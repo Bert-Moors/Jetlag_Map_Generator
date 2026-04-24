@@ -1,0 +1,54 @@
+{
+  "location": "H+S Brussels",
+  "folders":
+    [
+      {
+        "name": "Border",
+        "data": [
+          {
+            "geom_type": "border",
+            "type": "game zone border",
+            "query": "[out:json][timeout:10];relation[\"name:nl\"=\"Brussel Hoofdstad\"];out geom;"
+          }
+        ]
+      },
+      {
+        "name": "Public Utilities",
+        "data": [
+          {
+            "geom_type": "points",
+            "type": "Hospital",
+            "query": "[out:json][timeout:10];\nrelation[\"name:nl\"=\"Brussel Hoofdstad\"] -> .boundary;\n.boundary map_to_area -> .searcharea;\nnwr[\"name\"~\".*\"][\"healthcare\"=\"hospital\"](area.searcharea);\nout center;"
+          },
+          {
+            "geom_type": "points",
+            "type": "Library",
+            "dedup": { "range": 1500 },
+            "query": "[out:json][timeout:10];\nrelation[\"name:nl\"=\"Brussel Hoofdstad\"] -> .boundary;\n.boundary map_to_area -> .searcharea;\nnwr[\"amenity\"=\"library\"][\"name\"~\".*\"](area.searcharea);\nout center;"
+          }
+        ]
+      },
+      {
+        "name": "Admin Divisions",
+        "data": [
+          {
+            "geom_type": "polygons",
+            "type": "3rd Admin Divisions",
+            "query1": "[out:json][timeout:60];\nrelation[\"name:nl\"=\"Brussel Hoofdstad\"] -> .boundary;\n.boundary map_to_area -> .searcharea;\nrelation[\"name:nl\"=\"Elsene\"][\"admin_level\"=\"9\"][\"boundary\"=\"administrative\"](area.searcharea);\nout geom;",
+            "query": "[out:json][timeout:60];\nrelation[\"name:nl\"=\"Brussel Hoofdstad\"] -> .boundary;\n.boundary map_to_area -> .searcharea;\nrelation[\"name\"~\".*\"][\"admin_level\"=\"9\"][\"boundary\"=\"administrative\"](area.searcharea);\nout geom;",
+            "query3": "[out:json][timeout:60];\nrelation[\"name:nl\"=\"Brussel Hoofdstad\"] -> .boundary;\n.boundary map_to_area -> .searcharea;\nrelation[\"name:nl\"=\"Jette\"][\"admin_level\"=\"9\"][\"boundary\"=\"administrative\"](area.searcharea);\nout geom;"
+          }
+        ]
+      },
+      {
+        "name": "routes",
+        "data": [
+          {
+            "geom_type": "routes",
+            "type": "Subway",
+            "query": "[out:json][timeout:60];\nrelation[\"name:nl\"=\"Brussel Hoofdstad\"] -> .boundary;\n.boundary map_to_area -> .searcharea;\nrelation[\"route\"=\"subway\"](area.searcharea);\nout geom;"
+          }
+        ]
+      }
+    ]
+}
