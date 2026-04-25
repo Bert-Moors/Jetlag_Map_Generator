@@ -1,5 +1,7 @@
+import os.path
+
+from . import util
 from .overpass import overpass_query, overpass_query_with_cache
-from .util import order_lines
 
 import geopandas as gpd
 import json
@@ -27,7 +29,9 @@ class Generator():
                 frame["type"] = data["type"]
                 frames[data["type"]] = frame
             self.__add_to_kml(frames, kml_folder)
-        self._kml.save(self._output_path)
+        if not os.path.isdir(self._output_path):
+            os.makedirs(self._output_path, exist_ok=False)
+        self._kml.save(f"{self._output_path}/{self._settings["location"]}.kml")
 
     def __add_to_kml(self, frames: Dict[str, gpd.GeoDataFrame], folder: simplekml.Folder) -> None:
         for type in frames.keys():
@@ -48,6 +52,7 @@ class Generator():
                         for shape in shapes:
                             multipolygon.newpolygon(name=row["name"], outerboundaryis=shapely.get_coordinates(shape))
 
+    # ----------------------------------------------Parsing Functions--------------------------------------------------
     def __parse_json(self, json_data: Dict, geom_type: str) -> gpd.GeoDataFrame:
         frame = gpd.GeoDataFrame()
         # change parsing method based on
@@ -110,7 +115,7 @@ class Generator():
                             points.append([point["lon"], point["lat"]])
                         lines.append(points)
                 polygons = []
-                shapes = order_lines(lines)
+                shapes = util.order_lines(lines)
                 for poly in shapes:
                     polygons.append(shapely.geometry.Polygon(poly))
                 geom = shapely.geometry.MultiPolygon(polygons)
