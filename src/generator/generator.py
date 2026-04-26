@@ -1,5 +1,4 @@
 import os.path
-
 from . import util
 from .overpass import overpass_query, overpass_query_with_cache
 
@@ -24,8 +23,19 @@ class Generator():
             kml_folder = self._kml.newfolder(name=folder["name"])
             frames = {}
             for data in folder["data"]:
-                json_data = overpass_query_with_cache(data["query"])
-                frame = self.__parse_json(json_data, data["geom_type"])
+                if data.get("file"):
+                    frame = gpd.read_file(data["file"])
+                elif data.get("query"):
+                    json_data = overpass_query_with_cache(data["query"])
+                    frame = self.__parse_json(json_data, data["geom_type"])
+                else:
+                    raise Exception("Neither query nor file found in when loading "+folder["name"])
+                for proc in data.get("processors",[]):
+                    if isinstance(proc, dict):
+                        frame = get_processor(proc.get("name"), proc).process(frame)
+
+                        proc.get("name")
+
                 frame["type"] = data["type"]
                 frames[data["type"]] = frame
             self.__add_to_kml(frames, kml_folder)
