@@ -1,4 +1,6 @@
 import os.path
+
+from processors.processor_index import get_processor
 from . import util
 from .overpass import overpass_query, overpass_query_with_cache
 
@@ -45,22 +47,41 @@ class Generator():
 
     def __add_to_kml(self, frames: Dict[str, gpd.GeoDataFrame], folder: simplekml.Folder) -> None:
         for type in frames.keys():
-            fol = folder.newfolder(name=type)
+            fol = folder
             for _, row in frames[type].iterrows():
                 match row["geometry"].geom_type:
                     case "Point":
                         coords = shapely.get_coordinates(row["geometry"])
-                        fol.newpoint(name=row["name"],coords=coords)
+                        pt = fol.newpoint(name=row["name"],coords=coords)
+                        pt.extendeddata.newdata("type", type)
+                    case "Polygon":
+                        shapes = row["geometry"]
+                        multipolygon = fol.newmultigeometry(name=row["name"])
+                        multipolygon.extendeddata.newdata("type", type)
+                        multipolygon.newpolygon(name=row["name"], outerboundaryis=shapely.get_coordinates(shapes))
                     case "MultiLineString":
                         lines = row["geometry"].geoms
                         multiLine = fol.newmultigeometry(name=row["name"])
+                        multiLine.extendeddata.newdata("type", type)
                         for line in lines:
                             multiLine.newlinestring(coords=shapely.get_coordinates(line))
+                    case "LineString":
+                        if not row.get("name"):
+                            continue
+                        line = row["geometry"]
+                        ln = fol.newlinestring(name=row["name"], coords=shapely.get_coordinates(line))
+                        stle = simplekml.Style()
+                        stle.linestyle.width=3
+                        stle.linestyle.color=row.get("color")
+                        self._kml.styles.append(stle)
+                        ln.style=stle
                     case "MultiPolygon":
                         shapes = row["geometry"].geoms
                         multipolygon = fol.newmultigeometry(name=row["name"])
+                        multipolygon.extendeddata.newdata("type", type)
                         for shape in shapes:
                             multipolygon.newpolygon(name=row["name"], outerboundaryis=shapely.get_coordinates(shape))
+                print(row["geometry"].geom_type)
 
     # ----------------------------------------------Parsing Functions--------------------------------------------------
     def __parse_json(self, json_data: Dict, geom_type: str) -> gpd.GeoDataFrame:
@@ -107,7 +128,13 @@ class Generator():
                     case "node":
                         geom = shapely.Point(element["lon"], element["lat"])
                     case "way":
-                        geom = shapely.Point(element["center"]["lon"], element["center"]["lat"])
+                        lat = (element["bounds"]["maxlat"] + element["bounds"]["minlat"]) / 2
+                        lon = (element["bounds"]["maxlon"] + element["bounds"]["minlon"]) / 2
+                        geom = shapely.Point(lon, lat)
+                    case "relation":
+                        lat = (element["bounds"]["maxlat"] + element["bounds"]["minlat"]) / 2
+                        lon = (element["bounds"]["maxlon"] + element["bounds"]["minlon"]) / 2
+                        geom = shapely.Point(lon, lat)
                 p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "geometry": geom}
         else:
             raise Exception("Response is empty")
