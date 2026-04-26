@@ -32,11 +32,18 @@ class Generator():
                     frame = self.__parse_json(json_data, data["geom_type"])
                 else:
                     raise Exception("Neither query nor file found in when loading "+folder["name"])
-                for proc in data.get("processors",[]):
-                    if isinstance(proc, dict):
-                        frame = get_processor(proc.get("name"), proc).process(frame)
 
-                        proc.get("name")
+
+                # Loop through all the processors that exist on this data layer, and run them on the frame.
+                for proc_data in data.get("processors", []):
+                    if isinstance(proc_data, dict):
+                        # Fetch the class
+                        processor_class = get_processor(proc_data.get("name"))
+                        if processor_class is None:
+                            print("Invalid processor class", proc_data.get("name"))
+                            continue
+                        processor = processor_class(proc_data)
+                        frame = processor.process(frame)
 
                 frame["type"] = data["type"]
                 frames[data["type"]] = frame
@@ -81,7 +88,6 @@ class Generator():
                         multipolygon.extendeddata.newdata("type", type)
                         for shape in shapes:
                             multipolygon.newpolygon(name=row["name"], outerboundaryis=shapely.get_coordinates(shape))
-                print(row["geometry"].geom_type)
 
     # ----------------------------------------------Parsing Functions--------------------------------------------------
     def __parse_json(self, json_data: Dict, geom_type: str) -> gpd.GeoDataFrame:
