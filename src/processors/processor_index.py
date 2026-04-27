@@ -6,8 +6,9 @@ from processors.rename import Rename
 
 def get_processor(processor_name):
     mp = {
-        "name_collapse": AverageStationsSameName,
+        "name_based_deduplicate": AverageStationsSameName,
         "hiding_zones": HidingZones,
+        "rename_column": Rename,
         "rename": Rename,
         "to_poly": MultiLineToPolygon,
     }
