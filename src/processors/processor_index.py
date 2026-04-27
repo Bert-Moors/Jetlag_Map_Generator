@@ -8,10 +8,7 @@ def get_processor(processor_name):
     mp = {
         "name_based_deduplicate": AverageStationsSameName,
         "hiding_zones": HidingZones,
-        "rename": Rename,
-        "to_poly": MultiLineToPolygon,
         "rename_column": Rename,
-        "rename": Rename,
         "to_poly": MultiLineToPolygon,
     }
     return mp[processor_name]
