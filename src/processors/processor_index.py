@@ -1,5 +1,6 @@
 from processors.average_stations_same_name import AverageStationsSameName
 from processors.hiding_zones import HidingZones
+from processors.multi_line_to_polygon import MultiLineToPolygon
 from processors.rename import Rename
 
 
@@ -8,5 +9,6 @@ def get_processor(processor_name):
         "name_collapse": AverageStationsSameName,
         "hiding_zones": HidingZones,
         "rename": Rename,
+        "to_poly": MultiLineToPolygon,
     }
     return mp[processor_name]
