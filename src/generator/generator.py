@@ -54,7 +54,7 @@ class Generator():
 
     def __add_to_kml(self, frames: Dict[str, gpd.GeoDataFrame], folder: simplekml.Folder) -> None:
         for type in frames.keys():
-            fol = folder
+            fol = folder.newfolder(name=type)
             for _, row in frames[type].iterrows():
                 match row["geometry"].geom_type:
                     case "Point":
@@ -134,13 +134,23 @@ class Generator():
                     case "node":
                         geom = shapely.Point(element["lon"], element["lat"])
                     case "way":
-                        lat = (element["bounds"]["maxlat"] + element["bounds"]["minlat"]) / 2
-                        lon = (element["bounds"]["maxlon"] + element["bounds"]["minlon"]) / 2
-                        geom = shapely.Point(lon, lat)
+                        if element.get("center"):
+                            geom = shapely.Point(element["center"]["lon"], element["center"]["lat"])
+                        elif element.get("bounds"):
+                            lat = (element["bounds"]["maxlat"] + element["bounds"]["minlat"]) / 2
+                            lon = (element["bounds"]["maxlon"] + element["bounds"]["minlon"]) / 2
+                            geom = shapely.Point(lon, lat)
+                        else:
+                            raise Exception("Point has no valid data")
                     case "relation":
-                        lat = (element["bounds"]["maxlat"] + element["bounds"]["minlat"]) / 2
-                        lon = (element["bounds"]["maxlon"] + element["bounds"]["minlon"]) / 2
-                        geom = shapely.Point(lon, lat)
+                        if element.get("center"):
+                            geom = shapely.Point(element["center"]["lon"], element["center"]["lat"])
+                        elif element.get("bounds"):
+                            lat = (element["bounds"]["maxlat"] + element["bounds"]["minlat"]) / 2
+                            lon = (element["bounds"]["maxlon"] + element["bounds"]["minlon"]) / 2
+                            geom = shapely.Point(lon, lat)
+                        else:
+                            raise Exception("Point has no valid data")
                 p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "geometry": geom}
         else:
             raise Exception("Response is empty")
