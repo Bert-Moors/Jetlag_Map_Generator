@@ -144,7 +144,7 @@ class Generator():
                             points.append([point["lon"], point["lat"]])
                         lines.append(points)
                 geom = shapely.MultiLineString(lines)
-                p_frame.loc[len(p_frame)] = {"name": "border", "geometry": geom}
+                p_frame.loc[len(p_frame)] = {"name": element.get("tags", {}).get("name", "border"), "geometry": geom}
         else:
             raise Exception("Response is empty")
         return gpd.GeoDataFrame(p_frame)
