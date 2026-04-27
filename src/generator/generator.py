@@ -31,7 +31,7 @@ class Generator():
                     json_data = overpass_query_with_cache(data["query"])
                     frame = self.__parse_json(json_data, data["geom_type"])
                 else:
-                    raise Exception("Neither query nor file found in when loading "+folder["name"])
+                    raise Exception("Neither query nor file found in when loading "+folder["name"], data["name"])
 
 
                 # Loop through all the processors that exist on this data layer, and run them on the frame.
