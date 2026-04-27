@@ -35,7 +35,8 @@ class Generator():
 
 
                 # Loop through all the processors that exist on this data layer, and run them on the frame.
-                for proc_data in data.get("processors", []):
+
+                for proc_data in folder.get("processors", [])+ data.get("processors", []):
                     if isinstance(proc_data, dict):
                         # Fetch the class
                         processor_class = get_processor(proc_data.get("name"))
