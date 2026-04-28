@@ -31,7 +31,7 @@ class Generator():
                     json_data = overpass_query_with_cache(data["query"])
                     frame = self.__parse_json(json_data, data["geom_type"])
                 else:
-                    raise Exception("Neither query nor file found in when loading "+folder["name"])
+                    raise Exception("Neither query nor file found in when loading "+folder["name"], data["name"])
 
 
                 # Loop through all the processors that exist on this data layer, and run them on the frame.
@@ -78,6 +78,8 @@ class Generator():
                             continue
                         line = row["geometry"]
                         ln = fol.newlinestring(name=row["name"], coords=shapely.get_coordinates(line))
+                        ln.extendeddata.newdata("type", type)
+
                         stle = simplekml.Style()
                         stle.linestyle.width=3
                         stle.linestyle.color=row.get("color")
@@ -89,6 +91,8 @@ class Generator():
                         multipolygon.extendeddata.newdata("type", type)
                         for shape in shapes:
                             multipolygon.newpolygon(name=row["name"], outerboundaryis=shapely.get_coordinates(shape))
+                    case _:
+                        print(row["geometry"].geom_type, "Skipped due to being unsupported geom type")
 
     # ----------------------------------------------Parsing Functions--------------------------------------------------
     def __parse_json(self, json_data: Dict, geom_type: str) -> gpd.GeoDataFrame:
@@ -100,7 +104,7 @@ class Generator():
             case "points":
                 frame = self.__parse_points(json_data)
             case "lines":
-                pass
+                frame = self.__parse_lines(json_data)
             case "routes":
                 frame = self.__parse_routes(json_data)
             case "polygons":
@@ -109,6 +113,24 @@ class Generator():
         if frame.empty:
             raise Exception("geom type not supported")
         return frame
+
+    # This parser may not be generic enough
+    def __parse_lines(self, json_response: Dict) -> gpd.GeoDataFrame:
+        p_frame = pd.DataFrame(columns=["geometry", "name", "color"])
+        for line in json_response.get("elements"):
+            if not line.get("type") == "way":
+                if line.get("members"):
+                    row = []
+                    for member in line["members"]:
+                        if not member.get("type") == "way":
+                            continue
+                        row.append(shapely.LineString(map(lambda x: [x["lon"], x["lat"]],member["geometry"])))
+                    geom = shapely.MultiLineString(row)
+                    p_frame.loc[len(p_frame)] = {"name": line.get("tags").get("name"), "geometry": geom}
+                continue
+            geom = shapely.LineString(line["geometry"])
+            p_frame.loc[len(p_frame)]={"name":line.get("tags").get("name"), "geometry":geom}
+        return gpd.GeoDataFrame(p_frame)
 
     def __parse_border(self, json_response: Dict) -> gpd.GeoDataFrame:
         p_frame = pd.DataFrame(columns=["geometry", "name"])
@@ -122,7 +144,7 @@ class Generator():
                             points.append([point["lon"], point["lat"]])
                         lines.append(points)
                 geom = shapely.MultiLineString(lines)
-                p_frame.loc[len(p_frame)] = {"name": "border", "geometry": geom}
+                p_frame.loc[len(p_frame)] = {"name": element.get("tags", {}).get("name", "border"), "geometry": geom}
         else:
             raise Exception("Response is empty")
         return gpd.GeoDataFrame(p_frame)

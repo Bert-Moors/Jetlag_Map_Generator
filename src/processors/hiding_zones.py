@@ -12,6 +12,7 @@ class HidingZones:
         self.size = config.get('size',250)
         self.epsg = config.get('epsg',None)
 
+
     def process(self, df):
         new_df = df.copy()
         new_df.set_crs(4326,inplace=True)
