@@ -1,15 +1,19 @@
+from geopandas.geoseries import GeoSeries
+from shapely import MultiPolygon
+
+
 class MultiLineToPolygon:
     def __init__(self, _):
         pass
 
     def process(self, frame):
-        def namefix(rw):
-            return rw.get("name")
-        frame['fixed_name'] = frame.apply(namefix, axis=1)
-
         grouped_frame = frame.dissolve(by='name',as_index=False)
-        pols = grouped_frame.polygonize(node=True)
-        while len(pols)> len(grouped_frame):
-            grouped_frame.loc[len(grouped_frame)] = {'name':'ghost'}
-        grouped_frame["geometry"] =pols
-        return grouped_frame
+        result = frame[0:0]
+        for value in grouped_frame['name']:
+            sub = grouped_frame[grouped_frame['name'] == value]
+            geom = sub.geometry.polygonize(node=True)
+            if isinstance(geom, GeoSeries):
+                geom = MultiPolygon(geom)
+            row = {'name':value, 'geometry': geom}
+            result.loc[len(result)] = row
+        return result
