@@ -13,3 +13,13 @@ out(51.9,5.819573,52.2,5.989762);
 """
 style.color="ffa82d6f"
 style.href="https://maps.google.com/mapfiles/kml/shapes/bus.png"
+
+[layers.admin.1st]
+geom_type="border"
+file="inputs/play_area_custom.geojson"
+processors=[{name="rename_column",columns={Name="name"}}]
+
+[layers.admin.2nd]
+geom_type="border"
+file="inputs/woonwijken.geojson"
+processors=[{name="rename_column",columns={GEBIEDSNAAM="name"}}]
