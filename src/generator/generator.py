@@ -18,7 +18,7 @@ class Generator:
             for data in folder.layers:
                 frame = data.loader.load()
 
-                for proc_data in folder.processors + data.processors:
+                for proc_data in data.processors:
                     if isinstance(proc_data, dict):
                         # Fetch the class
                         processor_class = get_processor(proc_data.get("name"))
