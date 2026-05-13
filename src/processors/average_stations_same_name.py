@@ -7,7 +7,6 @@ class AverageStationsSameName:
     def __init__(self, config):
         self.prefix_ignores = config.get("prefix_ignores", [])
 
-
     def process(self, frame: pd.DataFrame)->pd.DataFrame:
         new = geopandas.GeoDataFrame(columns=['name', 'geometry'])
         def namefix(rw):
