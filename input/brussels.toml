@@ -1,0 +1,49 @@
+location="H&S Brussels Test"
+
+[layers.Border."game zone border"]
+geom_type="border"
+query="""
+[out:json][timeout:10];relation["name:nl"="Brussel Hoofdstad"];out geom;
+"""
+
+[layers."Public Utilities".Hospital]
+geom_type="points"
+query="""
+[out:json][timeout:10];
+relation["name:nl"="Brussel Hoofdstad"] -> .boundary;
+.boundary map_to_area -> .searcharea;
+nwr["name"~".*"]["healthcare"="hospital"](area.searcharea);
+out center;
+"""
+
+[layers."Public Utilities".Library]
+geom_type="points"
+dedup.range=1500
+query="""
+[out:json][timeout:10];
+relation["name:nl"="Brussel Hoofdstad"] -> .boundary;
+.boundary map_to_area -> .searcharea;
+nwr["amenity"="library"]["name"~".*"](area.searcharea);
+out center;
+"""
+
+
+[layers."Admin Division".3rd]
+geom_type="border"
+query= """
+[out:json][timeout:60];
+relation["name:nl"="Brussel Hoofdstad"] -> .boundary;
+.boundary map_to_area -> .searcharea;
+relation["name"~".*"]["admin_level"="9"]["boundary"="administrative"](area.searcharea);
+out geom;
+"""
+
+[layers.routes.Subway]
+geom_type="routes"
+query= """
+[out:json][timeout:60];
+relation["name:nl"="Brussel Hoofdstad"] -> .boundary;
+.boundary map_to_area -> .searcharea;
+relation["route"="subway"](area.searcharea);
+out geom;
+"""

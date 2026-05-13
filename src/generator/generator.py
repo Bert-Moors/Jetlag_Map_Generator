@@ -1,4 +1,5 @@
 import os.path
+import tomllib
 
 from processors.processor_index import get_processor
 from . import util
@@ -12,11 +13,42 @@ import simplekml
 from typing import Dict
 
 class Generator():
-    def __init__(self, settings: str, output_path: str):
+    def convert_toml_layers(self, layers):
+        folders = []
+        for k in layers:
+            folder = {"name": k}
+            folder_data = []
+            for idx in layers[k]:
+                row = layers[k][idx]
+                row["type"] = idx
+                folder_data.append(row)
+
+            folder["data"] = folder_data
+            folders.append(folder)
+        return folders
+
+    def convert_toml(self, settings):
+        res = {}
+        keywords = ["layers"]
+
+        for k in settings:
+            if k not in keywords:
+                res[k] = settings[k]
+                continue
+
+            if k == "layers":
+                res["folders"] = self.convert_toml_layers(settings[k])
+        return res
+
+    def __init__(self, settings: str, output_path: str, typ="json"):
         if settings is None or output_path is None:
             raise Exception("settings or output path can not be none")
-        with open(settings, encoding="utf-8") as file:
-            self._settings = json.load(file)
+        if typ =="json":
+            with open(settings, encoding="utf-8") as file:
+                self._settings = json.load(file)
+        elif typ == "toml":
+            with open(settings, "rb") as f:
+                self._settings = self.convert_toml(tomllib.load(f))
         self._output_path = output_path
         self._kml = simplekml.Kml()
 
