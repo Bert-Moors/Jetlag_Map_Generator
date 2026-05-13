@@ -33,6 +33,12 @@ class Folder:
 
 
 class Config:
+    """
+    Load a full config from file.
+    Accepts both a toml format and json format.
+    Note that JSON format may be deprecated in the future
+    """
+
     def __init__(self, file_name: str):
         self.location=""
         self.metadata = {}
@@ -42,6 +48,7 @@ class Config:
         if file_name is None:
             raise Exception("file_name cannot be None")
 
+        # Pick the correct parser based on extension
         typ = file_name.split(".")[-1]
         if typ =="json":
             self.load_json_config(file_name)
@@ -68,32 +75,37 @@ class Config:
 
             # Also load all the layers.
             for lay in toml_data.get("layers", []):
-                self.folders.append(self.convert_toml_layers(lay, toml_data["layers"][lay]))
+                self.folders.append(self.convert_toml_folder(lay, toml_data["layers"][lay]))
 
     @staticmethod
-    def convert_toml_layers(name, layers)-> Folder:
+    def convert_toml_folder(name, folder)-> Folder:
+        # Load the processors on folder-level
         processors = []
 
-        for proc in layers.get("processors", []):
+        for proc in folder.get("processors", []):
             processors.append(get_processor(proc))
-        folder = Folder(name, processors=processors)
+        result = Folder(name, processors=processors)
 
-        for idx in layers:
-            if idx == "processors":
+        for key in folder:
+            # Processors are handled before
+            if key == "processors":
                 continue
-            layer = layers[idx]
+
+            # Any key not a processors is a data-layer.
+            layer = folder[key]
 
             processors = []
             for proc in layer.get("processors", []):
                 processors.append(get_processor(proc))
+
             if query:=layer.get("query"):
                 loader=OverpassLoader(query, layer.get("geom_type"))
             elif file := layer.get("file"):
                 loader = GeoJsonLoader(file)
             else:
                 continue
-            folder.add_layer(LayerConfig(loader=loader, processors=processors, export_config={}, typ=idx))
-        return folder
+            result.add_layer(LayerConfig(loader=loader, processors=processors, export_config={}, typ=key))
+        return result
 
     def load_json_config(self, file_name: str):
         with open(file_name, encoding="utf-8") as file:
