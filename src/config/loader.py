@@ -12,7 +12,6 @@ class Loader(Protocol):
     def load(self) -> geopandas.geodataframe.GeoDataFrame:
         pass
 
-
 class LayerConfig:
     def __init__(self, loader: Loader, processors, export_config: Dict[str, Any], typ):
         self.loader = loader
@@ -44,11 +43,14 @@ class Config:
 
         typ = file_name.split(".")[-1]
         if typ =="json":
-            raise Exception("json loader broken")
+            self.load_json_config(file_name)
         elif typ == "toml":
             self.load_toml_config(file_name)
         else:
-            raise Exception("type of file neither toml nor json")
+            raise Exception("json/toml loader broken")
+
+    def load_json_config(self, file_name: str):
+        raise Exception("json loader missing")
 
     @staticmethod
     def convert_toml_layers(name, layers)-> Folder:
