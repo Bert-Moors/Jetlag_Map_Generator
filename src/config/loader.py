@@ -43,14 +43,11 @@ class Config:
 
         typ = file_name.split(".")[-1]
         if typ =="json":
-            self.load_json_config(file_name)
+            raise Exception("json loader not yet there")
         elif typ == "toml":
             self.load_toml_config(file_name)
         else:
-            raise Exception("json/toml loader broken")
-
-    def load_json_config(self, file_name: str):
-        raise Exception("json loader missing")
+            raise Exception("Wrong config loading format")
 
     @staticmethod
     def convert_toml_layers(name, layers)-> Folder:
