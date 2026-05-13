@@ -11,5 +11,5 @@ if __name__ == "__main__":
     ext = path.split(".")[-1]
     cfg = Config("input/"+path)
 
-    map_gen = gen.Generator("output/"+path+".kml")
+    map_gen = gen.Generator("output/"+path.split(".")[0])
     map_gen.generate(cfg)
