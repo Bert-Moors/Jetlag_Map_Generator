@@ -21,12 +21,9 @@ class Folder:
     Contains the config for one folder: contains multiple LayerConfigs.
     """
 
-    def __init__(self, name, processors=None):
-        if processors is None:
-            processors = []
+    def __init__(self, name):
         self.name = name
         self.layers = []
-        self.processors=processors
 
     def add_layer(self, layer):
         self.layers.append(layer)
@@ -80,11 +77,11 @@ class Config:
     @staticmethod
     def convert_toml_folder(name, folder)-> Folder:
         # Load the processors on folder-level
-        processors = []
+        folder_processors = []
 
         for proc in folder.get("processors", []):
-            processors.append(get_processor(proc))
-        result = Folder(name, processors=processors)
+            folder_processors.append(get_processor(proc))
+        result = Folder(name)
 
         for key in folder:
             # Processors are handled before
@@ -94,11 +91,11 @@ class Config:
             # Any key not a processors is a data-layer.
             layer = folder[key]
 
-            processors = []
+            processors = []+folder_processors
             for proc in layer.get("processors", []):
                 processors.append(get_processor(proc))
 
-            if query:=layer.get("query"):
+            if query := layer.get("query"):
                 loader=OverpassLoader(query, layer.get("geom_type"))
             elif file := layer.get("file"):
                 loader = GeoJsonLoader(file)

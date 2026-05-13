@@ -5,6 +5,7 @@ import pandas
 import pandas as pd
 import shapely
 
+from loaders import util
 from loaders.overpass import overpass_query_with_cache
 
 class Loader(Protocol):
