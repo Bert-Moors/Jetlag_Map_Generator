@@ -43,7 +43,7 @@ class Config:
 
         typ = file_name.split(".")[-1]
         if typ =="json":
-            raise Exception("json loader not yet there")
+            self.load_json_config(file_name)
         elif typ == "toml":
             self.load_toml_config(file_name)
         else:
@@ -86,3 +86,31 @@ class Config:
             self.location = toml_data.get("location", "")
             for lay in toml_data.get("layers", []):
                 self.layers.append(self.convert_toml_layers(lay, toml_data["layers"][lay]))
+
+    def load_json_config(self, file_name: str):
+        with open(file_name, encoding="utf-8") as file:
+            data = json.load(file)
+            keywords = ["layers", "location"]
+            for k in data:
+                if k not in keywords:
+                    self.metadata[k] = data[k]
+                    continue
+            self.location = data.get("location", "")
+            for layer in data.get("folders", []):
+                procs = []
+                for processor in layer.get("processors", []):
+                    procs.append(get_processor(processor))
+                folder  = Folder(name=layer.get("name"), processors=procs)
+                for dat in layer.get("data", []):
+                    processors = []
+                    for proc in dat.get("processors", []):
+                        processors.append(get_processor(proc))
+                    if query := dat.get("query"):
+                        loader = OverpassLoader(query, dat.get("geom_type"))
+                    elif file := dat.get("file"):
+                        loader = GeoJsonLoader(file)
+                    else:
+                        print("skipping wrongly configured data", dat)
+                        continue
+                    folder.add_layer(LayerConfig(loader=loader, processors=processors, export_config={}, typ=dat.get("geom_type")))
+                self.layers.append(folder)
