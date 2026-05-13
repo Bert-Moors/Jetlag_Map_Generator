@@ -1,18 +1,15 @@
 import json
 import tomllib
-from typing import Protocol, Dict, Any, List
+from typing import Dict, Any, List
 
-import geopandas
-
-from config.layer_config import OverpassLoader, GeoJsonLoader
+from loaders.loaders import OverpassLoader, GeoJsonLoader, Loader
 from processors.processor_index import get_processor
 
 
-class Loader(Protocol):
-    def load(self) -> geopandas.geodataframe.GeoDataFrame:
-        pass
-
 class LayerConfig:
+    """
+    Configures the exporting of one data layer within a folder.
+    """
     def __init__(self, loader: Loader, processors, export_config: Dict[str, Any], typ):
         self.loader = loader
         self.processors = processors
@@ -20,6 +17,10 @@ class LayerConfig:
         self.typ = typ
 
 class Folder:
+    """
+    Contains the config for one folder: contains multiple LayerConfigs.
+    """
+
     def __init__(self, name, processors=None):
         if processors is None:
             processors = []
@@ -35,7 +36,7 @@ class Config:
     def __init__(self, file_name: str):
         self.location=""
         self.metadata = {}
-        self.layers:List[Folder] = []
+        self.folders:List[Folder] = []
         self.name=""
 
         if file_name is None:
@@ -48,6 +49,26 @@ class Config:
             self.load_toml_config(file_name)
         else:
             raise Exception("Wrong config loading format")
+
+    def load_toml_config(self, file_name:str):
+        with open(file_name, "rb") as f:
+            toml_data = (tomllib.load(f))
+
+            # These keywords are handled by different code parts.
+            keywords = ["layers", "location"]
+
+            # All unknown fields end up in the metadata.
+            for k in toml_data:
+                if k not in keywords:
+                    self.metadata[k] = toml_data[k]
+                    continue
+
+            # The location is a fixed field for the config.
+            self.location = toml_data.get("location", "")
+
+            # Also load all the layers.
+            for lay in toml_data.get("layers", []):
+                self.folders.append(self.convert_toml_layers(lay, toml_data["layers"][lay]))
 
     @staticmethod
     def convert_toml_layers(name, layers)-> Folder:
@@ -73,19 +94,6 @@ class Config:
                 continue
             folder.add_layer(LayerConfig(loader=loader, processors=processors, export_config={}, typ=idx))
         return folder
-
-    def load_toml_config(self, file_name:str):
-        with open(file_name, "rb") as f:
-            toml_data = (tomllib.load(f))
-            keywords = ["layers", "location"]
-
-            for k in toml_data:
-                if k not in keywords:
-                    self.metadata[k] = toml_data[k]
-                    continue
-            self.location = toml_data.get("location", "")
-            for lay in toml_data.get("layers", []):
-                self.layers.append(self.convert_toml_layers(lay, toml_data["layers"][lay]))
 
     def load_json_config(self, file_name: str):
         with open(file_name, encoding="utf-8") as file:
@@ -113,4 +121,4 @@ class Config:
                         print("skipping wrongly configured data", dat)
                         continue
                     folder.add_layer(LayerConfig(loader=loader, processors=processors, export_config={}, typ=dat.get("geom_type")))
-                self.layers.append(folder)
+                self.folders.append(folder)

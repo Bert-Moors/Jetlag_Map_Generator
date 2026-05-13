@@ -1,7 +1,7 @@
 import src.generator as gen
 import sys
 
-from config.loader import Config
+from config.config import Config
 
 if __name__ == "__main__":
     print(sys.argv)

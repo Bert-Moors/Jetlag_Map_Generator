@@ -1,13 +1,15 @@
-from typing import Dict
+from typing import Dict, Protocol
 
 import geopandas
 import pandas
 import pandas as pd
 import shapely
 
-from config import util
-from overpass.overpass import overpass_query_with_cache
+from loaders.overpass import overpass_query_with_cache
 
+class Loader(Protocol):
+    def load(self) -> geopandas.geodataframe.GeoDataFrame:
+        pass
 
 class OverpassLoader:
     def __init__(self, query, geo_type):

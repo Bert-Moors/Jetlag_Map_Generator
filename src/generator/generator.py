@@ -1,5 +1,5 @@
 import os.path
-from config.loader import Config
+from config.config import Config
 from processors.processor_index import get_processor
 import geopandas as gpd
 import shapely
@@ -12,7 +12,7 @@ class Generator:
         self._kml = simplekml.Kml()
 
     def generate(self, config: Config):
-        for folder in config.layers:
+        for folder in config.folders:
             kml_folder = self._kml.newfolder(name=folder.name)
             frames = {}
             for data in folder.layers:
