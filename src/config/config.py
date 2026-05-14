@@ -6,19 +6,18 @@ from loaders.loaders import OverpassLoader, GeoJsonLoader, Loader
 from processors.processor_index import get_processor
 
 
-class LayerConfig:
+class Layer:
     """
     Configures the exporting of one data layer within a folder.
     """
-    def __init__(self, loader: Loader, processors, export_config: Dict[str, Any], typ):
+    def __init__(self, loader: Loader, processors, typ):
         self.loader = loader
         self.processors = processors
-        self.export_config = export_config
         self.typ = typ
 
 class Folder:
     """
-    Contains the config for one folder: contains multiple LayerConfigs.
+    Contains the config for one folder: contains multiple Layers.
     """
 
     def __init__(self, name):
@@ -101,7 +100,7 @@ class Config:
                 loader = GeoJsonLoader(file)
             else:
                 continue
-            result.add_layer(LayerConfig(loader=loader, processors=processors, export_config={}, typ=key))
+            result.add_layer(Layer(loader=loader, processors=processors, typ=key))
         return result
 
     def load_json_config(self, file_name: str):
@@ -129,5 +128,5 @@ class Config:
                     else:
                         print("skipping wrongly configured data", dat)
                         continue
-                    folder.add_layer(LayerConfig(loader=loader, processors=processors, export_config={}, typ=dat.get("geom_type")))
+                    folder.add_layer(Layer(loader=loader, processors=processors, typ=dat.get("geom_type")))
                 self.folders.append(folder)
