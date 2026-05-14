@@ -1,74 +1,24 @@
 import os.path
-import tomllib
-
+from config.config import Config
 from processors.processor_index import get_processor
-from . import util
-from .overpass import overpass_query, overpass_query_with_cache
-
 import geopandas as gpd
-import json
-import pandas as pd
 import shapely
 import simplekml
 from typing import Dict
 
-class Generator():
-    def convert_toml_layers(self, layers):
-        folders = []
-        for k in layers:
-            folder = {"name": k}
-            folder_data = []
-            for idx in layers[k]:
-                row = layers[k][idx]
-                row["type"] = idx
-                folder_data.append(row)
-
-            folder["data"] = folder_data
-            folders.append(folder)
-        return folders
-
-    def convert_toml(self, settings):
-        res = {}
-        keywords = ["layers"]
-
-        for k in settings:
-            if k not in keywords:
-                res[k] = settings[k]
-                continue
-
-            if k == "layers":
-                res["folders"] = self.convert_toml_layers(settings[k])
-        return res
-
-    def __init__(self, settings: str, output_path: str, typ="json"):
-        if settings is None or output_path is None:
-            raise Exception("settings or output path can not be none")
-        if typ =="json":
-            with open(settings, encoding="utf-8") as file:
-                self._settings = json.load(file)
-        elif typ == "toml":
-            with open(settings, "rb") as f:
-                self._settings = self.convert_toml(tomllib.load(f))
+class Generator:
+    def __init__(self, output_path: str):
         self._output_path = output_path
         self._kml = simplekml.Kml()
 
-    def generate(self):
-        for folder in self._settings["folders"]:
-            kml_folder = self._kml.newfolder(name=folder["name"])
+    def generate(self, config: Config):
+        for folder in config.folders:
+            kml_folder = self._kml.newfolder(name=folder.name)
             frames = {}
-            for data in folder["data"]:
-                if data.get("file"):
-                    frame = gpd.read_file(data["file"])
-                elif data.get("query"):
-                    json_data = overpass_query_with_cache(data["query"])
-                    frame = self.__parse_json(json_data, data["geom_type"])
-                else:
-                    raise Exception("Neither query nor file found in when loading "+folder["name"])
+            for data in folder.layers:
+                frame = data.loader.load()
 
-
-                # Loop through all the processors that exist on this data layer, and run them on the frame.
-
-                for proc_data in folder.get("processors", [])+ data.get("processors", []):
+                for proc_data in data.processors:
                     if isinstance(proc_data, dict):
                         # Fetch the class
                         processor_class = get_processor(proc_data.get("name"))
@@ -78,12 +28,12 @@ class Generator():
                         processor = processor_class(proc_data)
                         frame = processor.process(frame)
 
-                frame["type"] = data["type"]
-                frames[data["type"]] = frame
+                frame["type"] = data.typ
+                frames[data.typ] = frame
             self.__add_to_kml(frames, kml_folder)
         if not os.path.isdir(self._output_path):
             os.makedirs(self._output_path, exist_ok=False)
-        self._kml.save(f"{self._output_path}/{self._settings["location"]}.kml")
+        self._kml.save(f"{self._output_path}/{config.location}.kml")
 
     def __add_to_kml(self, frames: Dict[str, gpd.GeoDataFrame], folder: simplekml.Folder) -> None:
         for type in frames.keys():
@@ -121,108 +71,3 @@ class Generator():
                         multipolygon.extendeddata.newdata("type", type)
                         for shape in shapes:
                             multipolygon.newpolygon(name=row["name"], outerboundaryis=shapely.get_coordinates(shape))
-
-    # ----------------------------------------------Parsing Functions--------------------------------------------------
-    def __parse_json(self, json_data: Dict, geom_type: str) -> gpd.GeoDataFrame:
-        frame = gpd.GeoDataFrame()
-        # change parsing method based on
-        match geom_type:
-            case "border":
-                frame = self.__parse_border(json_data)
-            case "points":
-                frame = self.__parse_points(json_data)
-            case "lines":
-                pass
-            case "routes":
-                frame = self.__parse_routes(json_data)
-            case "polygons":
-                frame = self.__parse_polygons(json_data)
-        # if frame did not get overwritten or empty geom type is not supported
-        if frame.empty:
-            raise Exception("geom type not supported")
-        return frame
-
-    def __parse_border(self, json_response: Dict) -> gpd.GeoDataFrame:
-        p_frame = pd.DataFrame(columns=["geometry", "name"])
-        if json_response["elements"]:
-            for element in json_response["elements"]:
-                lines = []
-                for member in element["members"]:
-                    if member["type"] == "way":
-                        points = []
-                        for point in member["geometry"]:
-                            points.append([point["lon"], point["lat"]])
-                        lines.append(points)
-                geom = shapely.MultiLineString(lines)
-                p_frame.loc[len(p_frame)] = {"name": "border", "geometry": geom}
-        else:
-            raise Exception("Response is empty")
-        return gpd.GeoDataFrame(p_frame)
-
-    def __parse_points(self, json_response: Dict) -> gpd.GeoDataFrame:
-        p_frame = pd.DataFrame(columns=["geometry", "name"])
-        if json_response["elements"]:
-            for element in json_response["elements"]:
-                match element["type"]:
-                    case "node":
-                        geom = shapely.Point(element["lon"], element["lat"])
-                    case "way":
-                        if element.get("center"):
-                            geom = shapely.Point(element["center"]["lon"], element["center"]["lat"])
-                        elif element.get("bounds"):
-                            lat = (element["bounds"]["maxlat"] + element["bounds"]["minlat"]) / 2
-                            lon = (element["bounds"]["maxlon"] + element["bounds"]["minlon"]) / 2
-                            geom = shapely.Point(lon, lat)
-                        else:
-                            raise Exception("Point has no valid data")
-                    case "relation":
-                        if element.get("center"):
-                            geom = shapely.Point(element["center"]["lon"], element["center"]["lat"])
-                        elif element.get("bounds"):
-                            lat = (element["bounds"]["maxlat"] + element["bounds"]["minlat"]) / 2
-                            lon = (element["bounds"]["maxlon"] + element["bounds"]["minlon"]) / 2
-                            geom = shapely.Point(lon, lat)
-                        else:
-                            raise Exception("Point has no valid data")
-                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "geometry": geom}
-        else:
-            raise Exception("Response is empty")
-        return gpd.GeoDataFrame(p_frame)
-
-    def __parse_polygons(self, json_response: Dict) -> gpd.GeoDataFrame:
-        p_frame = pd.DataFrame(columns=["geometry", "name"])
-        if json_response["elements"]:
-            for element in json_response["elements"]:
-                lines = []
-                for member in element["members"]:
-                    if member["type"] == "way":
-                        points = []
-                        for point in member["geometry"]:
-                            points.append([point["lon"], point["lat"]])
-                        lines.append(points)
-                polygons = []
-                shapes = util.order_lines(lines)
-                for poly in shapes:
-                    polygons.append(shapely.geometry.Polygon(poly))
-                geom = shapely.geometry.MultiPolygon(polygons)
-                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "geometry": geom}
-        else:
-            raise Exception("Response is empty")
-        return gpd.GeoDataFrame(p_frame)
-
-    def __parse_routes(self, json_response: Dict) -> gpd.GeoDataFrame:
-        p_frame = pd.DataFrame(columns=["geometry", "name"])
-        if json_response["elements"]:
-            for element in json_response["elements"]:
-                lines = []
-                for member in element["members"]:
-                    if member["type"] == "way" and member["role"] != "platform":
-                        points = []
-                        for point in member["geometry"]:
-                            points.append([point["lon"], point["lat"]])
-                        lines.append(points)
-                geom = shapely.MultiLineString(lines)
-                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "geometry": geom}
-        else:
-            raise Exception("Response is empty")
-        return gpd.GeoDataFrame(p_frame)

@@ -3,10 +3,11 @@ from processors.hiding_zones import HidingZones
 from processors.rename import Rename
 
 
-def get_processor(processor_name):
+def get_processor(processor):
     mp = {
         "name_based_deduplicate": AverageStationsSameName,
         "hiding_zones": HidingZones,
         "rename_column": Rename,
     }
-    return mp[processor_name]
+
+    return mp[processor.get("name")](processor)
