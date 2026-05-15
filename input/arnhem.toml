@@ -15,21 +15,13 @@ style.color="ffa82d6f"
 style.href="https://maps.google.com/mapfiles/kml/shapes/bus.png"
 
 [layers.admin.1st]
-geom_type="border"
+geom_type="polygons"
 file="inputs/play_area_custom.geojson"
 processors=[{name="rename_column",columns={Name="name"}}]
 
-[layers.admin.2nd]
-geom_type="border"
-file="inputs/woonwijken.geojson"
-processors=[{name="rename_column",columns={GEBIEDSNAAM="name"}}]
-
-[layers.admin.1st]
-geom_type="border"
-file="inputs/play_area_custom.geojson"
-processors=[{name="rename_column",columns={Name="name"}}]
 
 [layers.admin.2nd]
-geom_type="border"
+geom_type="polygons"
 file="inputs/woonwijken.geojson"
-processors=[{name="rename_column",columns={GEBIEDSNAAM="name"}}]
+processors=[{name="rename_column",columns={GEBIEDSNAAM="name"}}, {name="to_poly"}]
+matching="2nd"

@@ -69,7 +69,9 @@ class QuestionGenerator:
     @staticmethod
     def build_matching_geo(feature_collection: dict[str, Any]) -> tuple[str, Any]:
         features = feature_collection["features"]
-        geometry_types = {feature["geometry"].get("type") for feature in features}
+        if features is None:
+            raise ValueError("Feature collection is missing a feature")
+        geometry_types = {feature.get("geometry", {}).get("type") for feature in features}
 
         if geometry_types.issubset({"Polygon", "MultiPolygon"}):
             coordinates: list[list[list[list[float]]]] = []
