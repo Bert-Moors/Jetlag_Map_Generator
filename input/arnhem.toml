@@ -23,3 +23,13 @@ processors=[{name="rename_column",columns={Name="name"}}]
 geom_type="border"
 file="inputs/woonwijken.geojson"
 processors=[{name="rename_column",columns={GEBIEDSNAAM="name"}}]
+
+[layers.admin.1st]
+geom_type="border"
+file="inputs/play_area_custom.geojson"
+processors=[{name="rename_column",columns={Name="name"}}]
+
+[layers.admin.2nd]
+geom_type="border"
+file="inputs/woonwijken.geojson"
+processors=[{name="rename_column",columns={GEBIEDSNAAM="name"}}]
