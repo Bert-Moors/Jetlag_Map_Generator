@@ -28,6 +28,12 @@ class Folder:
         self.layers.append(layer)
 
 
+class QuestionConfig:
+    def __init__(self, typ: str, layer: str, data_field:str, name: str):
+        self.type = typ
+        self.layer = layer
+        self.data_field = data_field
+        self.name = name
 class Config:
     """
     Load a full config from file.
@@ -39,6 +45,7 @@ class Config:
         self.location=""
         self.metadata = {}
         self.folders:List[Folder] = []
+        self.questions = []
         self.name=""
 
         if file_name is None:
@@ -73,8 +80,7 @@ class Config:
             for lay in toml_data.get("layers", []):
                 self.folders.append(self.convert_toml_folder(lay, toml_data["layers"][lay]))
 
-    @staticmethod
-    def convert_toml_folder(name, folder)-> Folder:
+    def convert_toml_folder(self, name, folder)-> Folder:
         # Load the processors on folder-level
         folder_processors = []
 
@@ -94,6 +100,13 @@ class Config:
             for proc in layer.get("processors", []):
                 processors.append(get_processor(proc))
 
+            if layer.get("measuring", False):
+                self.questions.append(QuestionConfig("measuring", name, key, layer.get("measuring")))
+            if layer.get("matching", False):
+                self.questions.append(QuestionConfig("matching", name, key, layer.get("matching")))
+            if layer.get("tentacles", False):
+                self.questions.append(QuestionConfig("tentacles", name, key, layer.get("tentacles")))
+
             if query := layer.get("query"):
                 loader=OverpassLoader(query, layer.get("geom_type"))
             elif file := layer.get("file"):
@@ -106,12 +119,16 @@ class Config:
     def load_json_config(self, file_name: str):
         with open(file_name, encoding="utf-8") as file:
             data = json.load(file)
-            keywords = ["layers", "location"]
+            keywords = ["layers", "location", "matching"]
             for k in data:
                 if k not in keywords:
                     self.metadata[k] = data[k]
                     continue
             self.location = data.get("location", "")
+
+            for q in data.get("questions", []):
+                self.questions.append(QuestionConfig(q.get("type"), q.get("path"), q.get("name")))
+
             for layer in data.get("folders", []):
                 procs = []
                 for processor in layer.get("processors", []):
@@ -119,6 +136,14 @@ class Config:
                 folder  = Folder(name=layer.get("name"), processors=procs)
                 for dat in layer.get("data", []):
                     processors = []
+                    if dat.get("measuring", False):
+                        self.questions.append(QuestionConfig("measuring", layer.get("name"), q.get("type"), q.get("measuring")))
+                    if dat.get("matching", False):
+                        self.questions.append(QuestionConfig("measuring", layer.get("name"), q.get("type"), q.get("matching")))
+                    if dat.get("tentacles", False):
+                        self.questions.append(
+                            QuestionConfig("tentacles", layer.get("name"), q.get("type"), q.get("tentacles")))
+
                     for proc in dat.get("processors", []):
                         processors.append(get_processor(proc))
                     if query := dat.get("query"):

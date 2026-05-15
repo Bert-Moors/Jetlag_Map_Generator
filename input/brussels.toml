@@ -15,6 +15,9 @@ relation["name:nl"="Brussel Hoofdstad"] -> .boundary;
 nwr["name"~".*"]["healthcare"="hospital"](area.searcharea);
 out center;
 """
+matching="Hospitals"
+measuring="Hospitals"
+
 
 [layers."Public Utilities".Library]
 geom_type="points"

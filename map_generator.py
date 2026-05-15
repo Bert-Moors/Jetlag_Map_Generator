@@ -2,6 +2,7 @@ import src.generator as gen
 import sys
 
 from config.config import Config
+from generator.matching_generator import QuestionGenerator
 
 if __name__ == "__main__":
     print(sys.argv)
@@ -13,3 +14,5 @@ if __name__ == "__main__":
 
     map_gen = gen.Generator("output/"+path.split(".")[0])
     map_gen.generate(cfg)
+
+    QuestionGenerator("output/" + path.split(".")[0]).generate(cfg)
