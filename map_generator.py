@@ -2,7 +2,7 @@ import src.generator as gen
 import sys
 
 from config.config import Config
-from generator.matching_generator import QuestionGenerator
+from generator.question_generator import QuestionGenerator
 
 if __name__ == "__main__":
     print(sys.argv)

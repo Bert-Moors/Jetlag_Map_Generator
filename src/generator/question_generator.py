@@ -1,13 +1,21 @@
 import json
+import random
 
 from config.config import Config, Layer
-from generator.random_unique import RandomUnique
+
 
 
 class QuestionGenerator:
     def __init__(self, output_path: str):
         self._output_path = output_path
+        self.nums = set()
 
+    def random(self):
+        while True:
+            num = random.random()
+            if num not in self.nums:
+                self.nums.add(num)
+                return num
 
     def generate(self, config: Config):
         for q in config.questions:
@@ -34,7 +42,7 @@ class QuestionGenerator:
 
         jso = {
             "question_name": name,
-            "id":RandomUnique.singleton().random(),
+            "id":self.random(),
             "bla": data.to_json()
         }
         print(jso)
@@ -51,7 +59,7 @@ class QuestionGenerator:
 
         jso = {
             "question_name": name,
-            "id":RandomUnique.singleton().random(),
+            "id": self.random(),
             "bla": data.to_json()
         }
         print(jso)
@@ -69,7 +77,7 @@ class QuestionGenerator:
 
         jso = {
             "question_name": name,
-            "id":RandomUnique.singleton().random(),
+            "id": self.random(),
             "bla": data.to_json()
         }
         print(jso)
