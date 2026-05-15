@@ -29,10 +29,11 @@ relation["name:nl"="Brussel Hoofdstad"] -> .boundary;
 nwr["amenity"="library"]["name"~".*"](area.searcharea);
 out center;
 """
-
+matching="Libraries"
+measuring="Libraries"
 
 [layers."Admin Division".3rd]
-geom_type="border"
+geom_type="polygons"
 query= """
 [out:json][timeout:60];
 relation["name:nl"="Brussel Hoofdstad"] -> .boundary;
@@ -40,6 +41,7 @@ relation["name:nl"="Brussel Hoofdstad"] -> .boundary;
 relation["name"~".*"]["admin_level"="9"]["boundary"="administrative"](area.searcharea);
 out geom;
 """
+matching="3rd"
 
 [layers.routes.Subway]
 geom_type="routes"
