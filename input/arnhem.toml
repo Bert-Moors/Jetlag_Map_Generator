@@ -13,3 +13,5 @@ out(51.9,5.819573,52.2,5.989762);
 """
 style.color="ffa82d6f"
 style.href="https://maps.google.com/mapfiles/kml/shapes/bus.png"
+measuring="stops"
+matching="stops"

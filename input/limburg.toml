@@ -1,0 +1,26 @@
+location="H&S lIMBURG"
+[layers."Admin Division".1st]
+geom_type="border"
+query= """
+[out:json][timeout:60];
+relation["ref:veiligheidsregiocode"=24];
+map_to_area ->.p;
+relation["name"~".*"]["admin_level"="8"]["boundary"="administrative"](area.p);
+out geom;
+"""
+
+processors= [{"name"="to_poly"}]
+matching="1st"
+
+[layers."Admin Division".2nd]
+geom_type="border"
+query= """
+[out:json][timeout:60];
+relation["ref:veiligheidsregiocode"=24];
+map_to_area ->.p;
+relation["name"~".*"]["admin_level"="10"]["boundary"="administrative"](area.p);
+out geom;
+"""
+
+processors= [{"name"="to_poly"}]
+matching="2nd"

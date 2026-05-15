@@ -6,6 +6,8 @@ def order_lines(lines: List) -> List[List]:
     for index, line in enumerate(lines):
         ## if points is currently empty check if the first line needs to be added in reverse or not
         if not points:
+            if index == len(lines):
+                break
             if line[-1] == lines[index+1][0] or line[-1] == lines[index+1][-1]:
                 points += line
             if line[0] == lines[index +1][0] or line[0] == lines[index +1][-1]:

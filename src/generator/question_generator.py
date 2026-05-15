@@ -69,9 +69,13 @@ class QuestionGenerator:
     @staticmethod
     def build_matching_geo(feature_collection: dict[str, Any]) -> tuple[str, Any]:
         features = feature_collection["features"]
-        geometry_types = {feature["geometry"].get("type") for feature in features}
+        if features is None:
+            raise ValueError("Feature collection is missing a feature")
+        geometry_types = {feature.get("geometry", {}).get("type") for feature in features}
+        if geometry_types == {"Point"}:
+            return "custom-points", features
 
-        if geometry_types.issubset({"Polygon", "MultiPolygon"}):
+        if geometry_types.issubset({"Polygon", "MultiPolygon", "Point"}):
             coordinates: list[list[list[list[float]]]] = []
             collected_properties: list[dict[str, Any]] = []
 
@@ -83,27 +87,19 @@ class QuestionGenerator:
 
             return (
                 "custom-zone",
-                {
-                    "type": "Feature",
-                    "properties": {"collectedProperties": collected_properties},
-                    "geometry": {"type": "MultiPolygon", "coordinates": coordinates},
-                },
+                feature_collection
             )
 
-        if geometry_types == {"Point"}:
-            return "custom-points", features
-
-        raise ValueError(
-            "Matching questions require only Polygon/MultiPolygon or only Point geometries",
-        )
+        raise ValueError("AHI")
 
     def generate_matching_question(self, layer: Layer, name: str):
         print("generating", name)
         data = layer.loader.load()
+        ctr = data.centroid[0]
         for proc in layer.processors:
             data = proc.process(data)
-        typ, dct = self.build_matching_geo(data.to_geo_dict())
-        ctr = data.centroid[0]
+        typ, dct = self.build_matching_geo(self.as_feature_collection(data.to_geo_dict()))
+
         jso = {
             "question_name": name,
             "id": "matching",
@@ -112,7 +108,7 @@ class QuestionGenerator:
                 "type": typ,
                 "lat": ctr.y,
                 "lng": ctr.x,
-                "geo": dct
+                "geo": dct,
             }
         }
         print(jso)
