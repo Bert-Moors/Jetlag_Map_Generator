@@ -1,5 +1,6 @@
 import json
 import random
+from typing import Any
 
 from config.config import Config, Layer
 
@@ -26,7 +27,7 @@ class QuestionGenerator:
                         if z.typ != q.data_field:
                             continue
                         if q.type == "matching":
-                            self.generate_measuring_question(z, q.name)
+                            self.generate_matching_question(z, q.name)
                         if q.type == "measuring":
                             self.generate_measuring_question(z, q.name)
                         if q.type == "tentacles":
@@ -34,16 +35,85 @@ class QuestionGenerator:
 
         pass
 
+    @staticmethod
+    def as_feature_collection(payload: dict[str, Any]) -> dict[str, Any]:
+        payload_type = payload.get("type")
+
+        if payload_type == "FeatureCollection":
+            features = payload.get("features")
+            if not isinstance(features, list):
+                raise ValueError("FeatureCollection is missing a features array")
+            return payload
+
+        if payload_type == "Feature":
+            return {"type": "FeatureCollection", "features": [payload]}
+
+        return {
+            "type": "FeatureCollection",
+            "features": [{"type": "Feature", "properties": {}, "geometry": payload}],
+        }
+
+    @staticmethod
+    def polygon_parts(geometry: dict[str, Any]) -> list[list[list[list[float]]]]:
+        geometry_type = geometry.get("type")
+        coordinates = geometry.get("coordinates")
+
+        if geometry_type == "Polygon":
+            return [coordinates]
+        if geometry_type == "MultiPolygon":
+            return coordinates
+
+        raise ValueError(f"Geometry type {geometry_type} cannot be used for matching zones")
+
+
+    @staticmethod
+    def build_matching_geo(feature_collection: dict[str, Any]) -> tuple[str, Any]:
+        features = feature_collection["features"]
+        geometry_types = {feature["geometry"].get("type") for feature in features}
+
+        if geometry_types.issubset({"Polygon", "MultiPolygon"}):
+            coordinates: list[list[list[list[float]]]] = []
+            collected_properties: list[dict[str, Any]] = []
+
+            for feature in features:
+                coordinates.extend(QuestionGenerator.polygon_parts(feature["geometry"]))
+                properties = feature.get("properties")
+                if isinstance(properties, dict) and properties:
+                    collected_properties.append(properties)
+
+            return (
+                "custom-zone",
+                {
+                    "type": "Feature",
+                    "properties": {"collectedProperties": collected_properties},
+                    "geometry": {"type": "MultiPolygon", "coordinates": coordinates},
+                },
+            )
+
+        if geometry_types == {"Point"}:
+            return "custom-points", features
+
+        raise ValueError(
+            "Matching questions require only Polygon/MultiPolygon or only Point geometries",
+        )
+
     def generate_matching_question(self, layer: Layer, name: str):
         print("generating", name)
         data = layer.loader.load()
         for proc in layer.processors:
             data = proc.process(data)
-
+        typ, dct = self.build_matching_geo(data.to_geo_dict())
+        ctr = data.centroid[0]
         jso = {
             "question_name": name,
-            "id":self.random(),
-            "bla": data.to_json()
+            "id": "matching",
+            "key":self.random(),
+            "data": {
+                "type": typ,
+                "lat": ctr.y,
+                "lng": ctr.x,
+                "geo": dct
+            }
         }
         print(jso)
 
@@ -56,11 +126,18 @@ class QuestionGenerator:
         data = layer.loader.load()
         for proc in layer.processors:
             data = proc.process(data)
-
+        dct = self.as_feature_collection(data.to_geo_dict())
+        ctr = data.centroid[0]
         jso = {
             "question_name": name,
-            "id": self.random(),
-            "bla": data.to_json()
+            "id": "measuring",
+            "key": self.random(),
+            "data": {
+                "type": "custom-measure",
+                "lat": ctr.y,
+                "lng": ctr.x,
+                "geo": dct
+            }
         }
         print(jso)
 
@@ -77,8 +154,9 @@ class QuestionGenerator:
 
         jso = {
             "question_name": name,
-            "id": self.random(),
-            "bla": data.to_json()
+            "id": "tentacle",
+            "key": self.random(),
+            "data": data.to_json()
         }
         print(jso)
 
