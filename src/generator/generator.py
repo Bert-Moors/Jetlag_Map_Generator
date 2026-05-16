@@ -18,15 +18,8 @@ class Generator:
             for data in folder.layers:
                 frame = data.loader.load()
 
-                for proc_data in data.processors:
-                    if isinstance(proc_data, dict):
-                        # Fetch the class
-                        processor_class = get_processor(proc_data.get("name"))
-                        if processor_class is None:
-                            print("Invalid processor class", proc_data.get("name"))
-                            continue
-                        processor = processor_class(proc_data)
-                        frame = processor.process(frame)
+                for processor in data.processors:
+                    frame = processor.process(frame)
 
                 frame["type"] = data.typ
                 frames[data.typ] = frame
