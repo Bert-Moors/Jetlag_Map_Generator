@@ -1,5 +1,6 @@
 import json
 import os
+import re
 from _sha2 import sha256
 from typing import Dict
 import requests
@@ -14,13 +15,15 @@ overpass_mirrors = [
 #--------------Functions--------------
 def overpass_query(query: str) -> Dict:
     tries = 0
+    # get timeout value from query
+    timeout = int(re.search("timeout:[0-9]+", query).group()[8::])
     # retry request with different interpreters until you get 200 response
     while True:
         try:
             response = requests.get(
                 overpass_mirrors[tries % len(overpass_mirrors)],
                 data=query,
-                timeout=10,
+                timeout=timeout,
                 headers={"User-Agent": "mapgenerator/1.0"})
             print(response.status_code)
             tries += 1
