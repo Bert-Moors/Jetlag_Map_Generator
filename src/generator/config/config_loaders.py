@@ -21,9 +21,10 @@ def load_config(file_name: str) -> Config:
         case "toml":
             return load_toml_config(file_name)
         case "yml":
-            return load_yml_config()
+            return load_yml_config(file_name)
         case _:
             raise Exception("Wrong config loading format")
+
 
 def load_json_config(file_name: str) -> Config:
     config = Config(file_name)
@@ -55,6 +56,7 @@ def load_json_config(file_name: str) -> Config:
             config.folders.append(folder)
     return config
 
+
 def load_toml_config(file_name: str) -> Config:
     config = Config(file_name)
     with open(file_name, "rb") as f:
@@ -77,8 +79,9 @@ def load_toml_config(file_name: str) -> Config:
             config.folders.append(convert_toml_folder(lay, toml_data["layers"][lay]))
     return config
 
+
 @staticmethod
-def convert_toml_folder(name, folder)-> Layer:
+def convert_toml_folder(name, folder) -> Layer:
     # Load the processors on folder-level
     folder_processors = []
 
@@ -94,12 +97,12 @@ def convert_toml_folder(name, folder)-> Layer:
         # Any key not a processors is a data-layer.
         layer = folder[key]
 
-        processors = []+folder_processors
+        processors = [] + folder_processors
         for proc in layer.get("processors", []):
             processors.append(get_processor(proc))
 
         if query := layer.get("query"):
-            loader=OverpassLoader(query, layer.get("geom_type"))
+            loader = OverpassLoader(query, layer.get("geom_type"))
         elif file := layer.get("file"):
             loader = GeoJsonLoader(file)
         else:
@@ -107,5 +110,6 @@ def convert_toml_folder(name, folder)-> Layer:
         result.add_datasource(Datasource(loader=loader, processors=processors, typ=key))
     return result
 
-def load_yml_config() -> Config:
+
+def load_yml_config(file_name: str) -> Config:
     pass

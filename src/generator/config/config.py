@@ -1,18 +1,18 @@
-import tomllib
-from typing import Dict, Any, List
+from typing import List
 
-from loaders.loaders import OverpassLoader, GeoJsonLoader, Loader
-from processors.processor_index import get_processor
+from loaders.loaders import Loader
 
 
 class Datasource:
     """
     Configures source and styling for one datasource.
     """
+
     def __init__(self, loader: Loader, processors, typ):
         self.loader = loader
         self.processors = processors
         self.typ = typ
+
 
 class Layer:
     """
@@ -35,7 +35,7 @@ class Config:
     """
 
     def __init__(self, file_name: str):
-        self.location=""
+        self.location = ""
         self.metadata = {}
-        self.folders:List[Layer] = []
-        self.name=""
+        self.folders: List[Layer] = []
+        self.name = ""
