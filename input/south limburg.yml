@@ -1,0 +1,104 @@
+config:
+  name: H+S South Limburg
+layers:
+  Transit:
+    Train Station:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         (
+           nwr["railway"="station"](area.targetMunicipalities);
+         );
+
+         out center;'
+  Natural:
+    Mountains:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["natural"="peak"](area.targetMunicipalities);
+
+         out center;'
+  Points Of Interest:
+    Campings:
+      geom_type: points
+      query:
+          '[out:json][timeout:90];
+
+           area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+           nwr["tourism"="camp_site"](area.targetMunicipalities);
+
+           out center;'
+    Mills:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         (
+           nwr["man_made"="windmill"](area.targetMunicipalities);
+           nwr["man_made"="watermill"](area.targetMunicipalities);
+           nwr["building"="windmill"](area.targetMunicipalities);
+           nwr["building"="watermill"](area.targetMunicipalities);
+         );
+
+         out center;'
+    Museums:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["tourism"="museum"]["name"~".*"](area.targetMunicipalities);
+
+         out center;'
+    Golf Courses:
+      geom_type: points
+      query:
+        'Golf courses:
+         [out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["leisure"="golf_course"](area.targetMunicipalities);
+
+         out center;'
+    Cinema:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["amenity"="cinema"](area.targetMunicipalities);
+
+         out center;'
+    Zoos:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["amenity"="cinema"](area.targetMunicipalities);
+
+         out center;'
+    Amusement Parks:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["amenity"="cinema"](area.targetMunicipalities);
+
+         out center;'

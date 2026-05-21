@@ -20,12 +20,13 @@ class Layer:
     Contains multiple data sources
     """
 
-    def __init__(self, name):
+    def __init__(self, name, processors):
         self.name = name
-        self.datasource = []
+        self.processors = processors
+        self.datasources = []
 
-    def add_datasource(self, data):
-        self.datasource.append(data)
+    def add_datasource(self, data: Datasource):
+        self.datasources.append(data)
 
 
 class Config:
@@ -34,8 +35,11 @@ class Config:
     Contains multiple layers.
     """
 
-    def __init__(self, file_name: str):
+    def __init__(self, name:str, exporters):
+        self.name = name
         self.location = ""
-        self.metadata = {}
-        self.folders: List[Layer] = []
-        self.name = ""
+        self.exporters = exporters
+        self.layers: List[Layer] = []
+
+    def add_layer(self, layer: Layer):
+        self.layers.append(layer)
