@@ -1,12 +1,10 @@
 import json
 import tomllib
-
 import yaml
 
 from generator.config import Config, Layer, Datasource
 from loaders.loaders import OverpassLoader, GeoJsonLoader
 from processors.processor_index import get_processor
-
 
 def load_config(file_name: str) -> Config:
     """
@@ -45,7 +43,6 @@ def load_yml_config(file_name: str) -> Config:
         yaml_data = yaml.load(file, Loader=yaml.FullLoader)
         config = dict_to_config(yaml_data)
     return config
-
 
 #--------------Util Functions--------------
 def dict_to_config(data: dict) -> Config:
