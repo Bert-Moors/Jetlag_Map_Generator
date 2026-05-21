@@ -12,10 +12,10 @@ class Generator:
         self._kml = simplekml.Kml()
 
     def generate(self):
-        for folder in self._config.layers:
-            kml_folder = self._kml.newfolder(name=folder.name)
+        for layer in self._config.layers:
+            kml_folder = self._kml.newfolder(name=layer.name)
             frames = {}
-            for data in folder.datasources:
+            for data in layer.datasources:
                 frame = data.loader.load()
 
                 for processor in data.processors:
