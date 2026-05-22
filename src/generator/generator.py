@@ -21,8 +21,8 @@ class Generator:
                 for processor in data.processors:
                     frame = processor.process(frame)
 
-                frame["type"] = data.typ
-                frames[data.typ] = frame
+                frame["type"] = data.type
+                frames[data.type] = frame
             self.__add_to_kml(frames, kml_folder)
         if not os.path.isdir(self._output_path):
             os.makedirs(self._output_path, exist_ok=False)

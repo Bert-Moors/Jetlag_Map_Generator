@@ -7,10 +7,10 @@ class Datasource:
     Configures source and styling for one datasource.
     """
 
-    def __init__(self, loader: Loader, processors, typ):
+    def __init__(self, loader: Loader, processors, type):
         self.loader = loader
         self.processors = processors
-        self.typ = typ
+        self.type = type
 
 
 class Layer:

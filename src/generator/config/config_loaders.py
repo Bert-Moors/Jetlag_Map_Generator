@@ -14,35 +14,36 @@ def load_config(file_name: str) -> Config:
     if file_name is None:
         raise Exception("file_name cannot be None")
 
-    file_type = file_name.split(".")[-1]
-    match file_type:
+    config_dict = {}
+    match file_name.split(".")[-1]:
         case "json":
-            return load_json_config(file_name)
+            config_dict = load_json_config(file_name)
         case "toml":
-            return load_toml_config(file_name)
-        case "yml":
-            return load_yml_config(file_name)
+            config_dict = load_toml_config(file_name)
+        case "yml" | "yaml":
+            config_dict = load_yml_config(file_name)
         case _:
             raise Exception("Wrong config loading format")
+    return dict_to_config(config_dict)
 
 #--------------Loader Functions--------------
-def load_json_config(file_name: str) -> Config:
+def load_json_config(file_name: str) -> dict:
     with open(file_name, "r") as file:
         json_data = json.load(file)
-        config = dict_to_config(json_data)
-    return config
+    return json_data
 
-def load_toml_config(file_name: str) -> Config:
+def load_toml_config(file_name: str) -> dict:
     with open(file_name, "rb") as f:
         toml_data = (tomllib.load(f))
-        config = dict_to_config(toml_data)
-    return config
+        config_dict = {"config": toml_data["config"], "layers":toml_data.get("layers", {})}
+        for key in [x for x in toml_data.keys() if x not in ["config", "layers"]]:
+            config_dict["layers"][key] = toml_data[key]
+    return config_dict
 
-def load_yml_config(file_name: str) -> Config:
+def load_yml_config(file_name: str) -> dict:
     with open(file_name, "r") as file:
         yaml_data = yaml.load(file, Loader=yaml.FullLoader)
-        config = dict_to_config(yaml_data)
-    return config
+    return yaml_data
 
 #--------------Util Functions--------------
 def dict_to_config(data: dict) -> Config:
