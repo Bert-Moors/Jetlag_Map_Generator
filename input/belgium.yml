@@ -1,0 +1,23 @@
+---
+config:
+  name: H+S Belgium
+layers:
+  stops:
+    train stations:
+      geom_type: points
+      processors: [{name: hiding_zones, size: 1000}]
+      query:
+          '[ out:json ][ timeout:60 ];
+          relation(52411) -> .boundary;
+          .boundary map_to_area -> .searcharea;
+          node["name"~".*"]["railway"~"station|halt"]["operator"="NMBS/SNCB"](area.searcharea);
+          out center;"'
+    tram stations:
+      geom_type: points
+      processors: [ { name: hiding_zones, size: 1000 } ]
+      query:
+        '[ out:json ][ timeout:60 ];
+          relation(52411) -> .boundary;
+          .boundary map_to_area -> .searcharea;
+          node["name"~".*"]["railway"~"station|halt"](area.searcharea);
+          out center;"'

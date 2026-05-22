@@ -1,15 +1,11 @@
 import src.generator as gen
 import sys
 
-from config.config import Config
-
 if __name__ == "__main__":
-    print(sys.argv)
-    path = "brussels.toml"
+    path = "arnhem.toml"
     if len(sys.argv) > 1:
         path = sys.argv[1]
     ext = path.split(".")[-1]
-    cfg = Config("input/"+path)
 
-    map_gen = gen.Generator("output/"+path.split(".")[0])
-    map_gen.generate(cfg)
+    map_gen = gen.Generator("input/"+path, "output/"+path.split(".")[0])
+    map_gen.generate()

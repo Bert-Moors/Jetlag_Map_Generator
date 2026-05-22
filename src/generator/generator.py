@@ -1,32 +1,32 @@
 import os.path
-from config.config import Config
-from processors.processor_index import get_processor
+import generator.config as genconfig
 import geopandas as gpd
 import shapely
 import simplekml
 from typing import Dict
 
 class Generator:
-    def __init__(self, output_path: str):
+    def __init__(self, config_file: str, output_path: str):
+        self._config = genconfig.load_config(config_file)
         self._output_path = output_path
         self._kml = simplekml.Kml()
 
-    def generate(self, config: Config):
-        for folder in config.folders:
-            kml_folder = self._kml.newfolder(name=folder.name)
+    def generate(self):
+        for layer in self._config.layers:
+            kml_folder = self._kml.newfolder(name=layer.name)
             frames = {}
-            for data in folder.layers:
+            for data in layer.datasources:
                 frame = data.loader.load()
 
                 for processor in data.processors:
                     frame = processor.process(frame)
 
-                frame["type"] = data.typ
-                frames[data.typ] = frame
+                frame["type"] = data.name_type
+                frames[data.name_type] = frame
             self.__add_to_kml(frames, kml_folder)
         if not os.path.isdir(self._output_path):
             os.makedirs(self._output_path, exist_ok=False)
-        self._kml.save(f"{self._output_path}/{config.location}.kml")
+        self._kml.save(f"{self._output_path}/{self._config.location}.kml")
 
     def __add_to_kml(self, frames: Dict[str, gpd.GeoDataFrame], folder: simplekml.Folder) -> None:
         for type in frames.keys():
