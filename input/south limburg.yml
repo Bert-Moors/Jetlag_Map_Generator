@@ -1,6 +1,24 @@
 config:
   name: H+S South Limburg
 layers:
+  Border:
+    Game Border:
+      processors: [
+        {
+          name: "rename_column",
+          columns:{Name: "name"}
+        }
+      ]
+      file: "input/SL Border.kml"
+  Admin Divisions:
+    Gemeente:
+      processors: [
+        {
+          name: "rename_column",
+          columns: { Name: "name" }
+        }
+      ]
+      file: "input/SL gemeentes.kml"
   Transit:
     Train Station:
       geom_type: points
@@ -12,6 +30,16 @@ layers:
          (
            nwr["railway"="station"]["operator"!="Zuid-Limburgse Stoomtrein Maatschappij"]["name"~".*"](area.targetMunicipalities);
          );
+
+         out center;'
+    Airport:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["aeroway"="aerodrome"]["iata"](area.targetMunicipalities);
 
          out center;'
   Natural:
@@ -119,5 +147,26 @@ layers:
          )->.broadCategories;
 
          (.exactNames; .broadCategories;);
+
+         out center;'
+  Public Utilities:
+    Hospital:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["healthcare"~"hospital"]["name"~".*"](area.targetMunicipalities);
+
+         out center;'
+    Library:
+      geom_type: points
+      query:
+        '[out:json][timeout:60];
+
+         area["admin_level"="8"]["name"~"^(Eijsden-Margraten|Gulpen-Wittem|Heerlen|Kerkrade|Landgraaf|Maastricht|Meerssen|Simpelveld|Vaals|Valkenburg aan de Geul|Voerendaal)$"]->.targetMunicipalities;
+
+         nwr["amenity"="library"]["name"~".*"](area.targetMunicipalities);
 
          out center;'

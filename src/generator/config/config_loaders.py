@@ -4,7 +4,8 @@ import yaml
 
 from generator.config import Config, Layer, Datasource
 from loaders.loaders import OverpassLoader, GeoJsonLoader
-from processors.processor_index import get_processor
+from processors import get_processor
+from generator.exporters import  get_exporter
 
 def load_config(file_name: str) -> Config:
     """
@@ -50,7 +51,11 @@ def dict_to_config(data: dict) -> Config:
     config: Config
     if config_data := data.get("config"):
         name = config_data.get("name", "")
-        exporters = config_data.get("exporters", {})
+        exporters = []
+        for exporter in data.get("exporters", []):
+            exporters.append(get_exporter(exporter))
+        if not exporters:
+            exporters.append(get_exporter("googleMMaps"))
         config = Config(name, exporters)
     else:
         raise Exception("config not defined")
