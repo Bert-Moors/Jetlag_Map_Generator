@@ -52,7 +52,7 @@ def dict_to_config(data: dict) -> Config:
     if config_data := data.get("config"):
         name = config_data.get("name", "")
         exporters = []
-        for exporter in data.get("exporters", []):
+        for exporter in config_data.get("exporters", []):
             exporters.append(get_exporter(exporter))
         if not exporters:
             exporters.append(get_exporter("googleMMaps"))

@@ -19,4 +19,14 @@ class GoogleMyMapsKmlExporter:
 
         add_to_kml(data, self._kml)
 
-        self._kml.save(f"{output_path}.kml")
+        self._kml.save(f"{output_path} GMM.kml")
+
+class FullKmlExporter:
+    def __init__(self):
+        self._kml = simplekml.Kml()
+
+    def export(self, data: dict, output_path):
+        for layer_name in data.keys():
+            folder = self._kml.newfolder(name=layer_name)
+            add_to_kml(data[layer_name], folder)
+        self._kml.save(f"{output_path} FULL.kml")

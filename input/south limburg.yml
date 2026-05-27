@@ -1,5 +1,6 @@
 config:
   name: H+S South Limburg
+  exporters: ["googleMMaps", "fullkml"]
 layers:
   Border:
     Game Border:
