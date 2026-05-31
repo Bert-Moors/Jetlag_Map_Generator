@@ -7,9 +7,10 @@ class Datasource:
     Configures source and styling for one datasource.
     """
 
-    def __init__(self, loader: Loader, processors, name_type):
+    def __init__(self, loader: Loader, processors,post_processors, name_type):
         self.loader = loader
         self.processors = processors
+        self.post_processors = post_processors
         self.name_type = name_type
 
 
