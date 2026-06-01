@@ -30,5 +30,9 @@ processors: [
   },
 ]
 ```
-In this example, hiding zones of size 300 are created, and no intrusion is allowed. 
+In this example, the size of the zones is set to be 300, and no intrusion is allowed. 
 Metro stations are seen as more important than other stations.
+
+Note that you may want to use a `name_based_deduplicate` on the data-layers. This (among other situations) merges north- and southbound bus stops together into one point (at the center). The `remove_overlapping_zones` processor will work without doing that, but may then pick either of the two bus stops, based on which one is more overlapping.
+
+On a technical level, the processor eagerly deletes the points with the highest amount of overlap. This algorithm is not guaranteed to result in the best possible maps in all cases, but it was relatively straightforward to implement. In most cases it should not matter a lot.
