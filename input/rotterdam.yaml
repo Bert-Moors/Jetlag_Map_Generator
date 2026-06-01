@@ -6,7 +6,6 @@ layers:
       {
         name: "remove_overlapping_zones",
         size: 300,
-        allowed_intrusion: 80,
         config: {
           "metro": {
             importance: 2
