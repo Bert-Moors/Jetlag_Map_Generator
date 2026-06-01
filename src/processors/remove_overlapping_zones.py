@@ -21,7 +21,7 @@ class RemoveOverlappingZones:
         return config_data.get("size", self.default_size)
 
     def get_max_size(self):
-        res = 0
+        res = self.default_size
         for x in self.config:
             res = max(self.config[x].get("size", 0), res)
         return res
@@ -83,7 +83,6 @@ class RemoveOverlappingZones:
             if idx_to_drop ==-1:
                 break
             new_df.drop(idx_to_drop,inplace=True)
-
 
         new_df.to_crs(4326, inplace=True)
 
