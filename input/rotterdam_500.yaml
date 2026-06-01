@@ -1,0 +1,187 @@
+config:
+  location: "H&S Rotterdam Test"
+layers:
+  stops_500_no_intrusion:
+    processors: [
+      {
+        name: "remove_overlapping_zones",
+        size: 500,
+
+        config: {
+          "metro": {
+            allowed_intrusion: 0,
+            size: 500,
+            importance: 2
+          },
+          "tram": {
+            allowed_intrusion: 0,
+            size: 500
+          }
+        }
+      },
+    ]
+    tram:
+      geom_type: "points"
+
+      post_processors: [
+        {
+          name: "hiding_zones",
+          size: 500
+        }
+      ]
+      type: "tram"
+      query:
+        '
+       [out:json][timeout:25];
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht"]->.searchArea;
+       (
+         node["railway"="tram_stop"](area.searchArea);
+         way["railway"="tram_stop"](area.searchArea);
+       );
+       out center;
+       
+        '
+      style.color: "ffa82d6f"
+      style.href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+    metro:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      post_processors: [
+        {
+          name: "hiding_zones",
+          size: 500
+        }
+      ]
+      type: "metro"
+      query:
+        '
+        [out:json][timeout:25];
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht"]->.searchArea;
+        (
+          node["railway"="stop"]["subway"="yes"](area.searchArea);
+          way["railway"="stop"]["subway"="yes"](area.searchArea);
+        );
+        out center;
+      '
+  stops_500_some_intrusion:
+    processors: [
+      {
+        name: "remove_overlapping_zones",
+        size: 500,
+
+        config: {
+          "metro": {
+            allowed_intrusion: 400,
+            size: 500,
+            importance: 2
+          },
+          "tram": {
+            allowed_intrusion: 400,
+            size: 500
+          }
+        }
+      },
+    ]
+    tram:
+      geom_type: "points"
+
+      post_processors: [
+        {
+          name: "hiding_zones",
+          size: 500
+        }
+      ]
+      type: "tram"
+      query:
+        '
+       [out:json][timeout:25];
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht"]->.searchArea;
+       (
+         node["railway"="tram_stop"](area.searchArea);
+         way["railway"="tram_stop"](area.searchArea);
+       );
+       out center;
+        '
+      style.color: "ffa82d6f"
+      style.href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+    metro:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      post_processors: [
+        {
+          name: "hiding_zones",
+          size: 500
+        }
+      ]
+      type: "metro"
+      query:
+        '
+        [out:json][timeout:25];
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht"]->.searchArea;
+        (
+          node["railway"="stop"]["subway"="yes"](area.searchArea);
+          way["railway"="stop"]["subway"="yes"](area.searchArea);
+        );
+        out center;
+      '
+  stops_500_no_overlap_fix:
+    tram:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      post_processors: [
+        {
+          name: "hiding_zones",
+          size: 500
+        }
+      ]
+      type: "tram"
+      query:
+        '
+       [out:json][timeout:25];
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht"]->.searchArea;
+       (
+         node["railway"="tram_stop"](area.searchArea);
+         way["railway"="tram_stop"](area.searchArea);
+       );
+       out center;
+       
+        '
+      style.color: "ffa82d6f"
+      style.href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+    metro:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      post_processors: [
+        {
+          name: "hiding_zones",
+          size: 500
+        }
+      ]
+      type: "metro"
+      query:
+        '
+        [out:json][timeout:25];
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht"]->.searchArea;
+        (
+          node["railway"="stop"]["subway"="yes"](area.searchArea);
+          way["railway"="stop"]["subway"="yes"](area.searchArea);
+        );
+        out center;
+        
+        '

@@ -7,15 +7,14 @@ class RemoveOverlappingZones:
     def __init__(self, config):
         self.epsg = config.get("epsg",None)
         self.config = config.get("config", {})
-        self.default_distance = config.get("distance", 100)
+        self.default_allowed_intrusion = config.get("allowed_intrusion", 80)
+        self.default_importance = config.get("importance", 1)
         self.default_size = config.get("size", 250)
 
-    def get_distance_for_type(self, typ):
-        config_data = self.config.get(typ, {})
-        return config_data.get("distance",self.default_distance)
+
     def get_allowed_intrusion(self, typ):
         config_data = self.config.get(typ, {})
-        return config_data.get("allowed_intrusion", 0)
+        return config_data.get("allowed_intrusion", self.default_allowed_intrusion)
 
     def get_size(self, typ):
         config_data = self.config.get(typ, {})
@@ -27,9 +26,9 @@ class RemoveOverlappingZones:
             res = max(self.config[x].get("size", 0), res)
         return res
 
-    def get_priority(self, typ):
+    def get_importance(self, typ):
         config_data = self.config.get(typ, {})
-        return config_data.get("importance", 1)
+        return config_data.get("importance", self.default_importance)
 
     def process(self, df):
         new_df = df.copy()
@@ -62,16 +61,16 @@ class RemoveOverlappingZones:
                     continue
 
                 # Score only counts for higher prios, or for same prio.
-                if self.get_priority(x["type"]) > self.get_priority(y["type"]):
+                if self.get_importance(x["type"]) > self.get_importance(y["type"]):
                     continue
 
                 y_size = self.get_size(y["type"])
                 x_size = self.get_size(x["type"])
                 dist = x["geometry"].distance(y["geometry"])
                 allowed_intrusion = self.get_allowed_intrusion(x["type"])
-                score = x_size + y_size - allowed_intrusion - dist
-                if x_size + y_size > allowed_intrusion + dist:
-                    nb_importances[idx] = self.get_priority(x["type"])
+                score = x_size + y_size - (x_size*allowed_intrusion/100) - dist
+                if x_size + y_size > (x_size*allowed_intrusion/100) + dist:
+                    nb_importances[idx] = self.get_importance(x["type"])
                     nbs[idx] = nbs.get(idx,0)+score
             lowest_importance = 1000
             highest_score = 0
