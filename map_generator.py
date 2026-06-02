@@ -2,7 +2,7 @@ import src.generator as gen
 import sys
 
 if __name__ == "__main__":
-    path = "arnhem.toml"
+    path = "south limburg.yml"
     if len(sys.argv) > 1:
         path = sys.argv[1]
     ext = path.split(".")[-1]
