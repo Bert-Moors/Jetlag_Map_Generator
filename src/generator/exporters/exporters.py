@@ -80,5 +80,5 @@ class HidingZoneExporter:
                         partials.append(partial_df)
 
         dat = GeoDataFrame(concat(partials), crs="EPSG:4326")
-        add_to_kml({'hiding_zones':dat}, layer)
+        add_to_kml({'Hiding Zones':dat}, layer)
         self._kml.save(f"{output_path} HZ.kml")
