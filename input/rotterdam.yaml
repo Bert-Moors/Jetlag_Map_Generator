@@ -6,7 +6,7 @@ layers:
     processors: [
       {
         name: "add_column",
-        columns: { "hiding_size": 250 }
+        columns: { "hiding_size": 300 }
       },
       {
         name: "remove_overlapping_zones",
