@@ -90,13 +90,10 @@ def dict_to_datasource(name:str, data:dict) -> Datasource:
     for proc in data.get("processors", []):
         processors.append(get_processor(proc))
 
-    post_processors = []
-    for proc in data.get("post_processors", []):
-        post_processors.append(get_processor(proc))
     if query := data.get("query"):
         loader = OverpassLoader(query, data.get("geom_type"))
     elif file := data.get("file"):
         loader = GeoJsonLoader(file)
     else:
         raise Exception(f"datasource {name} not configured properly")
-    return Datasource(loader, processors, post_processors, name)
+    return Datasource(loader, processors, name)

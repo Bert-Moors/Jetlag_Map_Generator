@@ -37,10 +37,6 @@ class Generator:
                 for type in layer_frame["type"].unique():
                     split_frames[type] = layer_frame[layer_frame["type"] == type]
                 self._gathered_data[layer.name] = split_frames
-            for data in layer.datasources:
-                for processor in data.post_processors:
-                    self._gathered_data[layer.name][data.name_type] = processor.process(
-                        self._gathered_data[layer.name][data.name_type])
 
     def __export_data(self):
         if not os.path.isdir(self._output_path):

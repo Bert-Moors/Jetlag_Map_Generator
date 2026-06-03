@@ -1,8 +1,13 @@
 config:
   location: "H&S Rotterdam Test"
+  exporters: ["googleMMaps", "fullkml", "kmlHidingZones"]
 layers:
   hiding_zones:
     processors: [
+      {
+        name: "add_column",
+        columns: { "hiding_size": 250 }
+      },
       {
         name: "remove_overlapping_zones",
         size: 300,
@@ -22,12 +27,6 @@ layers:
         {
           name: "remove_by_names",
           name_list: ["De Montignyplein"]
-        }
-      ]
-      post_processors: [
-        {
-          name: "hiding_zones",
-          size: 300
         }
       ]
       type: "tram"
@@ -54,10 +53,62 @@ layers:
           name_list: ["Hoek van Holland Haven", "Hoek van Holland Strand"]
         }
       ]
-      post_processors: [
+      type: "metro"
+      query:
+        '
+        [out:json][timeout:25];
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"]->.searchArea;
+        (
+          node["railway"="stop"]["subway"="yes"](area.searchArea);
+          way["railway"="stop"]["subway"="yes"](area.searchArea);
+        );
+        out center;
+        '
+  stops:
+    processors: [
+      {
+        name: "remove_overlapping_zones",
+        size: 300,
+        config: {
+          "metro": {
+            importance: 2
+          }
+        }
+      },
+    ]
+    tram:
+      geom_type: "points"
+      processors: [
         {
-          name: "hiding_zones",
-          size: 300
+          name: "name_based_deduplicate",
+        },
+        {
+          name: "remove_by_names",
+          name_list: ["De Montignyplein"]
+        }
+      ]
+      type: "tram"
+      query:
+        '
+       [out:json][timeout:25];
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"]->.searchArea;
+       (
+         node["railway"="tram_stop"](area.searchArea);
+         way["railway"="tram_stop"](area.searchArea);
+       );
+       out center;
+        '
+      style.color: "ffa82d6f"
+      style.href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+    metro:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+        {
+          name: "remove_by_names",
+          name_list: ["Hoek van Holland Haven", "Hoek van Holland Strand"]
         }
       ]
       type: "metro"
@@ -70,4 +121,24 @@ layers:
           way["railway"="stop"]["subway"="yes"](area.searchArea);
         );
         out center;
-      '
+        '
+  transit:
+    rail_station:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      type: "railway stations"
+      query:
+        '
+        [ out:json ][ timeout:60 ];
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"]->.searchArea;
+          (
+          node["railway"="station"]["name"~".*"]["train"="yes"](area.searchArea);
+          relation["railway"="station"]["name"~".*"]["train"="yes"](area.searchArea);
+          way["railway"="station"]["name"~".*"]["train"="yes"](area.searchArea);
+          );
+          out geom;
+          '

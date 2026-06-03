@@ -39,7 +39,8 @@ processors: [
     allowed_intrusion: 0,
     config: {
       "metro": {
-        importance: 2
+        importance: 2,
+        size: 500
       }
     }
   },
