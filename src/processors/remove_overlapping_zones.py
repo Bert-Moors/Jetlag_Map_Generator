@@ -9,7 +9,7 @@ class RemoveOverlappingZones:
         self.config = config.get("config", {})
         self.default_allowed_intrusion = config.get("allowed_intrusion", 80)
         self.default_importance = config.get("importance", 1)
-        self.default_size = config.get("size", 250)
+        self.default_size = config.get("size", 500)
 
 
     def get_allowed_intrusion(self, typ):
@@ -66,6 +66,10 @@ class RemoveOverlappingZones:
 
                 y_size = self.get_size(y["type"])
                 x_size = self.get_size(x["type"])
+                if "hiding_size" in x and x["hiding_size"]:
+                    x_size = x["hiding_size"]
+                if "hiding_size" in y and y["hiding_size"]:
+                    y_size = y["hiding_size"]
                 dist = x["geometry"].distance(y["geometry"])
                 allowed_intrusion = self.get_allowed_intrusion(x["type"])
                 score = x_size + y_size - (x_size*allowed_intrusion/100) - dist
