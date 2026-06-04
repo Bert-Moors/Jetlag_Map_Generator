@@ -43,8 +43,11 @@ layers:
         
         out(51.9,5.819573,52.2,5.989762);
         '
-      style.color: "ffa82d6f"
-      style.href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+      style: {
+        color:"ffa82d6f",
+        href:  "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+      }
+
     rail_station:
       geom_type: "points"
       processors: [

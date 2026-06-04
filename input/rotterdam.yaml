@@ -1,6 +1,6 @@
 config:
   location: "H&S Rotterdam Test"
-  exporters: ["googleMMaps", "fullkml", "kmlHidingZones"]
+  exporters: ["googleMMaps", "fullkml", "kmlHidingZones","osmA3Pdf"]
 layers:
   Hiding Spots:
     processors: [
@@ -39,8 +39,13 @@ layers:
        );
        out center;
         '
-      style.color: "ffa82d6f"
-      style.href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+      style:
+        secondary_color: "ff823000"
+        scale: 0.225
+        svg: |
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="30" fill="{secondary_color}"/>
+          </svg>
     metro:
       geom_type: "points"
       processors: [
@@ -63,7 +68,13 @@ layers:
         );
         out center;
         '
-
+      style:
+        secondary_color: "ff00d2e7"
+        scale: 0.45
+        svg: |
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149.99246 120.00375">
+            <path fill="{secondary_color}" d="M 61.908,0.662 L 74.621,43.657 L 88.337,0.662 L 124.134,0.662 L 149.341,86.452 L 118.781,86.452 L 107.235,43.855 L 95.567,86.452 L 54.213,86.452 L 42.826,44.894 L 31.220,86.452 L 0.659,86.452 L 24.568,0.662 L 61.908,0.662 z"/>
+          </svg>
   Transit:
     rail_station:
       geom_type: "points"
@@ -84,3 +95,11 @@ layers:
           );
           out geom;
           '
+      style:
+        color: "ff17c9ff"
+        secondary_color: "ff823000"
+        scale: 0.7
+        svg: |
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="17.605821 7.442756 154.73988 60.445938">
+            <path fill="{secondary_color}" d="M 85.54072,36.507933 C 82.491655,33.494418 78.298475,31.63876 73.671792,31.63876 H 41.035986 l 12.096266,-12.089148 h 30.661386 c 1.322864,0.02129 2.509262,0.582647 3.369591,1.456135 l 17.818991,17.845104 c 3.04905,3.005397 7.24935,4.866507 11.87567,4.866507 h 32.65767 l -12.08915,12.096255 -30.66865,-0.01456 c -1.31432,-0.01456 -2.50924,-0.582666 -3.36958,-1.464668 z m 9.32669,26.407626 c 3.049047,3.100603 7.24934,5.012616 11.904547,5.034309 h 35.64758 l 30.21973,-30.226835 -30.21973,-30.2268525 H 125.31892 L 149.49817,31.643118 116.85694,31.6358 c -1.29301,0 -2.47939,-0.511581 -3.33971,-1.343302 L 95.535566,12.453854 C 92.478988,9.3830133 88.264452,7.4782458 83.605103,7.4427562 H 47.936544 L 17.722102,37.736134 47.936544,68.011328 h 17.0932 L 40.842436,43.822631 h 32.641523 c 1.293,0 2.464812,0.511576 3.33209,1.343297 z"/>
+          </svg>

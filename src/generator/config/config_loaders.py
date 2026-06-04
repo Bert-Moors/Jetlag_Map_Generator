@@ -96,4 +96,28 @@ def dict_to_datasource(name:str, data:dict) -> Datasource:
         loader = GeoJsonLoader(file)
     else:
         raise Exception(f"datasource {name} not configured properly")
-    return Datasource(loader, processors, name)
+    style = normalize_style(data.get("style", {}))
+    if color := data.get("style.color"):
+        style["color"] = color
+    if secondary_color := data.get("style.secondary_color"):
+        style["secondary_color"] = secondary_color
+    if href := data.get("style.href"):
+        style["href"] = href
+    if svg := data.get("style.svg"):
+        style["svg"] = svg
+    if scale := data.get("style.scale"):
+        style["scale"] = scale
+    return Datasource(loader, processors, name, style)
+
+def normalize_style(style: dict) -> dict:
+    normalized = {}
+    for key, value in style.items():
+        if value is not None:
+            normalized[key] = value
+            continue
+        if ":" not in key:
+            normalized[key] = value
+            continue
+        split_key, split_value = key.split(":", 1)
+        normalized[split_key.strip()] = split_value.strip().strip('"').strip("'")
+    return normalized

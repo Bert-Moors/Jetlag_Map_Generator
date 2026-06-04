@@ -22,6 +22,7 @@ class Generator:
                 frame = data.loader.load()
 
                 frame["type"] = data.name_type
+                self.__apply_style(frame, data)
                 self._gathered_data[layer.name][data.name_type] = frame
 
     def __process_data(self):
@@ -29,6 +30,7 @@ class Generator:
             for data in layer.datasources:
                 for processor in data.processors:
                     self._gathered_data[layer.name][data.name_type] = processor.process(self._gathered_data[layer.name][data.name_type])
+                self.__apply_style(self._gathered_data[layer.name][data.name_type], data)
             if layer.processors:
                 layer_frame = gpd.GeoDataFrame(pd.concat(self._gathered_data[layer.name].values()))
                 for processor in layer.processors:
@@ -43,3 +45,10 @@ class Generator:
             os.makedirs(self._output_path, exist_ok=False)
         for exporter in self._config.exporters:
             exporter.export(self._gathered_data.copy(), f"{self._output_path}/{self._config.name}")
+
+    def __apply_style(self, frame, data):
+        frame["style_color"] = data.style.get("color")
+        frame["style_secondary_color"] = data.style.get("secondary_color")
+        frame["style_href"] = data.style.get("href")
+        frame["style_svg"] = data.style.get("svg")
+        frame["style_scale"] = data.style.get("scale")
