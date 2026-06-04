@@ -131,7 +131,7 @@ class OpenStreetMapA3PdfExporter:
                 self._draw_geometry(draw, row["geometry"], color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
 
         font = ImageFont.load_default()
-        self._draw_scale_ruler(draw, font, scale, page_size)
+        self._draw_scale_ruler(draw, font, world_bounds, zoom, page_size)
         attribution = self.TILE_SERVERS[self._active_tile_server_name]["attribution"]
         draw.text((page_size[0] - max(205, len(attribution) * 6), page_size[1] - 18), attribution, fill=(30, 30, 30, 220), font=font)
         image.save(f"{output_path} OSM A3.pdf", "PDF", resolution=self.DPI)
@@ -255,13 +255,15 @@ class OpenStreetMapA3PdfExporter:
         lat = math.degrees(math.atan(math.sinh(n)))
         return lon, lat
 
-    def _draw_scale_ruler(self, draw, font, scale, page_size):
-        tick_km = self._scale_tick_km(scale)
-        tick_cm = tick_km * scale
+    def _draw_scale_ruler(self, draw, font, world_bounds, zoom, page_size):
+        width_km, _ = self._world_bounds_size_km(world_bounds, zoom)
         cm_to_px = self.DPI / 2.54
+        pixels_per_km = page_size[0] / width_km
+        cm_per_km = pixels_per_km / cm_to_px
+        tick_km = self._scale_tick_km(pixels_per_km, cm_to_px)
         x0 = round(1.2 * cm_to_px)
         y0 = page_size[1] - round(1.2 * cm_to_px)
-        tick_px = tick_cm * cm_to_px
+        tick_px = tick_km * pixels_per_km
         tick_count = 3
         line_width = 3
         label_color = (20, 20, 20, 230)
@@ -280,24 +282,25 @@ class OpenStreetMapA3PdfExporter:
             if tick == tick_count:
                 label = f"{label} km"
             draw.text((x, y0 + 10), label, fill=label_color, font=font, anchor="ma")
-        label_km = self._scale_label_km(scale)
-        label_cm = label_km * scale
-        draw.text((x0, y0 - 24), f"{self._format_km(label_cm)} cm = {self._format_km(label_km)} km", fill=label_color, font=font)
+        label_km = tick_km * 2
+        label_cm = label_km * cm_per_km
+        self._debug(f"Measured rendered scale: {cm_per_km:g} cm/km")
+        self._debug(f"Scale ruler label: {self._format_distance(label_cm)} cm = {self._format_distance(label_km)} km")
+        draw.text((x0, y0 - 24), f"{self._format_distance(label_cm)} cm = {self._format_distance(label_km)} km", fill=label_color, font=font)
 
-    def _scale_tick_km(self, scale):
+    def _scale_tick_km(self, pixels_per_km, cm_to_px):
+        min_tick_px = 1.25 * cm_to_px
         for tick_km in [0.1, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100]:
-            if tick_km * scale >= 1.25:
+            if tick_km * pixels_per_km >= min_tick_px:
                 return tick_km
         return 100
 
-    def _scale_label_km(self, scale):
-        for label_km in [0.2, 0.5, 1, 2, 5, 10, 20, 50, 100, 200]:
-            if label_km * scale >= 2.5:
-                return label_km
-        return 200
-
     def _format_km(self, value):
         return str(int(value)) if float(value).is_integer() else f"{value:g}"
+
+    def _format_distance(self, value):
+        rounded = round(value, 1)
+        return str(int(rounded)) if float(rounded).is_integer() else f"{rounded:g}"
 
     def _render_tiles(self, Image, world_bounds, zoom, page_size, output_path):
         min_x, min_y, max_x, max_y = world_bounds
