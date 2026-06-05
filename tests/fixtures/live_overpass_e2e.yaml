@@ -1,0 +1,17 @@
+config:
+  name: live-overpass-e2e
+  exporters:
+    - googleMMaps
+    - kmlHidingZones
+layers:
+  Transit:
+    station:
+      geom_type: points
+      query: |
+        [out:json][timeout:25];
+        node(44727803);
+        out;
+      processors:
+        - name: add_column
+          columns:
+            hiding_size: 75
