@@ -28,11 +28,11 @@ layers:
           name_list: ["De Montignyplein"]
         }
       ]
-      type: "tram"
       query:
         '
        [out:json][timeout:25];
-       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"]->.searchArea;
+       relation["name"="Zuid Holland"]->.NL;
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
        (
          node["railway"="tram_stop"](area.searchArea);
          way["railway"="tram_stop"](area.searchArea);
@@ -52,11 +52,11 @@ layers:
           name_list: ["Hoek van Holland Haven", "Hoek van Holland Strand"]
         }
       ]
-      type: "metro"
       query:
         '
         [out:json][timeout:25];
-        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"]->.searchArea;
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
         (
           node["railway"="stop"]["subway"="yes"](area.searchArea);
           way["railway"="stop"]["subway"="yes"](area.searchArea);
@@ -65,6 +65,25 @@ layers:
         '
 
   Transit:
+    airports:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      query:
+        '
+        [ out:json ][ timeout:60 ];
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+          (
+          node["aeroway"="aerodrome"]["name"~".*"](area.searchArea);
+          relation["aeroway"="aerodrome"]["name"~".*"](area.searchArea);
+          way["aeroway"="aerodrome"]["name"~".*"](area.searchArea);
+          );
+          out geom;
+          '
     rail_station:
       geom_type: "points"
       processors: [
@@ -72,11 +91,11 @@ layers:
           name: "name_based_deduplicate",
         },
       ]
-      type: "railway stations"
       query:
         '
         [ out:json ][ timeout:60 ];
-       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"]->.searchArea;
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
           (
           node["railway"="station"]["name"~".*"]["train"="yes"](area.searchArea);
           relation["railway"="station"]["name"~".*"]["train"="yes"](area.searchArea);
@@ -84,3 +103,193 @@ layers:
           );
           out geom;
           '
+  Admin_1st:
+    1st:
+      geom_type: "polygons"
+      query:
+        '
+        [ out:json ][ timeout:60 ];
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+        relation["name"~".*"]["admin_level"="8"]["boundary"="administrative"](area.searchArea);
+        
+          out geom;
+          '
+  Admin_2nd:
+    2nd:
+      geom_type: "polygons"
+      query:
+        '
+        [ out:json ][ timeout:60 ];
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+        relation["name"~".*"]["admin_level"="10"]["boundary"="administrative"](area.searchArea);
+        
+          out geom;
+          '
+  Natural:
+    Park:
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+       relation["name"="Zuid Holland"]->.NL;
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+
+        (
+        node["leisure"="park"]["name"~".*"](area.searchArea);
+        relation["leisure"="park"]["name"~".*"](area.searchArea);
+
+        way["leisure"="park"]["name"~".*"](area.searchArea);
+
+          );
+        out geom;
+        '
+  Places of Interest:
+    Zoo:
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+       relation["name"="Zuid Holland"]->.NL;
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+
+        (
+          node["tourism"="zoo"]["name"~".*"](area.searchArea);
+          relation["tourism"="zoo"]["name"~".*"](area.searchArea);
+          way["tourism"="zoo"]["name"~".*"](area.searchArea);
+        );
+        out geom;
+        '
+    Aquarium:
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        
+       relation["name"="Zuid Holland"]->.NL;
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+        (
+          node["tourism"="aquarium"]["name"~".*"](area.searchArea);
+          relation["tourism"="aquarium"]["name"~".*"](area.searchArea);
+          way["tourism"="aquarium"]["name"~".*"](area.searchArea);
+        );
+        out geom;
+        '
+    Golf Course:
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        
+       relation["name"="Zuid Holland"]->.NL;
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+        (
+          node["leisure"="golf_course"]["name"~".*"](area.searchArea);
+          relation["leisure"="golf_course"]["name"~".*"](area.searchArea);
+          way["leisure"="golf_course"]["name"~".*"](area.searchArea);
+        );
+        out geom;
+        '
+    Museum:
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        
+       relation["name"="Zuid Holland"]->.NL;
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+        (
+          node["tourism"="museum"]["name"~".*"](area.searchArea);
+          relation["tourism"="museum"]["name"~".*"](area.searchArea);
+          way["tourism"="museum"]["name"~".*"](area.searchArea);
+        );
+        out geom;
+        '
+    Cinema:
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        
+       relation["name"="Zuid Holland"]->.NL;
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+        (
+          node["amenity"="cinema"]["shop"!~"."]["name"~".*"](area.searchArea);
+          relation["amenity"="cinema"]["shop"!~"."]["name"~".*"](area.searchArea);
+          way["amenity"="cinema"]["shop"!~"."]["name"~".*"](area.searchArea);
+        );
+        out geom;
+        '
+  Public Utilities:
+    Hospital:
+      file: "input/rotterdam_hospitals.csv"
+      processors: [{"name":"lat_lon_to_points"}, {"name":"rename_column", "columns": {"Name":"name"}}]
+    Library:
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        relation["name"="Zuid Holland"]->.NL;
+       area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+        (
+          node["amenity"="library"]["shop"!~"."]["name"~".*"](area.searchArea);
+          relation["amenity"="library"]["shop"!~"."]["name"~".*"](area.searchArea);
+          way["amenity"="library"]["shop"!~"."]["name"~".*"](area.searchArea);
+        );
+        out geom;
+        '
+    Consulate:
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"Rotterdam|Schiedam|Spijkenisse|Capelle aan den IJssel|Poortugaal|Rhoon|Barendrecht|Maassluis|Vlaardingen"](area.NL)->.searchArea;
+        (
+          node["diplomatic"="consulate"]["shop"!~"."]["name"~".*"](area.searchArea);
+          relation["diplomatic"="consulate"]["shop"!~"."]["name"~".*"](area.searchArea);
+          way["diplomatic"="consulate"]["shop"!~"."]["name"~".*"](area.searchArea);
+        );
+        out geom;
+        '
