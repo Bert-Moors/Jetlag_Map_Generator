@@ -1,0 +1,74 @@
+config:
+  location: "H&S Arnhem Test"
+layers:
+  stops:
+    processors: [
+      {
+        name: "remove_overlapping_zones",
+        size: 250,
+
+        config: {
+          "rail_station": {
+            allowed_intrusion: 0,
+            size: 400,
+            importance: 2
+          },
+          "stops": {
+            allowed_intrusion: 200,
+            size: 250
+          }
+        }
+      },
+    ]
+    stops:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+          prefix_ignores: [ "Arnhem, ", "Velp, ", "Oosterbeek, " ]
+        },
+      ]
+      post_processors: [
+        {
+          name: "hiding_zones",
+          size: 200
+        }
+      ]
+      type: "bus stops"
+      query:
+        '
+        [out:json][timeout:60];
+        relation["type"="route"]["route"~"bus|trolleybus"]["ref"~"^(1|2|3|5|7|21|352)$"](51.9,5.819573,52.2,5.989762);
+        node(r)(51.9,5.819573,52.2,5.989762);
+        
+        out(51.9,5.819573,52.2,5.989762);
+        '
+      style.color: "ffa82d6f"
+      style.href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+    rail_station:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+        },
+      ]
+      post_processors: [
+        {
+          name: "hiding_zones",
+          size: 400
+        }
+      ]
+      type: "railway stations"
+      query:
+        '
+          [out:json][timeout:60];
+          relation["name"="Gelderland"];
+          relation(id=1434826,1434826,272939,2728474,418418);
+          map_to_area ->.p;
+          (
+            node["railway"="station"]["name"~".*"](area.p);
+            relation["railway"="station"]["name"~".*"](area.p);
+            way["railway"="station"]["name"~".*"](area.p);
+          );
+          out geom;
+        '

@@ -76,6 +76,8 @@ def dict_to_layer(name:str, data:dict) -> Layer:
     layer = Layer(name, processors)
     if data:
         for datasource_name, datasource_data in zip(data.keys(), data.values()):
+            if datasource_name == "processors":
+                continue
             layer.add_datasource(dict_to_datasource(datasource_name, datasource_data))
     else:
         raise Exception(f"Layer {name} has no datasources defined")
@@ -87,6 +89,7 @@ def dict_to_datasource(name:str, data:dict) -> Datasource:
     processors = []
     for proc in data.get("processors", []):
         processors.append(get_processor(proc))
+
     if query := data.get("query"):
         loader = OverpassLoader(query, data.get("geom_type"))
     elif file := data.get("file"):

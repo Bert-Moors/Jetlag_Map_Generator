@@ -1,5 +1,8 @@
+from processors.add_column import AddColumn
 from processors.average_stations_same_name import AverageStationsSameName
 from processors.hiding_zones import HidingZones
+from processors.remove_items_by_name import RemoveByNames
+from processors.remove_overlapping_zones import RemoveOverlappingZones
 from processors.rename import Rename
 
 
@@ -8,6 +11,9 @@ def get_processor(processor):
         "name_based_deduplicate": AverageStationsSameName,
         "hiding_zones": HidingZones,
         "rename_column": Rename,
+        "remove_by_names": RemoveByNames,
+        "remove_overlapping_zones": RemoveOverlappingZones,
+        "add_column":AddColumn,
     }
 
     return mp[processor.get("name")](processor)

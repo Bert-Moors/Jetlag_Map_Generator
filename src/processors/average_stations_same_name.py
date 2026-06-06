@@ -8,7 +8,7 @@ class AverageStationsSameName:
         self.prefix_ignores = config.get("prefix_ignores", [])
 
     def process(self, frame: pd.DataFrame)->pd.DataFrame:
-        new = geopandas.GeoDataFrame(columns=['name', 'geometry'])
+        new = geopandas.GeoDataFrame(columns=['name', 'geometry', 'type'])
         def namefix(rw):
             nm = rw.get('name','').upper()
             for ig in self.prefix_ignores:
@@ -18,5 +18,5 @@ class AverageStationsSameName:
         bframe = frame.dissolve(by='fixed_name')
 
         for x in bframe.iloc:
-            new.loc[len(new)]= {'name':x.get('name'), 'geometry': x["geometry"].centroid}
+            new.loc[len(new)]= {'name':x.get('name'), 'geometry': x["geometry"].centroid, 'type': x.get('type')}
         return new
