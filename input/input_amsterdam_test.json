@@ -1,0 +1,22 @@
+{
+  "location": "H+S Amsterdam Test",
+  "folders":
+    [
+
+      {
+        "name": "Admin Divisions",
+        "data": [
+          {
+            "geom_type": "border",
+              "processors":[
+              {
+                "name": "to_poly"
+              }
+          ],
+            "type": "3rd Admin Divisions",
+            "query": "[out:json][timeout:60];\nrelation[\"name\"=\"Amsterdam-Amstelland\"] -> .boundary;\n.boundary map_to_area -> .searcharea;\nrelation[\"name\"~\".*\"][\"admin_level\"=\"10\"][\"boundary\"=\"administrative\"](area.searcharea);\nout geom;",
+          }
+        ]
+      }
+    ]
+}

@@ -22,3 +22,12 @@ layers:
       ]
 
       file: "input/SL gemeentes.kml"
+    Postcodes:
+      file: "input/limburg_layers/Postcodes.kmz"
+  Transit Stops:
+    Bus:
+      file: "input/limburg_layers/Transit Stops.kmz"
+  Hiding Zones:
+    All:
+      style.width: 1
+      file: "input/limburg_layers/Hiding Zones.kmz"

@@ -1,0 +1,191 @@
+{
+  "location": "H+S Arnhem",
+  "folders":
+    [
+      {
+        "name": "Lines",
+        "data": [
+          {
+            "geom_type": "routes",
+            "type": "Line",
+            "query": " [out:json][timeout:60];\nrelation[\"type\"=\"route\"][\"route\"~\"bus|trolleybus\"][\"ref\"~\"^(1|2|3|5|6|7|21|352)$\"](51.9,5.819573,52.2,5.989762);\n\nout geom;",
+            "style": {
+              "color": "ffa82d6f"
+            }
+          }
+        ]
+      },
+   {
+        "name": "Stops",
+        "processors": [
+              {
+                "name":"name_based_deduplicate",
+                "prefix_ignores": ["Arnhem, ", "Oosterbeek, "]
+              }
+        ],
+        "data": [
+          {
+            "geom_type": "points",
+            "type": "Stops",
+
+
+            "query": " [out:json][timeout:60];\nrelation[\"type\"=\"route\"][\"route\"~\"bus|trolleybus\"][\"ref\"~\"^(1|2|3|5|7|21|352)$\"](51.9,5.819573,52.2,5.989762);\nnode(r)(51.9,5.819573,52.2,5.989762);\nout(51.9,5.819573,52.2,5.989762);",
+            "style": {
+              "color": "ffa82d6f",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+            }
+          }
+        ]
+      },
+        {
+        "name": "Hiding Zones",
+        "data": [
+          {
+            "processors": [
+                  {
+                    "name":"name_based_deduplicate",
+                    "prefix_ignores": ["Arnhem, ", "Oosterbeek, "]
+                  },
+              {
+                "name": "hiding_zones"
+              }
+            ],
+            "geom_type": "points",
+            "type": "Zones",
+            "query": " [out:json][timeout:60];\nrelation[\"type\"=\"route\"][\"route\"~\"bus|trolleybus\"][\"ref\"~\"^(1|2|3|5|7|21|352)$\"](51.9,5.819573,52.2,5.989762);\nnode(r)(51.9,5.819573,52.2,5.989762);\nout(51.9,5.819573,52.2,5.989762);",
+            "style": {
+              "color": "ffa82d6f",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+            }
+          }
+        ]
+      },
+
+
+      {
+        "name": "Play Area",
+        "data": [
+          {
+            "geom_type": "border",
+            "file": "inputs/play_area_custom.geojson",
+            "processors":[
+            {
+              "name": "rename_column",
+              "columns": {
+                "Name": "name"
+              }
+            }
+          ],
+            "type": "1st Division"
+          },
+           {
+            "geom_type": "border",
+            "file": "inputs/woonwijken.geojson",
+              "processors":[
+            {
+              "name": "rename_column",
+              "columns": {
+                "GEBIEDSNAAM": "name"
+              }
+            }
+          ],
+            "name_field": "GEBIEDSNAAM",
+            "type": "2nd Division"
+          }
+        ]
+      },
+      {
+        "name": "Points of Interest",
+                    "processors": [
+                  {
+                    "name":"name_based_deduplicate",
+                    "prefix_ignores": ["Arnhem, ", "Oosterbeek, "]
+                  }],
+        "data": [
+          {
+            "geom_type": "points",
+
+            "type": "Railway Stations",
+            "query": "    [out:json][timeout:60];\nrelation[\"name\"=\"Gelderland\"];\nrelation(id=1434826,1434826,272939,2728474,418418);\nmap_to_area ->.p;\n(\n\n\nnode[\"railway\"=\"station\"][\"name\"~\".*\"](area.p);\nrelation[\"railway\"=\"station\"][\"name\"~\".*\"](area.p);\nway[\"railway\"=\"station\"][\"name\"~\".*\"](area.p);\n );\nout center;\n\n\n ",
+                        "style": {
+              "color": "ff0000ff",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/rail.png"
+            }
+          },
+    {
+            "geom_type": "points",
+            "type": "Zoo",
+            "query": " [out:json][timeout:60];\nrelation[\"name\"=\"Gelderland\"];\nrelation(id=1434826,272939,2728474,418418);\nmap_to_area ->.p;\n(\n\n\n  way[\"tourism\"=\"zoo\"][\"name\"~\"Zoo\"](area.p);\n\n  );\nout center;\n\n\n ",
+                        "style": {
+              "color": "ff0000ff",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/rail.png"
+            }
+          },
+          {
+            "geom_type": "points",
+            "type": "Libraries",
+            "query": "    [out:json][timeout:60];\nrelation[\"name\"=\"Gelderland\"];\nrelation(id=1434826,272939,2728474,418418);\nmap_to_area ->.p;\n(\n\n\n//node[\"leisure\"=\"nature_reserve\"][\"name\"~\".*\"](51.93618,5.819573,52.025,5.989762);\n//relation[\"leisure\"=\"nature_reserve\"][\"name\"~\".*\"](51.93618,5.819573,52.025,5.989762);\n//way[\"leisure\"=\"nature_reserve\"][\"name\"~\".*\"](51.93618,5.819573,52.025,5.989762);\nnode[\"amenity\"=\"library\"][\"name\"~\".*\"](area.p);\nrelation[\"amenity\"=\"library\"][\"name\"~\".*\"](area.p);\n\nway[\"amenity\"=\"library\"][\"name\"~\".*\"](area.p);\n\n  );\nout geom;\n\n\n ",
+                        "style": {
+              "color": "ff0000ff",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/library.png"
+            }
+          },
+                  {
+            "geom_type": "points",
+            "type": "Cinemas",
+            "query": "    [out:json][timeout:60];\nrelation[\"name\"=\"Gelderland\"];\nrelation(id=1434826,272939,2728474,418418);\nmap_to_area ->.p;\n(\nnode[\"amenity\"=\"cinema\"][\"shop\"!~\".\"][\"name\"~\".*\"](area.p);\nrelation[\"amenity\"=\"cinema\"][\"shop\"!~\".\"][\"name\"~\".*\"](area.p);\n\nway[\"amenity\"=\"cinema\"][\"shop\"!~\".\"][\"name\"~\".*\"](area.p);\n\n  );\nout geom;\n\n\n ",
+                        "style": {
+              "color": "ff0000ff",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/movies.png"
+            }
+          },
+          {
+            "geom_type": "points",
+            "type": "Museums",
+            "query": "[out:json][timeout:60];\nrelation['name'='Gelderland'];\n(\n\nnode[\"tourism\"=\"museum\"][\"name\"~\".*\"](51.93618,5.819573,52.025,5.989762);\n way[\"tourism\"=\"museum\"][\"name\"~\".*\"](51.93618,5.819573,52.025,5.989762);\n  );\nout geom;\n\n",
+            "style": {
+              "color": "ff0000ff",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/museum.png"
+            }
+          },
+          {
+            "geom_type": "points",
+            "type": "Golf Clubs",
+            "query": "[out:json][timeout:60];\nrelation['name'='Gelderland'];\n(\n\nnode[\"leasure\"=\"golf_course\"](51.93618,5.819573,52.025,5.989762);\n way[\"leasure\"=\"golf_course\"](51.93618,5.819573,52.025,5.989762);\n  relation[\"leisure\"=\"golf_course\"](51.93618,5.819573,52.025,5.989762);\n  way[\"name\"=\"Rosendaelsche Golfclub\"];\n\n  );\nout geom;\n\n",
+            "style": {
+              "color": "ff00ff00",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/golf.png"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Natural",
+               "processors": [
+                  {
+                    "name":"name_based_deduplicate",
+                    "prefix_ignores": ["Arnhem, ", "Oosterbeek, "]
+                  }],
+        "data": [
+            {
+            "geom_type": "points",
+            "type": "\"Mountains\"",
+            "query": "[out:json][timeout:60];\nrelation['name'='Gelderland'];\nrelation(id=1434826,2728474,1434826, 272939);\nmap_to_area ->.p;\n(\n\nnode[\"natural\"=\"peak\"][\"name\"~\".*\"](if: t[\"ele\"] > 45)(area.p);\n\n\n  );\nout geom;\n\n",
+              "style": {
+              "color": "ff00ff00",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/mountains.png"
+            }
+          },
+             {
+            "geom_type": "points",
+            "type": "Parks",
+            "query": "[out:json][timeout:60];\nrelation[\"name\"=\"Gelderland\"];\nrelation(id=1434826,272939,2728474,418418);\nmap_to_area ->.p;\n(\nnode[\"leisure\"=\"park\"][\"name\"~\".*\"](area.p);\nrelation[\"leisure\"=\"park\"][\"name\"~\".*\"](area.p);\n\nway[\"leisure\"=\"park\"][\"name\"~\".*\"](area.p);\n\n  );\nout geom;\n\n\n ",
+             "style": {
+              "color": "ff00ff00",
+              "href": "https://maps.google.com/mapfiles/kml/shapes/parks.png"
+            }
+          }
+        ]
+      }
+    ]
+}
