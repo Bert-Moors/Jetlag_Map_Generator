@@ -3,6 +3,7 @@ import math
 import os
 import re
 import xml.etree.ElementTree as ElementTree
+import zlib
 from pathlib import Path
 
 import geopandas as gpd
@@ -78,7 +79,7 @@ class OpenStreetMapA3PdfExporter:
             "subdomains": [""],
         },
     }
-    DEFAULT_TILE_SERVER = "carto_light"
+    DEFAULT_TILE_SERVER = "carto_voyager"
     FALLBACK_TILE_SERVERS = ["carto_light", "carto_voyager", "osm_de", "opentopomap"]
     USER_AGENT = "JetlagMapGenerator/1.0 (+https://www.openstreetmap.org/copyright)"
     TILE_SIZE = 256
@@ -809,9 +810,7 @@ class OpenStreetMapA3PdfExporter:
         if not vector_elements and not label_elements and not legend_entries:
             image.save(pdf_path, "PDF", resolution=self.DPI)
             return
-        image_data = io.BytesIO()
-        image.convert("RGB").save(image_data, "JPEG", quality=95, subsampling=0)
-        image_bytes = image_data.getvalue()
+        image_bytes = zlib.compress(image.convert("RGB").tobytes(), level=9)
         page_width = self.A3_LANDSCAPE_MM[0] / 25.4 * 72
         page_height = self.A3_LANDSCAPE_MM[1] / 25.4 * 72
         content = self._pdf_content_stream(vector_elements, label_elements, legend_entries, page_size, page_width, page_height)
@@ -983,7 +982,7 @@ class OpenStreetMapA3PdfExporter:
             b"<< /Length " + str(len(content)).encode("ascii") + b" >>\nstream\n" + content + b"endstream",
             (
                 f"<< /Type /XObject /Subtype /Image /Width {image_width} /Height {image_height} "
-                f"/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length {len(image_bytes)} >>\nstream\n"
+                f"/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /FlateDecode /Length {len(image_bytes)} >>\nstream\n"
             ).encode("ascii") + image_bytes + b"\nendstream",
             b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>",
         ]
