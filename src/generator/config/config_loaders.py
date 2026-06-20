@@ -107,6 +107,8 @@ def dict_to_datasource(name:str, data:dict) -> Datasource:
         style["svg"] = svg
     if scale := data.get("style.scale"):
         style["scale"] = scale
+    if width := data.get("style.width"):
+        style["width"] = width
     return Datasource(loader, processors, name, style)
 
 def normalize_style(style: dict) -> dict:

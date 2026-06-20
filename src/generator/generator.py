@@ -52,3 +52,4 @@ class Generator:
         frame["style_href"] = data.style.get("href")
         frame["style_svg"] = data.style.get("svg")
         frame["style_scale"] = data.style.get("scale")
+        frame["style_width"] = data.style.get("width")

@@ -213,15 +213,13 @@ class OpenStreetMapA3PdfExporter:
         current_scale = self.A3_LANDSCAPE_MM[0] / 10 / width_km
         rounded_scale = self._nice_scale(current_scale)
         desired_width_km = self.A3_LANDSCAPE_MM[0] / 10 / rounded_scale
-        shrink = desired_width_km / width_km
-        if shrink >= 1:
-            return world_bounds, rounded_scale
+        scale = desired_width_km / width_km
 
         min_x, min_y, max_x, max_y = world_bounds
         center_x = (min_x + max_x) / 2
         center_y = (min_y + max_y) / 2
-        width = (max_x - min_x) * shrink
-        height = (max_y - min_y) * shrink
+        width = (max_x - min_x) * scale
+        height = (max_y - min_y) * scale
         return (
             center_x - width / 2,
             center_y - height / 2,
@@ -232,10 +230,12 @@ class OpenStreetMapA3PdfExporter:
     def _nice_scale(self, scale):
         exponent = math.floor(math.log10(scale)) if scale > 0 else 0
         base = 10 ** exponent
+        previous = base
         for multiplier in [1, 1.5, 2, 2.5, 3, 4, 5, 7.5, 10]:
             nice = multiplier * base
-            if scale <= nice:
-                return nice
+            if nice > scale:
+                return previous
+            previous = nice
         return 10 * base
 
     def _world_bounds_size_km(self, world_bounds, zoom):
