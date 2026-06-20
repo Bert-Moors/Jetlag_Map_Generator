@@ -84,7 +84,7 @@ class OpenStreetMapA3PdfExporter:
     TILE_SIZE = 256
     A3_LANDSCAPE_MM = (420, 297)
     DPI = 300
-    MAX_TILES = 80
+    MAX_TILES = 700
     GEOD = Geod(ellps="WGS84")
 
     def export(self, data: dict, output_path):
@@ -109,12 +109,18 @@ class OpenStreetMapA3PdfExporter:
         zoom = self._choose_zoom(bounds, page_size)
         world_bounds = self._world_bounds_for_page(bounds, zoom, page_size)
         world_bounds, scale = self._round_world_bounds_to_scale(world_bounds, zoom)
+        final_zoom = self._choose_zoom_for_world_bounds(world_bounds, zoom)
+        if final_zoom != zoom:
+            zoom_factor = 2 ** (final_zoom - zoom)
+            world_bounds = tuple(value * zoom_factor for value in world_bounds)
+            zoom = final_zoom
         tile_range = self._world_tile_range(world_bounds, zoom)
         tile_count = (tile_range[2] - tile_range[0] + 1) * (tile_range[3] - tile_range[1] + 1)
+        source_size = (round(world_bounds[2] - world_bounds[0]), round(world_bounds[3] - world_bounds[1]))
         self._debug(f"Input bounds lon/lat: {bounds}")
         self._debug(f"A3 page size: {page_size[0]}x{page_size[1]} px at {self.DPI} DPI")
         self._debug(f"Rounded map scale: {scale:g} cm/km")
-        self._debug(f"Selected zoom {zoom}; fetching/compositing {tile_count} tile(s)")
+        self._debug(f"Selected zoom {zoom}; source map area {source_size[0]}x{source_size[1]} px; fetching/compositing {tile_count} tile(s)")
         image = self._render_tiles(Image, world_bounds, zoom, page_size, output_path)
 
         self._image = image
@@ -169,6 +175,15 @@ class OpenStreetMapA3PdfExporter:
     def _choose_zoom(self, bounds, page_size):
         for zoom in range(18, 0, -1):
             min_x, min_y, max_x, max_y = self._world_tile_range(self._world_bounds_for_page(bounds, zoom, page_size), zoom)
+            if (max_x - min_x + 1) * (max_y - min_y + 1) <= self.MAX_TILES:
+                return zoom
+        return 1
+
+    def _choose_zoom_for_world_bounds(self, world_bounds, current_zoom):
+        for zoom in range(18, 0, -1):
+            zoom_factor = 2 ** (zoom - current_zoom)
+            scaled_bounds = tuple(value * zoom_factor for value in world_bounds)
+            min_x, min_y, max_x, max_y = self._world_tile_range(scaled_bounds, zoom)
             if (max_x - min_x + 1) * (max_y - min_y + 1) <= self.MAX_TILES:
                 return zoom
         return 1
@@ -715,15 +730,6 @@ class OpenStreetMapA3PdfExporter:
         outline = self._coords_to_page(polygon.exterior.coords, zoom, world_bounds, page_size)
         if len(outline) < 3:
             return
-        fill = (color[0], color[1], color[2], 70)
-        overlay = self._Image.new("RGBA", page_size, (0, 0, 0, 0))
-        overlay_draw = self._ImageDraw.Draw(overlay)
-        overlay_draw.polygon(outline, fill=fill)
-        for interior in polygon.interiors:
-            hole = self._coords_to_page(interior.coords, zoom, world_bounds, page_size)
-            if len(hole) >= 3:
-                overlay_draw.polygon(hole, fill=(0, 0, 0, 0))
-        self._image.alpha_composite(overlay)
         draw.line(outline, fill=color, width=stroke_width or 2, joint="curve")
 
     def _coords_to_page(self, coords, zoom, world_bounds, page_size):
