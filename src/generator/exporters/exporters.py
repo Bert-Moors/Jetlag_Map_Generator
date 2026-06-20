@@ -1,4 +1,3 @@
-import base64
 import io
 import math
 import os
@@ -109,7 +108,7 @@ class OpenStreetMapA3PdfExporter:
         page_size = self._page_size_px()
         zoom = self._choose_zoom(bounds, page_size)
         world_bounds = self._world_bounds_for_page(bounds, zoom, page_size)
-        world_bounds, scale = self._round_world_bounds_to_scale(world_bounds, zoom)
+        world_bounds, map_scale = self._round_world_bounds_to_scale(world_bounds, zoom)
         final_zoom = self._choose_zoom_for_world_bounds(world_bounds, zoom)
         if final_zoom != zoom:
             zoom_factor = 2 ** (final_zoom - zoom)
@@ -120,7 +119,7 @@ class OpenStreetMapA3PdfExporter:
         source_size = (round(world_bounds[2] - world_bounds[0]), round(world_bounds[3] - world_bounds[1]))
         self._debug(f"Input bounds lon/lat: {bounds}")
         self._debug(f"A3 page size: {page_size[0]}x{page_size[1]} px at {self.DPI} DPI")
-        self._debug(f"Rounded map scale: {scale:g} cm/km")
+        self._debug(f"Rounded map scale: {map_scale:g} cm/km")
         self._debug(f"Selected zoom {zoom}; source map area {source_size[0]}x{source_size[1]} px; fetching/compositing {tile_count} tile(s)")
         image = self._render_tiles(Image, world_bounds, zoom, page_size, output_path)
 
@@ -136,14 +135,14 @@ class OpenStreetMapA3PdfExporter:
                 secondary_color = self._row_secondary_color(row, (255, 255, 255, 240))
                 icon_href = row.get("style_href")
                 svg = row.get("style_svg")
-                scale = self._row_scale(row)
+                marker_scale = self._row_scale(row)
                 stroke_width = self._row_width(row)
                 geometry = row["geometry"]
                 vector_elements.extend(self._geometry_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width))
-                self._draw_point_geometry(draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
+                self._draw_point_geometry(draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, marker_scale)
 
         font = ImageFont.load_default()
-        self._draw_scale_ruler(draw, font, scale, page_size)
+        self._draw_scale_ruler(draw, font, map_scale, page_size)
         attribution = self.TILE_SERVERS[self._active_tile_server_name]["attribution"]
         draw.text((page_size[0] - max(205, len(attribution) * 6), page_size[1] - 18), attribution, fill=(30, 30, 30, 220), font=font)
         self._save_pdf(image, vector_elements, page_size, output_path)
@@ -730,25 +729,66 @@ class OpenStreetMapA3PdfExporter:
         if not vector_elements:
             image.save(pdf_path, "PDF", resolution=self.DPI)
             return
-        try:
-            import cairosvg
-        except ImportError:
-            self._debug("CairoSVG is unavailable; saving raster-only PDF")
-            image.save(pdf_path, "PDF", resolution=self.DPI)
-            return
+        image_data = io.BytesIO()
+        image.convert("RGB").save(image_data, "JPEG", quality=95, subsampling=0)
+        image_bytes = image_data.getvalue()
+        page_width = self.A3_LANDSCAPE_MM[0] / 25.4 * 72
+        page_height = self.A3_LANDSCAPE_MM[1] / 25.4 * 72
+        content = self._pdf_content_stream(vector_elements, page_size, page_width, page_height)
+        self._write_pdf(pdf_path, image_bytes, page_size, page_width, page_height, content)
 
-        png = io.BytesIO()
-        image.save(png, "PNG")
-        image_data = base64.b64encode(png.getvalue()).decode("ascii")
+    def _pdf_content_stream(self, vector_elements, page_size, page_width, page_height):
         width, height = page_size
-        svg = (
-            f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.A3_LANDSCAPE_MM[0]}mm" '
-            f'height="{self.A3_LANDSCAPE_MM[1]}mm" viewBox="0 0 {width} {height}">'
-            f'<image href="data:image/png;base64,{image_data}" x="0" y="0" width="{width}" height="{height}"/>'
-            f'{"".join(vector_elements)}'
-            '</svg>'
+        parts = [f"q\n{page_width:.4f} 0 0 {page_height:.4f} 0 0 cm\n/Im0 Do\nQ\n"]
+        for element in vector_elements:
+            color = element["color"]
+            stroke_width = element["stroke_width"] / width * page_width
+            r, g, b = color[0] / 255, color[1] / 255, color[2] / 255
+            parts.append(f"{r:.4f} {g:.4f} {b:.4f} RG\n{stroke_width:.4f} w\n1 J\n1 j\n")
+            for index, (x, y) in enumerate(element["points"]):
+                pdf_x = x / width * page_width
+                pdf_y = page_height - (y / height * page_height)
+                operator = "m" if index == 0 else "l"
+                parts.append(f"{pdf_x:.4f} {pdf_y:.4f} {operator}\n")
+            if element["close"]:
+                parts.append("h\n")
+            parts.append("S\n")
+        return "".join(parts).encode("ascii")
+
+    def _write_pdf(self, pdf_path, image_bytes, page_size, page_width, page_height, content):
+        image_width, image_height = page_size
+        objects = [
+            b"<< /Type /Catalog /Pages 2 0 R >>",
+            b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
+            (
+                f"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {page_width:.4f} {page_height:.4f}] "
+                "/Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>"
+            ).encode("ascii"),
+            b"<< /Length " + str(len(content)).encode("ascii") + b" >>\nstream\n" + content + b"endstream",
+            (
+                f"<< /Type /XObject /Subtype /Image /Width {image_width} /Height {image_height} "
+                f"/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length {len(image_bytes)} >>\nstream\n"
+            ).encode("ascii") + image_bytes + b"\nendstream",
+        ]
+        pdf = bytearray(b"%PDF-1.4\n")
+        offsets = [0]
+        for index, obj in enumerate(objects, start=1):
+            offsets.append(len(pdf))
+            pdf.extend(f"{index} 0 obj\n".encode("ascii"))
+            pdf.extend(obj)
+            pdf.extend(b"\nendobj\n")
+        xref_offset = len(pdf)
+        pdf.extend(f"xref\n0 {len(objects) + 1}\n".encode("ascii"))
+        pdf.extend(b"0000000000 65535 f \n")
+        for offset in offsets[1:]:
+            pdf.extend(f"{offset:010d} 00000 n \n".encode("ascii"))
+        pdf.extend(
+            (
+                f"trailer\n<< /Size {len(objects) + 1} /Root 1 0 R >>\n"
+                f"startxref\n{xref_offset}\n%%EOF\n"
+            ).encode("ascii")
         )
-        cairosvg.svg2pdf(bytestring=svg.encode("utf-8"), write_to=pdf_path)
+        Path(pdf_path).write_bytes(pdf)
 
     def _draw_point_geometry(self, draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href=None, svg=None, scale=1.0):
         if geometry is None or geometry.is_empty:
@@ -768,13 +808,15 @@ class OpenStreetMapA3PdfExporter:
             return []
         match geometry:
             case LineString():
-                return [self._line_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width)]
+                element = self._line_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width)
+                return [element] if element else []
             case ShapelyMultiLineString():
-                return [self._line_to_svg(line, color, zoom, world_bounds, page_size, stroke_width) for line in geometry.geoms]
+                return [element for line in geometry.geoms if (element := self._line_to_svg(line, color, zoom, world_bounds, page_size, stroke_width))]
             case Polygon():
-                return [self._polygon_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width)]
+                element = self._polygon_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width)
+                return [element] if element else []
             case MultiPolygon():
-                return [self._polygon_to_svg(polygon, color, zoom, world_bounds, page_size, stroke_width) for polygon in geometry.geoms]
+                return [element for polygon in geometry.geoms if (element := self._polygon_to_svg(polygon, color, zoom, world_bounds, page_size, stroke_width))]
             case GeometryCollection():
                 elements = []
                 for child in geometry.geoms:
@@ -785,28 +827,14 @@ class OpenStreetMapA3PdfExporter:
     def _line_to_svg(self, line, color, zoom, world_bounds, page_size, stroke_width=None):
         points = self._coords_to_page(line.coords, zoom, world_bounds, page_size)
         if len(points) < 2:
-            return ""
-        return self._svg_path(self._points_to_path(points), color, stroke_width or 5)
+            return None
+        return {"points": points, "close": False, "color": color, "stroke_width": stroke_width or 5}
 
     def _polygon_to_svg(self, polygon, color, zoom, world_bounds, page_size, stroke_width=None):
         outline = self._coords_to_page(polygon.exterior.coords, zoom, world_bounds, page_size)
         if len(outline) < 3:
-            return ""
-        return self._svg_path(self._points_to_path(outline, close=True), color, stroke_width or 2)
-
-    def _points_to_path(self, points, close=False):
-        commands = [f"M {points[0][0]:.2f} {points[0][1]:.2f}"]
-        commands.extend(f"L {x:.2f} {y:.2f}" for x, y in points[1:])
-        if close:
-            commands.append("Z")
-        return " ".join(commands)
-
-    def _svg_path(self, path, color, stroke_width):
-        return (
-            f'<path d="{path}" fill="none" stroke="{self._rgba_to_hex(color)}" '
-            f'stroke-opacity="{color[3] / 255:.3f}" stroke-width="{stroke_width}" '
-            'stroke-linejoin="round" stroke-linecap="round"/>'
-        )
+            return None
+        return {"points": outline, "close": True, "color": color, "stroke_width": stroke_width or 2}
 
     def _draw_line(self, draw, line, color, zoom, world_bounds, page_size, stroke_width=None):
         points = self._coords_to_page(line.coords, zoom, world_bounds, page_size)
