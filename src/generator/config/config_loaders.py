@@ -109,6 +109,20 @@ def dict_to_datasource(name:str, data:dict) -> Datasource:
         style["scale"] = scale
     if width := data.get("style.width"):
         style["width"] = width
+    if ignore_for_map_boundaries := data.get("style.ignore_for_map_boundaries"):
+        style["ignore_for_map_boundaries"] = ignore_for_map_boundaries
+    if with_label := data.get("style.with_label"):
+        style["with_label"] = with_label
+    if fixed_label := data.get("style.fixed_label"):
+        style["fixed_label"] = fixed_label
+    if label_size := data.get("style.label_size"):
+        style["label_size"] = label_size
+    if label_direction := data.get("style.label_direction"):
+        style["label_direction"] = label_direction
+    if type_to_color := data.get("style.type_to_color"):
+        style["type_to_color"] = type_to_color
+    if dotted := data.get("style.dotted"):
+        style["dotted"] = dotted
     return Datasource(loader, processors, name, style)
 
 def normalize_style(style: dict) -> dict:

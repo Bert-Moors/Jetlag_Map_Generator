@@ -128,7 +128,9 @@ class OpenStreetMapA3PdfExporter:
         self._ImageDraw = ImageDraw
         draw = ImageDraw.Draw(image, "RGBA")
         color_map = self._datatype_colors(frames)
+        legend_entries = self._legend_entries(frames, color_map)
         vector_elements = []
+        label_elements = []
         for _, datatype, frame in frames:
             for _, row in frame.iterrows():
                 color = self._row_color(row, color_map[datatype])
@@ -137,15 +139,19 @@ class OpenStreetMapA3PdfExporter:
                 svg = row.get("style_svg")
                 marker_scale = self._row_scale(row)
                 stroke_width = self._row_width(row)
+                dotted = self._row_dotted(row)
                 geometry = row["geometry"]
-                vector_elements.extend(self._geometry_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width))
+                vector_elements.extend(self._geometry_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width, dotted))
+                if self._row_with_label(row):
+                    label_elements.extend(self._geometry_to_labels(row, geometry, zoom, world_bounds, page_size))
+                label_elements.extend(self._geometry_to_fixed_labels(row, geometry, zoom, world_bounds, page_size))
                 self._draw_point_geometry(draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, marker_scale)
 
         font = ImageFont.load_default()
         self._draw_scale_ruler(draw, font, map_scale, page_size)
         attribution = self.TILE_SERVERS[self._active_tile_server_name]["attribution"]
         draw.text((page_size[0] - max(205, len(attribution) * 6), page_size[1] - 18), attribution, fill=(30, 30, 30, 220), font=font)
-        self._save_pdf(image, vector_elements, page_size, output_path)
+        self._save_pdf(image, vector_elements, label_elements, legend_entries, page_size, output_path)
         self._debug(f"Saved PDF: {output_path} OSM A3.pdf")
 
     def _flatten_frames(self, data):
@@ -163,7 +169,10 @@ class OpenStreetMapA3PdfExporter:
         return frames
 
     def _calculate_bounds(self, frames):
-        combined = gpd.GeoDataFrame(pd.concat([frame for _, _, frame in frames]), crs="EPSG:4326")
+        bounds_frames = [frame for _, _, frame in frames if not self._frame_ignored_for_map_boundaries(frame)]
+        if not bounds_frames:
+            bounds_frames = [frame for _, _, frame in frames]
+        combined = gpd.GeoDataFrame(pd.concat(bounds_frames), crs="EPSG:4326")
         min_lon, min_lat, max_lon, max_lat = combined.total_bounds
         if min_lon == max_lon:
             min_lon -= 0.01
@@ -174,6 +183,16 @@ class OpenStreetMapA3PdfExporter:
         lon_padding = (max_lon - min_lon) * 0.05
         lat_padding = (max_lat - min_lat) * 0.05
         return (min_lon - lon_padding, min_lat - lat_padding, max_lon + lon_padding, max_lat + lat_padding)
+
+    def _frame_ignored_for_map_boundaries(self, frame):
+        if "style_ignore_for_map_boundaries" not in frame.columns or frame.empty:
+            return False
+        value = frame["style_ignore_for_map_boundaries"].iloc[0]
+        if value is None or pd.isna(value):
+            return False
+        if isinstance(value, bool):
+            return value
+        return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
 
     def _choose_zoom(self, bounds, page_size):
         for zoom in range(18, 0, -1):
@@ -422,6 +441,10 @@ class OpenStreetMapA3PdfExporter:
         return (round((r + m) * 255), round((g + m) * 255), round((b + m) * 255), 235)
 
     def _row_color(self, row, fallback):
+        type_to_color = row.get("style_type_to_color")
+        row_type = row.get("type")
+        if isinstance(type_to_color, dict) and row_type in type_to_color:
+            return self._kml_color_to_rgba(str(type_to_color[row_type]), fallback)
         color = row.get("style_color")
         if not color or pd.isna(color):
             return fallback
@@ -462,6 +485,63 @@ class OpenStreetMapA3PdfExporter:
         if not width or pd.isna(width):
             return None
         return max(round(float(width)), 1)
+
+    def _row_with_label(self, row):
+        value = row.get("style_with_label")
+        if value is None or pd.isna(value):
+            return False
+        if isinstance(value, bool):
+            return value
+        return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
+
+    def _row_dotted(self, row):
+        value = row.get("style_dotted")
+        if value is None or pd.isna(value):
+            return False
+        if isinstance(value, bool):
+            return value
+        return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
+
+    def _row_label_size(self, row):
+        size = row.get("style_label_size")
+        if not size or pd.isna(size):
+            size = 12
+        return max(float(size) * 0.7, 1)
+
+    def _row_label_direction(self, row):
+        direction = row.get("style_label_direction")
+        if not direction or pd.isna(direction):
+            return 0.0
+        return float(direction)
+
+    def _row_fixed_label(self, row):
+        label = row.get("style_fixed_label")
+        if not label or pd.isna(label):
+            return None
+        return str(label).strip()[:1]
+
+    def _legend_entries(self, frames, color_map):
+        entries = []
+        for layer_name, datatype, frame in frames:
+            row = frame.iloc[0]
+            entries.append({
+                "layer": layer_name,
+                "name": str(datatype),
+                "shape": self._legend_shape(frame),
+                "color": self._row_color(row, color_map[datatype]),
+                "stroke_width": self._row_width(row) or 2,
+                "dotted": self._row_dotted(row),
+                "fixed_label": self._row_fixed_label(row),
+            })
+        return entries
+
+    def _legend_shape(self, frame):
+        geometry_types = set(frame.geometry.geom_type.dropna())
+        if geometry_types & {"LineString", "MultiLineString"}:
+            return "line"
+        if geometry_types & {"Polygon", "MultiPolygon"}:
+            return "polygon"
+        return "point"
 
     def _draw_geometry(self, draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href=None, svg=None, scale=1.0, stroke_width=None):
         if geometry is None or geometry.is_empty:
@@ -724,9 +804,9 @@ class OpenStreetMapA3PdfExporter:
         self._icon_cache[icon_href] = icon
         return icon
 
-    def _save_pdf(self, image, vector_elements, page_size, output_path):
+    def _save_pdf(self, image, vector_elements, label_elements, legend_entries, page_size, output_path):
         pdf_path = f"{output_path} OSM A3.pdf"
-        if not vector_elements:
+        if not vector_elements and not label_elements and not legend_entries:
             image.save(pdf_path, "PDF", resolution=self.DPI)
             return
         image_data = io.BytesIO()
@@ -734,17 +814,18 @@ class OpenStreetMapA3PdfExporter:
         image_bytes = image_data.getvalue()
         page_width = self.A3_LANDSCAPE_MM[0] / 25.4 * 72
         page_height = self.A3_LANDSCAPE_MM[1] / 25.4 * 72
-        content = self._pdf_content_stream(vector_elements, page_size, page_width, page_height)
+        content = self._pdf_content_stream(vector_elements, label_elements, legend_entries, page_size, page_width, page_height)
         self._write_pdf(pdf_path, image_bytes, page_size, page_width, page_height, content)
 
-    def _pdf_content_stream(self, vector_elements, page_size, page_width, page_height):
+    def _pdf_content_stream(self, vector_elements, label_elements, legend_entries, page_size, page_width, page_height):
         width, height = page_size
         parts = [f"q\n{page_width:.4f} 0 0 {page_height:.4f} 0 0 cm\n/Im0 Do\nQ\n"]
         for element in vector_elements:
             color = element["color"]
             stroke_width = element["stroke_width"] / width * page_width
             r, g, b = color[0] / 255, color[1] / 255, color[2] / 255
-            parts.append(f"{r:.4f} {g:.4f} {b:.4f} RG\n{stroke_width:.4f} w\n1 J\n1 j\n")
+            dash = f"[0 {stroke_width * 2:.4f}] 0 d\n" if element.get("dotted") else "[] 0 d\n"
+            parts.append(f"{r:.4f} {g:.4f} {b:.4f} RG\n{stroke_width:.4f} w\n1 J\n1 j\n{dash}")
             for index, (x, y) in enumerate(element["points"]):
                 pdf_x = x / width * page_width
                 pdf_y = page_height - (y / height * page_height)
@@ -753,7 +834,142 @@ class OpenStreetMapA3PdfExporter:
             if element["close"]:
                 parts.append("h\n")
             parts.append("S\n")
-        return "".join(parts).encode("ascii")
+        for label in label_elements:
+            x, y = label["point"]
+            pdf_x = x / width * page_width
+            pdf_y = page_height - (y / height * page_height)
+            size = label["size"]
+            angle = math.radians(-label["direction"])
+            cos_angle = math.cos(angle)
+            sin_angle = math.sin(angle)
+            text = self._pdf_escape_text(label["text"])
+            label_width = len(label["text"]) * size * 0.5
+            align = label.get("align", "center")
+            anchor_x = 0 if align == "left" else -label_width / 2
+            anchor_y = -size / 2
+            offset_x = anchor_x * cos_angle - anchor_y * sin_angle
+            offset_y = anchor_x * sin_angle + anchor_y * cos_angle
+            if label["text"].startswith("✈"):
+                parts.append(self._pdf_plane_icon(pdf_x + offset_x, pdf_y + offset_y, size))
+                continue
+            parts.append(
+                "q\nBT\n"
+                f"/F1 {size:.4f} Tf\n"
+                "0 0 0 rg\n"
+                f"{cos_angle:.6f} {sin_angle:.6f} {-sin_angle:.6f} {cos_angle:.6f} {pdf_x + offset_x:.4f} {pdf_y + offset_y:.4f} Tm\n"
+                f"({text}) Tj\n"
+                "ET\nQ\n"
+            )
+        parts.append(self._pdf_legend(legend_entries, page_width, page_height))
+        return "".join(parts).encode("cp1252", errors="replace")
+
+    def _pdf_legend(self, entries, page_width, page_height):
+        if not entries:
+            return ""
+        groups = []
+        for entry in entries:
+            if not groups or groups[-1][0] != entry["layer"]:
+                groups.append((entry["layer"], []))
+            groups[-1][1].append(entry)
+
+        width = 185
+        margin = 16
+        top_padding = 10
+        row_height = 10.5
+        heading_height = 12
+        height = top_padding * 2 + sum(heading_height + len(group_entries) * row_height for _, group_entries in groups)
+        x = page_width - margin - width
+        y = 30
+        parts = [
+            "q\n",
+            "1 1 1 rg\n0.88 0.88 0.88 RG\n0.6 w\n",
+            f"{x:.4f} {y:.4f} {width:.4f} {height:.4f} re\nB\n",
+        ]
+        cursor = y + height - top_padding - 7
+        for layer_name, group_entries in groups:
+            parts.append(self._pdf_text_at(layer_name, x + 8, cursor, 7.4, bold=True))
+            cursor -= heading_height
+            for entry in group_entries:
+                sample_x = x + 14
+                sample_y = cursor + 3
+                text_x = x + 32
+                parts.append(self._pdf_legend_sample(entry, sample_x, sample_y))
+                parts.append(self._pdf_text_at(entry["name"], text_x, cursor, 6.7))
+                cursor -= row_height
+        parts.append("Q\n")
+        return "".join(parts)
+
+    def _pdf_legend_sample(self, entry, x, y):
+        color = entry["color"]
+        r, g, b = color[0] / 255, color[1] / 255, color[2] / 255
+        if entry["shape"] == "line":
+            width = max(entry["stroke_width"] * 0.7, 0.5)
+            dash = f"[0 {width * 2:.4f}] 0 d\n" if entry["dotted"] else "[] 0 d\n"
+            return (
+                "q\n"
+                f"{r:.4f} {g:.4f} {b:.4f} RG\n{width:.4f} w\n1 J\n1 j\n{dash}"
+                f"{x - 8:.4f} {y:.4f} m\n{x + 8:.4f} {y:.4f} l\nS\nQ\n"
+            )
+        if entry["shape"] == "polygon":
+            return (
+                "q\n"
+                f"{r:.4f} {g:.4f} {b:.4f} RG\n0.9 w\n[] 0 d\n"
+                f"{x - 6:.4f} {y - 4:.4f} m\n{x + 6:.4f} {y - 4:.4f} l\n{x + 6:.4f} {y + 4:.4f} l\n{x - 6:.4f} {y + 4:.4f} l\nh\nS\nQ\n"
+            )
+        label = entry.get("fixed_label")
+        if label and label.startswith("✈"):
+            return self._pdf_plane_icon(x, y, 6.2)
+        parts = [
+            "q\n",
+            f"{r:.4f} {g:.4f} {b:.4f} rg\n1 1 1 RG\n0.7 w\n",
+            f"{x - 4.2:.4f} {y - 4.2:.4f} 8.4 8.4 re\nB\nQ\n",
+        ]
+        if label:
+            parts.append(self._pdf_text_at(label, x + 6, y - 2.2, 6.4))
+        return "".join(parts)
+
+    def _pdf_text_at(self, text, x, y, size, bold=False):
+        escaped = self._pdf_escape_text(text)
+        return (
+            "q\nBT\n"
+            f"/F1 {size:.4f} Tf\n0 0 0 rg\n"
+            f"1 0 0 1 {x:.4f} {y:.4f} Tm\n({escaped}) Tj\n"
+            "ET\nQ\n"
+        )
+
+    def _pdf_escape_text(self, text):
+        return str(text).replace("\\", "\\\\").replace("(", "\\(").replace(")", "\\)")
+
+    def _pdf_plane_icon(self, x, y, size):
+        half = size / 2
+        nose = x + size * 0.62
+        tail = x - size * 0.55
+        body_top = y + size * 0.08
+        body_bottom = y - size * 0.08
+        wing_top = y + size * 0.38
+        wing_bottom = y - size * 0.34
+        return (
+            "q\n0 0 0 rg\n0 0 0 RG\n0.8 w\n1 J\n1 j\n"
+            f"{tail:.4f} {body_bottom:.4f} m\n"
+            f"{x + size * 0.32:.4f} {body_bottom:.4f} l\n"
+            f"{nose:.4f} {y:.4f} l\n"
+            f"{x + size * 0.32:.4f} {body_top:.4f} l\n"
+            f"{tail:.4f} {body_top:.4f} l\n"
+            f"{tail - size * 0.12:.4f} {y + size * 0.28:.4f} l\n"
+            f"{tail + size * 0.08:.4f} {body_top:.4f} l\n"
+            f"{tail + size * 0.08:.4f} {body_bottom:.4f} l\n"
+            f"{tail - size * 0.08:.4f} {y - size * 0.22:.4f} l\n"
+            f"{tail + size * 0.18:.4f} {body_bottom:.4f} l\nh\nf\n"
+            f"{x - size * 0.08:.4f} {body_top:.4f} m\n"
+            f"{x + size * 0.16:.4f} {body_top:.4f} l\n"
+            f"{x - size * 0.22:.4f} {wing_top:.4f} l\n"
+            f"{x - size * 0.36:.4f} {wing_top:.4f} l\nh\nf\n"
+            f"{x - size * 0.03:.4f} {body_bottom:.4f} m\n"
+            f"{x + size * 0.15:.4f} {body_bottom:.4f} l\n"
+            f"{x - size * 0.18:.4f} {wing_bottom:.4f} l\n"
+            f"{x - size * 0.3:.4f} {wing_bottom:.4f} l\nh\nf\n"
+            "Q\n"
+        )
 
     def _write_pdf(self, pdf_path, image_bytes, page_size, page_width, page_height, content):
         image_width, image_height = page_size
@@ -762,13 +978,14 @@ class OpenStreetMapA3PdfExporter:
             b"<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
             (
                 f"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {page_width:.4f} {page_height:.4f}] "
-                "/Resources << /XObject << /Im0 5 0 R >> >> /Contents 4 0 R >>"
+                "/Resources << /XObject << /Im0 5 0 R >> /Font << /F1 6 0 R >> >> /Contents 4 0 R >>"
             ).encode("ascii"),
             b"<< /Length " + str(len(content)).encode("ascii") + b" >>\nstream\n" + content + b"endstream",
             (
                 f"<< /Type /XObject /Subtype /Image /Width {image_width} /Height {image_height} "
                 f"/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length {len(image_bytes)} >>\nstream\n"
             ).encode("ascii") + image_bytes + b"\nendstream",
+            b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>",
         ]
         pdf = bytearray(b"%PDF-1.4\n")
         offsets = [0]
@@ -803,15 +1020,15 @@ class OpenStreetMapA3PdfExporter:
                 for child in geometry.geoms:
                     self._draw_point_geometry(draw, child, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
 
-    def _geometry_to_svg(self, geometry, color, zoom, world_bounds, page_size, stroke_width=None):
+    def _geometry_to_svg(self, geometry, color, zoom, world_bounds, page_size, stroke_width=None, dotted=False):
         if geometry is None or geometry.is_empty:
             return []
         match geometry:
             case LineString():
-                element = self._line_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width)
+                element = self._line_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width, dotted)
                 return [element] if element else []
             case ShapelyMultiLineString():
-                return [element for line in geometry.geoms if (element := self._line_to_svg(line, color, zoom, world_bounds, page_size, stroke_width))]
+                return [element for line in geometry.geoms if (element := self._line_to_svg(line, color, zoom, world_bounds, page_size, stroke_width, dotted))]
             case Polygon():
                 element = self._polygon_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width)
                 return [element] if element else []
@@ -820,15 +1037,71 @@ class OpenStreetMapA3PdfExporter:
             case GeometryCollection():
                 elements = []
                 for child in geometry.geoms:
-                    elements.extend(self._geometry_to_svg(child, color, zoom, world_bounds, page_size, stroke_width))
+                    elements.extend(self._geometry_to_svg(child, color, zoom, world_bounds, page_size, stroke_width, dotted))
                 return elements
         return []
 
-    def _line_to_svg(self, line, color, zoom, world_bounds, page_size, stroke_width=None):
+    def _geometry_to_labels(self, row, geometry, zoom, world_bounds, page_size):
+        if geometry is None or geometry.is_empty:
+            return []
+        text = row.get("name")
+        if not text or pd.isna(text):
+            return []
+        point = self._label_point(geometry)
+        if point is None:
+            return []
+        return [{
+            "text": str(text),
+            "point": self._lon_lat_to_page(point.x, point.y, zoom, world_bounds, page_size),
+            "size": self._row_label_size(row),
+            "direction": self._row_label_direction(row),
+        }]
+
+    def _geometry_to_fixed_labels(self, row, geometry, zoom, world_bounds, page_size):
+        label = self._row_fixed_label(row)
+        if not label or geometry is None or geometry.is_empty:
+            return []
+        return [
+            {
+                "text": label,
+                "point": (point[0] + 14, point[1] - 14),
+                "size": self._row_label_size(row),
+                "direction": 0.0,
+                "align": "left",
+            }
+            for point in self._point_label_points(geometry, zoom, world_bounds, page_size)
+        ]
+
+    def _point_label_points(self, geometry, zoom, world_bounds, page_size):
+        match geometry:
+            case Point():
+                return [self._lon_lat_to_page(geometry.x, geometry.y, zoom, world_bounds, page_size)]
+            case MultiPoint():
+                return [self._lon_lat_to_page(point.x, point.y, zoom, world_bounds, page_size) for point in geometry.geoms]
+            case GeometryCollection():
+                points = []
+                for child in geometry.geoms:
+                    points.extend(self._point_label_points(child, zoom, world_bounds, page_size))
+                return points
+        return []
+
+    def _label_point(self, geometry):
+        match geometry:
+            case Point():
+                return geometry
+            case MultiPoint() | MultiPolygon() | ShapelyMultiLineString() | GeometryCollection():
+                return geometry.representative_point()
+            case Polygon():
+                return geometry.representative_point()
+            case LineString():
+                return geometry.interpolate(0.5, normalized=True)
+        return None
+
+    def _line_to_svg(self, line, color, zoom, world_bounds, page_size, stroke_width=None, dotted=False):
         points = self._coords_to_page(line.coords, zoom, world_bounds, page_size)
         if len(points) < 2:
             return None
-        return {"points": points, "close": False, "color": color, "stroke_width": stroke_width or 5}
+        return {"points": points, "close": False, "color": color, "stroke_width": stroke_width or 5, "dotted": dotted}
 
     def _polygon_to_svg(self, polygon, color, zoom, world_bounds, page_size, stroke_width=None):
         outline = self._coords_to_page(polygon.exterior.coords, zoom, world_bounds, page_size)

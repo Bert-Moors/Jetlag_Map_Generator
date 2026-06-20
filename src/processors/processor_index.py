@@ -1,5 +1,6 @@
 from processors.add_column import AddColumn
 from processors.average_stations_same_name import AverageStationsSameName
+from processors.filter_by_column import FilterByColumn
 from processors.hiding_zones import HidingZones
 from processors.lat_lon_to_points import LatLonToPoints
 from processors.remove_items_by_name import RemoveByNames
@@ -15,6 +16,7 @@ def get_processor(processor):
         "remove_by_names": RemoveByNames,
         "remove_overlapping_zones": RemoveOverlappingZones,
         "add_column":AddColumn,
+        "filter_by_column": FilterByColumn,
         "lat_lon_to_points": LatLonToPoints,
     }
 

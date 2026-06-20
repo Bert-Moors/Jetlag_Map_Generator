@@ -53,3 +53,11 @@ class Generator:
         frame["style_svg"] = data.style.get("svg")
         frame["style_scale"] = data.style.get("scale")
         frame["style_width"] = data.style.get("width")
+        frame["style_ignore_for_map_boundaries"] = data.style.get("ignore_for_map_boundaries")
+        frame["style_with_label"] = data.style.get("with_label")
+        frame["style_fixed_label"] = data.style.get("fixed_label")
+        frame["style_label_size"] = data.style.get("label_size")
+        frame["style_label_direction"] = data.style.get("label_direction")
+        type_to_color = data.style.get("type_to_color")
+        frame["style_type_to_color"] = [type_to_color] * len(frame) if isinstance(type_to_color, dict) else type_to_color
+        frame["style_dotted"] = data.style.get("dotted")

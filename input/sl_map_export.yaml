@@ -2,17 +2,16 @@ config:
   name: H+S South Limburg
   exporters: ["osmA3Pdf"]
 layers:
-  Border:
+  Borders:
     Game Border:
       processors: [
         {
           name: "rename_column",
-          columns:{Name: "name"}
+          columns: { Name: "name" }
         }
       ]
       style.width: 3
       file: "input/SL Border.kml"
-  Admin Divisions:
     Gemeente:
       processors: [
         {
@@ -20,14 +19,200 @@ layers:
           columns: { Name: "name" }
         }
       ]
-
       file: "input/SL gemeentes.kml"
     Postcodes:
       file: "input/limburg_layers/Postcodes.kmz"
   Transit Stops:
-    Bus:
+    Any:
       file: "input/limburg_layers/Transit Stops.kmz"
+  Transit Lines:
+    "15":
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "15" }
+      ]
+      style.color: "ff1f77b4"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
+    "43":
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "43" }
+      ]
+      style.color: "ffff7f0e"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
+    "47":
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "47" }
+      ]
+      style.color: "ff2ca02c"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
+    "54":
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "54" }
+      ]
+      style.color: "ffd62728"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
+    "55":
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "55" }
+      ]
+      style.color: "ff9467bd"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
+    "57":
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "57" }
+      ]
+      style.color: "ff8c564b"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
+    "350":
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "350" }
+      ]
+      style.color: "ffe377c2"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
+    RE18:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "RE18" }
+      ]
+      style.color: "ff7f7f7f"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
+    RS18:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "ref", value: "RS18" }
+      ]
+      style.color: "ffbcbd22"
+      style.width: 1.5
+      style.dotted: true
+      style.ignore_for_map_boundaries: true
+      file: "input/limburg_layers/Transit Lines.kmz"
   Hiding Zones:
     All:
       style.width: 1
       file: "input/limburg_layers/Hiding Zones.kmz"
+  Features:
+    Airport:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Airport" }
+      ]
+      style.color: "ff0000ff"
+      style.fixed_label: "✈"
+      file: "input/limburg_layers/Features.kmz"
+    Mountains:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Mountains" }
+      ]
+      style.color: "ff0080ff"
+      style.fixed_label: "P"
+      file: "input/limburg_layers/Features.kmz"
+    Campings:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Campings" }
+      ]
+      style.color: "ff00aa00"
+      file: "input/limburg_layers/Features.kmz"
+    Mills:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Mills" }
+      ]
+      style.color: "ffff8000"
+      style.fixed_label: "W"
+      file: "input/limburg_layers/Features.kmz"
+    Museums:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Museums" }
+      ]
+      style.color: "ffff00aa"
+      style.fixed_label: "M"
+      file: "input/limburg_layers/Features.kmz"
+    Golf Courses:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Golf Courses" }
+      ]
+      style.color: "ff00ff00"
+      style.fixed_label: "G"
+      file: "input/limburg_layers/Features.kmz"
+    Cinema:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Cinema" }
+      ]
+      style.color: "ffff00ff"
+      style.fixed_label: "F"
+      file: "input/limburg_layers/Features.kmz"
+    Zoos:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Zoos" }
+      ]
+      style.color: "ff00ffff"
+      style.fixed_label: "Z"
+      file: "input/limburg_layers/Features.kmz"
+    Amusement Parks:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Amusement Parks" }
+      ]
+      style.color: "ff8000ff"
+      style.fixed_label: "A"
+      file: "input/limburg_layers/Features.kmz"
+    Hospital:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Hospital" }
+      ]
+      style.color: "ff4040ff"
+      style.fixed_label: "H"
+      file: "input/limburg_layers/Features.kmz"
+    Library:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Library" }
+      ]
+      style.color: "ffaa5500"
+      style.fixed_label: "L"
+      file: "input/limburg_layers/Features.kmz"
+    Consulate:
+      processors: [
+        { name: "rename_column", columns: { Name: "name" } },
+        { name: "filter_by_column", column: "Type", value: "Consulate" }
+      ]
+      style.color: "ff800080"
+      style.fixed_label: "E"
+      file: "input/limburg_layers/Features.kmz"
