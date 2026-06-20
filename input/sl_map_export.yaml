@@ -1,0 +1,22 @@
+config:
+  name: H+S South Limburg
+  exporters: ["osmA3Pdf"]
+layers:
+  Border:
+    Game Border:
+      processors: [
+        {
+          name: "rename_column",
+          columns:{Name: "name"}
+        }
+      ]
+      file: "input/SL Border.kml"
+  Admin Divisions:
+    Gemeente:
+      processors: [
+        {
+          name: "rename_column",
+          columns: { Name: "name" }
+        }
+      ]
+      file: "input/SL gemeentes.kml"

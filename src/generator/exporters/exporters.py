@@ -707,12 +707,25 @@ class OpenStreetMapA3PdfExporter:
             draw.line(points, fill=color, width=5, joint="curve")
 
     def _draw_polygon(self, draw, polygon, color, zoom, world_bounds, page_size):
-        outline = [self._lon_lat_to_page(x, y, zoom, world_bounds, page_size) for x, y in polygon.exterior.coords]
+        outline = [self._lon_lat_to_page(x, y, zoom, world_bounds, page_size) for (x, y, *_) in polygon.exterior.coords]
         fill = (color[0], color[1], color[2], 70)
-        draw.polygon(outline, fill=fill, outline=color)
-        for interior in polygon.interiors:
-            hole = [self._lon_lat_to_page(x, y, zoom, world_bounds, page_size) for x, y in interior.coords]
-            draw.polygon(hole, fill=(255, 255, 255, 120))
+        if polygon.interiors:
+            from PIL import ImageDraw as PILImageDraw
+            mask = self._Image.new("L", self._image.size, 0)
+            mask_draw = PILImageDraw.Draw(mask)
+            mask_draw.polygon(outline, fill=255)
+            for interior in polygon.interiors:
+                hole = [self._lon_lat_to_page(x, y, zoom, world_bounds, page_size) for x, y in interior.coords]
+                mask_draw.polygon(hole, fill=0)
+            overlay = self._Image.new("RGBA", self._image.size, (0, 0, 0, 0))
+            overlay_draw = PILImageDraw.Draw(overlay)
+            overlay_draw.polygon(outline, fill=fill)
+            cutout = self._Image.composite(overlay, self._Image.new("RGBA", self._image.size, (0, 0, 0, 0)), mask)
+            result = self._Image.alpha_composite(self._image, cutout)
+            self._image.paste(result)
+        else:
+            draw.polygon(outline, fill=fill)
+        draw.polygon(outline, outline=color)
 
     def _lon_lat_to_page(self, lon, lat, zoom, world_bounds, page_size):
         world_x, world_y = self._lon_lat_to_world_px(lon, lat, zoom)
