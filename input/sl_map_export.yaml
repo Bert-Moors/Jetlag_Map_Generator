@@ -10,6 +10,7 @@ layers:
           columns:{Name: "name"}
         }
       ]
+      style.width: 3
       file: "input/SL Border.kml"
   Admin Divisions:
     Gemeente:
@@ -19,4 +20,5 @@ layers:
           columns: { Name: "name" }
         }
       ]
+
       file: "input/SL gemeentes.kml"

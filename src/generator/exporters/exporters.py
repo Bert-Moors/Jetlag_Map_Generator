@@ -119,6 +119,7 @@ class OpenStreetMapA3PdfExporter:
 
         self._image = image
         self._Image = Image
+        self._ImageDraw = ImageDraw
         draw = ImageDraw.Draw(image, "RGBA")
         color_map = self._datatype_colors(frames)
         for _, datatype, frame in frames:
@@ -128,7 +129,8 @@ class OpenStreetMapA3PdfExporter:
                 icon_href = row.get("style_href")
                 svg = row.get("style_svg")
                 scale = self._row_scale(row)
-                self._draw_geometry(draw, row["geometry"], color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
+                stroke_width = self._row_width(row)
+                self._draw_geometry(draw, row["geometry"], color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale, stroke_width)
 
         font = ImageFont.load_default()
         self._draw_scale_ruler(draw, font, scale, page_size)
@@ -437,7 +439,13 @@ class OpenStreetMapA3PdfExporter:
             return 1.0
         return float(scale)
 
-    def _draw_geometry(self, draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href=None, svg=None, scale=1.0):
+    def _row_width(self, row):
+        width = row.get("style_width")
+        if not width or pd.isna(width):
+            return None
+        return max(round(float(width)), 1)
+
+    def _draw_geometry(self, draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href=None, svg=None, scale=1.0, stroke_width=None):
         if geometry is None or geometry.is_empty:
             return
         match geometry:
@@ -447,18 +455,18 @@ class OpenStreetMapA3PdfExporter:
                 for point in geometry.geoms:
                     self._draw_point(draw, point, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
             case LineString():
-                self._draw_line(draw, geometry, color, zoom, world_bounds, page_size)
+                self._draw_line(draw, geometry, color, zoom, world_bounds, page_size, stroke_width)
             case ShapelyMultiLineString():
                 for line in geometry.geoms:
-                    self._draw_line(draw, line, color, zoom, world_bounds, page_size)
+                    self._draw_line(draw, line, color, zoom, world_bounds, page_size, stroke_width)
             case Polygon():
-                self._draw_polygon(draw, geometry, color, zoom, world_bounds, page_size)
+                self._draw_polygon(draw, geometry, color, zoom, world_bounds, page_size, stroke_width)
             case MultiPolygon():
                 for polygon in geometry.geoms:
-                    self._draw_polygon(draw, polygon, color, zoom, world_bounds, page_size)
+                    self._draw_polygon(draw, polygon, color, zoom, world_bounds, page_size, stroke_width)
             case GeometryCollection():
                 for child in geometry.geoms:
-                    self._draw_geometry(draw, child, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
+                    self._draw_geometry(draw, child, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale, stroke_width)
 
     def _draw_point(self, draw, point, color, secondary_color, zoom, world_bounds, page_size, icon_href=None, svg=None, scale=1.0):
         x, y = self._lon_lat_to_page(point.x, point.y, zoom, world_bounds, page_size)
@@ -698,18 +706,28 @@ class OpenStreetMapA3PdfExporter:
         self._icon_cache[icon_href] = icon
         return icon
 
-    def _draw_line(self, draw, line, color, zoom, world_bounds, page_size):
-        points = [self._lon_lat_to_page(x, y, zoom, world_bounds, page_size) for x, y in line.coords]
+    def _draw_line(self, draw, line, color, zoom, world_bounds, page_size, stroke_width=None):
+        points = self._coords_to_page(line.coords, zoom, world_bounds, page_size)
         if len(points) > 1:
-            draw.line(points, fill=color, width=5, joint="curve")
+            draw.line(points, fill=color, width=stroke_width or 5, joint="curve")
 
-    def _draw_polygon(self, draw, polygon, color, zoom, world_bounds, page_size):
-        outline = [self._lon_lat_to_page(x, y, zoom, world_bounds, page_size) for x, y in polygon.exterior.coords]
+    def _draw_polygon(self, draw, polygon, color, zoom, world_bounds, page_size, stroke_width=None):
+        outline = self._coords_to_page(polygon.exterior.coords, zoom, world_bounds, page_size)
+        if len(outline) < 3:
+            return
         fill = (color[0], color[1], color[2], 70)
-        draw.polygon(outline, fill=fill, outline=color)
+        overlay = self._Image.new("RGBA", page_size, (0, 0, 0, 0))
+        overlay_draw = self._ImageDraw.Draw(overlay)
+        overlay_draw.polygon(outline, fill=fill)
         for interior in polygon.interiors:
-            hole = [self._lon_lat_to_page(x, y, zoom, world_bounds, page_size) for x, y in interior.coords]
-            draw.polygon(hole, fill=(255, 255, 255, 120))
+            hole = self._coords_to_page(interior.coords, zoom, world_bounds, page_size)
+            if len(hole) >= 3:
+                overlay_draw.polygon(hole, fill=(0, 0, 0, 0))
+        self._image.alpha_composite(overlay)
+        draw.line(outline, fill=color, width=stroke_width or 2, joint="curve")
+
+    def _coords_to_page(self, coords, zoom, world_bounds, page_size):
+        return [self._lon_lat_to_page(coord[0], coord[1], zoom, world_bounds, page_size) for coord in coords]
 
     def _lon_lat_to_page(self, lon, lat, zoom, world_bounds, page_size):
         world_x, world_y = self._lon_lat_to_world_px(lon, lat, zoom)
