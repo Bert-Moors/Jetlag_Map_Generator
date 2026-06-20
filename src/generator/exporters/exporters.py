@@ -1,3 +1,4 @@
+import base64
 import io
 import math
 import os
@@ -128,6 +129,7 @@ class OpenStreetMapA3PdfExporter:
         self._ImageDraw = ImageDraw
         draw = ImageDraw.Draw(image, "RGBA")
         color_map = self._datatype_colors(frames)
+        vector_elements = []
         for _, datatype, frame in frames:
             for _, row in frame.iterrows():
                 color = self._row_color(row, color_map[datatype])
@@ -136,13 +138,15 @@ class OpenStreetMapA3PdfExporter:
                 svg = row.get("style_svg")
                 scale = self._row_scale(row)
                 stroke_width = self._row_width(row)
-                self._draw_geometry(draw, row["geometry"], color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale, stroke_width)
+                geometry = row["geometry"]
+                vector_elements.extend(self._geometry_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width))
+                self._draw_point_geometry(draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
 
         font = ImageFont.load_default()
         self._draw_scale_ruler(draw, font, scale, page_size)
         attribution = self.TILE_SERVERS[self._active_tile_server_name]["attribution"]
         draw.text((page_size[0] - max(205, len(attribution) * 6), page_size[1] - 18), attribution, fill=(30, 30, 30, 220), font=font)
-        image.save(f"{output_path} OSM A3.pdf", "PDF", resolution=self.DPI)
+        self._save_pdf(image, vector_elements, page_size, output_path)
         self._debug(f"Saved PDF: {output_path} OSM A3.pdf")
 
     def _flatten_frames(self, data):
@@ -720,6 +724,89 @@ class OpenStreetMapA3PdfExporter:
             icon = None
         self._icon_cache[icon_href] = icon
         return icon
+
+    def _save_pdf(self, image, vector_elements, page_size, output_path):
+        pdf_path = f"{output_path} OSM A3.pdf"
+        if not vector_elements:
+            image.save(pdf_path, "PDF", resolution=self.DPI)
+            return
+        try:
+            import cairosvg
+        except ImportError:
+            self._debug("CairoSVG is unavailable; saving raster-only PDF")
+            image.save(pdf_path, "PDF", resolution=self.DPI)
+            return
+
+        png = io.BytesIO()
+        image.save(png, "PNG")
+        image_data = base64.b64encode(png.getvalue()).decode("ascii")
+        width, height = page_size
+        svg = (
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.A3_LANDSCAPE_MM[0]}mm" '
+            f'height="{self.A3_LANDSCAPE_MM[1]}mm" viewBox="0 0 {width} {height}">'
+            f'<image href="data:image/png;base64,{image_data}" x="0" y="0" width="{width}" height="{height}"/>'
+            f'{"".join(vector_elements)}'
+            '</svg>'
+        )
+        cairosvg.svg2pdf(bytestring=svg.encode("utf-8"), write_to=pdf_path)
+
+    def _draw_point_geometry(self, draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href=None, svg=None, scale=1.0):
+        if geometry is None or geometry.is_empty:
+            return
+        match geometry:
+            case Point():
+                self._draw_point(draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
+            case MultiPoint():
+                for point in geometry.geoms:
+                    self._draw_point(draw, point, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
+            case GeometryCollection():
+                for child in geometry.geoms:
+                    self._draw_point_geometry(draw, child, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, scale)
+
+    def _geometry_to_svg(self, geometry, color, zoom, world_bounds, page_size, stroke_width=None):
+        if geometry is None or geometry.is_empty:
+            return []
+        match geometry:
+            case LineString():
+                return [self._line_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width)]
+            case ShapelyMultiLineString():
+                return [self._line_to_svg(line, color, zoom, world_bounds, page_size, stroke_width) for line in geometry.geoms]
+            case Polygon():
+                return [self._polygon_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width)]
+            case MultiPolygon():
+                return [self._polygon_to_svg(polygon, color, zoom, world_bounds, page_size, stroke_width) for polygon in geometry.geoms]
+            case GeometryCollection():
+                elements = []
+                for child in geometry.geoms:
+                    elements.extend(self._geometry_to_svg(child, color, zoom, world_bounds, page_size, stroke_width))
+                return elements
+        return []
+
+    def _line_to_svg(self, line, color, zoom, world_bounds, page_size, stroke_width=None):
+        points = self._coords_to_page(line.coords, zoom, world_bounds, page_size)
+        if len(points) < 2:
+            return ""
+        return self._svg_path(self._points_to_path(points), color, stroke_width or 5)
+
+    def _polygon_to_svg(self, polygon, color, zoom, world_bounds, page_size, stroke_width=None):
+        outline = self._coords_to_page(polygon.exterior.coords, zoom, world_bounds, page_size)
+        if len(outline) < 3:
+            return ""
+        return self._svg_path(self._points_to_path(outline, close=True), color, stroke_width or 2)
+
+    def _points_to_path(self, points, close=False):
+        commands = [f"M {points[0][0]:.2f} {points[0][1]:.2f}"]
+        commands.extend(f"L {x:.2f} {y:.2f}" for x, y in points[1:])
+        if close:
+            commands.append("Z")
+        return " ".join(commands)
+
+    def _svg_path(self, path, color, stroke_width):
+        return (
+            f'<path d="{path}" fill="none" stroke="{self._rgba_to_hex(color)}" '
+            f'stroke-opacity="{color[3] / 255:.3f}" stroke-width="{stroke_width}" '
+            'stroke-linejoin="round" stroke-linecap="round"/>'
+        )
 
     def _draw_line(self, draw, line, color, zoom, world_bounds, page_size, stroke_width=None):
         points = self._coords_to_page(line.coords, zoom, world_bounds, page_size)
