@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:ns2="http://www.google.com/kml/ext/2.2" xmlns:ns3="http://www.w3.org/2005/Atom" xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <LookAt>
+            <longitude>5.796188002438839</longitude>
+            <latitude>50.86326152090953</latitude>
+            <altitude>346586.82287839067</altitude>
+            <heading>0.0</heading>
+            <tilt>0.0</tilt>
+            <range>280060.3319435083</range>
+            <altitudeMode>clampToGround</altitudeMode>
+        </LookAt>
+        <Folder>
+            <name>religieuserfgoed</name>
+            <LookAt>
+                <longitude>5.8621237850292545</longitude>
+                <latitude>50.832543290234305</latitude>
+                <altitude>32598.85760892108</altitude>
+                <heading>0.0</heading>
+                <tilt>0.0</tilt>
+                <range>26341.586812540136</range>
+                <altitudeMode>clampToGround</altitudeMode>
+            </LookAt>
+            <Placemark id="religieuserfgoed.848">
+                <name>Kerktoren</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;848&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;18826&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;190480.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;314237.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Gulpen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/05167fba-4cb5-d7ae-54eb-768d7549e315.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/05167fba-4cb5-d7ae-54eb-768d7549e315.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Joris Brinkkemper (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1050-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1100&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/18826&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.890628872053753</longitude>
+                    <latitude>50.81691193150728</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kerktorens_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.890628872053747,50.816911931507285</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1152">
+                <name>Kerktoren</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1152&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;23836&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;198216.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;323031.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Schaesberg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/ebbef17e-8570-c080-9d8f-ae806ddb70f3.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/ebbef17e-8570-c080-9d8f-ae806ddb70f3.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1637-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1647&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/23836&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>6.001437803504388</longitude>
+                    <latitude>50.89542517077487</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kerktorens_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>6.001437803504387,50.89542517077487</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1295">
+                <name>St.-Michaëlskerk</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1295&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;27953&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;177287.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;315549.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;St.-Michaëlskerk&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Maastricht&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/edc41777-6d99-b3e0-55de-876956e907c1.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/edc41777-6d99-b3e0-55de-876956e907c1.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;G.Th. Delemarre (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Peutz, F.P.J.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1960-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1961&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1750&lt;/span&gt;&lt;/li&gt;
+  
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/27953&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.703515736159062</longitude>
+                    <latitude>50.82936908580034</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kerktorens_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.703515736159069,50.82936908580033</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1302">
+                <name>Kerktoren</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1302&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;28059&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;178889.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;316747.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Heer&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/06bce84b-3044-384f-d5d6-b346a214f5b6.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/06bce84b-3044-384f-d5d6-b346a214f5b6.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Frans Kabel (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1788-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1789&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/28059&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.7263311798543555</longitude>
+                    <latitude>50.84007299613036</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kerktorens_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.726331179854368,50.84007299613036</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1844">
+                <name>H. Kruisverheffingskerk</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1844&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;34656&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;181927.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;315365.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;H. Kruisverheffingskerk&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Cadier en Keer&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/47078810-65aa-3814-692c-c9399b6ef131.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/47078810-65aa-3814-692c-c9399b6ef131.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;G.Th. Delemarre (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1150-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1200&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;ME: ouder dan&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1150&lt;/span&gt;&lt;/li&gt;
+  
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/34656&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.769355836182413</longitude>
+                    <latitude>50.8275161353783</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kerktorens_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.769355836182421,50.8275161353783</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1984">
+                <name>Kerktoren</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1984&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;36625&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;199725.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;309028.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerktoren&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Vaals&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/ebfc9995-9db9-7732-fee9-a31a4b5ecd1b.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/ebfc9995-9db9-7732-fee9-a31a4b5ecd1b.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Joris Brinkkemper (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;ca.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1300&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1200-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1300&lt;/span&gt;&lt;/li&gt;
+  
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/36625&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>6.021160505885106</longitude>
+                    <latitude>50.76944583043533</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kerktorens_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>6.021160505885107,50.76944583043533</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>

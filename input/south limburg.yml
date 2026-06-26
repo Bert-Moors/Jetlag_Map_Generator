@@ -171,3 +171,40 @@ layers:
          nwr["amenity"="library"]["name"~".*"](area.targetMunicipalities);
 
          out center;'
+  Churches:
+    Churches:
+      processors: [
+        { name: "add_column", columns: { type: "Church" } },
+        {
+          name: "rename_column",
+          columns: { Name: "name" }
+        }
+      ]
+      file: "input/limburg_layers/landschapsatlas_view-religieuserfgoed-kerken.kml"
+    Towers:
+      processors: [
+        { name: "add_column", columns: { type: "Tower" } },
+        {
+          name: "rename_column",
+          columns: { Name: "name" }
+        }
+      ]
+      file: "input/limburg_layers/landschapsatlas_view-religieuserfgoed-kerktorens.kml"
+    Chapels:
+      processors: [
+        { name: "add_column", columns: { type: "Chapel" } },
+        {
+          name: "rename_column",
+          columns: { Name: "name" }
+        }
+      ]
+      file: "input/limburg_layers/landschapsatlas_view-religieuserfgoed-kapellen.kml"
+    Ruins:
+      processors: [
+        { name: "add_column", columns: { type: "Ruins" } },
+        {
+          name: "rename_column",
+          columns: { Name: "name" }
+        }
+      ]
+      file: "input/limburg_layers/landschapsatlas_view-religieuserfgoed-restanten.kml"

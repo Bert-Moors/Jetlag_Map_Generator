@@ -1,0 +1,2365 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:ns2="http://www.google.com/kml/ext/2.2" xmlns:ns3="http://www.w3.org/2005/Atom" xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <LookAt>
+            <longitude>5.796188002438839</longitude>
+            <latitude>50.86326152090953</latitude>
+            <altitude>346586.82287839067</altitude>
+            <heading>0.0</heading>
+            <tilt>0.0</tilt>
+            <range>280060.3319435083</range>
+            <altitudeMode>clampToGround</altitudeMode>
+        </LookAt>
+        <Folder>
+            <name>religieuserfgoed</name>
+            <LookAt>
+                <longitude>5.843722235909297</longitude>
+                <latitude>50.901867069553624</latitude>
+                <altitude>48601.718201807525</altitude>
+                <heading>0.0</heading>
+                <tilt>0.0</tilt>
+                <range>39272.737548360274</range>
+                <altitudeMode>clampToGround</altitudeMode>
+            </LookAt>
+            <Placemark id="religieuserfgoed.227">
+                <name>De Kapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;227&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;8770&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;183105.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;326276.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;De Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Geverik&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/0/00/Geverik-Kerk_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/0/00/Geverik-Kerk_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Lemmens, L.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1861-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1862&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/8770&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.786920082699069</longitude>
+                    <latitude>50.92553426560142</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.78692008269907,50.92553426560143</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.228">
+                <name>St. Annakapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;228&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;8785&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;187838.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;328413.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;St. Annakapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Spaubeek&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/4a68d614-f620-08d5-68e7-dfb8ff36568b.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/4a68d614-f620-08d5-68e7-dfb8ff36568b.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;P. van Galen (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1865&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/8785&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.854426963939247</longitude>
+                    <latitude>50.94449069840027</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.854426963939266,50.94449069840027</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.338">
+                <name>St. Hubertuskapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;338&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;9904&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;184444.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;338473.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;St. Hubertuskapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Born&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/368f8ed8-33d8-2c8c-3384-1b1210ac707a.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/368f8ed8-33d8-2c8c-3384-1b1210ac707a.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;IJ.Th. Heinz (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1666&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/9904&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.806959396082746</longitude>
+                    <latitude>51.03510083256001</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.8069593960827435,51.03510083256001</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.565">
+                <name>Kapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;565&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;14261&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;194964.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;338659.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Echt&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/03774225-8fd8-3be8-a5f8-b1be49bf6ee4.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/03774225-8fd8-3be8-a5f8-b1be49bf6ee4.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;L.M. Tangel (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1859&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/14261&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.95694929084469</longitude>
+                    <latitude>51.03613257015131</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.956949290844691,51.03613257015132</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.688">
+                <name>Sint Janskluis</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;688&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;16045&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;186312.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;330149.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sint Janskluis&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Geleen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/f/fd/Geleen-Sint-Janskluis_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/f/fd/Geleen-Sint-Janskluis_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1699&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/16045&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.832865805731046</longitude>
+                    <latitude>50.96018045671383</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.832865805731044,50.960180456713836</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.943">
+                <name>Kerkhofkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;943&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;21217&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;196884.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;321841.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerkhofkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Heerlen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/31af78a8-6c15-ce48-8224-93ec2b87ab80.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/31af78a8-6c15-ce48-8224-93ec2b87ab80.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;G.Th. Delemarre (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1848&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/21217&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.982369182790308</longitude>
+                    <latitude>50.88482795936677</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.982369182790305,50.88482795936676</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.946">
+                <name>Wegkapel met schelpnisje</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;946&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;21247&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;193504.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;323496.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Wegkapel met schelpnisje&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Ten Esschen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/f112eb0c-5f32-0bef-2805-971c9faa7e1c.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/f112eb0c-5f32-0bef-2805-971c9faa7e1c.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;P. van Galen (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1767&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/21247&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.934517600676529</longitude>
+                    <latitude>50.89994101709731</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.934517600676522,50.89994101709732</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.948">
+                <name>Sint Barbarakapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;948&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;21259&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;197662.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;323894.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sint Barbarakapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Heerlen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/b/b1/Heerlen-Barbarakapel_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/b/b1/Heerlen-Barbarakapel_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1670&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/21259&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.993665776414886</longitude>
+                    <latitude>50.90322367965993</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.9936657764148675,50.903223679659924</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1296">
+                <name>Sint Lambertuskapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1296&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;27961&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;176681.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;316587.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sint Lambertuskapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Maastricht&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/b1fa89c0-4c38-8edd-8b7b-84325ed81f4b.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/b1fa89c0-4c38-8edd-8b7b-84325ed81f4b.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;G.J. Dukker (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1847&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/27961&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.694976930929826</longitude>
+                    <latitude>50.838722545561374</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.694976930929818,50.838722545561374</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1300">
+                <name>St. Rochuskapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1300&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;28030&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;176480.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;315011.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;St. Rochuskapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Maastricht&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/3/33/Maastricht_-_rijksmonument_28030_-_Sint-Rochuskapel_20110910.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/3/33/Maastricht_-_rijksmonument_28030_-_Sint-Rochuskapel_20110910.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Otter via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1888&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/28030&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.692030422659414</longitude>
+                    <latitude>50.824563973530225</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.692030422659428,50.824563973530225</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1349">
+                <name>Veldkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1349&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;28496&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;182772.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;323443.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Veldkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Ulestraten&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/c/ce/Ulestraten-Kapel_Groenstraat-Genzonweg_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/c/ce/Ulestraten-Kapel_Groenstraat-Genzonweg_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1700-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1725&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/28496&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.781966659569719</longitude>
+                    <latitude>50.90008578942384</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.7819666595697115,50.90008578942384</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1776">
+                <name>Kapel van de H. Rosa</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1776&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;33749&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;189479.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;333525.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel van de H. Rosa&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sittard&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/f/fc/Sittard-Sint-Rosakapel_%282%29.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/f/fc/Sittard-Sint-Rosakapel_%282%29.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1675&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/33749&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.878263221570677</longitude>
+                    <latitude>50.990343441711495</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.8782632215706805,50.99034344171149</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1842">
+                <name>Bemelerberg</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1842&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;34632&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;181841.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;317963.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Bemelerberg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Bemelen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://rce.webgispublisher.nl/user/uploads/logos/geen_foto_beschikbaar.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://rce.webgispublisher.nl/user/uploads/logos/geen_foto_beschikbaar.jpg&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1725-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1757&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/34632&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.768327357473169</longitude>
+                    <latitude>50.85087257318308</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.768327357473162,50.85087257318308</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1850">
+                <name>H. Brigidakapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1850&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;34795&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;184784.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;308829.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;H. Brigidakapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Noorbeek&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/d2/Noorbeek-Brigidakapel.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/d2/Noorbeek-Brigidakapel.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1772&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/34795&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.809367375132027</longitude>
+                    <latitude>50.76862568580635</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.809367375132045,50.76862568580635</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1851">
+                <name>O.L.Vrouwekapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1851&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;34830&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;181245.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;330441.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;O.L.Vrouwekapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Stein&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/4f/Stein-Mariakapel_Kapelbergweg_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/4f/Stein-Mariakapel_Kapelbergweg_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1760&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/34830&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.760769564537043</longitude>
+                    <latitude>50.96306028388102</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.760769564537041,50.96306028388102</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1855">
+                <name>Kapel van Onze Lieve Vrouw</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1855&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;34854&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;182039.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;333632.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel van Onze Lieve Vrouw&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Urmond&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/2c64eeb5-1b73-3dc8-5279-26d5e75500fd.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/2c64eeb5-1b73-3dc8-5279-26d5e75500fd.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;G.J. Dukker (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1755&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/34854&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.772310348287945</longitude>
+                    <latitude>50.9917059777443</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.772310348287948,50.9917059777443</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1857">
+                <name>Grafkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1857&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;34876&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;181177.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;328774.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Grafkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Elsloo (L)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/b/b8/Elsloo-Op_de_Berg-grafkapel_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/b/b8/Elsloo-Op_de_Berg-grafkapel_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1849&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/34876&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.7596807998749</longitude>
+                    <latitude>50.94807934580336</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.7596807998749044,50.94807934580336</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1858">
+                <name>Kapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1858&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;34881&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;181694.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;327801.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Elsloo (L)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/6cda088d-ff7b-8e4f-fe6c-b75715b81801.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/6cda088d-ff7b-8e4f-fe6c-b75715b81801.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;L.M. Tangel (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1848&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/34881&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.766965316903807</longitude>
+                    <latitude>50.93930950328661</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.766965316903803,50.939309503286594</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2002">
+                <name>Ondergrondse schuilkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2002&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;36785&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;185644.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;319546.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Ondergrondse schuilkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Valkenburg (L)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/a/ac/Valkenburg-Romeinse_catacomben_%288%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/a/ac/Valkenburg-Romeinse_catacomben_%288%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;ca.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1800&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/36785&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.82246033434221</longitude>
+                    <latitude>50.864910809034185</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.822460334342196,50.86491080903417</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2004">
+                <name>Kapel van de H. Gerlachus</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2004&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;36790&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;183630.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;320212.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel van de H. Gerlachus&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Houthem-Sint Gerlach&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/399b6e0d-aef3-7574-e4d0-34b0046d886d.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/399b6e0d-aef3-7574-e4d0-34b0046d886d.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;L.M. Tangel (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1869-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1870&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/36790&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.793907162435318</longitude>
+                    <latitude>50.87100136716675</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.793907162435318,50.87100136716675</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2005">
+                <name>Niskapel van mergel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2005&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;36802&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;183285.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;321023.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niskapel van mergel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Houthem-Sint Gerlach&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/db/Houthem-Calvariekapel_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/db/Houthem-Calvariekapel_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1800-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1825&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/36802&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.789069605273937</longitude>
+                    <latitude>50.878308256347395</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.789069605273935,50.878308256347395</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2010">
+                <name>Kluiskapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2010&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;36829&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;188021.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;319102.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kluiskapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Oud-Valkenburg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/bbecb713-d5ae-32ec-ed9a-0c86da0b87b6.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/bbecb713-d5ae-32ec-ed9a-0c86da0b87b6.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;G.J. Dukker (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1690&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/36829&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.8561813252732975</longitude>
+                    <latitude>50.860787870994976</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.856181325273292,50.860787870994976</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2011">
+                <name>Schuilkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2011&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;36830&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;186640.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;318403.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Schuilkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sibbe&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/6/68/Sibbe-Kapel_Sibbergroeve_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/6/68/Sibbe-Kapel_Sibbergroeve_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1799-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1801&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/36830&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.836507229479267</longitude>
+                    <latitude>50.85458277149542</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.836507229479263,50.85458277149542</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2013">
+                <name>Wegkapelletje van mergel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2013&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;36845&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;188918.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;319966.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Wegkapelletje van mergel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Walem&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/5/54/Schin_op_Geul-Kapel_Walem_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/5/54/Schin_op_Geul-Kapel_Walem_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1828&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/36845&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.869001389957262</longitude>
+                    <latitude>50.86850157308185</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.8690013899572575,50.86850157308185</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2247">
+                <name>Sint Annakapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2247&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;39271&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;188116.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;308704.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sint Annakapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Slenaken&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/dc/Slenaken-Schilberg-Sint-Annakapel_%283%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/dc/Slenaken-Schilberg-Sint-Annakapel_%283%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;ca.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1850&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/39271&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.856583518583079</longitude>
+                    <latitude>50.76731977083776</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.8565835185830935,50.76731977083776</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2427">
+                <name>Mergelstenen heiligenbeeld-huisje</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2427&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;42107&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;181593.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;319059.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Mergelstenen heiligenbeeld-huisje&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Berg en Terblijt&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/97eb32c6-72b0-da30-50b9-568b93ca8aa9.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/97eb32c6-72b0-da30-50b9-568b93ca8aa9.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;L.M. Tangel (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;ca.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1860&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/42107&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.764886288775671</longitude>
+                    <latitude>50.86073565433882</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.764886288775674,50.86073565433882</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2428">
+                <name>Schuilkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2428&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;42115&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;182908.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;319613.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Schuilkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Berg en Terblijt&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/f1320992-f8ce-145e-5292-c7df9a4eaa97.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/f1320992-f8ce-145e-5292-c7df9a4eaa97.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1798&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/42115&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.783604804897237</longitude>
+                    <latitude>50.865652815727714</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.783604804897237,50.865652815727714</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2462">
+                <name>Grafkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2462&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;388516&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;200054.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;309456.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Grafkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Vaals&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/8/89/Vaals-Grafkapel_familie_Tyrell.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/8/89/Vaals-Grafkapel_familie_Tyrell.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1875-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1900&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/388516&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>6.0258766119824685</longitude>
+                    <latitude>50.773267125355225</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>6.025876611982467,50.773267125355225</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2532">
+                <name>Kerkhofkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2532&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;491726&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;180890.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;316574.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kerkhofkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Cadier en Keer&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/c/c5/Cadier_en_Keer-Kerkhofkapel.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/c/c5/Cadier_en_Keer-Kerkhofkapel.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1892&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/491726&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.7547248505343305</longitude>
+                    <latitude>50.83843111416945</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.754724850534351,50.838431114169445</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2533">
+                <name>Kapel Camillianenklooster</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2533&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;491833&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;198464.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;308995.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel Camillianenklooster&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Vaals&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/da/Vaals-Eschberg_7_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/da/Vaals-Eschberg_7_%281%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1908&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/491833&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>6.003283309486449</longitude>
+                    <latitude>50.76924596489279</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>6.003283309486444,50.76924596489279</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2578">
+                <name>Kapel van de Zusters Ursulinen</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2578&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;506636&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;176076.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;317882.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel van de Zusters Ursulinen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Maastricht&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/47/Capucijnenstraat.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/47/Capucijnenstraat.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kleon3 via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kayser, Joh.&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1890&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/506636&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.686463806111135</longitude>
+                    <latitude>50.85038543210912</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.686463806111129,50.850385432109114</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2572">
+                <name>Mariakapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2572&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;506469&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;187965.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;309500.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Mariakapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Slenaken&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/c/ce/Slenaken-Mariakapel_bij_Dorpsstraat_57_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/c/ce/Slenaken-Mariakapel_bij_Dorpsstraat_57_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1880&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/506469&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.854515328357863</longitude>
+                    <latitude>50.77448330494739</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.854515328357871,50.77448330494738</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2574">
+                <name>Wegkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2574&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;506472&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;189363.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;309691.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Wegkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Heijenrath&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/de/Heijenrath-Mariakapel_%283%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/d/de/Heijenrath-Mariakapel_%283%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1875&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1715&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/506472&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.874350933775659</longitude>
+                    <latitude>50.77611819965883</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.87435093377566,50.77611819965884</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2576">
+                <name>Kapel Begraafplaats Tongerseweg</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2576&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;506570&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;174401.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;316690.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel Begraafplaats Tongerseweg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Maastricht&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/5f3d70fc-2bc3-92f8-d9df-f25b0fcbc5c2.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/5f3d70fc-2bc3-92f8-d9df-f25b0fcbc5c2.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;L.M. Tangel (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kayser, Joh.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1885-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1886&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/506570&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.662616497702615</longitude>
+                    <latitude>50.8397300559479</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.66261649770261,50.839730055947896</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2582">
+                <name>Lourdesgrot St.Pieter</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2582&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;506692&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;176625.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;315510.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Lourdesgrot St.Pieter&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Maastricht&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/6/6d/Maastricht_-_rijksmonument_506692_-_Ursulinenweg_bij_3_-_Lourdesgrot_St_Pieter_20100724.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/6/6d/Maastricht_-_rijksmonument_506692_-_Ursulinenweg_bij_3_-_Lourdesgrot_St_Pieter_20100724.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Otter via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1880&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/506692&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.694117851677063</longitude>
+                    <latitude>50.829043868487105</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.694117851677061,50.82904386848711</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2595">
+                <name>Vredeskapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2595&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;507215&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;180853.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;321551.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Vredeskapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Meerssen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/40/Meerssen-Markt_Vredeskapel_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/40/Meerssen-Markt_Vredeskapel_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Cuypers, J.Th.J.&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1941&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/507215&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.754554353373365</longitude>
+                    <latitude>50.883169174848256</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.754554353373365,50.88316917484827</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2596">
+                <name>Sint Joseph Kapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2596&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;507224&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;180201.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;321951.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sint Joseph Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Meerssen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/8c89cbd6-4d58-057f-f6b8-7d4a767bc317.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/8c89cbd6-4d58-057f-f6b8-7d4a767bc317.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;L.M. Tangel (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Hoen, A.&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1930&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/507224&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.745317829834164</longitude>
+                    <latitude>50.88679368944873</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.745317829834158,50.88679368944874</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.3064">
+                <name>Hof van Olijven</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;3064&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;521612&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;189369.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;333704.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Hof van Olijven&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sittard&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://rce.webgispublisher.nl/user/uploads/logos/geen_foto_beschikbaar.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://rce.webgispublisher.nl/user/uploads/logos/geen_foto_beschikbaar.jpg&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1881&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/521612&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.876713681269209</longitude>
+                    <latitude>50.99195901891745</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.8767136812692025,50.99195901891745</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2741">
+                <name>Kapel Vroedvrouwenschool</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2741&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;512707&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;197599.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;319847.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel Vroedvrouwenschool&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Heerlen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/8/8e/Heerlen-Kapel_Zandweg_180_%283%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/8/8e/Heerlen-Kapel_Zandweg_180_%283%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Stuyt, J. &amp; G.&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1934&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/512707&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.992294463106603</longitude>
+                    <latitude>50.86685241684652</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.992294463106608,50.86685241684652</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2743">
+                <name>Kapel Savelbergklooster</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2743&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;512775&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;196810.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;322144.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel Savelbergklooster&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Heerlen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/4a/Heerlen-Gasthuisstraat_2a.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/4a/Heerlen-Gasthuisstraat_2a.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kayser, Joh.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1878-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1879&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/512775&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.9813526629519345</longitude>
+                    <latitude>50.8875568475803</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.981352662951933,50.887556847580306</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.2787">
+                <name>Mariapark</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;2787&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;513957&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;190445.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;328035.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Mariapark&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Schinnen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/a/aa/Schinnen-Kapel_Krekelberg_%283%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/a/aa/Schinnen-Kapel_Krekelberg_%283%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Tummers, H.A.A.&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1939&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/513957&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.89148165241437</longitude>
+                    <latitude>50.940937385876914</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.891481652414367,50.940937385876914</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.3070">
+                <name>Retraitehuis Schinnen</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;3070&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;521695&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;187447.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;328617.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Retraitehuis Schinnen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Sweikhuizen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/4a/Sweikhuizen-Moorheide_1_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/4/4a/Sweikhuizen-Moorheide_1_%282%29.JPG&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Romaine via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Swinkels, A.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1946-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1947&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1923&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/521695&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.848882209094256</longitude>
+                    <latitude>50.94634668421187</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.8488822090942625,50.94634668421187</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.3227">
+                <name>Grafkapel</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;3227&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;529944&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;183533.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;310160.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Grafkapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Mheer&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/cf4b792f-bc00-0924-e119-eb86020eac38.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/cf4b792f-bc00-0924-e119-eb86020eac38.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;P. van Galen (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Weber, C.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1864-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1865&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/529944&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.791739939931901</longitude>
+                    <latitude>50.78065295053439</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.791739939931904,50.78065295053439</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.3241">
+                <name>Missiehuis</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;3241&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;530923&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;180836.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;316417.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Missiehuis&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Cadier en Keer&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/264d56d0-8879-c3c7-f8c0-1d5e8cd45180.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/264d56d0-8879-c3c7-f8c0-1d5e8cd45180.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Janneke Hille (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Swinkels, A.H.J.&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1954&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/530923&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.753947129202871</longitude>
+                    <latitude>50.83702233598745</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.753947129202865,50.83702233598745</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.3244">
+                <name>'t Gasthuis</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;3244&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;531029&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;183275.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;317152.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Kapel&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;'t Gasthuis&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Bemelen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/7/72/Bergen_op_Zoom_-_rijksmonument_531079_-_Rijtuigweg_44_-_Groot_Arsenaal_20120609.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/7/72/Bergen_op_Zoom_-_rijksmonument_531079_-_Rijtuigweg_44_-_Groot_Arsenaal_20120609.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Otter via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;ca.&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1890&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/531029&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.7886257888684725</longitude>
+                    <latitude>50.84351389169676</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_kapellen_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.788625788868476,50.843513891696766</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>

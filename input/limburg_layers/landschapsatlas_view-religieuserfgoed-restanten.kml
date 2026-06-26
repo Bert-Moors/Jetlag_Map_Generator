@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:ns2="http://www.google.com/kml/ext/2.2" xmlns:ns3="http://www.w3.org/2005/Atom" xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <LookAt>
+            <longitude>5.800194002186032</longitude>
+            <latitude>50.85888173001467</latitude>
+            <altitude>178109.7148555435</altitude>
+            <heading>0.0</heading>
+            <tilt>0.0</tilt>
+            <range>143921.9917553224</range>
+            <altitudeMode>clampToGround</altitudeMode>
+        </LookAt>
+        <Folder>
+            <name>religieuserfgoed</name>
+            <LookAt>
+                <longitude>5.869129729841205</longitude>
+                <latitude>50.86507904626883</latitude>
+                <altitude>32131.77536873822</altitude>
+                <heading>0.0</heading>
+                <tilt>0.0</tilt>
+                <range>25964.159863228713</range>
+                <altitudeMode>clampToGround</altitudeMode>
+            </LookAt>
+            <Placemark id="religieuserfgoed.1156">
+                <name>Nieuwenhagen</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1156&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;23872&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;201143.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;324095.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Restant&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Nieuwenhagen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Nieuwenhagen&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/350x350/5fe52761-6a4a-6670-451e-bb78b8edd15f.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://images.memorix.nl/rce/thumb/fullsize/5fe52761-6a4a-6670-451e-bb78b8edd15f.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Frans Kabel (beeldbank RCE)&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1745&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Niet van toepassing&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/23872&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>6.043173006755424</longitude>
+                    <latitude>50.904760363596615</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_restanten_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>6.04317300675543,50.90476036359661</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="religieuserfgoed.1297">
+                <name>vm. Klooster Slavante</name>
+                <description>&lt;h4&gt;religieuserfgoed&lt;/h4&gt;
+
+&lt;ul class="textattributes"&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;ogc_fid&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1297&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rijksmonum&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;27975&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_x&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;176716.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rd_y&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;315076.0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;legenda&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Restant&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;naam&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;vm. Klooster Slavante&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;plaats&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Maastricht&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_thumb&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/6/6a/Maastricht_-_rijksmonument_27975_-_Slavante_2_-_klooster_Slavante_20100724.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;foto_groot&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://upload.wikimedia.org/wikipedia/commons/6/6a/Maastricht_-_rijksmonument_27975_-_Slavante_2_-_klooster_Slavante_20100724.jpg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;fotograaf&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Otter via Wikimedia Commons&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;architect&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;onbekend&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_beg&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1666-&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;hoofd_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;1681&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;voorg_eind&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;0&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;denominat&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;Rooms-Katholieke Kerk, anders&lt;/span&gt;&lt;/li&gt;
+  
+  &lt;li&gt;&lt;strong&gt;&lt;span class="atr-name"&gt;rmon_url&lt;/span&gt;:&lt;/strong&gt; &lt;span class="atr-value"&gt;https://monumentenregister.cultureelerfgoed.nl/monumenten/27975&lt;/span&gt;&lt;/li&gt;
+  
+&lt;/ul&gt;
+</description>
+                <LookAt>
+                    <longitude>5.695383436065896</longitude>
+                    <latitude>50.82513935116114</latitude>
+                    <altitude>0.0</altitude>
+                    <heading>0.0</heading>
+                    <tilt>0.0</tilt>
+                    <range>0.0</range>
+                    <altitudeMode>clampToGround</altitudeMode>
+                </LookAt>
+                <Style>
+                    <IconStyle>
+                        <scale>4.125</scale>
+                        <heading>0.0</heading>
+                        <Icon>
+                            <href>https://services.rce.geovoorziening.nl/kml/icon/Landschapsatlas_religieuserfgoed_restanten_style?0.0.0=&amp;0.1.0=&amp;0.1.1=</href>
+                        </Icon>
+                    </IconStyle>
+                    <LabelStyle>
+                        <color>00ffffff</color>
+                        <scale>0.0</scale>
+                    </LabelStyle>
+                </Style>
+                <Point>
+                    <coordinates>5.695383436065892,50.82513935116115</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>
