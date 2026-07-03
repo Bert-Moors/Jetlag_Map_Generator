@@ -63,6 +63,12 @@ class OpenStreetMapA3PdfExporter:
             "attribution": "Map tiles by CARTO, data (c) OpenStreetMap contributors",
             "subdomains": ["a", "b", "c", "d"],
         },
+        "carto_voyager_retina": {
+            "url": "https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}@2x.png",
+            "attribution": "Map tiles by CARTO, data (c) OpenStreetMap contributors",
+            "subdomains": ["a", "b", "c", "d"],
+            "tile_scale": 2,
+        },
         "stadia_osm_bright": {
             "url": "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png",
             "attribution": "Map tiles by Stadia Maps, data (c) OpenStreetMap contributors",
@@ -80,12 +86,12 @@ class OpenStreetMapA3PdfExporter:
         },
     }
     DEFAULT_TILE_SERVER = "carto_voyager"
-    FALLBACK_TILE_SERVERS = ["carto_light", "carto_voyager", "osm_de", "opentopomap"]
+    FALLBACK_TILE_SERVERS = ["carto_voyager_retina", "carto_voyager", "carto_light", "osm_de", "opentopomap"]
     USER_AGENT = "JetlagMapGenerator/1.0 (+https://www.openstreetmap.org/copyright)"
     TILE_SIZE = 256
     A3_LANDSCAPE_MM = (420, 297)
     DPI = 300
-    MAX_TILES = 700
+    MAX_TILES = 2500
     GEOD = Geod(ellps="WGS84")
 
     def export(self, data: dict, output_path):
@@ -93,6 +99,7 @@ class OpenStreetMapA3PdfExporter:
             from PIL import Image, ImageDraw, ImageFont
         except ImportError as exc:
             raise ImportError("The PDF exporter requires Pillow. Install it with `pip install pillow`.") from exc
+        Image.MAX_IMAGE_PIXELS = None
 
         self._active_tile_server_name = self._tile_server_name()
         self._failed_tile_servers = set()
@@ -342,16 +349,18 @@ class OpenStreetMapA3PdfExporter:
     def _render_tiles(self, Image, world_bounds, zoom, page_size, output_path):
         min_x, min_y, max_x, max_y = world_bounds
         tile_min_x, tile_min_y, tile_max_x, tile_max_y = self._world_tile_range(world_bounds, zoom)
-        mosaic = Image.new("RGB", ((tile_max_x - tile_min_x + 1) * self.TILE_SIZE, (tile_max_y - tile_min_y + 1) * self.TILE_SIZE), "white")
+        tile_scale = self._tile_scale(self._tile_server_name())
+        tile_pixel_size = self.TILE_SIZE * tile_scale
+        mosaic = Image.new("RGB", ((tile_max_x - tile_min_x + 1) * tile_pixel_size, (tile_max_y - tile_min_y + 1) * tile_pixel_size), "white")
         for x in range(tile_min_x, tile_max_x + 1):
             for y in range(tile_min_y, tile_max_y + 1):
-                tile = self._fetch_tile(Image, zoom, x, y, output_path)
-                mosaic.paste(tile, ((x - tile_min_x) * self.TILE_SIZE, (y - tile_min_y) * self.TILE_SIZE))
+                tile = self._fetch_tile(Image, zoom, x, y, output_path, tile_pixel_size)
+                mosaic.paste(tile, ((x - tile_min_x) * tile_pixel_size, (y - tile_min_y) * tile_pixel_size))
         crop = (
-            round(min_x - tile_min_x * self.TILE_SIZE),
-            round(min_y - tile_min_y * self.TILE_SIZE),
-            round(max_x - tile_min_x * self.TILE_SIZE),
-            round(max_y - tile_min_y * self.TILE_SIZE),
+            round((min_x - tile_min_x * self.TILE_SIZE) * tile_scale),
+            round((min_y - tile_min_y * self.TILE_SIZE) * tile_scale),
+            round((max_x - tile_min_x * self.TILE_SIZE) * tile_scale),
+            round((max_y - tile_min_y * self.TILE_SIZE) * tile_scale),
         )
         return mosaic.crop(crop).resize(page_size, Image.Resampling.LANCZOS).convert("RGBA")
 
@@ -364,7 +373,7 @@ class OpenStreetMapA3PdfExporter:
             math.floor(max_y / self.TILE_SIZE),
         )
 
-    def _fetch_tile(self, Image, zoom, x, y, output_path):
+    def _fetch_tile(self, Image, zoom, x, y, output_path, tile_pixel_size):
         max_tile = 2 ** zoom
         x %= max_tile
         y = min(max(y, 0), max_tile - 1)
@@ -376,7 +385,7 @@ class OpenStreetMapA3PdfExporter:
             if cache_path.exists():
                 self._active_tile_server_name = server_name
                 self._debug(f"Tile cache hit: {server_name} z={zoom} x={x} y={y}")
-                return Image.open(cache_path).convert("RGB")
+                return self._prepare_tile_image(Image, Image.open(cache_path).convert("RGB"), tile_pixel_size)
 
             server = self.TILE_SERVERS[server_name]
             subdomain = server["subdomains"][(x + y) % len(server["subdomains"])]
@@ -388,7 +397,7 @@ class OpenStreetMapA3PdfExporter:
                 cache_path.parent.mkdir(parents=True, exist_ok=True)
                 cache_path.write_bytes(response.content)
                 self._active_tile_server_name = server_name
-                return Image.open(io.BytesIO(response.content)).convert("RGB")
+                return self._prepare_tile_image(Image, Image.open(io.BytesIO(response.content)).convert("RGB"), tile_pixel_size)
             except Exception as exc:
                 errors.append(f"{server_name}: {exc}")
                 self._debug(f"Tile server failed ({server_name}): {exc}")
@@ -404,6 +413,14 @@ class OpenStreetMapA3PdfExporter:
 
     def _tile_server(self):
         return self.TILE_SERVERS[self._tile_server_name()]
+
+    def _tile_scale(self, server_name):
+        return self.TILE_SERVERS[server_name].get("tile_scale", 1)
+
+    def _prepare_tile_image(self, Image, tile, tile_pixel_size):
+        if tile.size == (tile_pixel_size, tile_pixel_size):
+            return tile
+        return tile.resize((tile_pixel_size, tile_pixel_size), Image.Resampling.LANCZOS)
 
     def _tile_cache_path(self, output_path, server_name, zoom, x, y):
         return Path(f"{output_path} OSM tile-cache") / server_name / str(zoom) / str(x) / f"{y}.png"

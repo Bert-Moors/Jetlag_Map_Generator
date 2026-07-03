@@ -3,7 +3,7 @@ import tomllib
 import yaml
 
 from generator.config import Config, Layer, Datasource
-from loaders.loaders import OverpassLoader, GeoJsonLoader
+from loaders.loaders import EmptyLoader, OverpassLoader, GeoJsonLoader
 from processors import get_processor
 from generator.exporters import  get_exporter
 
@@ -94,6 +94,8 @@ def dict_to_datasource(name:str, data:dict) -> Datasource:
         loader = OverpassLoader(query, data.get("geom_type"))
     elif file := data.get("file"):
         loader = GeoJsonLoader(file)
+    elif any(proc.get("source_layer") for proc in data.get("processors", [])):
+        loader = EmptyLoader()
     else:
         raise Exception(f"datasource {name} not configured properly")
     style = normalize_style(data.get("style", {}))

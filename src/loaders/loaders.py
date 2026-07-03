@@ -12,6 +12,11 @@ class Loader(Protocol):
     def load(self) -> geopandas.geodataframe.GeoDataFrame:
         pass
 
+
+class EmptyLoader:
+    def load(self):
+        return geopandas.GeoDataFrame(columns=["geometry", "name"], geometry="geometry", crs="EPSG:4326")
+
 class OverpassLoader:
     def __init__(self, query, geo_type):
         self.query = query
@@ -23,7 +28,7 @@ class OverpassLoader:
 
     # ----------------------------------------------Parsing Functions--------------------------------------------------
     def __parse_json(self, json_data: Dict, geom_type: str) -> geopandas.GeoDataFrame:
-        frame = geopandas.GeoDataFrame()
+        frame = None
         # change parsing method based on
         match geom_type:
             case "border":
@@ -37,7 +42,7 @@ class OverpassLoader:
             case "polygons":
                 frame = self.__parse_polygons(json_data)
         # if frame did not get overwritten or empty geom type is not supported
-        if frame.empty:
+        if frame is None:
             raise Exception("geom type not supported")
         return frame
 
@@ -55,11 +60,11 @@ class OverpassLoader:
                 geom = shapely.MultiLineString(lines)
                 p_frame.loc[len(p_frame)] = {"name": "border", "geometry": geom}
         else:
-            raise Exception("Response is empty")
+            return geopandas.GeoDataFrame(p_frame, geometry="geometry")
         return geopandas.GeoDataFrame(p_frame)
 
     def __parse_points(self, json_response: Dict) -> geopandas.GeoDataFrame:
-        p_frame = pd.DataFrame(columns=["geometry", "name"])
+        p_frame = pd.DataFrame(columns=["geometry", "name", "description"])
         if json_response["elements"]:
             for element in json_response["elements"]:
                 match element["type"]:
@@ -83,13 +88,13 @@ class OverpassLoader:
                             geom = shapely.Point(lon, lat)
                         else:
                             raise Exception("Point has no valid data")
-                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "geometry": geom}
+                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "description": self.__description(element), "geometry": geom}
         else:
-            raise Exception("Response is empty")
+            return geopandas.GeoDataFrame(p_frame, geometry="geometry")
         return geopandas.GeoDataFrame(p_frame)
 
     def __parse_polygons(self, json_response: Dict) -> geopandas.GeoDataFrame:
-        p_frame = pd.DataFrame(columns=["geometry", "name"])
+        p_frame = pd.DataFrame(columns=["geometry", "name", "description"])
         if json_response["elements"]:
             for element in json_response["elements"]:
                 lines = []
@@ -104,27 +109,34 @@ class OverpassLoader:
                 for poly in shapes:
                     polygons.append(shapely.geometry.Polygon(poly))
                 geom = shapely.geometry.MultiPolygon(polygons)
-                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "geometry": geom}
+                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "description": self.__description(element), "geometry": geom}
         else:
-            raise Exception("Response is empty")
+            return geopandas.GeoDataFrame(p_frame, geometry="geometry")
         return geopandas.GeoDataFrame(p_frame)
 
     def __parse_routes(self, json_response: Dict) -> geopandas.GeoDataFrame:
-        p_frame = pd.DataFrame(columns=["geometry", "name"])
+        p_frame = pd.DataFrame(columns=["geometry", "name", "description"])
         if json_response["elements"]:
             for element in json_response["elements"]:
                 lines = []
                 for member in element["members"]:
-                    if member["type"] == "way" and member["role"] != "platform":
+                    if member["type"] == "way" and member["role"] != "platform" and member.get("geometry"):
                         points = []
                         for point in member["geometry"]:
+                            if point is None:
+                                continue
                             points.append([point["lon"], point["lat"]])
-                        lines.append(points)
+                        if len(points) > 1:
+                            lines.append(points)
                 geom = shapely.MultiLineString(lines)
-                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "geometry": geom}
+                p_frame.loc[len(p_frame)] = {"name": element["tags"]["name"], "description": self.__description(element), "geometry": geom}
         else:
-            raise Exception("Response is empty")
+            return geopandas.GeoDataFrame(p_frame, geometry="geometry")
         return geopandas.GeoDataFrame(p_frame)
+
+    def __description(self, element):
+        tags = element.get("tags", {})
+        return tags.get("description") or tags.get("description:en")
 
 
 class GeoJsonLoader:

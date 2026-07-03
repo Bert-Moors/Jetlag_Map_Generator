@@ -1,0 +1,478 @@
+config:
+  name: "The Hague Tram"
+  location: "H&S The Hague Tram"
+  exporters: ["googleMMaps", "fullkml", "kmlHidingZones"]
+layers:
+  Hiding Spots:
+    processors: [
+      {
+        name: "add_column",
+        columns: { "hiding_size": 250 }
+      }
+    ]
+    tram:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+          prefix_ignores: [
+            "Den Haag, ",
+            "Delft, ",
+            "Rijswijk, ",
+            "Leidschendam, ",
+            "Voorburg, ",
+            "Nootdorp, ",
+            "Wateringen, "
+          ],
+          equivalent_station_names: [
+            {
+              station_list: ["Station Laan van N.O.I.", "Den Haag Laan van NOI", "Den Haag Laan van N.O.I."],
+              replacement-station-name: "Station Laan van N.O.I."
+            },
+            {
+              station_list: ["Van Speijkstraat", "Obrechtstraat"],
+              replacement-station-name: "Van Speijkstraat/Obrechtstraat"
+            },
+            {
+              station_list: ["Conradkade", "Laan van Meerdervoort"],
+              replacement-station-name: "Conradkade/Laan van Meerdervoort"
+            },
+            {
+              station_list: ["Loosduinseweg", "De la Reyweg"],
+              replacement-station-name: "Loosduinseweg/De la Reyweg"
+            },
+            {
+              station_list: ["Malieveld", "Korte Voorhout"],
+              replacement-station-name: "Malieveld/Korte Voorhout"
+            },
+            {
+              station_list: ["Buitenhof", "Kneuterdijk"],
+              replacement-station-name: "Buitenhof/Kneuterdijk"
+            },
+            {
+              station_list: ["Spui", "Centrum", "Kalvermarkt-Stadhuis"],
+              replacement-station-name: "Spui/Centrum/Kalvermarkt-Stadhuis"
+            },
+            {
+              station_list: ["Monstersestraat", "Loosduinseweg"],
+              replacement-station-name: "Monstersestraat/Loosduinseweg"
+            },
+            {
+              station_list: ["Leidschenveen Centrum", "Leidschenveen"],
+              replacement-station-name: "Leidschenveen/Leidschenveen Centrum"
+            }
+          ],
+          distance_cutoff: 300
+        },
+      ]
+      type: "tram stops"
+      query:
+        '
+        [out:json][timeout:60];
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Delft|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
+        relation["type"="route"]["route"~"tram|light_rail"]["ref"~"^(1|2|3|4|6|9|11|12|15|16|17|19)$"](area.serviceArea)->.tramRoutes;
+        (
+          node(r.tramRoutes)(area.serviceArea)["railway"~"tram_stop|stop"]["name"];
+          node(r.tramRoutes)(area.serviceArea)["public_transport"~"platform|stop_position"]["name"];
+          way(r.tramRoutes)(area.serviceArea)["railway"="tram_stop"]["name"];
+          way(r.tramRoutes)(area.serviceArea)["public_transport"="platform"]["name"];
+        );
+        out center;
+        '
+      style: {
+        color: "ffa82d6f",
+        href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+      }
+
+  Transit:
+    tram_lines:
+      geom_type: "routes"
+      type: "tram lines"
+      query:
+        '
+        [out:json][timeout:60];
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Delft|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
+        relation["type"="route"]["route"~"tram|light_rail"]["ref"~"^(1|2|3|4|6|9|11|12|15|16|17|19)$"](area.serviceArea);
+        out geom(51.95,4.17,52.14,4.43);
+        '
+      style: {
+        color: "ffa82d6f",
+        width: 4,
+        with_label: true,
+        label_size: 10
+      }
+
+  Administrative Zones:
+    coast_west:
+      geom_type: "polygons"
+      query:
+        '
+        [out:json][timeout:60];
+        relation(192736)->.denhaag;
+        .denhaag map_to_area -> .denhaagArea;
+        relation["boundary"="place"]["place"="suburb"]["name"~"^(Scheveningen|Segbroek|Loosduinen)$"](area.denhaagArea);
+        out geom;
+        '
+      style: { color: "ff1f78b4" }
+    centre:
+      geom_type: "polygons"
+      query:
+        '
+        [out:json][timeout:60];
+        relation(192736)->.denhaag;
+        .denhaag map_to_area -> .denhaagArea;
+        relation["boundary"="place"]["place"="suburb"]["name"~"^(Centrum|Laak)$"](area.denhaagArea);
+        out geom;
+        '
+      style: { color: "ff33a02c" }
+    south_wateringen:
+      geom_type: "polygons"
+      query:
+        '
+        [out:json][timeout:60];
+        relation(192736)->.denhaag;
+        .denhaag map_to_area -> .denhaagArea;
+        (
+          relation["boundary"="place"]["place"="suburb"]["name"="Escamp"](area.denhaagArea);
+          relation["boundary"="administrative"]["admin_level"="10"]["name"="Wateringen"];
+          relation["boundary"="administrative"]["admin_level"="8"]["name"="Rijswijk"];
+        );
+        out geom;
+        '
+      style: { color: "ffe31a1c" }
+    delft:
+      geom_type: "polygons"
+      query:
+        '
+        [out:json][timeout:60];
+        relation(192736)->.denhaag;
+        .denhaag map_to_area -> .denhaagArea;
+        (
+          relation["boundary"="administrative"]["admin_level"="8"]["name"="Delft"];
+          relation["boundary"="administrative"]["admin_level"="10"]["name"="Nootdorp"];
+          relation["boundary"="place"]["place"="suburb"]["name"="Leidschenveen-Ypenburg"](area.denhaagArea);
+        );
+        out geom;
+        '
+      style: { color: "ffb15928" }
+    leidschendam_voorburg:
+      geom_type: "polygons"
+      query:
+        '
+        [out:json][timeout:60];
+        relation(192736)->.denhaag;
+        .denhaag map_to_area -> .denhaagArea;
+        (
+          relation["boundary"="administrative"]["admin_level"="8"]["name"="Leidschendam-Voorburg"];
+          relation["boundary"="place"]["place"="suburb"]["name"="Haagse Hout"](area.denhaagArea);
+        );
+        out geom;
+        '
+      style: { color: "ffcab2d6" }
+
+  Simplified Tram Lines:
+    simplified_tram_lines:
+      geom_type: "points"
+      processors: [
+        {
+          name: "simplified_lines",
+          file: "input/the_hague_tram_lines.json",
+          source_layer: "Hiding Spots",
+          source_type: "tram",
+          prefix_ignores: [
+            "Den Haag, ",
+            "Delft, ",
+            "Rijswijk, ",
+            "Leidschendam, ",
+            "Voorburg, ",
+            "Nootdorp, ",
+            "Wateringen, "
+          ],
+          normalization_list: [
+            { from: "Station Den Haag HS", to: "Station Hollands Spoor" },
+            { from: "Den Haag Laan van NOI", to: "Station Laan van N.O.I." },
+            { from: "Den Haag Laan van N.O.I.", to: "Station Laan van N.O.I." },
+            { from: "Waldorpstraat / Station HS", to: "Waldorpstraat/Station HS" }
+          ],
+          aliases: {
+            "Station Hollands Spoor": ["Station Den Haag HS", "Den Haag HS"],
+            "Station Laan van N.O.I.": ["Den Haag Laan van NOI", "Den Haag Laan van N.O.I."],
+            "Waldorpstraat/Station HS": ["Waldorpstraat / Station HS"],
+            "Scheveningseslag/Beelden aan Zee": ["Scheveningseslag / Beelden aan Zee"],
+            "Mall of The Netherlands": ["Leidsenhage"],
+            "Bogaard stadscentrum": ["In de Bogaard"],
+            "De Savornin Lohmanplein": ["Savornin Lohmanplein"],
+            "Van Speijkstraat": ["Van Speijkstraat/Obrechtstraat"],
+            "Obrechtstraat": ["Van Speijkstraat/Obrechtstraat"],
+            "Conradkade": ["Conradkade/Laan van Meerdervoort"],
+            "Laan van Meerdervoort": ["Conradkade/Laan van Meerdervoort"],
+            "Loosduinseweg": ["Loosduinseweg/De la Reyweg", "Monstersestraat/Loosduinseweg"],
+            "De la Reyweg": ["Loosduinseweg/De la Reyweg"],
+            "Malieveld": ["Malieveld/Korte Voorhout"],
+            "Korte Voorhout": ["Malieveld/Korte Voorhout"],
+            "Buitenhof": ["Buitenhof/Kneuterdijk"],
+            "Kneuterdijk": ["Buitenhof/Kneuterdijk"],
+            "Spui": ["Spui/Centrum/Kalvermarkt-Stadhuis"],
+            "Centrum": ["Spui/Centrum/Kalvermarkt-Stadhuis"],
+            "Kalvermarkt-Stadhuis": ["Spui/Centrum/Kalvermarkt-Stadhuis"],
+            "Monstersestraat": ["Monstersestraat/Loosduinseweg"],
+            "Leidschenveen": ["Leidschenveen/Leidschenveen Centrum", "Leidschenveen Centrum"],
+            "Leidschenveen Centrum": ["Leidschenveen/Leidschenveen Centrum", "Leidschenveen"]
+          }
+        },
+      ]
+      style: {
+        width: 6,
+        with_label: true,
+        label_size: 10,
+        type_to_color: {
+          "1": "ffe41a1c",
+          "2": "ff377eb8",
+          "3": "ff4daf4a",
+          "4": "ff984ea3",
+          "6": "ffff7f00",
+          "9": "ffffff33",
+          "11": "ffa65628",
+          "12": "fff781bf",
+          "15": "ff999999",
+          "16": "ff66c2a5",
+          "17": "fffc8d62",
+          "19": "ff8da0cb"
+        }
+      }
+
+  Interesting Places:
+    processors: [
+      {
+        name: "filter_by_distance_to_layer",
+        source_layer: "Hiding Spots",
+        source_type: "tram",
+        distance: 500
+      },
+      {
+        name: "remove_overlapping_zones",
+        size: 90,
+        allowed_intrusion: 0,
+        config: {
+          "monuments_with_wiki": { importance: 4 },
+          "memorials_with_wiki": { importance: 4 },
+          "viewpoints_with_wiki": { importance: 3 },
+          "castles_with_wiki": { importance: 4 },
+          "public_art_with_wiki": { importance: 3 },
+          "attractions_with_wiki": { importance: 4 },
+          "historic_sites_with_wiki": { importance: 4 },
+          "monuments_without_wiki": { importance: 2 },
+          "memorials_without_wiki": { importance: 2 },
+          "viewpoints_without_wiki": { importance: 1 },
+          "castles_without_wiki": { importance: 2 },
+          "public_art_without_wiki": { importance: 1 },
+          "attractions_without_wiki": { importance: 1 },
+          "historic_sites_without_wiki": { importance: 2 }
+        }
+      },
+    ]
+    monuments_with_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["historic"="monument"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          way["historic"="monument"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          relation["historic"="monument"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          node["historic"="monument"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"="monument"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"="monument"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ff7b3294", href: "https://maps.google.com/mapfiles/kml/paddle/purple-circle.png" }
+    monuments_without_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["historic"="monument"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"="monument"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"="monument"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ffc2a5cf", href: "https://maps.google.com/mapfiles/kml/paddle/purple-blank.png" }
+    memorials_with_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["historic"="memorial"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          way["historic"="memorial"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          relation["historic"="memorial"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          node["historic"="memorial"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"="memorial"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"="memorial"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ff008837", href: "https://maps.google.com/mapfiles/kml/paddle/grn-circle.png" }
+    memorials_without_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["historic"="memorial"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"="memorial"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"="memorial"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ffa6dba0", href: "https://maps.google.com/mapfiles/kml/paddle/grn-blank.png" }
+    viewpoints_with_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["tourism"="viewpoint"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          way["tourism"="viewpoint"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          relation["tourism"="viewpoint"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          node["tourism"="viewpoint"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["tourism"="viewpoint"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["tourism"="viewpoint"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ff0571b0", href: "https://maps.google.com/mapfiles/kml/paddle/blu-circle.png" }
+    viewpoints_without_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["tourism"="viewpoint"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          way["tourism"="viewpoint"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          relation["tourism"="viewpoint"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ff92c5de", href: "https://maps.google.com/mapfiles/kml/paddle/blu-blank.png" }
+    castles_with_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["historic"="castle"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          way["historic"="castle"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          relation["historic"="castle"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          node["historic"="castle"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"="castle"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"="castle"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ffb35806", href: "https://maps.google.com/mapfiles/kml/paddle/orange-circle.png" }
+    castles_without_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["historic"="castle"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"="castle"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"="castle"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "fffdb863", href: "https://maps.google.com/mapfiles/kml/paddle/orange-blank.png" }
+    public_art_with_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"]["wikipedia"](51.95,4.17,52.14,4.43);
+          way["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"]["wikipedia"](51.95,4.17,52.14,4.43);
+          relation["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"]["wikipedia"](51.95,4.17,52.14,4.43);
+          node["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"]["wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ff1b9e77", href: "https://maps.google.com/mapfiles/kml/paddle/ltblu-circle.png" }
+    public_art_without_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          way["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          relation["tourism"="artwork"]["name"]["artwork_type"~"statue|sculpture|installation|mural"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ff66c2a5", href: "https://maps.google.com/mapfiles/kml/paddle/ltblu-blank.png" }
+    attractions_with_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["tourism"="attraction"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          way["tourism"="attraction"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          relation["tourism"="attraction"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          node["tourism"="attraction"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["tourism"="attraction"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["tourism"="attraction"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ffe7298a", href: "https://maps.google.com/mapfiles/kml/paddle/pink-circle.png" }
+    attractions_without_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["tourism"="attraction"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          way["tourism"="attraction"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          relation["tourism"="attraction"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "fff1b6da", href: "https://maps.google.com/mapfiles/kml/paddle/pink-blank.png" }
+    historic_sites_with_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["historic"~"archaeological_site|ruins"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          way["historic"~"archaeological_site|ruins"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          relation["historic"~"archaeological_site|ruins"]["name"]["wikipedia"](51.95,4.17,52.14,4.43);
+          node["historic"~"archaeological_site|ruins"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"~"archaeological_site|ruins"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"~"archaeological_site|ruins"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ff7570b3", href: "https://maps.google.com/mapfiles/kml/paddle/wht-circle.png" }
+    historic_sites_without_wiki:
+      geom_type: "points"
+      query:
+        '
+        [out:json][timeout:60];
+        (
+          node["historic"~"archaeological_site|ruins"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"~"archaeological_site|ruins"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"~"archaeological_site|ruins"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+        );
+        out center;
+        '
+      style: { color: "ffbcbddc", href: "https://maps.google.com/mapfiles/kml/paddle/wht-blank.png" }

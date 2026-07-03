@@ -9,6 +9,7 @@ class Generator:
         self._config = genconfig.load_config(config_file)
         self._output_path = output_path
         self._gathered_data = {}
+        self._processed_datasources = {}
 
     def generate(self):
         self.__import_data()
@@ -27,13 +28,19 @@ class Generator:
 
     def __process_data(self):
         for layer in self._config.layers:
+            self._processed_datasources[layer.name] = {}
             for data in layer.datasources:
                 for processor in data.processors:
+                    if hasattr(processor, "set_context"):
+                        processor.set_context(self._processed_datasources)
                     self._gathered_data[layer.name][data.name_type] = processor.process(self._gathered_data[layer.name][data.name_type])
                 self.__apply_style(self._gathered_data[layer.name][data.name_type], data)
+                self._processed_datasources[layer.name][data.name_type] = self._gathered_data[layer.name][data.name_type]
             if layer.processors:
                 layer_frame = gpd.GeoDataFrame(pd.concat(self._gathered_data[layer.name].values()))
                 for processor in layer.processors:
+                    if hasattr(processor, "set_context"):
+                        processor.set_context(self._processed_datasources)
                     layer_frame = processor.process(layer_frame)
                 split_frames = {}
                 for type in layer_frame["type"].unique():
