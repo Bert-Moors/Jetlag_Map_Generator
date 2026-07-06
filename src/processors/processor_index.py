@@ -8,6 +8,7 @@ from processors.remove_items_by_name import RemoveByNames
 from processors.remove_overlapping_zones import RemoveOverlappingZones
 from processors.rename import Rename
 from processors.simplified_lines import SimplifiedLines
+from processors.simplify_geometry import SimplifyGeometry
 
 
 def get_processor(processor):
@@ -22,6 +23,7 @@ def get_processor(processor):
         "filter_by_distance_to_layer": FilterByDistanceToLayer,
         "lat_lon_to_points": LatLonToPoints,
         "simplified_lines": SimplifiedLines,
+        "simplify_geometry": SimplifyGeometry,
     }
 
     return mp[processor.get("name")](processor)

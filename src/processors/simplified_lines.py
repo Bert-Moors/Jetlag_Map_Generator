@@ -13,6 +13,7 @@ class SimplifiedLines:
     def __init__(self, config):
         self.file = config.get("file")
         self.min_stops = config.get("min_stops", 2)
+        self.key_column = config.get("key_column", "name")
         self.prefix_ignores = config.get("prefix_ignores", [])
         self.normalization_list = config.get("normalization_list", [])
         self.aliases = config.get("aliases", {})
@@ -70,7 +71,7 @@ class SimplifiedLines:
     def _points_by_name(self, frame):
         points_by_name = {}
         for _, row in frame.iterrows():
-            name = row.get("name")
+            name = row.get(self.key_column)
             geometry = row.get("geometry")
             if not name or geometry is None or geometry.is_empty:
                 continue

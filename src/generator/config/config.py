@@ -35,10 +35,11 @@ class Config:
     Contains multiple layers.
     """
 
-    def __init__(self, name:str, exporters):
+    def __init__(self, name:str, exporters, settings=None):
         self.name = name
         self.location = ""
         self.exporters = exporters
+        self.settings = settings or {}
         self.layers: List[Layer] = []
 
     def add_layer(self, layer: Layer):

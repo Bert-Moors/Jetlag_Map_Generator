@@ -1,7 +1,8 @@
 config:
   name: "The Hague Tram"
   location: "H&S The Hague Tram"
-  exporters: ["googleMMaps", "fullkml", "kmlHidingZones"]
+  exporters: ["googleMMaps", "fullkml", "kmlHidingZones", "osmA3Pdf"]
+  round_map_zoom: false
 layers:
   Hiding Spots:
     processors: [

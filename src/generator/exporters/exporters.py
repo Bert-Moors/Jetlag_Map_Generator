@@ -94,6 +94,12 @@ class OpenStreetMapA3PdfExporter:
     MAX_TILES = 2500
     GEOD = Geod(ellps="WGS84")
 
+    def __init__(self):
+        self._round_map_zoom = True
+
+    def configure(self, settings):
+        self._round_map_zoom = self._setting_bool(settings.get("round_map_zoom"), True)
+
     def export(self, data: dict, output_path):
         try:
             from PIL import Image, ImageDraw, ImageFont
@@ -116,7 +122,10 @@ class OpenStreetMapA3PdfExporter:
         page_size = self._page_size_px()
         zoom = self._choose_zoom(bounds, page_size)
         world_bounds = self._world_bounds_for_page(bounds, zoom, page_size)
-        world_bounds, map_scale = self._round_world_bounds_to_scale(world_bounds, zoom)
+        if self._round_map_zoom:
+            world_bounds, map_scale = self._round_world_bounds_to_scale(world_bounds, zoom)
+        else:
+            map_scale = self._world_bounds_scale(world_bounds, zoom)
         final_zoom = self._choose_zoom_for_world_bounds(world_bounds, zoom)
         if final_zoom != zoom:
             zoom_factor = 2 ** (final_zoom - zoom)
@@ -127,7 +136,8 @@ class OpenStreetMapA3PdfExporter:
         source_size = (round(world_bounds[2] - world_bounds[0]), round(world_bounds[3] - world_bounds[1]))
         self._debug(f"Input bounds lon/lat: {bounds}")
         self._debug(f"A3 page size: {page_size[0]}x{page_size[1]} px at {self.DPI} DPI")
-        self._debug(f"Rounded map scale: {map_scale:g} cm/km")
+        scale_label = "Rounded map scale" if self._round_map_zoom else "Map scale"
+        self._debug(f"{scale_label}: {map_scale:g} cm/km")
         self._debug(f"Selected zoom {zoom}; source map area {source_size[0]}x{source_size[1]} px; fetching/compositing {tile_count} tile(s)")
         image = self._render_tiles(Image, world_bounds, zoom, page_size, output_path)
 
@@ -143,16 +153,13 @@ class OpenStreetMapA3PdfExporter:
             for _, row in frame.iterrows():
                 color = self._row_color(row, color_map[datatype])
                 secondary_color = self._row_secondary_color(row, (255, 255, 255, 240))
-                icon_href = row.get("style_href")
+                icon_href = self._row_icon_href(row)
                 svg = row.get("style_svg")
                 marker_scale = self._row_scale(row)
                 stroke_width = self._row_width(row)
                 dotted = self._row_dotted(row)
                 geometry = row["geometry"]
                 vector_elements.extend(self._geometry_to_svg(geometry, color, zoom, world_bounds, page_size, stroke_width, dotted))
-                if self._row_with_label(row):
-                    label_elements.extend(self._geometry_to_labels(row, geometry, zoom, world_bounds, page_size))
-                label_elements.extend(self._geometry_to_fixed_labels(row, geometry, zoom, world_bounds, page_size))
                 self._draw_point_geometry(draw, geometry, color, secondary_color, zoom, world_bounds, page_size, icon_href, svg, marker_scale)
 
         font = ImageFont.load_default()
@@ -254,10 +261,10 @@ class OpenStreetMapA3PdfExporter:
         return (min_x, min_y, max_x, max_y)
 
     def _round_world_bounds_to_scale(self, world_bounds, zoom):
-        width_km, _ = self._world_bounds_size_km(world_bounds, zoom)
-        current_scale = self.A3_LANDSCAPE_MM[0] / 10 / width_km
+        current_scale = self._world_bounds_scale(world_bounds, zoom)
         rounded_scale = self._nice_scale(current_scale)
         desired_width_km = self.A3_LANDSCAPE_MM[0] / 10 / rounded_scale
+        width_km, _ = self._world_bounds_size_km(world_bounds, zoom)
         scale = desired_width_km / width_km
 
         min_x, min_y, max_x, max_y = world_bounds
@@ -271,6 +278,17 @@ class OpenStreetMapA3PdfExporter:
             center_x + width / 2,
             center_y + height / 2,
         ), rounded_scale
+
+    def _world_bounds_scale(self, world_bounds, zoom):
+        width_km, _ = self._world_bounds_size_km(world_bounds, zoom)
+        return self.A3_LANDSCAPE_MM[0] / 10 / width_km
+
+    def _setting_bool(self, value, default):
+        if value is None:
+            return default
+        if isinstance(value, bool):
+            return value
+        return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
 
     def _nice_scale(self, scale):
         exponent = math.floor(math.log10(scale)) if scale > 0 else 0
@@ -503,6 +521,14 @@ class OpenStreetMapA3PdfExporter:
         if not width or pd.isna(width):
             return None
         return max(round(float(width)), 1)
+
+    def _row_icon_href(self, row):
+        href = row.get("style_href")
+        if not href or pd.isna(href):
+            return None
+        if str(href).endswith("/bus.png"):
+            return None
+        return href
 
     def _row_with_label(self, row):
         value = row.get("style_with_label")

@@ -56,7 +56,11 @@ def dict_to_config(data: dict) -> Config:
             exporters.append(get_exporter(exporter))
         if not exporters:
             exporters.append(get_exporter("googleMMaps"))
-        config = Config(name, exporters)
+        settings = {key: value for key, value in config_data.items() if key not in {"name", "exporters"}}
+        config = Config(name, exporters, settings)
+        for exporter in config.exporters:
+            if hasattr(exporter, "configure"):
+                exporter.configure(settings)
     else:
         raise Exception("config not defined")
 
