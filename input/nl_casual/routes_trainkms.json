@@ -1,0 +1,4332 @@
+[
+  {
+    "fromStation": "utm",
+    "toStation": "bhv",
+    "distance": 62
+  },
+  {
+    "fromStation": "bhv",
+    "toStation": "utm",
+    "distance": 62
+  },
+  {
+    "fromStation": "bhv",
+    "toStation": "uto",
+    "distance": 56
+  },
+  {
+    "fromStation": "uto",
+    "toStation": "bhv",
+    "distance": 56
+  },
+  {
+    "fromStation": "uto",
+    "toStation": "ut",
+    "distance": 34
+  },
+  {
+    "fromStation": "ut",
+    "toStation": "uto",
+    "distance": 34
+  },
+  {
+    "fromStation": "ndb",
+    "toStation": "ampo",
+    "distance": 172
+  },
+  {
+    "fromStation": "ampo",
+    "toStation": "ndb",
+    "distance": 172
+  },
+  {
+    "fromStation": "bd",
+    "toStation": "bdpb",
+    "distance": 48
+  },
+  {
+    "fromStation": "bdpb",
+    "toStation": "bd",
+    "distance": 48
+  },
+  {
+    "fromStation": "bdpb",
+    "toStation": "zlw",
+    "distance": 101
+  },
+  {
+    "fromStation": "zlw",
+    "toStation": "bdpb",
+    "distance": 101
+  },
+  {
+    "fromStation": "ehv",
+    "toStation": "ehs",
+    "distance": 26
+  },
+  {
+    "fromStation": "ehs",
+    "toStation": "ehv",
+    "distance": 26
+  },
+  {
+    "fromStation": "ehs",
+    "toStation": "bet",
+    "distance": 74
+  },
+  {
+    "fromStation": "bet",
+    "toStation": "ehs",
+    "distance": 74
+  },
+  {
+    "fromStation": "bet",
+    "toStation": "btl",
+    "distance": 99
+  },
+  {
+    "fromStation": "btl",
+    "toStation": "bet",
+    "distance": 99
+  },
+  {
+    "fromStation": "btl",
+    "toStation": "ot",
+    "distance": 89
+  },
+  {
+    "fromStation": "ot",
+    "toStation": "btl",
+    "distance": 89
+  },
+  {
+    "fromStation": "ot",
+    "toStation": "tb",
+    "distance": 81
+  },
+  {
+    "fromStation": "tb",
+    "toStation": "ot",
+    "distance": 81
+  },
+  {
+    "fromStation": "rsd",
+    "toStation": "odb",
+    "distance": 69
+  },
+  {
+    "fromStation": "odb",
+    "toStation": "rsd",
+    "distance": 69
+  },
+  {
+    "fromStation": "odb",
+    "toStation": "zvb",
+    "distance": 81
+  },
+  {
+    "fromStation": "zvb",
+    "toStation": "odb",
+    "distance": 81
+  },
+  {
+    "fromStation": "zvb",
+    "toStation": "zlw",
+    "distance": 78
+  },
+  {
+    "fromStation": "zlw",
+    "toStation": "zvb",
+    "distance": 78
+  },
+  {
+    "fromStation": "zlw",
+    "toStation": "ddzd",
+    "distance": 115
+  },
+  {
+    "fromStation": "ddzd",
+    "toStation": "zlw",
+    "distance": 115
+  },
+  {
+    "fromStation": "ddzd",
+    "toStation": "ddr",
+    "distance": 28
+  },
+  {
+    "fromStation": "ddr",
+    "toStation": "ddzd",
+    "distance": 28
+  },
+  {
+    "fromStation": "ddr",
+    "toStation": "ddrs",
+    "distance": 21
+  },
+  {
+    "fromStation": "ddrs",
+    "toStation": "ddr",
+    "distance": 21
+  },
+  {
+    "fromStation": "ddrs",
+    "toStation": "sdtb",
+    "distance": 37
+  },
+  {
+    "fromStation": "sdtb",
+    "toStation": "ddrs",
+    "distance": 37
+  },
+  {
+    "fromStation": "sdtb",
+    "toStation": "sdt",
+    "distance": 32
+  },
+  {
+    "fromStation": "sdt",
+    "toStation": "sdtb",
+    "distance": 32
+  },
+  {
+    "fromStation": "sdt",
+    "toStation": "hbzm",
+    "distance": 26
+  },
+  {
+    "fromStation": "hbzm",
+    "toStation": "sdt",
+    "distance": 26
+  },
+  {
+    "fromStation": "hbzm",
+    "toStation": "gnd",
+    "distance": 14
+  },
+  {
+    "fromStation": "gnd",
+    "toStation": "hbzm",
+    "distance": 14
+  },
+  {
+    "fromStation": "gnd",
+    "toStation": "bhdv",
+    "distance": 28
+  },
+  {
+    "fromStation": "bhdv",
+    "toStation": "gnd",
+    "distance": 28
+  },
+  {
+    "fromStation": "bhdv",
+    "toStation": "gr",
+    "distance": 66
+  },
+  {
+    "fromStation": "gr",
+    "toStation": "bhdv",
+    "distance": 66
+  },
+  {
+    "fromStation": "gr",
+    "toStation": "akl",
+    "distance": 47
+  },
+  {
+    "fromStation": "akl",
+    "toStation": "gr",
+    "distance": 47
+  },
+  {
+    "fromStation": "akl",
+    "toStation": "ldm",
+    "distance": 74
+  },
+  {
+    "fromStation": "ldm",
+    "toStation": "akl",
+    "distance": 74
+  },
+  {
+    "fromStation": "ldm",
+    "toStation": "bsd",
+    "distance": 68
+  },
+  {
+    "fromStation": "bsd",
+    "toStation": "ldm",
+    "distance": 68
+  },
+  {
+    "fromStation": "bsd",
+    "toStation": "gdm",
+    "distance": 68
+  },
+  {
+    "fromStation": "gdm",
+    "toStation": "bsd",
+    "distance": 68
+  },
+  {
+    "fromStation": "hdr",
+    "toStation": "hdrz",
+    "distance": 26
+  },
+  {
+    "fromStation": "hdrz",
+    "toStation": "hdr",
+    "distance": 26
+  },
+  {
+    "fromStation": "hdrz",
+    "toStation": "ana",
+    "distance": 89
+  },
+  {
+    "fromStation": "ana",
+    "toStation": "hdrz",
+    "distance": 89
+  },
+  {
+    "fromStation": "ana",
+    "toStation": "sgn",
+    "distance": 91
+  },
+  {
+    "fromStation": "sgn",
+    "toStation": "ana",
+    "distance": 91
+  },
+  {
+    "fromStation": "sgn",
+    "toStation": "hwd",
+    "distance": 139
+  },
+  {
+    "fromStation": "hwd",
+    "toStation": "sgn",
+    "distance": 139
+  },
+  {
+    "fromStation": "hwd",
+    "toStation": "amrn",
+    "distance": 51
+  },
+  {
+    "fromStation": "amrn",
+    "toStation": "hwd",
+    "distance": 51
+  },
+  {
+    "fromStation": "amrn",
+    "toStation": "amr",
+    "distance": 17
+  },
+  {
+    "fromStation": "amr",
+    "toStation": "amrn",
+    "distance": 17
+  },
+  {
+    "fromStation": "amr",
+    "toStation": "hlo",
+    "distance": 51
+  },
+  {
+    "fromStation": "hlo",
+    "toStation": "amr",
+    "distance": 51
+  },
+  {
+    "fromStation": "hlo",
+    "toStation": "cas",
+    "distance": 68
+  },
+  {
+    "fromStation": "cas",
+    "toStation": "hlo",
+    "distance": 68
+  },
+  {
+    "fromStation": "cas",
+    "toStation": "utg",
+    "distance": 42
+  },
+  {
+    "fromStation": "utg",
+    "toStation": "cas",
+    "distance": 42
+  },
+  {
+    "fromStation": "utg",
+    "toStation": "kma",
+    "distance": 50
+  },
+  {
+    "fromStation": "kma",
+    "toStation": "utg",
+    "distance": 50
+  },
+  {
+    "fromStation": "kma",
+    "toStation": "wm",
+    "distance": 19
+  },
+  {
+    "fromStation": "wm",
+    "toStation": "kma",
+    "distance": 19
+  },
+  {
+    "fromStation": "wm",
+    "toStation": "zzs",
+    "distance": 28
+  },
+  {
+    "fromStation": "zzs",
+    "toStation": "wm",
+    "distance": 28
+  },
+  {
+    "fromStation": "zzs",
+    "toStation": "kz",
+    "distance": 12
+  },
+  {
+    "fromStation": "kz",
+    "toStation": "zzs",
+    "distance": 12
+  },
+  {
+    "fromStation": "kz",
+    "toStation": "zd",
+    "distance": 21
+  },
+  {
+    "fromStation": "zd",
+    "toStation": "kz",
+    "distance": 21
+  },
+  {
+    "fromStation": "zd",
+    "toStation": "ass",
+    "distance": 82
+  },
+  {
+    "fromStation": "ass",
+    "toStation": "zd",
+    "distance": 82
+  },
+  {
+    "fromStation": "ass",
+    "toStation": "asd",
+    "distance": 50
+  },
+  {
+    "fromStation": "asd",
+    "toStation": "ass",
+    "distance": 50
+  },
+  {
+    "fromStation": "asd",
+    "toStation": "asdm",
+    "distance": 36
+  },
+  {
+    "fromStation": "asdm",
+    "toStation": "asd",
+    "distance": 36
+  },
+  {
+    "fromStation": "asdm",
+    "toStation": "asa",
+    "distance": 26
+  },
+  {
+    "fromStation": "asa",
+    "toStation": "asdm",
+    "distance": 26
+  },
+  {
+    "fromStation": "asa",
+    "toStation": "dvd",
+    "distance": 21
+  },
+  {
+    "fromStation": "dvd",
+    "toStation": "asa",
+    "distance": 21
+  },
+  {
+    "fromStation": "dvd",
+    "toStation": "asb",
+    "distance": 10
+  },
+  {
+    "fromStation": "asb",
+    "toStation": "dvd",
+    "distance": 10
+  },
+  {
+    "fromStation": "asb",
+    "toStation": "ashd",
+    "distance": 11
+  },
+  {
+    "fromStation": "ashd",
+    "toStation": "asb",
+    "distance": 11
+  },
+  {
+    "fromStation": "ashd",
+    "toStation": "ac",
+    "distance": 50
+  },
+  {
+    "fromStation": "ac",
+    "toStation": "ashd",
+    "distance": 50
+  },
+  {
+    "fromStation": "ac",
+    "toStation": "bkl",
+    "distance": 113
+  },
+  {
+    "fromStation": "bkl",
+    "toStation": "ac",
+    "distance": 113
+  },
+  {
+    "fromStation": "bkl",
+    "toStation": "mas",
+    "distance": 53
+  },
+  {
+    "fromStation": "mas",
+    "toStation": "bkl",
+    "distance": 53
+  },
+  {
+    "fromStation": "mas",
+    "toStation": "utzl",
+    "distance": 49
+  },
+  {
+    "fromStation": "utzl",
+    "toStation": "mas",
+    "distance": 49
+  },
+  {
+    "fromStation": "utzl",
+    "toStation": "ut",
+    "distance": 31
+  },
+  {
+    "fromStation": "ut",
+    "toStation": "utzl",
+    "distance": 31
+  },
+  {
+    "fromStation": "ut",
+    "toStation": "utvr",
+    "distance": 15
+  },
+  {
+    "fromStation": "utvr",
+    "toStation": "ut",
+    "distance": 15
+  },
+  {
+    "fromStation": "utvr",
+    "toStation": "bnk",
+    "distance": 55
+  },
+  {
+    "fromStation": "bnk",
+    "toStation": "utvr",
+    "distance": 55
+  },
+  {
+    "fromStation": "bnk",
+    "toStation": "db",
+    "distance": 45
+  },
+  {
+    "fromStation": "db",
+    "toStation": "bnk",
+    "distance": 45
+  },
+  {
+    "fromStation": "db",
+    "toStation": "mrn",
+    "distance": 77
+  },
+  {
+    "fromStation": "mrn",
+    "toStation": "db",
+    "distance": 77
+  },
+  {
+    "fromStation": "mrn",
+    "toStation": "klp",
+    "distance": 146
+  },
+  {
+    "fromStation": "klp",
+    "toStation": "mrn",
+    "distance": 146
+  },
+  {
+    "fromStation": "klp",
+    "toStation": "ed",
+    "distance": 70
+  },
+  {
+    "fromStation": "ed",
+    "toStation": "klp",
+    "distance": 70
+  },
+  {
+    "fromStation": "ed",
+    "toStation": "wf",
+    "distance": 87
+  },
+  {
+    "fromStation": "wf",
+    "toStation": "ed",
+    "distance": 87
+  },
+  {
+    "fromStation": "wf",
+    "toStation": "otb",
+    "distance": 35
+  },
+  {
+    "fromStation": "otb",
+    "toStation": "wf",
+    "distance": 35
+  },
+  {
+    "fromStation": "otb",
+    "toStation": "ah",
+    "distance": 45
+  },
+  {
+    "fromStation": "ah",
+    "toStation": "otb",
+    "distance": 45
+  },
+  {
+    "fromStation": "ah",
+    "toStation": "ahz",
+    "distance": 60
+  },
+  {
+    "fromStation": "ahz",
+    "toStation": "ah",
+    "distance": 60
+  },
+  {
+    "fromStation": "ahz",
+    "toStation": "est",
+    "distance": 43
+  },
+  {
+    "fromStation": "est",
+    "toStation": "ahz",
+    "distance": 43
+  },
+  {
+    "fromStation": "est",
+    "toStation": "nml",
+    "distance": 58
+  },
+  {
+    "fromStation": "nml",
+    "toStation": "est",
+    "distance": 58
+  },
+  {
+    "fromStation": "nml",
+    "toStation": "nm",
+    "distance": 25
+  },
+  {
+    "fromStation": "nm",
+    "toStation": "nml",
+    "distance": 25
+  },
+  {
+    "fromStation": "rhn",
+    "toStation": "vndc",
+    "distance": 73
+  },
+  {
+    "fromStation": "vndc",
+    "toStation": "rhn",
+    "distance": 73
+  },
+  {
+    "fromStation": "vndc",
+    "toStation": "vndw",
+    "distance": 14
+  },
+  {
+    "fromStation": "vndw",
+    "toStation": "vndc",
+    "distance": 14
+  },
+  {
+    "fromStation": "vndw",
+    "toStation": "mrn",
+    "distance": 132
+  },
+  {
+    "fromStation": "mrn",
+    "toStation": "vndw",
+    "distance": 132
+  },
+  {
+    "fromStation": "ut",
+    "toStation": "utlr",
+    "distance": 39
+  },
+  {
+    "fromStation": "utlr",
+    "toStation": "ut",
+    "distance": 39
+  },
+  {
+    "fromStation": "utlr",
+    "toStation": "utt",
+    "distance": 17
+  },
+  {
+    "fromStation": "utt",
+    "toStation": "utlr",
+    "distance": 17
+  },
+  {
+    "fromStation": "utt",
+    "toStation": "vtn",
+    "distance": 21
+  },
+  {
+    "fromStation": "vtn",
+    "toStation": "utt",
+    "distance": 21
+  },
+  {
+    "fromStation": "vtn",
+    "toStation": "wd",
+    "distance": 82
+  },
+  {
+    "fromStation": "wd",
+    "toStation": "vtn",
+    "distance": 82
+  },
+  {
+    "fromStation": "wd",
+    "toStation": "gdg",
+    "distance": 154
+  },
+  {
+    "fromStation": "gdg",
+    "toStation": "wd",
+    "distance": 154
+  },
+  {
+    "fromStation": "gdg",
+    "toStation": "gd",
+    "distance": 14
+  },
+  {
+    "fromStation": "gd",
+    "toStation": "gdg",
+    "distance": 14
+  },
+  {
+    "fromStation": "gd",
+    "toStation": "llzm",
+    "distance": 134
+  },
+  {
+    "fromStation": "llzm",
+    "toStation": "gd",
+    "distance": 134
+  },
+  {
+    "fromStation": "llzm",
+    "toStation": "ztmo",
+    "distance": 20
+  },
+  {
+    "fromStation": "ztmo",
+    "toStation": "llzm",
+    "distance": 20
+  },
+  {
+    "fromStation": "ztmo",
+    "toStation": "ztm",
+    "distance": 12
+  },
+  {
+    "fromStation": "ztm",
+    "toStation": "ztmo",
+    "distance": 12
+  },
+  {
+    "fromStation": "ztm",
+    "toStation": "ypb",
+    "distance": 61
+  },
+  {
+    "fromStation": "ypb",
+    "toStation": "ztm",
+    "distance": 61
+  },
+  {
+    "fromStation": "ypb",
+    "toStation": "vb",
+    "distance": 24
+  },
+  {
+    "fromStation": "vb",
+    "toStation": "ypb",
+    "distance": 24
+  },
+  {
+    "fromStation": "vb",
+    "toStation": "gvc",
+    "distance": 31
+  },
+  {
+    "fromStation": "gvc",
+    "toStation": "vb",
+    "distance": 31
+  },
+  {
+    "fromStation": "zvt",
+    "toStation": "ovn",
+    "distance": 56
+  },
+  {
+    "fromStation": "ovn",
+    "toStation": "zvt",
+    "distance": 56
+  },
+  {
+    "fromStation": "ovn",
+    "toStation": "hlm",
+    "distance": 23
+  },
+  {
+    "fromStation": "hlm",
+    "toStation": "ovn",
+    "distance": 23
+  },
+  {
+    "fromStation": "hlm",
+    "toStation": "bll",
+    "distance": 20
+  },
+  {
+    "fromStation": "bll",
+    "toStation": "hlm",
+    "distance": 20
+  },
+  {
+    "fromStation": "bll",
+    "toStation": "sptz",
+    "distance": 19
+  },
+  {
+    "fromStation": "sptz",
+    "toStation": "bll",
+    "distance": 19
+  },
+  {
+    "fromStation": "sptz",
+    "toStation": "sptn",
+    "distance": 16
+  },
+  {
+    "fromStation": "sptn",
+    "toStation": "sptz",
+    "distance": 16
+  },
+  {
+    "fromStation": "sptn",
+    "toStation": "drh",
+    "distance": 9
+  },
+  {
+    "fromStation": "drh",
+    "toStation": "sptn",
+    "distance": 9
+  },
+  {
+    "fromStation": "drh",
+    "toStation": "bv",
+    "distance": 46
+  },
+  {
+    "fromStation": "bv",
+    "toStation": "drh",
+    "distance": 46
+  },
+  {
+    "fromStation": "bv",
+    "toStation": "hk",
+    "distance": 27
+  },
+  {
+    "fromStation": "hk",
+    "toStation": "bv",
+    "distance": 27
+  },
+  {
+    "fromStation": "hk",
+    "toStation": "utg",
+    "distance": 36
+  },
+  {
+    "fromStation": "utg",
+    "toStation": "hk",
+    "distance": 36
+  },
+  {
+    "fromStation": "ekz",
+    "toStation": "bkf",
+    "distance": 24
+  },
+  {
+    "fromStation": "bkf",
+    "toStation": "ekz",
+    "distance": 24
+  },
+  {
+    "fromStation": "bkf",
+    "toStation": "bkg",
+    "distance": 13
+  },
+  {
+    "fromStation": "bkg",
+    "toStation": "bkf",
+    "distance": 13
+  },
+  {
+    "fromStation": "bkg",
+    "toStation": "hks",
+    "distance": 37
+  },
+  {
+    "fromStation": "hks",
+    "toStation": "bkg",
+    "distance": 37
+  },
+  {
+    "fromStation": "hks",
+    "toStation": "hnk",
+    "distance": 79
+  },
+  {
+    "fromStation": "hnk",
+    "toStation": "hks",
+    "distance": 79
+  },
+  {
+    "fromStation": "hnk",
+    "toStation": "hn",
+    "distance": 22
+  },
+  {
+    "fromStation": "hn",
+    "toStation": "hnk",
+    "distance": 22
+  },
+  {
+    "fromStation": "hn",
+    "toStation": "pmo",
+    "distance": 178
+  },
+  {
+    "fromStation": "pmo",
+    "toStation": "hn",
+    "distance": 178
+  },
+  {
+    "fromStation": "pmo",
+    "toStation": "pmr",
+    "distance": 16
+  },
+  {
+    "fromStation": "pmr",
+    "toStation": "pmo",
+    "distance": 16
+  },
+  {
+    "fromStation": "pmr",
+    "toStation": "pmw",
+    "distance": 16
+  },
+  {
+    "fromStation": "pmw",
+    "toStation": "pmr",
+    "distance": 16
+  },
+  {
+    "fromStation": "pmw",
+    "toStation": "zdk",
+    "distance": 90
+  },
+  {
+    "fromStation": "zdk",
+    "toStation": "pmw",
+    "distance": 90
+  },
+  {
+    "fromStation": "zdk",
+    "toStation": "zd",
+    "distance": 28
+  },
+  {
+    "fromStation": "zd",
+    "toStation": "zdk",
+    "distance": 28
+  },
+  {
+    "fromStation": "hwd",
+    "toStation": "obd",
+    "distance": 60
+  },
+  {
+    "fromStation": "obd",
+    "toStation": "hwd",
+    "distance": 60
+  },
+  {
+    "fromStation": "obd",
+    "toStation": "hn",
+    "distance": 109
+  },
+  {
+    "fromStation": "hn",
+    "toStation": "obd",
+    "distance": 109
+  },
+  {
+    "fromStation": "stv",
+    "toStation": "kmw",
+    "distance": 42
+  },
+  {
+    "fromStation": "kmw",
+    "toStation": "stv",
+    "distance": 42
+  },
+  {
+    "fromStation": "kmw",
+    "toStation": "hnp",
+    "distance": 52
+  },
+  {
+    "fromStation": "hnp",
+    "toStation": "kmw",
+    "distance": 52
+  },
+  {
+    "fromStation": "hnp",
+    "toStation": "wk",
+    "distance": 35
+  },
+  {
+    "fromStation": "wk",
+    "toStation": "hnp",
+    "distance": 35
+  },
+  {
+    "fromStation": "wk",
+    "toStation": "ijt",
+    "distance": 121
+  },
+  {
+    "fromStation": "ijt",
+    "toStation": "wk",
+    "distance": 121
+  },
+  {
+    "fromStation": "ijt",
+    "toStation": "sk",
+    "distance": 35
+  },
+  {
+    "fromStation": "sk",
+    "toStation": "ijt",
+    "distance": 35
+  },
+  {
+    "fromStation": "sk",
+    "toStation": "sknd",
+    "distance": 9
+  },
+  {
+    "fromStation": "sknd",
+    "toStation": "sk",
+    "distance": 9
+  },
+  {
+    "fromStation": "sknd",
+    "toStation": "mg",
+    "distance": 110
+  },
+  {
+    "fromStation": "mg",
+    "toStation": "sknd",
+    "distance": 110
+  },
+  {
+    "fromStation": "mg",
+    "toStation": "lw",
+    "distance": 98
+  },
+  {
+    "fromStation": "lw",
+    "toStation": "mg",
+    "distance": 98
+  },
+  {
+    "fromStation": "lw",
+    "toStation": "lwc",
+    "distance": 32
+  },
+  {
+    "fromStation": "lwc",
+    "toStation": "lw",
+    "distance": 32
+  },
+  {
+    "fromStation": "lwc",
+    "toStation": "hdg",
+    "distance": 68
+  },
+  {
+    "fromStation": "hdg",
+    "toStation": "lwc",
+    "distance": 68
+  },
+  {
+    "fromStation": "hdg",
+    "toStation": "fwd",
+    "distance": 40
+  },
+  {
+    "fromStation": "fwd",
+    "toStation": "hdg",
+    "distance": 40
+  },
+  {
+    "fromStation": "fwd",
+    "toStation": "dwe",
+    "distance": 32
+  },
+  {
+    "fromStation": "dwe",
+    "toStation": "fwd",
+    "distance": 32
+  },
+  {
+    "fromStation": "dwe",
+    "toStation": "bp",
+    "distance": 77
+  },
+  {
+    "fromStation": "bp",
+    "toStation": "dwe",
+    "distance": 77
+  },
+  {
+    "fromStation": "bp",
+    "toStation": "gk",
+    "distance": 108
+  },
+  {
+    "fromStation": "gk",
+    "toStation": "bp",
+    "distance": 108
+  },
+  {
+    "fromStation": "gk",
+    "toStation": "zh",
+    "distance": 70
+  },
+  {
+    "fromStation": "zh",
+    "toStation": "gk",
+    "distance": 70
+  },
+  {
+    "fromStation": "zh",
+    "toStation": "gn",
+    "distance": 118
+  },
+  {
+    "fromStation": "gn",
+    "toStation": "zh",
+    "distance": 118
+  },
+  {
+    "fromStation": "gn",
+    "toStation": "gerp",
+    "distance": 26
+  },
+  {
+    "fromStation": "gerp",
+    "toStation": "gn",
+    "distance": 26
+  },
+  {
+    "fromStation": "gerp",
+    "toStation": "kw",
+    "distance": 87
+  },
+  {
+    "fromStation": "kw",
+    "toStation": "gerp",
+    "distance": 87
+  },
+  {
+    "fromStation": "kw",
+    "toStation": "mth",
+    "distance": 19
+  },
+  {
+    "fromStation": "mth",
+    "toStation": "kw",
+    "distance": 19
+  },
+  {
+    "fromStation": "mth",
+    "toStation": "hgz",
+    "distance": 18
+  },
+  {
+    "fromStation": "hgz",
+    "toStation": "mth",
+    "distance": 18
+  },
+  {
+    "fromStation": "hgz",
+    "toStation": "zb",
+    "distance": 66
+  },
+  {
+    "fromStation": "zb",
+    "toStation": "hgz",
+    "distance": 66
+  },
+  {
+    "fromStation": "zb",
+    "toStation": "sda",
+    "distance": 77
+  },
+  {
+    "fromStation": "sda",
+    "toStation": "zb",
+    "distance": 77
+  },
+  {
+    "fromStation": "sda",
+    "toStation": "ws",
+    "distance": 49
+  },
+  {
+    "fromStation": "ws",
+    "toStation": "sda",
+    "distance": 49
+  },
+  {
+    "fromStation": "ws",
+    "toStation": "nsch",
+    "distance": 120
+  },
+  {
+    "fromStation": "nsch",
+    "toStation": "ws",
+    "distance": 120
+  },
+  {
+    "fromStation": "hlgh",
+    "toStation": "hlg",
+    "distance": 10
+  },
+  {
+    "fromStation": "hlg",
+    "toStation": "hlgh",
+    "distance": 10
+  },
+  {
+    "fromStation": "hlg",
+    "toStation": "fn",
+    "distance": 84
+  },
+  {
+    "fromStation": "fn",
+    "toStation": "hlg",
+    "distance": 84
+  },
+  {
+    "fromStation": "fn",
+    "toStation": "drp",
+    "distance": 63
+  },
+  {
+    "fromStation": "drp",
+    "toStation": "fn",
+    "distance": 63
+  },
+  {
+    "fromStation": "drp",
+    "toStation": "dei",
+    "distance": 70
+  },
+  {
+    "fromStation": "dei",
+    "toStation": "drp",
+    "distance": 70
+  },
+  {
+    "fromStation": "dei",
+    "toStation": "lw",
+    "distance": 37
+  },
+  {
+    "fromStation": "lw",
+    "toStation": "dei",
+    "distance": 37
+  },
+  {
+    "fromStation": "lw",
+    "toStation": "gw",
+    "distance": 136
+  },
+  {
+    "fromStation": "gw",
+    "toStation": "lw",
+    "distance": 136
+  },
+  {
+    "fromStation": "gw",
+    "toStation": "akm",
+    "distance": 48
+  },
+  {
+    "fromStation": "akm",
+    "toStation": "gw",
+    "distance": 48
+  },
+  {
+    "fromStation": "akm",
+    "toStation": "hr",
+    "distance": 115
+  },
+  {
+    "fromStation": "hr",
+    "toStation": "akm",
+    "distance": 115
+  },
+  {
+    "fromStation": "hr",
+    "toStation": "hry",
+    "distance": 25
+  },
+  {
+    "fromStation": "hry",
+    "toStation": "hr",
+    "distance": 25
+  },
+  {
+    "fromStation": "hry",
+    "toStation": "wv",
+    "distance": 76
+  },
+  {
+    "fromStation": "wv",
+    "toStation": "hry",
+    "distance": 76
+  },
+  {
+    "fromStation": "wv",
+    "toStation": "swk",
+    "distance": 126
+  },
+  {
+    "fromStation": "swk",
+    "toStation": "wv",
+    "distance": 126
+  },
+  {
+    "fromStation": "swk",
+    "toStation": "mp",
+    "distance": 139
+  },
+  {
+    "fromStation": "mp",
+    "toStation": "swk",
+    "distance": 139
+  },
+  {
+    "fromStation": "mp",
+    "toStation": "zl",
+    "distance": 277
+  },
+  {
+    "fromStation": "zl",
+    "toStation": "mp",
+    "distance": 277
+  },
+  {
+    "fromStation": "zl",
+    "toStation": "wz",
+    "distance": 89
+  },
+  {
+    "fromStation": "wz",
+    "toStation": "zl",
+    "distance": 89
+  },
+  {
+    "fromStation": "wz",
+    "toStation": "hde",
+    "distance": 87
+  },
+  {
+    "fromStation": "hde",
+    "toStation": "wz",
+    "distance": 87
+  },
+  {
+    "fromStation": "hde",
+    "toStation": "ns",
+    "distance": 87
+  },
+  {
+    "fromStation": "ns",
+    "toStation": "hde",
+    "distance": 87
+  },
+  {
+    "fromStation": "ns",
+    "toStation": "hd",
+    "distance": 122
+  },
+  {
+    "fromStation": "hd",
+    "toStation": "ns",
+    "distance": 122
+  },
+  {
+    "fromStation": "hd",
+    "toStation": "eml",
+    "distance": 42
+  },
+  {
+    "fromStation": "eml",
+    "toStation": "hd",
+    "distance": 42
+  },
+  {
+    "fromStation": "eml",
+    "toStation": "pt",
+    "distance": 49
+  },
+  {
+    "fromStation": "pt",
+    "toStation": "eml",
+    "distance": 49
+  },
+  {
+    "fromStation": "pt",
+    "toStation": "nkk",
+    "distance": 74
+  },
+  {
+    "fromStation": "nkk",
+    "toStation": "pt",
+    "distance": 74
+  },
+  {
+    "fromStation": "nkk",
+    "toStation": "avat",
+    "distance": 52
+  },
+  {
+    "fromStation": "avat",
+    "toStation": "nkk",
+    "distance": 52
+  },
+  {
+    "fromStation": "avat",
+    "toStation": "amfs",
+    "distance": 31
+  },
+  {
+    "fromStation": "amfs",
+    "toStation": "avat",
+    "distance": 31
+  },
+  {
+    "fromStation": "amfs",
+    "toStation": "amf",
+    "distance": 32
+  },
+  {
+    "fromStation": "amf",
+    "toStation": "amfs",
+    "distance": 32
+  },
+  {
+    "fromStation": "amf",
+    "toStation": "dld",
+    "distance": 95
+  },
+  {
+    "fromStation": "dld",
+    "toStation": "amf",
+    "distance": 95
+  },
+  {
+    "fromStation": "dld",
+    "toStation": "bhv",
+    "distance": 29
+  },
+  {
+    "fromStation": "bhv",
+    "toStation": "dld",
+    "distance": 29
+  },
+  {
+    "fromStation": "utvr",
+    "toStation": "utln",
+    "distance": 20
+  },
+  {
+    "fromStation": "utln",
+    "toStation": "utvr",
+    "distance": 20
+  },
+  {
+    "fromStation": "utln",
+    "toStation": "htn",
+    "distance": 41
+  },
+  {
+    "fromStation": "htn",
+    "toStation": "utln",
+    "distance": 41
+  },
+  {
+    "fromStation": "htn",
+    "toStation": "htnc",
+    "distance": 20
+  },
+  {
+    "fromStation": "htnc",
+    "toStation": "htn",
+    "distance": 20
+  },
+  {
+    "fromStation": "htnc",
+    "toStation": "cl",
+    "distance": 87
+  },
+  {
+    "fromStation": "cl",
+    "toStation": "htnc",
+    "distance": 87
+  },
+  {
+    "fromStation": "cl",
+    "toStation": "gdm",
+    "distance": 77
+  },
+  {
+    "fromStation": "gdm",
+    "toStation": "cl",
+    "distance": 77
+  },
+  {
+    "fromStation": "gdm",
+    "toStation": "zbm",
+    "distance": 94
+  },
+  {
+    "fromStation": "zbm",
+    "toStation": "gdm",
+    "distance": 94
+  },
+  {
+    "fromStation": "zbm",
+    "toStation": "ht",
+    "distance": 127
+  },
+  {
+    "fromStation": "ht",
+    "toStation": "zbm",
+    "distance": 127
+  },
+  {
+    "fromStation": "rd",
+    "toStation": "eem",
+    "distance": 71
+  },
+  {
+    "fromStation": "eem",
+    "toStation": "rd",
+    "distance": 71
+  },
+  {
+    "fromStation": "rd",
+    "toStation": "uhm",
+    "distance": 31
+  },
+  {
+    "fromStation": "uhm",
+    "toStation": "rd",
+    "distance": 31
+  },
+  {
+    "fromStation": "uhm",
+    "toStation": "uhz",
+    "distance": 31
+  },
+  {
+    "fromStation": "uhz",
+    "toStation": "uhm",
+    "distance": 31
+  },
+  {
+    "fromStation": "uhz",
+    "toStation": "ust",
+    "distance": 47
+  },
+  {
+    "fromStation": "ust",
+    "toStation": "uhz",
+    "distance": 47
+  },
+  {
+    "fromStation": "ust",
+    "toStation": "wfm",
+    "distance": 31
+  },
+  {
+    "fromStation": "wfm",
+    "toStation": "ust",
+    "distance": 31
+  },
+  {
+    "fromStation": "wfm",
+    "toStation": "bf",
+    "distance": 49
+  },
+  {
+    "fromStation": "bf",
+    "toStation": "wfm",
+    "distance": 49
+  },
+  {
+    "fromStation": "bf",
+    "toStation": "wsm",
+    "distance": 34
+  },
+  {
+    "fromStation": "wsm",
+    "toStation": "bf",
+    "distance": 34
+  },
+  {
+    "fromStation": "wsm",
+    "toStation": "swd",
+    "distance": 47
+  },
+  {
+    "fromStation": "swd",
+    "toStation": "wsm",
+    "distance": 47
+  },
+  {
+    "fromStation": "swd",
+    "toStation": "gnn",
+    "distance": 71
+  },
+  {
+    "fromStation": "gnn",
+    "toStation": "swd",
+    "distance": 71
+  },
+  {
+    "fromStation": "gnn",
+    "toStation": "gn",
+    "distance": 39
+  },
+  {
+    "fromStation": "gn",
+    "toStation": "gnn",
+    "distance": 39
+  },
+  {
+    "fromStation": "zb",
+    "toStation": "vdm",
+    "distance": 75
+  },
+  {
+    "fromStation": "vdm",
+    "toStation": "zb",
+    "distance": 75
+  },
+  {
+    "fromStation": "dz",
+    "toStation": "dzw",
+    "distance": 9
+  },
+  {
+    "fromStation": "dzw",
+    "toStation": "dz",
+    "distance": 9
+  },
+  {
+    "fromStation": "dzw",
+    "toStation": "apg",
+    "distance": 32
+  },
+  {
+    "fromStation": "apg",
+    "toStation": "dzw",
+    "distance": 32
+  },
+  {
+    "fromStation": "apg",
+    "toStation": "lp",
+    "distance": 80
+  },
+  {
+    "fromStation": "lp",
+    "toStation": "apg",
+    "distance": 80
+  },
+  {
+    "fromStation": "lp",
+    "toStation": "stm",
+    "distance": 35
+  },
+  {
+    "fromStation": "stm",
+    "toStation": "lp",
+    "distance": 35
+  },
+  {
+    "fromStation": "stm",
+    "toStation": "bdm",
+    "distance": 70
+  },
+  {
+    "fromStation": "bdm",
+    "toStation": "stm",
+    "distance": 70
+  },
+  {
+    "fromStation": "bdm",
+    "toStation": "swd",
+    "distance": 42
+  },
+  {
+    "fromStation": "swd",
+    "toStation": "bdm",
+    "distance": 42
+  },
+  {
+    "fromStation": "gerp",
+    "toStation": "hrn",
+    "distance": 30
+  },
+  {
+    "fromStation": "hrn",
+    "toStation": "gerp",
+    "distance": 30
+  },
+  {
+    "fromStation": "hrn",
+    "toStation": "asn",
+    "distance": 222
+  },
+  {
+    "fromStation": "asn",
+    "toStation": "hrn",
+    "distance": 222
+  },
+  {
+    "fromStation": "asn",
+    "toStation": "bl",
+    "distance": 156
+  },
+  {
+    "fromStation": "bl",
+    "toStation": "asn",
+    "distance": 156
+  },
+  {
+    "fromStation": "bl",
+    "toStation": "hgv",
+    "distance": 139
+  },
+  {
+    "fromStation": "hgv",
+    "toStation": "bl",
+    "distance": 139
+  },
+  {
+    "fromStation": "hgv",
+    "toStation": "mp",
+    "distance": 199
+  },
+  {
+    "fromStation": "mp",
+    "toStation": "hgv",
+    "distance": 199
+  },
+  {
+    "fromStation": "zl",
+    "toStation": "hno",
+    "distance": 123
+  },
+  {
+    "fromStation": "hno",
+    "toStation": "zl",
+    "distance": 123
+  },
+  {
+    "fromStation": "hno",
+    "toStation": "rat",
+    "distance": 58
+  },
+  {
+    "fromStation": "rat",
+    "toStation": "hno",
+    "distance": 58
+  },
+  {
+    "fromStation": "rat",
+    "toStation": "nvd",
+    "distance": 132
+  },
+  {
+    "fromStation": "nvd",
+    "toStation": "rat",
+    "distance": 132
+  },
+  {
+    "fromStation": "nvd",
+    "toStation": "wdn",
+    "distance": 85
+  },
+  {
+    "fromStation": "wdn",
+    "toStation": "nvd",
+    "distance": 85
+  },
+  {
+    "fromStation": "wdn",
+    "toStation": "aml",
+    "distance": 46
+  },
+  {
+    "fromStation": "aml",
+    "toStation": "wdn",
+    "distance": 46
+  },
+  {
+    "fromStation": "emn",
+    "toStation": "emnz",
+    "distance": 51
+  },
+  {
+    "fromStation": "emnz",
+    "toStation": "emn",
+    "distance": 51
+  },
+  {
+    "fromStation": "emnz",
+    "toStation": "na",
+    "distance": 38
+  },
+  {
+    "fromStation": "na",
+    "toStation": "emnz",
+    "distance": 38
+  },
+  {
+    "fromStation": "na",
+    "toStation": "dln",
+    "distance": 70
+  },
+  {
+    "fromStation": "dln",
+    "toStation": "na",
+    "distance": 70
+  },
+  {
+    "fromStation": "dln",
+    "toStation": "co",
+    "distance": 40
+  },
+  {
+    "fromStation": "co",
+    "toStation": "dln",
+    "distance": 40
+  },
+  {
+    "fromStation": "co",
+    "toStation": "gbg",
+    "distance": 77
+  },
+  {
+    "fromStation": "gbg",
+    "toStation": "co",
+    "distance": 77
+  },
+  {
+    "fromStation": "gbg",
+    "toStation": "hdb",
+    "distance": 51
+  },
+  {
+    "fromStation": "hdb",
+    "toStation": "gbg",
+    "distance": 51
+  },
+  {
+    "fromStation": "hdb",
+    "toStation": "mrb",
+    "distance": 85
+  },
+  {
+    "fromStation": "mrb",
+    "toStation": "hdb",
+    "distance": 85
+  },
+  {
+    "fromStation": "mrb",
+    "toStation": "omn",
+    "distance": 111
+  },
+  {
+    "fromStation": "omn",
+    "toStation": "mrb",
+    "distance": 111
+  },
+  {
+    "fromStation": "omn",
+    "toStation": "dl",
+    "distance": 108
+  },
+  {
+    "fromStation": "dl",
+    "toStation": "omn",
+    "distance": 108
+  },
+  {
+    "fromStation": "dl",
+    "toStation": "zl",
+    "distance": 124
+  },
+  {
+    "fromStation": "zl",
+    "toStation": "dl",
+    "distance": 124
+  },
+  {
+    "fromStation": "zl",
+    "toStation": "zlsh",
+    "distance": 37
+  },
+  {
+    "fromStation": "zlsh",
+    "toStation": "zl",
+    "distance": 37
+  },
+  {
+    "fromStation": "zlsh",
+    "toStation": "kpn",
+    "distance": 96
+  },
+  {
+    "fromStation": "kpn",
+    "toStation": "zlsh",
+    "distance": 96
+  },
+  {
+    "fromStation": "mrb",
+    "toStation": "vhp",
+    "distance": 62
+  },
+  {
+    "fromStation": "vhp",
+    "toStation": "mrb",
+    "distance": 62
+  },
+  {
+    "fromStation": "vhp",
+    "toStation": "da",
+    "distance": 20
+  },
+  {
+    "fromStation": "da",
+    "toStation": "vhp",
+    "distance": 20
+  },
+  {
+    "fromStation": "da",
+    "toStation": "vz",
+    "distance": 46
+  },
+  {
+    "fromStation": "vz",
+    "toStation": "da",
+    "distance": 46
+  },
+  {
+    "fromStation": "vz",
+    "toStation": "aml",
+    "distance": 62
+  },
+  {
+    "fromStation": "aml",
+    "toStation": "vz",
+    "distance": 62
+  },
+  {
+    "fromStation": "aml",
+    "toStation": "amri",
+    "distance": 18
+  },
+  {
+    "fromStation": "amri",
+    "toStation": "aml",
+    "distance": 18
+  },
+  {
+    "fromStation": "amri",
+    "toStation": "bn",
+    "distance": 75
+  },
+  {
+    "fromStation": "bn",
+    "toStation": "amri",
+    "distance": 75
+  },
+  {
+    "fromStation": "bn",
+    "toStation": "hgl",
+    "distance": 53
+  },
+  {
+    "fromStation": "hgl",
+    "toStation": "bn",
+    "distance": 53
+  },
+  {
+    "fromStation": "hgl",
+    "toStation": "esk",
+    "distance": 38
+  },
+  {
+    "fromStation": "esk",
+    "toStation": "hgl",
+    "distance": 38
+  },
+  {
+    "fromStation": "esk",
+    "toStation": "es",
+    "distance": 38
+  },
+  {
+    "fromStation": "es",
+    "toStation": "esk",
+    "distance": 38
+  },
+  {
+    "fromStation": "es",
+    "toStation": "ese",
+    "distance": 42
+  },
+  {
+    "fromStation": "ese",
+    "toStation": "es",
+    "distance": 42
+  },
+  {
+    "fromStation": "ese",
+    "toStation": "gbr",
+    "distance": 20
+  },
+  {
+    "fromStation": "gbr",
+    "toStation": "ese",
+    "distance": 20
+  },
+  {
+    "fromStation": "odz",
+    "toStation": "hglo",
+    "distance": 88
+  },
+  {
+    "fromStation": "hglo",
+    "toStation": "odz",
+    "distance": 88
+  },
+  {
+    "fromStation": "hglo",
+    "toStation": "hgl",
+    "distance": 22
+  },
+  {
+    "fromStation": "hgl",
+    "toStation": "hglo",
+    "distance": 22
+  },
+  {
+    "fromStation": "hgl",
+    "toStation": "hglg",
+    "distance": 17
+  },
+  {
+    "fromStation": "hglg",
+    "toStation": "hgl",
+    "distance": 17
+  },
+  {
+    "fromStation": "hglg",
+    "toStation": "ddn",
+    "distance": 42
+  },
+  {
+    "fromStation": "ddn",
+    "toStation": "hglg",
+    "distance": 42
+  },
+  {
+    "fromStation": "ddn",
+    "toStation": "go",
+    "distance": 94
+  },
+  {
+    "fromStation": "go",
+    "toStation": "ddn",
+    "distance": 94
+  },
+  {
+    "fromStation": "go",
+    "toStation": "lc",
+    "distance": 133
+  },
+  {
+    "fromStation": "lc",
+    "toStation": "go",
+    "distance": 133
+  },
+  {
+    "fromStation": "lc",
+    "toStation": "zp",
+    "distance": 171
+  },
+  {
+    "fromStation": "zp",
+    "toStation": "lc",
+    "distance": 171
+  },
+  {
+    "fromStation": "zp",
+    "toStation": "bmn",
+    "distance": 71
+  },
+  {
+    "fromStation": "bmn",
+    "toStation": "zp",
+    "distance": 71
+  },
+  {
+    "fromStation": "bmn",
+    "toStation": "dr",
+    "distance": 60
+  },
+  {
+    "fromStation": "dr",
+    "toStation": "bmn",
+    "distance": 60
+  },
+  {
+    "fromStation": "dr",
+    "toStation": "rh",
+    "distance": 61
+  },
+  {
+    "fromStation": "rh",
+    "toStation": "dr",
+    "distance": 61
+  },
+  {
+    "fromStation": "rh",
+    "toStation": "vp",
+    "distance": 40
+  },
+  {
+    "fromStation": "vp",
+    "toStation": "rh",
+    "distance": 40
+  },
+  {
+    "fromStation": "vp",
+    "toStation": "ahpr",
+    "distance": 25
+  },
+  {
+    "fromStation": "ahpr",
+    "toStation": "vp",
+    "distance": 25
+  },
+  {
+    "fromStation": "ahpr",
+    "toStation": "ahp",
+    "distance": 16
+  },
+  {
+    "fromStation": "ahp",
+    "toStation": "ahpr",
+    "distance": 16
+  },
+  {
+    "fromStation": "ahp",
+    "toStation": "ah",
+    "distance": 19
+  },
+  {
+    "fromStation": "ah",
+    "toStation": "ahp",
+    "distance": 19
+  },
+  {
+    "fromStation": "apd",
+    "toStation": "apdm",
+    "distance": 25
+  },
+  {
+    "fromStation": "apdm",
+    "toStation": "apd",
+    "distance": 25
+  },
+  {
+    "fromStation": "apdm",
+    "toStation": "kbk",
+    "distance": 66
+  },
+  {
+    "fromStation": "kbk",
+    "toStation": "apdm",
+    "distance": 66
+  },
+  {
+    "fromStation": "kbk",
+    "toStation": "vem",
+    "distance": 42
+  },
+  {
+    "fromStation": "vem",
+    "toStation": "kbk",
+    "distance": 42
+  },
+  {
+    "fromStation": "vem",
+    "toStation": "zp",
+    "distance": 42
+  },
+  {
+    "fromStation": "zp",
+    "toStation": "vem",
+    "distance": 42
+  },
+  {
+    "fromStation": "zp",
+    "toStation": "vd",
+    "distance": 118
+  },
+  {
+    "fromStation": "vd",
+    "toStation": "zp",
+    "distance": 118
+  },
+  {
+    "fromStation": "vd",
+    "toStation": "rl",
+    "distance": 96
+  },
+  {
+    "fromStation": "rl",
+    "toStation": "vd",
+    "distance": 96
+  },
+  {
+    "fromStation": "rl",
+    "toStation": "ltv",
+    "distance": 127
+  },
+  {
+    "fromStation": "ltv",
+    "toStation": "rl",
+    "distance": 127
+  },
+  {
+    "fromStation": "ltv",
+    "toStation": "www",
+    "distance": 86
+  },
+  {
+    "fromStation": "www",
+    "toStation": "ltv",
+    "distance": 86
+  },
+  {
+    "fromStation": "www",
+    "toStation": "ww",
+    "distance": 10
+  },
+  {
+    "fromStation": "ww",
+    "toStation": "www",
+    "distance": 10
+  },
+  {
+    "fromStation": "ww",
+    "toStation": "atn",
+    "distance": 124
+  },
+  {
+    "fromStation": "atn",
+    "toStation": "ww",
+    "distance": 124
+  },
+  {
+    "fromStation": "atn",
+    "toStation": "vsv",
+    "distance": 83
+  },
+  {
+    "fromStation": "vsv",
+    "toStation": "atn",
+    "distance": 83
+  },
+  {
+    "fromStation": "vsv",
+    "toStation": "tbg",
+    "distance": 69
+  },
+  {
+    "fromStation": "tbg",
+    "toStation": "vsv",
+    "distance": 69
+  },
+  {
+    "fromStation": "tbg",
+    "toStation": "gdr",
+    "distance": 16
+  },
+  {
+    "fromStation": "gdr",
+    "toStation": "tbg",
+    "distance": 16
+  },
+  {
+    "fromStation": "gdr",
+    "toStation": "dtc",
+    "distance": 51
+  },
+  {
+    "fromStation": "dtc",
+    "toStation": "gdr",
+    "distance": 51
+  },
+  {
+    "fromStation": "dtc",
+    "toStation": "dtch",
+    "distance": 19
+  },
+  {
+    "fromStation": "dtch",
+    "toStation": "dtc",
+    "distance": 19
+  },
+  {
+    "fromStation": "dtch",
+    "toStation": "wl",
+    "distance": 36
+  },
+  {
+    "fromStation": "wl",
+    "toStation": "dtch",
+    "distance": 36
+  },
+  {
+    "fromStation": "wl",
+    "toStation": "did",
+    "distance": 60
+  },
+  {
+    "fromStation": "did",
+    "toStation": "wl",
+    "distance": 60
+  },
+  {
+    "fromStation": "did",
+    "toStation": "zv",
+    "distance": 46
+  },
+  {
+    "fromStation": "zv",
+    "toStation": "did",
+    "distance": 46
+  },
+  {
+    "fromStation": "zv",
+    "toStation": "dvn",
+    "distance": 44
+  },
+  {
+    "fromStation": "dvn",
+    "toStation": "zv",
+    "distance": 44
+  },
+  {
+    "fromStation": "dvn",
+    "toStation": "wtv",
+    "distance": 38
+  },
+  {
+    "fromStation": "wtv",
+    "toStation": "dvn",
+    "distance": 38
+  },
+  {
+    "fromStation": "wtv",
+    "toStation": "ahp",
+    "distance": 43
+  },
+  {
+    "fromStation": "ahp",
+    "toStation": "wtv",
+    "distance": 43
+  },
+  {
+    "fromStation": "est",
+    "toStation": "za",
+    "distance": 110
+  },
+  {
+    "fromStation": "za",
+    "toStation": "est",
+    "distance": 110
+  },
+  {
+    "fromStation": "za",
+    "toStation": "hmn",
+    "distance": 32
+  },
+  {
+    "fromStation": "hmn",
+    "toStation": "za",
+    "distance": 32
+  },
+  {
+    "fromStation": "hmn",
+    "toStation": "op",
+    "distance": 30
+  },
+  {
+    "fromStation": "op",
+    "toStation": "hmn",
+    "distance": 30
+  },
+  {
+    "fromStation": "op",
+    "toStation": "ktr",
+    "distance": 34
+  },
+  {
+    "fromStation": "ktr",
+    "toStation": "op",
+    "distance": 34
+  },
+  {
+    "fromStation": "ktr",
+    "toStation": "tl",
+    "distance": 120
+  },
+  {
+    "fromStation": "tl",
+    "toStation": "ktr",
+    "distance": 120
+  },
+  {
+    "fromStation": "hlm",
+    "toStation": "had",
+    "distance": 45
+  },
+  {
+    "fromStation": "had",
+    "toStation": "hlm",
+    "distance": 45
+  },
+  {
+    "fromStation": "had",
+    "toStation": "hil",
+    "distance": 69
+  },
+  {
+    "fromStation": "hil",
+    "toStation": "had",
+    "distance": 69
+  },
+  {
+    "fromStation": "hil",
+    "toStation": "vh",
+    "distance": 107
+  },
+  {
+    "fromStation": "vh",
+    "toStation": "hil",
+    "distance": 107
+  },
+  {
+    "fromStation": "vh",
+    "toStation": "ledn",
+    "distance": 70
+  },
+  {
+    "fromStation": "ledn",
+    "toStation": "vh",
+    "distance": 70
+  },
+  {
+    "fromStation": "ledn",
+    "toStation": "dvnk",
+    "distance": 26
+  },
+  {
+    "fromStation": "dvnk",
+    "toStation": "ledn",
+    "distance": 26
+  },
+  {
+    "fromStation": "dvnk",
+    "toStation": "vst",
+    "distance": 27
+  },
+  {
+    "fromStation": "vst",
+    "toStation": "dvnk",
+    "distance": 27
+  },
+  {
+    "fromStation": "vst",
+    "toStation": "gvm",
+    "distance": 61
+  },
+  {
+    "fromStation": "gvm",
+    "toStation": "vst",
+    "distance": 61
+  },
+  {
+    "fromStation": "gvm",
+    "toStation": "laa",
+    "distance": 25
+  },
+  {
+    "fromStation": "laa",
+    "toStation": "gvm",
+    "distance": 25
+  },
+  {
+    "fromStation": "laa",
+    "toStation": "gvc",
+    "distance": 15
+  },
+  {
+    "fromStation": "gvc",
+    "toStation": "laa",
+    "distance": 15
+  },
+  {
+    "fromStation": "hlm",
+    "toStation": "hlms",
+    "distance": 19
+  },
+  {
+    "fromStation": "hlms",
+    "toStation": "hlm",
+    "distance": 19
+  },
+  {
+    "fromStation": "hlms",
+    "toStation": "hwzb",
+    "distance": 67
+  },
+  {
+    "fromStation": "hwzb",
+    "toStation": "hlms",
+    "distance": 67
+  },
+  {
+    "fromStation": "hwzb",
+    "toStation": "ass",
+    "distance": 60
+  },
+  {
+    "fromStation": "ass",
+    "toStation": "hwzb",
+    "distance": 60
+  },
+  {
+    "fromStation": "asdm",
+    "toStation": "assp",
+    "distance": 14
+  },
+  {
+    "fromStation": "assp",
+    "toStation": "asdm",
+    "distance": 14
+  },
+  {
+    "fromStation": "assp",
+    "toStation": "dmn",
+    "distance": 21
+  },
+  {
+    "fromStation": "dmn",
+    "toStation": "assp",
+    "distance": 21
+  },
+  {
+    "fromStation": "dmn",
+    "toStation": "wp",
+    "distance": 63
+  },
+  {
+    "fromStation": "wp",
+    "toStation": "dmn",
+    "distance": 63
+  },
+  {
+    "fromStation": "wp",
+    "toStation": "ampo",
+    "distance": 117
+  },
+  {
+    "fromStation": "ampo",
+    "toStation": "wp",
+    "distance": 117
+  },
+  {
+    "fromStation": "ampo",
+    "toStation": "almm",
+    "distance": 14
+  },
+  {
+    "fromStation": "almm",
+    "toStation": "ampo",
+    "distance": 14
+  },
+  {
+    "fromStation": "almm",
+    "toStation": "alm",
+    "distance": 20
+  },
+  {
+    "fromStation": "alm",
+    "toStation": "almm",
+    "distance": 20
+  },
+  {
+    "fromStation": "alm",
+    "toStation": "almp",
+    "distance": 19
+  },
+  {
+    "fromStation": "almp",
+    "toStation": "alm",
+    "distance": 19
+  },
+  {
+    "fromStation": "almp",
+    "toStation": "almb",
+    "distance": 31
+  },
+  {
+    "fromStation": "almb",
+    "toStation": "almp",
+    "distance": 31
+  },
+  {
+    "fromStation": "almb",
+    "toStation": "almo",
+    "distance": 18
+  },
+  {
+    "fromStation": "almo",
+    "toStation": "almb",
+    "distance": 18
+  },
+  {
+    "fromStation": "almo",
+    "toStation": "lls",
+    "distance": 181
+  },
+  {
+    "fromStation": "lls",
+    "toStation": "almo",
+    "distance": 181
+  },
+  {
+    "fromStation": "lls",
+    "toStation": "dron",
+    "distance": 210
+  },
+  {
+    "fromStation": "dron",
+    "toStation": "lls",
+    "distance": 210
+  },
+  {
+    "fromStation": "dron",
+    "toStation": "kpnz",
+    "distance": 140
+  },
+  {
+    "fromStation": "kpnz",
+    "toStation": "dron",
+    "distance": 140
+  },
+  {
+    "fromStation": "kpnz",
+    "toStation": "zl",
+    "distance": 150
+  },
+  {
+    "fromStation": "zl",
+    "toStation": "kpnz",
+    "distance": 150
+  },
+  {
+    "fromStation": "zl",
+    "toStation": "wh",
+    "distance": 140
+  },
+  {
+    "fromStation": "wh",
+    "toStation": "zl",
+    "distance": 140
+  },
+  {
+    "fromStation": "wh",
+    "toStation": "ost",
+    "distance": 65
+  },
+  {
+    "fromStation": "ost",
+    "toStation": "wh",
+    "distance": 65
+  },
+  {
+    "fromStation": "ost",
+    "toStation": "dv",
+    "distance": 92
+  },
+  {
+    "fromStation": "dv",
+    "toStation": "ost",
+    "distance": 92
+  },
+  {
+    "fromStation": "dv",
+    "toStation": "zp",
+    "distance": 164
+  },
+  {
+    "fromStation": "zp",
+    "toStation": "dv",
+    "distance": 164
+  },
+  {
+    "fromStation": "nm",
+    "toStation": "nmh",
+    "distance": 17
+  },
+  {
+    "fromStation": "nmh",
+    "toStation": "nm",
+    "distance": 17
+  },
+  {
+    "fromStation": "nmh",
+    "toStation": "mmlh",
+    "distance": 74
+  },
+  {
+    "fromStation": "mmlh",
+    "toStation": "nmh",
+    "distance": 74
+  },
+  {
+    "fromStation": "mmlh",
+    "toStation": "ck",
+    "distance": 46
+  },
+  {
+    "fromStation": "ck",
+    "toStation": "mmlh",
+    "distance": 46
+  },
+  {
+    "fromStation": "ck",
+    "toStation": "bmr",
+    "distance": 103
+  },
+  {
+    "fromStation": "bmr",
+    "toStation": "ck",
+    "distance": 103
+  },
+  {
+    "fromStation": "bmr",
+    "toStation": "vlb",
+    "distance": 71
+  },
+  {
+    "fromStation": "vlb",
+    "toStation": "bmr",
+    "distance": 71
+  },
+  {
+    "fromStation": "vlb",
+    "toStation": "vry",
+    "distance": 73
+  },
+  {
+    "fromStation": "vry",
+    "toStation": "vlb",
+    "distance": 73
+  },
+  {
+    "fromStation": "vry",
+    "toStation": "br",
+    "distance": 206
+  },
+  {
+    "fromStation": "br",
+    "toStation": "vry",
+    "distance": 206
+  },
+  {
+    "fromStation": "br",
+    "toStation": "vl",
+    "distance": 17
+  },
+  {
+    "fromStation": "vl",
+    "toStation": "br",
+    "distance": 17
+  },
+  {
+    "fromStation": "vl",
+    "toStation": "tg",
+    "distance": 49
+  },
+  {
+    "fromStation": "tg",
+    "toStation": "vl",
+    "distance": 49
+  },
+  {
+    "fromStation": "tg",
+    "toStation": "rv",
+    "distance": 70
+  },
+  {
+    "fromStation": "rv",
+    "toStation": "tg",
+    "distance": 70
+  },
+  {
+    "fromStation": "rv",
+    "toStation": "sm",
+    "distance": 64
+  },
+  {
+    "fromStation": "sm",
+    "toStation": "rv",
+    "distance": 64
+  },
+  {
+    "fromStation": "sm",
+    "toStation": "rm",
+    "distance": 54
+  },
+  {
+    "fromStation": "rm",
+    "toStation": "sm",
+    "distance": 54
+  },
+  {
+    "fromStation": "rm",
+    "toStation": "ec",
+    "distance": 133
+  },
+  {
+    "fromStation": "ec",
+    "toStation": "rm",
+    "distance": 133
+  },
+  {
+    "fromStation": "ec",
+    "toStation": "srn",
+    "distance": 45
+  },
+  {
+    "fromStation": "srn",
+    "toStation": "ec",
+    "distance": 45
+  },
+  {
+    "fromStation": "srn",
+    "toStation": "std",
+    "distance": 66
+  },
+  {
+    "fromStation": "std",
+    "toStation": "srn",
+    "distance": 66
+  },
+  {
+    "fromStation": "std",
+    "toStation": "lut",
+    "distance": 39
+  },
+  {
+    "fromStation": "lut",
+    "toStation": "std",
+    "distance": 39
+  },
+  {
+    "fromStation": "lut",
+    "toStation": "bk",
+    "distance": 41
+  },
+  {
+    "fromStation": "bk",
+    "toStation": "lut",
+    "distance": 41
+  },
+  {
+    "fromStation": "bk",
+    "toStation": "bde",
+    "distance": 75
+  },
+  {
+    "fromStation": "bde",
+    "toStation": "bk",
+    "distance": 75
+  },
+  {
+    "fromStation": "bde",
+    "toStation": "mtn",
+    "distance": 34
+  },
+  {
+    "fromStation": "mtn",
+    "toStation": "bde",
+    "distance": 34
+  },
+  {
+    "fromStation": "mtn",
+    "toStation": "mt",
+    "distance": 30
+  },
+  {
+    "fromStation": "mt",
+    "toStation": "mtn",
+    "distance": 30
+  },
+  {
+    "fromStation": "mt",
+    "toStation": "mtr",
+    "distance": 16
+  },
+  {
+    "fromStation": "mtr",
+    "toStation": "mt",
+    "distance": 16
+  },
+  {
+    "fromStation": "mtr",
+    "toStation": "edn",
+    "distance": 75
+  },
+  {
+    "fromStation": "edn",
+    "toStation": "mtr",
+    "distance": 75
+  },
+  {
+    "fromStation": "amf",
+    "toStation": "hvl",
+    "distance": 60
+  },
+  {
+    "fromStation": "hvl",
+    "toStation": "amf",
+    "distance": 60
+  },
+  {
+    "fromStation": "hvl",
+    "toStation": "bnn",
+    "distance": 102
+  },
+  {
+    "fromStation": "bnn",
+    "toStation": "hvl",
+    "distance": 102
+  },
+  {
+    "fromStation": "bnn",
+    "toStation": "bnc",
+    "distance": 24
+  },
+  {
+    "fromStation": "bnc",
+    "toStation": "bnn",
+    "distance": 24
+  },
+  {
+    "fromStation": "bnc",
+    "toStation": "bnz",
+    "distance": 21
+  },
+  {
+    "fromStation": "bnz",
+    "toStation": "bnc",
+    "distance": 21
+  },
+  {
+    "fromStation": "bnz",
+    "toStation": "ltn",
+    "distance": 51
+  },
+  {
+    "fromStation": "ltn",
+    "toStation": "bnz",
+    "distance": 51
+  },
+  {
+    "fromStation": "ltn",
+    "toStation": "edc",
+    "distance": 58
+  },
+  {
+    "fromStation": "edc",
+    "toStation": "ltn",
+    "distance": 58
+  },
+  {
+    "fromStation": "edc",
+    "toStation": "ed",
+    "distance": 21
+  },
+  {
+    "fromStation": "ed",
+    "toStation": "edc",
+    "distance": 21
+  },
+  {
+    "fromStation": "wdn",
+    "toStation": "rsn",
+    "distance": 77
+  },
+  {
+    "fromStation": "rsn",
+    "toStation": "wdn",
+    "distance": 77
+  },
+  {
+    "fromStation": "rsn",
+    "toStation": "hon",
+    "distance": 75
+  },
+  {
+    "fromStation": "hon",
+    "toStation": "rsn",
+    "distance": 75
+  },
+  {
+    "fromStation": "hon",
+    "toStation": "dvc",
+    "distance": 146
+  },
+  {
+    "fromStation": "dvc",
+    "toStation": "hon",
+    "distance": 146
+  },
+  {
+    "fromStation": "dvc",
+    "toStation": "dv",
+    "distance": 45
+  },
+  {
+    "fromStation": "dv",
+    "toStation": "dvc",
+    "distance": 45
+  },
+  {
+    "fromStation": "dv",
+    "toStation": "twl",
+    "distance": 47
+  },
+  {
+    "fromStation": "twl",
+    "toStation": "dv",
+    "distance": 47
+  },
+  {
+    "fromStation": "twl",
+    "toStation": "apdo",
+    "distance": 71
+  },
+  {
+    "fromStation": "apdo",
+    "toStation": "twl",
+    "distance": 71
+  },
+  {
+    "fromStation": "apdo",
+    "toStation": "apd",
+    "distance": 28
+  },
+  {
+    "fromStation": "apd",
+    "toStation": "apdo",
+    "distance": 28
+  },
+  {
+    "fromStation": "apd",
+    "toStation": "hvl",
+    "distance": 377
+  },
+  {
+    "fromStation": "hvl",
+    "toStation": "apd",
+    "distance": 377
+  },
+  {
+    "fromStation": "amf",
+    "toStation": "brn",
+    "distance": 89
+  },
+  {
+    "fromStation": "brn",
+    "toStation": "amf",
+    "distance": 89
+  },
+  {
+    "fromStation": "brn",
+    "toStation": "hvs",
+    "distance": 71
+  },
+  {
+    "fromStation": "hvs",
+    "toStation": "brn",
+    "distance": 71
+  },
+  {
+    "fromStation": "hvs",
+    "toStation": "hvsm",
+    "distance": 15
+  },
+  {
+    "fromStation": "hvsm",
+    "toStation": "hvs",
+    "distance": 15
+  },
+  {
+    "fromStation": "hvsm",
+    "toStation": "bsmz",
+    "distance": 33
+  },
+  {
+    "fromStation": "bsmz",
+    "toStation": "hvsm",
+    "distance": 33
+  },
+  {
+    "fromStation": "bsmz",
+    "toStation": "ndb",
+    "distance": 16
+  },
+  {
+    "fromStation": "ndb",
+    "toStation": "bsmz",
+    "distance": 16
+  },
+  {
+    "fromStation": "ndb",
+    "toStation": "wp",
+    "distance": 91
+  },
+  {
+    "fromStation": "wp",
+    "toStation": "ndb",
+    "distance": 91
+  },
+  {
+    "fromStation": "wp",
+    "toStation": "dmnz",
+    "distance": 62
+  },
+  {
+    "fromStation": "dmnz",
+    "toStation": "wp",
+    "distance": 62
+  },
+  {
+    "fromStation": "dmnz",
+    "toStation": "dvd",
+    "distance": 16
+  },
+  {
+    "fromStation": "dvd",
+    "toStation": "dmnz",
+    "distance": 16
+  },
+  {
+    "fromStation": "dvd",
+    "toStation": "rai",
+    "distance": 43
+  },
+  {
+    "fromStation": "rai",
+    "toStation": "dvd",
+    "distance": 43
+  },
+  {
+    "fromStation": "rai",
+    "toStation": "asdz",
+    "distance": 8
+  },
+  {
+    "fromStation": "asdz",
+    "toStation": "rai",
+    "distance": 8
+  },
+  {
+    "fromStation": "asdz",
+    "toStation": "shl",
+    "distance": 92
+  },
+  {
+    "fromStation": "shl",
+    "toStation": "asdz",
+    "distance": 92
+  },
+  {
+    "fromStation": "ass",
+    "toStation": "asdl",
+    "distance": 38
+  },
+  {
+    "fromStation": "asdl",
+    "toStation": "ass",
+    "distance": 38
+  },
+  {
+    "fromStation": "asdl",
+    "toStation": "shl",
+    "distance": 86
+  },
+  {
+    "fromStation": "shl",
+    "toStation": "asdl",
+    "distance": 86
+  },
+  {
+    "fromStation": "shl",
+    "toStation": "hfd",
+    "distance": 46
+  },
+  {
+    "fromStation": "hfd",
+    "toStation": "shl",
+    "distance": 46
+  },
+  {
+    "fromStation": "hfd",
+    "toStation": "rtd",
+    "distance": 478
+  },
+  {
+    "fromStation": "rtd",
+    "toStation": "hfd",
+    "distance": 478
+  },
+  {
+    "fromStation": "rtd",
+    "toStation": "rtb",
+    "distance": 19
+  },
+  {
+    "fromStation": "rtb",
+    "toStation": "rtd",
+    "distance": 19
+  },
+  {
+    "fromStation": "rtb",
+    "toStation": "rtz",
+    "distance": 24
+  },
+  {
+    "fromStation": "rtz",
+    "toStation": "rtb",
+    "distance": 24
+  },
+  {
+    "fromStation": "rtz",
+    "toStation": "rtst",
+    "distance": 11
+  },
+  {
+    "fromStation": "rtst",
+    "toStation": "rtz",
+    "distance": 11
+  },
+  {
+    "fromStation": "rtst",
+    "toStation": "rlb",
+    "distance": 18
+  },
+  {
+    "fromStation": "rlb",
+    "toStation": "rtst",
+    "distance": 18
+  },
+  {
+    "fromStation": "rlb",
+    "toStation": "bdpb",
+    "distance": 338
+  },
+  {
+    "fromStation": "bdpb",
+    "toStation": "rlb",
+    "distance": 338
+  },
+  {
+    "fromStation": "gvc",
+    "toStation": "gv",
+    "distance": 18
+  },
+  {
+    "fromStation": "gv",
+    "toStation": "gvc",
+    "distance": 18
+  },
+  {
+    "fromStation": "gv",
+    "toStation": "gvmw",
+    "distance": 18
+  },
+  {
+    "fromStation": "gvmw",
+    "toStation": "gv",
+    "distance": 18
+  },
+  {
+    "fromStation": "gvmw",
+    "toStation": "rsw",
+    "distance": 18
+  },
+  {
+    "fromStation": "rsw",
+    "toStation": "gvmw",
+    "distance": 18
+  },
+  {
+    "fromStation": "rsw",
+    "toStation": "dt",
+    "distance": 38
+  },
+  {
+    "fromStation": "dt",
+    "toStation": "rsw",
+    "distance": 38
+  },
+  {
+    "fromStation": "dt",
+    "toStation": "dtz",
+    "distance": 21
+  },
+  {
+    "fromStation": "dtz",
+    "toStation": "dt",
+    "distance": 21
+  },
+  {
+    "fromStation": "dtz",
+    "toStation": "sdm",
+    "distance": 87
+  },
+  {
+    "fromStation": "sdm",
+    "toStation": "dtz",
+    "distance": 87
+  },
+  {
+    "fromStation": "sdm",
+    "toStation": "rtd",
+    "distance": 41
+  },
+  {
+    "fromStation": "rtd",
+    "toStation": "sdm",
+    "distance": 41
+  },
+  {
+    "fromStation": "rlb",
+    "toStation": "brd",
+    "distance": 33
+  },
+  {
+    "fromStation": "brd",
+    "toStation": "rlb",
+    "distance": 33
+  },
+  {
+    "fromStation": "brd",
+    "toStation": "zwd",
+    "distance": 78
+  },
+  {
+    "fromStation": "zwd",
+    "toStation": "brd",
+    "distance": 78
+  },
+  {
+    "fromStation": "zwd",
+    "toStation": "ddr",
+    "distance": 20
+  },
+  {
+    "fromStation": "ddr",
+    "toStation": "zwd",
+    "distance": 20
+  },
+  {
+    "fromStation": "rsd",
+    "toStation": "bgn",
+    "distance": 134
+  },
+  {
+    "fromStation": "bgn",
+    "toStation": "rsd",
+    "distance": 134
+  },
+  {
+    "fromStation": "bgn",
+    "toStation": "rb",
+    "distance": 157
+  },
+  {
+    "fromStation": "rb",
+    "toStation": "bgn",
+    "distance": 157
+  },
+  {
+    "fromStation": "rb",
+    "toStation": "kbd",
+    "distance": 33
+  },
+  {
+    "fromStation": "kbd",
+    "toStation": "rb",
+    "distance": 33
+  },
+  {
+    "fromStation": "kbd",
+    "toStation": "krg",
+    "distance": 67
+  },
+  {
+    "fromStation": "krg",
+    "toStation": "kbd",
+    "distance": 67
+  },
+  {
+    "fromStation": "krg",
+    "toStation": "bzl",
+    "distance": 59
+  },
+  {
+    "fromStation": "bzl",
+    "toStation": "krg",
+    "distance": 59
+  },
+  {
+    "fromStation": "bzl",
+    "toStation": "gs",
+    "distance": 52
+  },
+  {
+    "fromStation": "gs",
+    "toStation": "bzl",
+    "distance": 52
+  },
+  {
+    "fromStation": "gs",
+    "toStation": "arn",
+    "distance": 153
+  },
+  {
+    "fromStation": "arn",
+    "toStation": "gs",
+    "distance": 153
+  },
+  {
+    "fromStation": "arn",
+    "toStation": "mdb",
+    "distance": 37
+  },
+  {
+    "fromStation": "mdb",
+    "toStation": "arn",
+    "distance": 37
+  },
+  {
+    "fromStation": "mdb",
+    "toStation": "vss",
+    "distance": 39
+  },
+  {
+    "fromStation": "vss",
+    "toStation": "mdb",
+    "distance": 39
+  },
+  {
+    "fromStation": "vss",
+    "toStation": "vs",
+    "distance": 22
+  },
+  {
+    "fromStation": "vs",
+    "toStation": "vss",
+    "distance": 22
+  },
+  {
+    "fromStation": "ledn",
+    "toStation": "ssh",
+    "distance": 68
+  },
+  {
+    "fromStation": "ssh",
+    "toStation": "ledn",
+    "distance": 68
+  },
+  {
+    "fromStation": "ssh",
+    "toStation": "nvp",
+    "distance": 103
+  },
+  {
+    "fromStation": "nvp",
+    "toStation": "ssh",
+    "distance": 103
+  },
+  {
+    "fromStation": "nvp",
+    "toStation": "hfd",
+    "distance": 51
+  },
+  {
+    "fromStation": "hfd",
+    "toStation": "nvp",
+    "distance": 51
+  },
+  {
+    "fromStation": "rai",
+    "toStation": "asb",
+    "distance": 50
+  },
+  {
+    "fromStation": "asb",
+    "toStation": "rai",
+    "distance": 50
+  },
+  {
+    "fromStation": "hvs",
+    "toStation": "hvsp",
+    "distance": 12
+  },
+  {
+    "fromStation": "hvsp",
+    "toStation": "hvs",
+    "distance": 12
+  },
+  {
+    "fromStation": "hvsp",
+    "toStation": "hor",
+    "distance": 42
+  },
+  {
+    "fromStation": "hor",
+    "toStation": "hvsp",
+    "distance": 42
+  },
+  {
+    "fromStation": "hor",
+    "toStation": "uto",
+    "distance": 87
+  },
+  {
+    "fromStation": "uto",
+    "toStation": "hor",
+    "distance": 87
+  },
+  {
+    "fromStation": "brn",
+    "toStation": "sd",
+    "distance": 31
+  },
+  {
+    "fromStation": "sd",
+    "toStation": "brn",
+    "distance": 31
+  },
+  {
+    "fromStation": "sd",
+    "toStation": "st",
+    "distance": 15
+  },
+  {
+    "fromStation": "st",
+    "toStation": "sd",
+    "distance": 15
+  },
+  {
+    "fromStation": "st",
+    "toStation": "stz",
+    "distance": 9
+  },
+  {
+    "fromStation": "stz",
+    "toStation": "st",
+    "distance": 9
+  },
+  {
+    "fromStation": "stz",
+    "toStation": "dld",
+    "distance": 54
+  },
+  {
+    "fromStation": "dld",
+    "toStation": "stz",
+    "distance": 54
+  },
+  {
+    "fromStation": "eghm",
+    "toStation": "lg",
+    "distance": 30
+  },
+  {
+    "fromStation": "lg",
+    "toStation": "eghm",
+    "distance": 30
+  },
+  {
+    "fromStation": "lg",
+    "toStation": "hrl",
+    "distance": 32
+  },
+  {
+    "fromStation": "hrl",
+    "toStation": "lg",
+    "distance": 32
+  },
+  {
+    "fromStation": "hrl",
+    "toStation": "hrlw",
+    "distance": 18
+  },
+  {
+    "fromStation": "hrlw",
+    "toStation": "hrl",
+    "distance": 18
+  },
+  {
+    "fromStation": "hrlw",
+    "toStation": "vdl",
+    "distance": 20
+  },
+  {
+    "fromStation": "vdl",
+    "toStation": "hrlw",
+    "distance": 20
+  },
+  {
+    "fromStation": "vdl",
+    "toStation": "kmr",
+    "distance": 36
+  },
+  {
+    "fromStation": "kmr",
+    "toStation": "vdl",
+    "distance": 36
+  },
+  {
+    "fromStation": "kmr",
+    "toStation": "sog",
+    "distance": 23
+  },
+  {
+    "fromStation": "sog",
+    "toStation": "kmr",
+    "distance": 23
+  },
+  {
+    "fromStation": "sog",
+    "toStation": "vk",
+    "distance": 32
+  },
+  {
+    "fromStation": "vk",
+    "toStation": "sog",
+    "distance": 32
+  },
+  {
+    "fromStation": "vk",
+    "toStation": "sgl",
+    "distance": 27
+  },
+  {
+    "fromStation": "sgl",
+    "toStation": "vk",
+    "distance": 27
+  },
+  {
+    "fromStation": "sgl",
+    "toStation": "mes",
+    "distance": 33
+  },
+  {
+    "fromStation": "mes",
+    "toStation": "sgl",
+    "distance": 33
+  },
+  {
+    "fromStation": "mes",
+    "toStation": "mtn",
+    "distance": 24
+  },
+  {
+    "fromStation": "mtn",
+    "toStation": "mes",
+    "distance": 24
+  },
+  {
+    "fromStation": "krd",
+    "toStation": "cvm",
+    "distance": 20
+  },
+  {
+    "fromStation": "cvm",
+    "toStation": "krd",
+    "distance": 20
+  },
+  {
+    "fromStation": "cvm",
+    "toStation": "egh",
+    "distance": 18
+  },
+  {
+    "fromStation": "egh",
+    "toStation": "cvm",
+    "distance": 18
+  },
+  {
+    "fromStation": "egh",
+    "toStation": "lg",
+    "distance": 18
+  },
+  {
+    "fromStation": "lg",
+    "toStation": "egh",
+    "distance": 18
+  },
+  {
+    "fromStation": "hrl",
+    "toStation": "hb",
+    "distance": 36
+  },
+  {
+    "fromStation": "hb",
+    "toStation": "hrl",
+    "distance": 36
+  },
+  {
+    "fromStation": "hb",
+    "toStation": "nh",
+    "distance": 30
+  },
+  {
+    "fromStation": "nh",
+    "toStation": "hb",
+    "distance": 30
+  },
+  {
+    "fromStation": "nh",
+    "toStation": "sn",
+    "distance": 28
+  },
+  {
+    "fromStation": "sn",
+    "toStation": "nh",
+    "distance": 28
+  },
+  {
+    "fromStation": "sn",
+    "toStation": "sbk",
+    "distance": 19
+  },
+  {
+    "fromStation": "sbk",
+    "toStation": "sn",
+    "distance": 19
+  },
+  {
+    "fromStation": "sbk",
+    "toStation": "gln",
+    "distance": 32
+  },
+  {
+    "fromStation": "gln",
+    "toStation": "sbk",
+    "distance": 32
+  },
+  {
+    "fromStation": "gln",
+    "toStation": "std",
+    "distance": 40
+  },
+  {
+    "fromStation": "std",
+    "toStation": "gln",
+    "distance": 40
+  },
+  {
+    "fromStation": "rm",
+    "toStation": "wt",
+    "distance": 236
+  },
+  {
+    "fromStation": "wt",
+    "toStation": "rm",
+    "distance": 236
+  },
+  {
+    "fromStation": "wt",
+    "toStation": "mz",
+    "distance": 95
+  },
+  {
+    "fromStation": "mz",
+    "toStation": "wt",
+    "distance": 95
+  },
+  {
+    "fromStation": "mz",
+    "toStation": "hze",
+    "distance": 102
+  },
+  {
+    "fromStation": "hze",
+    "toStation": "mz",
+    "distance": 102
+  },
+  {
+    "fromStation": "hze",
+    "toStation": "gp",
+    "distance": 42
+  },
+  {
+    "fromStation": "gp",
+    "toStation": "hze",
+    "distance": 42
+  },
+  {
+    "fromStation": "gp",
+    "toStation": "ehv",
+    "distance": 61
+  },
+  {
+    "fromStation": "ehv",
+    "toStation": "gp",
+    "distance": 61
+  },
+  {
+    "fromStation": "btl",
+    "toStation": "vg",
+    "distance": 80
+  },
+  {
+    "fromStation": "vg",
+    "toStation": "btl",
+    "distance": 80
+  },
+  {
+    "fromStation": "vg",
+    "toStation": "ht",
+    "distance": 42
+  },
+  {
+    "fromStation": "ht",
+    "toStation": "vg",
+    "distance": 42
+  },
+  {
+    "fromStation": "gdm",
+    "toStation": "tpsw",
+    "distance": 92
+  },
+  {
+    "fromStation": "tpsw",
+    "toStation": "gdm",
+    "distance": 92
+  },
+  {
+    "fromStation": "tpsw",
+    "toStation": "tl",
+    "distance": 27
+  },
+  {
+    "fromStation": "tl",
+    "toStation": "tpsw",
+    "distance": 27
+  },
+  {
+    "fromStation": "rtd",
+    "toStation": "rtn",
+    "distance": 50
+  },
+  {
+    "fromStation": "rtn",
+    "toStation": "rtd",
+    "distance": 50
+  },
+  {
+    "fromStation": "rtn",
+    "toStation": "rta",
+    "distance": 52
+  },
+  {
+    "fromStation": "rta",
+    "toStation": "rtn",
+    "distance": 52
+  },
+  {
+    "fromStation": "rta",
+    "toStation": "cps",
+    "distance": 20
+  },
+  {
+    "fromStation": "cps",
+    "toStation": "rta",
+    "distance": 20
+  },
+  {
+    "fromStation": "cps",
+    "toStation": "nwk",
+    "distance": 22
+  },
+  {
+    "fromStation": "nwk",
+    "toStation": "cps",
+    "distance": 22
+  },
+  {
+    "fromStation": "nwk",
+    "toStation": "gd",
+    "distance": 94
+  },
+  {
+    "fromStation": "gd",
+    "toStation": "nwk",
+    "distance": 94
+  },
+  {
+    "fromStation": "wd",
+    "toStation": "bkl",
+    "distance": 126
+  },
+  {
+    "fromStation": "bkl",
+    "toStation": "wd",
+    "distance": 126
+  },
+  {
+    "fromStation": "nm",
+    "toStation": "nmgo",
+    "distance": 30
+  },
+  {
+    "fromStation": "nmgo",
+    "toStation": "nm",
+    "distance": 30
+  },
+  {
+    "fromStation": "nmgo",
+    "toStation": "nmd",
+    "distance": 19
+  },
+  {
+    "fromStation": "nmd",
+    "toStation": "nmgo",
+    "distance": 19
+  },
+  {
+    "fromStation": "nmd",
+    "toStation": "wc",
+    "distance": 47
+  },
+  {
+    "fromStation": "wc",
+    "toStation": "nmd",
+    "distance": 47
+  },
+  {
+    "fromStation": "wc",
+    "toStation": "rvs",
+    "distance": 67
+  },
+  {
+    "fromStation": "rvs",
+    "toStation": "wc",
+    "distance": 67
+  },
+  {
+    "fromStation": "rvs",
+    "toStation": "o",
+    "distance": 84
+  },
+  {
+    "fromStation": "o",
+    "toStation": "rvs",
+    "distance": 84
+  },
+  {
+    "fromStation": "o",
+    "toStation": "ow",
+    "distance": 18
+  },
+  {
+    "fromStation": "ow",
+    "toStation": "o",
+    "distance": 18
+  },
+  {
+    "fromStation": "ow",
+    "toStation": "rs",
+    "distance": 106
+  },
+  {
+    "fromStation": "rs",
+    "toStation": "ow",
+    "distance": 106
+  },
+  {
+    "fromStation": "rs",
+    "toStation": "hto",
+    "distance": 42
+  },
+  {
+    "fromStation": "hto",
+    "toStation": "rs",
+    "distance": 42
+  },
+  {
+    "fromStation": "hto",
+    "toStation": "ht",
+    "distance": 22
+  },
+  {
+    "fromStation": "ht",
+    "toStation": "hto",
+    "distance": 22
+  },
+  {
+    "fromStation": "ht",
+    "toStation": "tb",
+    "distance": 223
+  },
+  {
+    "fromStation": "tb",
+    "toStation": "ht",
+    "distance": 223
+  },
+  {
+    "fromStation": "tb",
+    "toStation": "tbu",
+    "distance": 28
+  },
+  {
+    "fromStation": "tbu",
+    "toStation": "tb",
+    "distance": 28
+  },
+  {
+    "fromStation": "tbu",
+    "toStation": "tbr",
+    "distance": 42
+  },
+  {
+    "fromStation": "tbr",
+    "toStation": "tbu",
+    "distance": 42
+  },
+  {
+    "fromStation": "tbr",
+    "toStation": "gz",
+    "distance": 49
+  },
+  {
+    "fromStation": "gz",
+    "toStation": "tbr",
+    "distance": 49
+  },
+  {
+    "fromStation": "gz",
+    "toStation": "bd",
+    "distance": 97
+  },
+  {
+    "fromStation": "bd",
+    "toStation": "gz",
+    "distance": 97
+  },
+  {
+    "fromStation": "bd",
+    "toStation": "etn",
+    "distance": 111
+  },
+  {
+    "fromStation": "etn",
+    "toStation": "bd",
+    "distance": 111
+  },
+  {
+    "fromStation": "etn",
+    "toStation": "rsd",
+    "distance": 129
+  },
+  {
+    "fromStation": "rsd",
+    "toStation": "etn",
+    "distance": 129
+  },
+  {
+    "fromStation": "ledn",
+    "toStation": "ldl",
+    "distance": 33
+  },
+  {
+    "fromStation": "ldl",
+    "toStation": "ledn",
+    "distance": 33
+  },
+  {
+    "fromStation": "ldl",
+    "toStation": "apn",
+    "distance": 120
+  },
+  {
+    "fromStation": "apn",
+    "toStation": "ldl",
+    "distance": 120
+  },
+  {
+    "fromStation": "apn",
+    "toStation": "bdg",
+    "distance": 80
+  },
+  {
+    "fromStation": "bdg",
+    "toStation": "apn",
+    "distance": 80
+  },
+  {
+    "fromStation": "bdg",
+    "toStation": "wd",
+    "distance": 111
+  },
+  {
+    "fromStation": "wd",
+    "toStation": "bdg",
+    "distance": 111
+  },
+  {
+    "fromStation": "apn",
+    "toStation": "bsk",
+    "distance": 57
+  },
+  {
+    "fromStation": "bsk",
+    "toStation": "apn",
+    "distance": 57
+  },
+  {
+    "fromStation": "bsk",
+    "toStation": "bsks",
+    "distance": 10
+  },
+  {
+    "fromStation": "bsks",
+    "toStation": "bsk",
+    "distance": 10
+  },
+  {
+    "fromStation": "bsks",
+    "toStation": "wadn",
+    "distance": 12
+  },
+  {
+    "fromStation": "wadn",
+    "toStation": "bsks",
+    "distance": 12
+  },
+  {
+    "fromStation": "wadn",
+    "toStation": "wad",
+    "distance": 13
+  },
+  {
+    "fromStation": "wad",
+    "toStation": "wadn",
+    "distance": 13
+  },
+  {
+    "fromStation": "wad",
+    "toStation": "wadt",
+    "distance": 19
+  },
+  {
+    "fromStation": "wadt",
+    "toStation": "wad",
+    "distance": 19
+  },
+  {
+    "fromStation": "wadt",
+    "toStation": "gd",
+    "distance": 58
+  },
+  {
+    "fromStation": "gd",
+    "toStation": "wadt",
+    "distance": 58
+  },
+  {
+    "fromStation": "laa",
+    "toStation": "gv",
+    "distance": 19
+  },
+  {
+    "fromStation": "gv",
+    "toStation": "laa",
+    "distance": 19
+  },
+  {
+    "fromStation": "ehv",
+    "toStation": "hmbv",
+    "distance": 94
+  },
+  {
+    "fromStation": "hmbv",
+    "toStation": "ehv",
+    "distance": 94
+  },
+  {
+    "fromStation": "hmbv",
+    "toStation": "hmh",
+    "distance": 16
+  },
+  {
+    "fromStation": "hmh",
+    "toStation": "hmbv",
+    "distance": 16
+  },
+  {
+    "fromStation": "hmh",
+    "toStation": "hm",
+    "distance": 19
+  },
+  {
+    "fromStation": "hm",
+    "toStation": "hmh",
+    "distance": 19
+  },
+  {
+    "fromStation": "hm",
+    "toStation": "hmbh",
+    "distance": 30
+  },
+  {
+    "fromStation": "hmbh",
+    "toStation": "hm",
+    "distance": 30
+  },
+  {
+    "fromStation": "hmbh",
+    "toStation": "dn",
+    "distance": 65
+  },
+  {
+    "fromStation": "dn",
+    "toStation": "hmbh",
+    "distance": 65
+  },
+  {
+    "fromStation": "dn",
+    "toStation": "hrt",
+    "distance": 179
+  },
+  {
+    "fromStation": "hrt",
+    "toStation": "dn",
+    "distance": 179
+  },
+  {
+    "fromStation": "hrt",
+    "toStation": "br",
+    "distance": 99
+  },
+  {
+    "fromStation": "br",
+    "toStation": "hrt",
+    "distance": 99
+  }
+]

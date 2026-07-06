@@ -1,0 +1,1312 @@
+{
+  "lines": [
+    {
+      "stops": [
+        "ah",
+        "ahp"
+      ],
+      "name": "ah-ahp",
+      "ref": "ah-ahp"
+    },
+    {
+      "stops": [
+        "ah",
+        "ahz",
+        "est"
+      ],
+      "name": "ah-est",
+      "ref": "ah-est"
+    },
+    {
+      "stops": [
+        "ah",
+        "otb",
+        "wf",
+        "ed"
+      ],
+      "name": "ah-ed",
+      "ref": "ah-ed"
+    },
+    {
+      "stops": [
+        "ahp",
+        "wtv",
+        "dvn",
+        "zv",
+        "did",
+        "wl",
+        "dtch",
+        "dtc",
+        "gdr",
+        "tbg",
+        "vsv",
+        "atn",
+        "ww",
+        "www",
+        "ltv",
+        "rl",
+        "vd",
+        "zp"
+      ],
+      "name": "ahp-zp",
+      "ref": "ahp-zp"
+    },
+    {
+      "stops": [
+        "ahp",
+        "ahpr",
+        "vp",
+        "rh",
+        "dr",
+        "bmn",
+        "zp"
+      ],
+      "name": "ahp-zp",
+      "ref": "ahp-zp"
+    },
+    {
+      "stops": [
+        "amf",
+        "brn"
+      ],
+      "name": "amf-brn",
+      "ref": "amf-brn"
+    },
+    {
+      "stops": [
+        "amf",
+        "amfs",
+        "avat",
+        "nkk",
+        "pt",
+        "eml",
+        "hd",
+        "ns",
+        "hde",
+        "wz",
+        "zl"
+      ],
+      "name": "amf-zl",
+      "ref": "amf-zl"
+    },
+    {
+      "stops": [
+        "amf",
+        "dld"
+      ],
+      "name": "amf-dld",
+      "ref": "amf-dld"
+    },
+    {
+      "stops": [
+        "amf",
+        "hvl"
+      ],
+      "name": "amf-hvl",
+      "ref": "amf-hvl"
+    },
+    {
+      "stops": [
+        "aml",
+        "vz",
+        "da",
+        "vhp",
+        "mrb"
+      ],
+      "name": "aml-mrb",
+      "ref": "aml-mrb"
+    },
+    {
+      "stops": [
+        "aml",
+        "wdn"
+      ],
+      "name": "aml-wdn",
+      "ref": "aml-wdn"
+    },
+    {
+      "stops": [
+        "aml",
+        "amri",
+        "bn",
+        "hgl"
+      ],
+      "name": "aml-hgl",
+      "ref": "aml-hgl"
+    },
+    {
+      "stops": [
+        "ampo",
+        "almm",
+        "alm",
+        "almp",
+        "almb",
+        "almo",
+        "lls",
+        "dron",
+        "kpnz",
+        "zl"
+      ],
+      "name": "ampo-zl",
+      "ref": "ampo-zl"
+    },
+    {
+      "stops": [
+        "ampo",
+        "wp"
+      ],
+      "name": "ampo-wp",
+      "ref": "ampo-wp"
+    },
+    {
+      "stops": [
+        "ampo",
+        "ndb"
+      ],
+      "name": "ampo-ndb",
+      "ref": "ampo-ndb"
+    },
+    {
+      "stops": [
+        "apd",
+        "apdm",
+        "kbk",
+        "vem",
+        "zp"
+      ],
+      "name": "apd-zp",
+      "ref": "apd-zp"
+    },
+    {
+      "stops": [
+        "apd",
+        "hvl"
+      ],
+      "name": "apd-hvl",
+      "ref": "apd-hvl"
+    },
+    {
+      "stops": [
+        "apd",
+        "apdo",
+        "twl",
+        "dv"
+      ],
+      "name": "apd-dv",
+      "ref": "apd-dv"
+    },
+    {
+      "stops": [
+        "apn",
+        "bsk",
+        "bsks",
+        "wadn",
+        "wad",
+        "wadt",
+        "gd"
+      ],
+      "name": "apn-gd",
+      "ref": "apn-gd"
+    },
+    {
+      "stops": [
+        "apn",
+        "bdg",
+        "wd"
+      ],
+      "name": "apn-wd",
+      "ref": "apn-wd"
+    },
+    {
+      "stops": [
+        "apn",
+        "ldl",
+        "ledn"
+      ],
+      "name": "apn-ledn",
+      "ref": "apn-ledn"
+    },
+    {
+      "stops": [
+        "asb",
+        "rai"
+      ],
+      "name": "asb-rai",
+      "ref": "asb-rai"
+    },
+    {
+      "stops": [
+        "asb",
+        "dvd"
+      ],
+      "name": "asb-dvd",
+      "ref": "asb-dvd"
+    },
+    {
+      "stops": [
+        "asb",
+        "ashd",
+        "ac",
+        "bkl"
+      ],
+      "name": "asb-bkl",
+      "ref": "asb-bkl"
+    },
+    {
+      "stops": [
+        "asdm",
+        "assp",
+        "dmn",
+        "wp"
+      ],
+      "name": "asdm-wp",
+      "ref": "asdm-wp"
+    },
+    {
+      "stops": [
+        "asdm",
+        "asa",
+        "dvd"
+      ],
+      "name": "asdm-dvd",
+      "ref": "asdm-dvd"
+    },
+    {
+      "stops": [
+        "asdm",
+        "asd",
+        "ass"
+      ],
+      "name": "asdm-ass",
+      "ref": "asdm-ass"
+    },
+    {
+      "stops": [
+        "ass",
+        "asdl",
+        "shl"
+      ],
+      "name": "ass-shl",
+      "ref": "ass-shl"
+    },
+    {
+      "stops": [
+        "ass",
+        "hwzb",
+        "hlms",
+        "hlm"
+      ],
+      "name": "ass-hlm",
+      "ref": "ass-hlm"
+    },
+    {
+      "stops": [
+        "ass",
+        "zd"
+      ],
+      "name": "ass-zd",
+      "ref": "ass-zd"
+    },
+    {
+      "stops": [
+        "bd",
+        "gz",
+        "tbr",
+        "tbu",
+        "tb"
+      ],
+      "name": "bd-tb",
+      "ref": "bd-tb"
+    },
+    {
+      "stops": [
+        "bd",
+        "etn",
+        "rsd"
+      ],
+      "name": "bd-rsd",
+      "ref": "bd-rsd"
+    },
+    {
+      "stops": [
+        "bd",
+        "bdpb"
+      ],
+      "name": "bd-bdpb",
+      "ref": "bd-bdpb"
+    },
+    {
+      "stops": [
+        "bdpb",
+        "rlb"
+      ],
+      "name": "bdpb-rlb",
+      "ref": "bdpb-rlb"
+    },
+    {
+      "stops": [
+        "bdpb",
+        "zlw"
+      ],
+      "name": "bdpb-zlw",
+      "ref": "bdpb-zlw"
+    },
+    {
+      "stops": [
+        "bhv",
+        "uto"
+      ],
+      "name": "bhv-uto",
+      "ref": "bhv-uto"
+    },
+    {
+      "stops": [
+        "bhv",
+        "utm"
+      ],
+      "name": "bhv-utm",
+      "ref": "bhv-utm"
+    },
+    {
+      "stops": [
+        "bhv",
+        "dld"
+      ],
+      "name": "bhv-dld",
+      "ref": "bhv-dld"
+    },
+    {
+      "stops": [
+        "bkl",
+        "mas",
+        "utzl",
+        "ut"
+      ],
+      "name": "bkl-ut",
+      "ref": "bkl-ut"
+    },
+    {
+      "stops": [
+        "bkl",
+        "wd"
+      ],
+      "name": "bkl-wd",
+      "ref": "bkl-wd"
+    },
+    {
+      "stops": [
+        "br",
+        "vry",
+        "vlb",
+        "bmr",
+        "ck",
+        "mmlh",
+        "nmh",
+        "nm"
+      ],
+      "name": "br-nm",
+      "ref": "br-nm"
+    },
+    {
+      "stops": [
+        "br",
+        "vl",
+        "tg",
+        "rv",
+        "sm",
+        "rm"
+      ],
+      "name": "br-rm",
+      "ref": "br-rm"
+    },
+    {
+      "stops": [
+        "br",
+        "hrt",
+        "dn",
+        "hmbh",
+        "hm",
+        "hmh",
+        "hmbv",
+        "ehv"
+      ],
+      "name": "br-ehv",
+      "ref": "br-ehv"
+    },
+    {
+      "stops": [
+        "brn",
+        "sd",
+        "st",
+        "stz",
+        "dld"
+      ],
+      "name": "brn-dld",
+      "ref": "brn-dld"
+    },
+    {
+      "stops": [
+        "brn",
+        "hvs"
+      ],
+      "name": "brn-hvs",
+      "ref": "brn-hvs"
+    },
+    {
+      "stops": [
+        "btl",
+        "vg",
+        "ht"
+      ],
+      "name": "btl-ht",
+      "ref": "btl-ht"
+    },
+    {
+      "stops": [
+        "btl",
+        "bet",
+        "ehs",
+        "ehv"
+      ],
+      "name": "btl-ehv",
+      "ref": "btl-ehv"
+    },
+    {
+      "stops": [
+        "btl",
+        "ot",
+        "tb"
+      ],
+      "name": "btl-tb",
+      "ref": "btl-tb"
+    },
+    {
+      "stops": [
+        "ddr",
+        "ddrs",
+        "sdtb",
+        "sdt",
+        "hbzm",
+        "gnd",
+        "bhdv",
+        "gr",
+        "akl",
+        "ldm",
+        "bsd",
+        "gdm"
+      ],
+      "name": "ddr-gdm",
+      "ref": "ddr-gdm"
+    },
+    {
+      "stops": [
+        "ddr",
+        "ddzd",
+        "zlw"
+      ],
+      "name": "ddr-zlw",
+      "ref": "ddr-zlw"
+    },
+    {
+      "stops": [
+        "ddr",
+        "zwd",
+        "brd",
+        "rlb"
+      ],
+      "name": "ddr-rlb",
+      "ref": "ddr-rlb"
+    },
+    {
+      "stops": [
+        "dv",
+        "zp"
+      ],
+      "name": "dv-zp",
+      "ref": "dv-zp"
+    },
+    {
+      "stops": [
+        "dv",
+        "dvc",
+        "hon",
+        "rsn",
+        "wdn"
+      ],
+      "name": "dv-wdn",
+      "ref": "dv-wdn"
+    },
+    {
+      "stops": [
+        "dv",
+        "ost",
+        "wh",
+        "zl"
+      ],
+      "name": "dv-zl",
+      "ref": "dv-zl"
+    },
+    {
+      "stops": [
+        "dvd",
+        "rai"
+      ],
+      "name": "dvd-rai",
+      "ref": "dvd-rai"
+    },
+    {
+      "stops": [
+        "dvd",
+        "dmnz",
+        "wp"
+      ],
+      "name": "dvd-wp",
+      "ref": "dvd-wp"
+    },
+    {
+      "stops": [
+        "dz",
+        "dzw",
+        "apg",
+        "lp",
+        "stm",
+        "bdm",
+        "swd"
+      ],
+      "name": "dz-swd",
+      "ref": "dz-swd"
+    },
+    {
+      "stops": [
+        "ed",
+        "klp",
+        "mrn"
+      ],
+      "name": "ed-mrn",
+      "ref": "ed-mrn"
+    },
+    {
+      "stops": [
+        "ed",
+        "edc",
+        "ltn",
+        "bnz",
+        "bnc",
+        "bnn",
+        "hvl"
+      ],
+      "name": "ed-hvl",
+      "ref": "ed-hvl"
+    },
+    {
+      "stops": [
+        "edn",
+        "mtr",
+        "mt",
+        "mtn"
+      ],
+      "name": "edn-mtn",
+      "ref": "edn-mtn"
+    },
+    {
+      "stops": [
+        "eem",
+        "rd",
+        "uhm",
+        "uhz",
+        "ust",
+        "wfm",
+        "bf",
+        "wsm",
+        "swd"
+      ],
+      "name": "eem-swd",
+      "ref": "eem-swd"
+    },
+    {
+      "stops": [
+        "eghm",
+        "lg"
+      ],
+      "name": "eghm-lg",
+      "ref": "eghm-lg"
+    },
+    {
+      "stops": [
+        "ehv",
+        "gp",
+        "hze",
+        "mz",
+        "wt",
+        "rm"
+      ],
+      "name": "ehv-rm",
+      "ref": "ehv-rm"
+    },
+    {
+      "stops": [
+        "ekz",
+        "bkf",
+        "bkg",
+        "hks",
+        "hnk",
+        "hn"
+      ],
+      "name": "ekz-hn",
+      "ref": "ekz-hn"
+    },
+    {
+      "stops": [
+        "emn",
+        "emnz",
+        "na",
+        "dln",
+        "co",
+        "gbg",
+        "hdb",
+        "mrb"
+      ],
+      "name": "emn-mrb",
+      "ref": "emn-mrb"
+    },
+    {
+      "stops": [
+        "est",
+        "za",
+        "hmn",
+        "op",
+        "ktr",
+        "tl",
+        "tpsw",
+        "gdm"
+      ],
+      "name": "est-gdm",
+      "ref": "est-gdm"
+    },
+    {
+      "stops": [
+        "est",
+        "nml",
+        "nm"
+      ],
+      "name": "est-nm",
+      "ref": "est-nm"
+    },
+    {
+      "stops": [
+        "gbr",
+        "ese",
+        "es",
+        "esk",
+        "hgl"
+      ],
+      "name": "gbr-hgl",
+      "ref": "gbr-hgl"
+    },
+    {
+      "stops": [
+        "gd",
+        "gdg",
+        "wd"
+      ],
+      "name": "gd-wd",
+      "ref": "gd-wd"
+    },
+    {
+      "stops": [
+        "gd",
+        "llzm",
+        "ztmo",
+        "ztm",
+        "ypb",
+        "vb",
+        "gvc"
+      ],
+      "name": "gd-gvc",
+      "ref": "gd-gvc"
+    },
+    {
+      "stops": [
+        "gd",
+        "nwk",
+        "cps",
+        "rta",
+        "rtn",
+        "rtd"
+      ],
+      "name": "gd-rtd",
+      "ref": "gd-rtd"
+    },
+    {
+      "stops": [
+        "gdm",
+        "zbm",
+        "ht"
+      ],
+      "name": "gdm-ht",
+      "ref": "gdm-ht"
+    },
+    {
+      "stops": [
+        "gdm",
+        "cl",
+        "htnc",
+        "htn",
+        "utln",
+        "utvr"
+      ],
+      "name": "gdm-utvr",
+      "ref": "gdm-utvr"
+    },
+    {
+      "stops": [
+        "gerp",
+        "gn"
+      ],
+      "name": "gerp-gn",
+      "ref": "gerp-gn"
+    },
+    {
+      "stops": [
+        "gerp",
+        "hrn",
+        "asn",
+        "bl",
+        "hgv",
+        "mp"
+      ],
+      "name": "gerp-mp",
+      "ref": "gerp-mp"
+    },
+    {
+      "stops": [
+        "gerp",
+        "kw",
+        "mth",
+        "hgz",
+        "zb"
+      ],
+      "name": "gerp-zb",
+      "ref": "gerp-zb"
+    },
+    {
+      "stops": [
+        "gn",
+        "gnn",
+        "swd"
+      ],
+      "name": "gn-swd",
+      "ref": "gn-swd"
+    },
+    {
+      "stops": [
+        "gn",
+        "zh",
+        "gk",
+        "bp",
+        "dwe",
+        "fwd",
+        "hdg",
+        "lwc",
+        "lw"
+      ],
+      "name": "gn-lw",
+      "ref": "gn-lw"
+    },
+    {
+      "stops": [
+        "gv",
+        "gvc"
+      ],
+      "name": "gv-gvc",
+      "ref": "gv-gvc"
+    },
+    {
+      "stops": [
+        "gv",
+        "laa"
+      ],
+      "name": "gv-laa",
+      "ref": "gv-laa"
+    },
+    {
+      "stops": [
+        "gv",
+        "gvmw",
+        "rsw",
+        "dt",
+        "dtz",
+        "sdm",
+        "rtd"
+      ],
+      "name": "gv-rtd",
+      "ref": "gv-rtd"
+    },
+    {
+      "stops": [
+        "gvc",
+        "laa"
+      ],
+      "name": "gvc-laa",
+      "ref": "gvc-laa"
+    },
+    {
+      "stops": [
+        "hdr",
+        "hdrz",
+        "ana",
+        "sgn",
+        "hwd"
+      ],
+      "name": "hdr-hwd",
+      "ref": "hdr-hwd"
+    },
+    {
+      "stops": [
+        "hfd",
+        "shl"
+      ],
+      "name": "hfd-shl",
+      "ref": "hfd-shl"
+    },
+    {
+      "stops": [
+        "hfd",
+        "rtd"
+      ],
+      "name": "hfd-rtd",
+      "ref": "hfd-rtd"
+    },
+    {
+      "stops": [
+        "hfd",
+        "nvp",
+        "ssh",
+        "ledn"
+      ],
+      "name": "hfd-ledn",
+      "ref": "hfd-ledn"
+    },
+    {
+      "stops": [
+        "hgl",
+        "hglg",
+        "ddn",
+        "go",
+        "lc",
+        "zp"
+      ],
+      "name": "hgl-zp",
+      "ref": "hgl-zp"
+    },
+    {
+      "stops": [
+        "hgl",
+        "hglo",
+        "odz"
+      ],
+      "name": "hgl-odz",
+      "ref": "hgl-odz"
+    },
+    {
+      "stops": [
+        "hlgh",
+        "hlg",
+        "fn",
+        "drp",
+        "dei",
+        "lw"
+      ],
+      "name": "hlgh-lw",
+      "ref": "hlgh-lw"
+    },
+    {
+      "stops": [
+        "hlm",
+        "ovn",
+        "zvt"
+      ],
+      "name": "hlm-zvt",
+      "ref": "hlm-zvt"
+    },
+    {
+      "stops": [
+        "hlm",
+        "bll",
+        "sptz",
+        "sptn",
+        "drh",
+        "bv",
+        "hk",
+        "utg"
+      ],
+      "name": "hlm-utg",
+      "ref": "hlm-utg"
+    },
+    {
+      "stops": [
+        "hlm",
+        "had",
+        "hil",
+        "vh",
+        "ledn"
+      ],
+      "name": "hlm-ledn",
+      "ref": "hlm-ledn"
+    },
+    {
+      "stops": [
+        "hn",
+        "pmo",
+        "pmr",
+        "pmw",
+        "zdk",
+        "zd"
+      ],
+      "name": "hn-zd",
+      "ref": "hn-zd"
+    },
+    {
+      "stops": [
+        "hn",
+        "obd",
+        "hwd"
+      ],
+      "name": "hn-hwd",
+      "ref": "hn-hwd"
+    },
+    {
+      "stops": [
+        "hrl",
+        "hb",
+        "nh",
+        "sn",
+        "sbk",
+        "gln",
+        "std"
+      ],
+      "name": "hrl-std",
+      "ref": "hrl-std"
+    },
+    {
+      "stops": [
+        "hrl",
+        "hrlw",
+        "vdl",
+        "kmr",
+        "sog",
+        "vk",
+        "sgl",
+        "mes",
+        "mtn"
+      ],
+      "name": "hrl-mtn",
+      "ref": "hrl-mtn"
+    },
+    {
+      "stops": [
+        "hrl",
+        "lg"
+      ],
+      "name": "hrl-lg",
+      "ref": "hrl-lg"
+    },
+    {
+      "stops": [
+        "ht",
+        "hto",
+        "rs",
+        "ow",
+        "o",
+        "rvs",
+        "wc",
+        "nmd",
+        "nmgo",
+        "nm"
+      ],
+      "name": "ht-nm",
+      "ref": "ht-nm"
+    },
+    {
+      "stops": [
+        "ht",
+        "tb"
+      ],
+      "name": "ht-tb",
+      "ref": "ht-tb"
+    },
+    {
+      "stops": [
+        "hvs",
+        "hvsp",
+        "hor",
+        "uto"
+      ],
+      "name": "hvs-uto",
+      "ref": "hvs-uto"
+    },
+    {
+      "stops": [
+        "hvs",
+        "hvsm",
+        "bsmz",
+        "ndb"
+      ],
+      "name": "hvs-ndb",
+      "ref": "hvs-ndb"
+    },
+    {
+      "stops": [
+        "hwd",
+        "amrn",
+        "amr",
+        "hlo",
+        "cas",
+        "utg"
+      ],
+      "name": "hwd-utg",
+      "ref": "hwd-utg"
+    },
+    {
+      "stops": [
+        "kpn",
+        "zlsh",
+        "zl"
+      ],
+      "name": "kpn-zl",
+      "ref": "kpn-zl"
+    },
+    {
+      "stops": [
+        "krd",
+        "cvm",
+        "egh",
+        "lg"
+      ],
+      "name": "krd-lg",
+      "ref": "krd-lg"
+    },
+    {
+      "stops": [
+        "laa",
+        "gvm",
+        "vst",
+        "dvnk",
+        "ledn"
+      ],
+      "name": "laa-ledn",
+      "ref": "laa-ledn"
+    },
+    {
+      "stops": [
+        "lw",
+        "mg",
+        "sknd",
+        "sk",
+        "ijt",
+        "wk",
+        "hnp",
+        "kmw",
+        "stv"
+      ],
+      "name": "lw-stv",
+      "ref": "lw-stv"
+    },
+    {
+      "stops": [
+        "lw",
+        "gw",
+        "akm",
+        "hr",
+        "hry",
+        "wv",
+        "swk",
+        "mp"
+      ],
+      "name": "lw-mp",
+      "ref": "lw-mp"
+    },
+    {
+      "stops": [
+        "mp",
+        "zl"
+      ],
+      "name": "mp-zl",
+      "ref": "mp-zl"
+    },
+    {
+      "stops": [
+        "mrb",
+        "omn",
+        "dl",
+        "zl"
+      ],
+      "name": "mrb-zl",
+      "ref": "mrb-zl"
+    },
+    {
+      "stops": [
+        "mrn",
+        "db",
+        "bnk",
+        "utvr"
+      ],
+      "name": "mrn-utvr",
+      "ref": "mrn-utvr"
+    },
+    {
+      "stops": [
+        "mrn",
+        "vndw",
+        "vndc",
+        "rhn"
+      ],
+      "name": "mrn-rhn",
+      "ref": "mrn-rhn"
+    },
+    {
+      "stops": [
+        "mtn",
+        "bde",
+        "bk",
+        "lut",
+        "std"
+      ],
+      "name": "mtn-std",
+      "ref": "mtn-std"
+    },
+    {
+      "stops": [
+        "ndb",
+        "wp"
+      ],
+      "name": "ndb-wp",
+      "ref": "ndb-wp"
+    },
+    {
+      "stops": [
+        "nsch",
+        "ws",
+        "sda",
+        "zb"
+      ],
+      "name": "nsch-zb",
+      "ref": "nsch-zb"
+    },
+    {
+      "stops": [
+        "rai",
+        "asdz",
+        "shl"
+      ],
+      "name": "rai-shl",
+      "ref": "rai-shl"
+    },
+    {
+      "stops": [
+        "rlb",
+        "rtst",
+        "rtz",
+        "rtb",
+        "rtd"
+      ],
+      "name": "rlb-rtd",
+      "ref": "rlb-rtd"
+    },
+    {
+      "stops": [
+        "rm",
+        "ec",
+        "srn",
+        "std"
+      ],
+      "name": "rm-std",
+      "ref": "rm-std"
+    },
+    {
+      "stops": [
+        "rsd",
+        "odb",
+        "zvb",
+        "zlw"
+      ],
+      "name": "rsd-zlw",
+      "ref": "rsd-zlw"
+    },
+    {
+      "stops": [
+        "rsd",
+        "bgn",
+        "rb",
+        "kbd",
+        "krg",
+        "bzl",
+        "gs",
+        "arn",
+        "mdb",
+        "vss",
+        "vs"
+      ],
+      "name": "rsd-vs",
+      "ref": "rsd-vs"
+    },
+    {
+      "stops": [
+        "ut",
+        "uto"
+      ],
+      "name": "ut-uto",
+      "ref": "ut-uto"
+    },
+    {
+      "stops": [
+        "ut",
+        "utvr"
+      ],
+      "name": "ut-utvr",
+      "ref": "ut-utvr"
+    },
+    {
+      "stops": [
+        "ut",
+        "utlr",
+        "utt",
+        "vtn",
+        "wd"
+      ],
+      "name": "ut-wd",
+      "ref": "ut-wd"
+    },
+    {
+      "stops": [
+        "utg",
+        "kma",
+        "wm",
+        "zzs",
+        "kz",
+        "zd"
+      ],
+      "name": "utg-zd",
+      "ref": "utg-zd"
+    },
+    {
+      "stops": [
+        "vdm",
+        "zb"
+      ],
+      "name": "vdm-zb",
+      "ref": "vdm-zb"
+    },
+    {
+      "stops": [
+        "wdn",
+        "nvd",
+        "rat",
+        "hno",
+        "zl"
+      ],
+      "name": "wdn-zl",
+      "ref": "wdn-zl"
+    }
+  ]
+}

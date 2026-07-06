@@ -1,0 +1,264 @@
+{
+  "lines": [
+    {
+      "stops": [
+        "GN",
+        "ASN",
+        "ZL",
+        "AMF",
+        "UT",
+        "GD",
+        "GVC"
+      ],
+      "name": "IC 500",
+      "ref": "500"
+    },
+    {
+      "stops": [
+        "LW",
+        "HR",
+        "ZL",
+        "AMF",
+        "UT",
+        "GD",
+        "GVC"
+      ],
+      "name": "IC 600",
+      "ref": "600"
+    },
+    {
+      "stops": [
+        "GN",
+        "ASN",
+        "ZL",
+        "AMF",
+        "UT",
+        "SHL"
+      ],
+      "name": "IC 700",
+      "ref": "700"
+    },
+    {
+      "stops": [
+        "LW",
+        "HR",
+        "ZL",
+        "AMF",
+        "UT",
+        "SHL"
+      ],
+      "name": "IC 800",
+      "ref": "800"
+    },
+    {
+      "stops": [
+        "GVC",
+        "GV",
+        "DT",
+        "SDM",
+        "RTD",
+        "BD",
+        "TB",
+        "EHV"
+      ],
+      "name": "IC 1100",
+      "ref": "1100"
+    },
+    {
+      "stops": [
+        "ASD",
+        "AMF",
+        "APD",
+        "DV"
+      ],
+      "name": "IC 1500",
+      "ref": "1500"
+    },
+    {
+      "stops": [
+        "ES",
+        "HGL",
+        "WDN",
+        "ZL",
+        "APD",
+        "AMF",
+        "UT",
+        "GD",
+        "GVC"
+      ],
+      "name": "IC 1700",
+      "ref": "1700"
+    },
+    {
+      "stops": [
+        "GVC",
+        "GV",
+        "DT",
+        "SDM",
+        "RTD",
+        "SHL",
+        "ASD"
+      ],
+      "name": "IC 2100",
+      "ref": "2100"
+    },
+    {
+      "stops": [
+        "ASD",
+        "SHL",
+        "LEDN",
+        "GVC",
+        "GV",
+        "RTD",
+        "DDR",
+        "RSD",
+        "GS",
+        "VS"
+      ],
+      "name": "IC 2200",
+      "ref": "2200"
+    },
+    {
+      "stops": [
+        "ALM",
+        "ALMB",
+        "ASD"
+      ],
+      "name": "IC 2600",
+      "ref": "2600"
+    },
+    {
+      "stops": [
+        "HDR",
+        "AMR",
+        "ASD",
+        "HVS",
+        "AMF",
+        "UT",
+        "HT",
+        "EHV",
+        "MT"
+      ],
+      "name": "IC 2700",
+      "ref": "2700"
+    },
+    {
+      "stops": [
+        "RTD",
+        "GD",
+        "UT"
+      ],
+      "name": "IC 2800",
+      "ref": "2800"
+    },
+    {
+      "stops": [
+        "EKZ",
+        "HN",
+        "AMR",
+        "ASD",
+        "HVS",
+        "AMF",
+        "UT",
+        "HT",
+        "EHV",
+        "MT"
+      ],
+      "name": "IC 2900",
+      "ref": "2900"
+    },
+    {
+      "stops": [
+        "NM",
+        "AH",
+        "ED",
+        "AMF",
+        "HVS",
+        "ASD",
+        "AMR",
+        "HDR"
+      ],
+      "name": "IC 3000",
+      "ref": "3000"
+    },
+    {
+      "stops": [
+        "NM",
+        "AH",
+        "ED",
+        "AMF",
+        "UT",
+        "GD",
+        "GVC"
+      ],
+      "name": "IC 3100",
+      "ref": "3100"
+    },
+    {
+      "stops": [
+        "AH",
+        "ED",
+        "AMF",
+        "UT",
+        "GD",
+        "RTD"
+      ],
+      "name": "IC 3200",
+      "ref": "3200"
+    },
+    {
+      "stops": [
+        "HLM",
+        "AMR"
+      ],
+      "name": "IC 3400",
+      "ref": "3400"
+    },
+    {
+      "stops": [
+        "DDR",
+        "RTD",
+        "SHL",
+        "ASD",
+        "HVS",
+        "AMF",
+        "UT",
+        "HT",
+        "EHV",
+        "VL"
+      ],
+      "name": "IC 3500",
+      "ref": "3500"
+    },
+    {
+      "stops": [
+        "RSD",
+        "BD",
+        "TB",
+        "EHV",
+        "HT",
+        "UT",
+        "AMF",
+        "ZL"
+      ],
+      "name": "IC 3600",
+      "ref": "3600"
+    },
+    {
+      "stops": [
+        "EKZ",
+        "HN",
+        "AMR",
+        "ASD",
+        "HVS",
+        "AMF",
+        "UT",
+        "HT",
+        "EHV",
+        "HRL"
+      ],
+      "name": "IC 3900",
+      "ref": "3900"
+    }
+  ]
+}

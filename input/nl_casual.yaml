@@ -1,0 +1,113 @@
+config:
+  name: "NL Casual Stations"
+  exporters: ["googleMMaps", "fullkml"]
+
+layers:
+  Stations:
+    stations:
+      file: "input/nl_casual/stations-2023-09.csv"
+      processors: [
+        { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
+        { name: "filter_by_column", column: "country", value: "NL" },
+        { name: "lat_lon_to_points" }
+      ]
+      style:
+        color: "ff377eb8"
+
+    intercity:
+      file: "input/nl_casual/stations-2023-09.csv"
+      processors: [
+        { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
+        { name: "filter_by_column", column: "country", value: "NL" },
+        { name: "filter_by_column", column: "type", values: ["megastation", "knooppuntIntercitystation", "intercitystation"] },
+        { name: "lat_lon_to_points" }
+      ]
+      style:
+        color: "ffe41a1c"
+        size: 6
+
+    sneltrein:
+      file: "input/nl_casual/stations-2023-09.csv"
+      processors: [
+        { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
+        { name: "filter_by_column", column: "country", value: "NL" },
+        { name: "filter_by_column", column: "type", values: ["knooppuntSneltreinstation", "sneltreinstation"] },
+        { name: "lat_lon_to_points" }
+      ]
+      style:
+        color: "ff4daf4a"
+        size: 5
+
+    stoptrein:
+      file: "input/nl_casual/stations-2023-09.csv"
+      processors: [
+        { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
+        { name: "filter_by_column", column: "country", value: "NL" },
+        { name: "filter_by_column", column: "type", values: ["knooppuntStoptreinstation", "stoptreinstation"] },
+        { name: "lat_lon_to_points" }
+      ]
+      style:
+        color: "ff984ea3"
+        size: 4
+
+    facultatif:
+      file: "input/nl_casual/stations-2023-09.csv"
+      processors: [
+        { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
+        { name: "filter_by_column", column: "country", value: "NL" },
+        { name: "filter_by_column", column: "type", value: "facultatiefStation" },
+        { name: "lat_lon_to_points" }
+      ]
+      style:
+        color: "ffa65629"
+        size: 3
+
+  Theme Parks:
+    themeparks:
+      file: "input/nl_casual/themeparks.csv"
+      processors: [
+        { name: "rename_column", columns: { latitude: "Latitude", longitude: "Longitude" } },
+        { name: "lat_lon_to_points" }
+      ]
+      style:
+        color: "ffff1493"
+        size: 7
+
+  Airports:
+    airports:
+      file: "input/nl_casual/airports.csv"
+      processors: [
+        { name: "rename_column", columns: { latitude: "Latitude", longitude: "Longitude" } },
+        { name: "lat_lon_to_points" }
+      ]
+      style:
+        color: "ffffd700"
+        size: 8
+
+  Provinces:
+    provinces:
+      query: "[out:json][timeout:60];area[\"ISO3166-1\"=\"NL\"]->.a;rel[\"boundary\"=\"administrative\"][\"admin_level\"=\"4\"][\"ISO3166-2\"~\"^NL-\"](area.a);out geom;"
+      geom_type: "polygons"
+      processors: [
+        { name: "simplify_geometry", tolerance: 0.001 }
+      ]
+      style:
+        color: "ff1a1a1a"
+        width: 3
+        fill: "00000000"
+
+  Train Lines:
+    train_lines:
+      processors: [
+        {
+          name: "simplified_lines",
+          file: "input/nl_casual/routes_trainkms_converted.json",
+          key_column: "code",
+          source_layer: "Stations",
+          source_type: "stations",
+          min_stops: 2
+        }
+      ]
+      style:
+        color: "ffe41a1c"
+        width: 2
