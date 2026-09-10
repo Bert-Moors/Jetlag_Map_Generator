@@ -869,14 +869,7 @@
       "name": "hfd-shl",
       "ref": "hfd-shl"
     },
-    {
-      "stops": [
-        "hfd",
-        "rtd"
-      ],
-      "name": "hfd-rtd",
-      "ref": "hfd-rtd"
-    },
+
     {
       "stops": [
         "hfd",

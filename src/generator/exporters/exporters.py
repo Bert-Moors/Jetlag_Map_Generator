@@ -69,9 +69,19 @@ class OpenStreetMapA3PdfExporter:
             "subdomains": ["a", "b", "c", "d"],
             "tile_scale": 2,
         },
+        "map_tiler": {
+            "url": "https://api.maptiler.com/maps/dataviz-v4/{z}/{x}/{y}.png?key=KNh5OR6gPub9HMhM6wqF ",
+            "attribution": "MapTiler",
+            "subdomains": [""],
+        },
         "stadia_osm_bright": {
             "url": "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}.png",
             "attribution": "Map tiles by Stadia Maps, data (c) OpenStreetMap contributors",
+            "subdomains": [""],
+        },
+        "toner_light": {
+            "url": "https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}.png",
+            "attribution":"© Carto",
             "subdomains": [""],
         },
         "opentopomap": {
@@ -87,6 +97,8 @@ class OpenStreetMapA3PdfExporter:
     }
     DEFAULT_TILE_SERVER = "carto_voyager"
     FALLBACK_TILE_SERVERS = ["carto_voyager_retina", "carto_voyager", "carto_light", "osm_de", "opentopomap"]
+    DEFAULT_TILE_SERVER = "map_tiler"
+    FALLBACK_TILE_SERVERS = ["map_tiler"]
     USER_AGENT = "JetlagMapGenerator/1.0 (+https://www.openstreetmap.org/copyright)"
     TILE_SIZE = 256
     A3_LANDSCAPE_MM = (420, 297)
