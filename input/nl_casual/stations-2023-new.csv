@@ -14,7 +14,6 @@ id,code,uic,name_short,name_medium,name_long,slug,country,type,geo_lat,geo_lng
 48,ASSP,8400235,Scienceprk,"Science Park","Amsterdam Science Park",amsterdam-science-park,NL,stoptreinstation,52.35526,4.94651
 50,ASS,8400059,Sloterdijk,Sloterdijk,"Amsterdam Sloterdijk",amsterdam-sloterdijk,NL,knooppuntIntercitystation,52.388889312744,4.8377776145935
 46,ASDZ,8400061,"Amsterdm Z","Amsterdam Zuid","Amsterdam Zuid",amsterdam-zuid,NL,intercitystation,52.338889,4.872356
-6,AH,8400071,"Arnhem C","Arnhem C.","Arnhem Centraal",arnhem-centraal,NL,knooppuntIntercitystation,51.985000610352,5.8991665840149
 102,BRN,8400086,Baarn,Baarn,Baarn,baarn,NL,knooppuntStoptreinstation,52.208332061768,5.2808332443237
 98,BRD,8400090,Barendrcht,Barendrecht,Barendrecht,barendrecht,NL,stoptreinstation,51.854721069336,4.5533332824707
 87,BNC,8400091,"Barnevld C","Barneveld C.","Barneveld Centrum",barneveld-centrum,NL,stoptreinstation,52.139999389648,5.590277671814
@@ -41,7 +40,6 @@ id,code,uic,name_short,name_medium,name_long,slug,country,type,geo_lat,geo_lng
 135,DMN,8400165,Diemen,Diemen,Diemen,diemen,NL,stoptreinstation,52.34515,4.967566
 136,DMNZ,8400163,"Diemen Z","Diemen Zuid","Diemen Zuid",diemen-zuid,NL,stoptreinstation,52.330276489258,4.9558334350586
 124,DDR,8400180,Dordrecht,Dordrecht,Dordrecht,dordrecht,NL,knooppuntIntercitystation,51.807220458984,4.668333530426
-126,DDZD,8400181,"Dordrcht Z","Dordrecht Zuid","Dordrecht Zuid",dordrecht-zuid,NL,stoptreinstation,51.790000915527,4.6713891029358
 122,DB,8400182,Driebergen,Driebergen-Zeist,Driebergen-Zeist,driebergen-zeist,NL,knooppuntStoptreinstation,52.065277099609,5.25861120224
 155,DVD,8400194,Duivendrt,Duivendrecht,Duivendrecht,duivendrecht,NL,knooppuntStoptreinstation,52.323333740234,4.9363889694214
 163,EDC,8400201,"Ede C","Ede C.","Ede Centrum",ede-centrum,NL,stoptreinstation,52.043609619141,5.668333530426
@@ -82,7 +80,6 @@ id,code,uic,name_short,name_medium,name_long,slug,country,type,geo_lat,geo_lng
 413,RTST,8400534,"R'dam Sta","R'dam Stadion","Rotterdam Stadion",rotterdam-stadion,NL,facultatiefStation,51.893890380859,4.5197219848633
 414,RTZ,8400533,"Rotterdm Z","Rotterdam Zuid","Rotterdam Zuid",rotterdam-zuid,NL,stoptreinstation,51.904445648193,4.5102777481079
 544,SSH,8400603,Sassenheim,Sassenheim,Sassenheim,sassenheim,NL,stoptreinstation,52.215278,4.517222
-427,SGN,8400549,Schagen,Schagen,Schagen,schagen,NL,stoptreinstation,52.784442901611,4.8052778244019
 422,SDM,8400553,"Schiedam C","Schiedam C.","Schiedam Centrum",schiedam-centrum,NL,stoptreinstation,51.921243812803,4.4089937210083
 428,SHL,8400561,Schiphol,"Schiphol Airport","Schiphol Airport",schiphol-airport,NL,megastation,52.30944442749,4.7619442939758
 438,ST,8400567,Soest,Soest,Soest,soest,NL,knooppuntStoptreinstation,52.173332214355,5.3099999427795
@@ -112,3 +109,45 @@ id,code,uic,name_short,name_medium,name_long,slug,country,type,geo_lat,geo_lng
 535,ZTM,8400741,Zoetermeer,Zoetermeer,Zoetermeer,zoetermeer,NL,knooppuntStoptreinstation,52.047500610352,4.4772224426269
 536,ZTMO,8400740,"Zoetermr O","Zoetermeer Oost","Zoetermeer Oost",zoetermeer-oost,NL,stoptreinstation,52.046390533447,4.4927778244019
 541,ZWD,8400752,Zwijndrcht,Zwijndrecht,Zwijndrecht,zwijndrecht,NL,stoptreinstation,51.814998626709,4.6416668891907
+113,CAS,8400151,Castricum,Castricum,Castricum,castricum,NL,intercitystation,52.545833587646,4.6586112976074
+142,DRH,8400183,Driehuis,Driehuis,Driehuis,driehuis,NL,stoptreinstation,52.442501068115,4.6380553245544
+237,HIL,8400329,Hillegom,Hillegom,Hillegom,hillegom,NL,stoptreinstation,52.302501678467,4.5655555725098
+98,BRD,8400090,Barendrcht,Barendrecht,Barendrecht,barendrecht,NL,stoptreinstation,51.854721069336,4.5533332824707
+125,DDRS,8400186,Stadspldrs,Stadspolders,Dordrecht Stadspolders,dordrecht-stadspolders,NL,stoptreinstation,51.801944732666,4.7166666984558
+116,CL,8400154,Culemborg,Culemborg,Culemborg,culemborg,NL,stoptreinstation,51.946666717529,5.2269444465637
+198,GDM,8400244,Geldermlsn,Geldermalsen,Geldermalsen,geldermalsen,NL,knooppuntStoptreinstation,51.88301,5.27127
+210,GR,8400256,Gorinchem,Gorinchem,Gorinchem,gorinchem,NL,knooppuntStoptreinstation,51.833889007568,4.9683332443237
+546,BHDV,8400236,Boven-Har,Boven-Hardinxv.,Boven-Hardinxveld,boven-hardinxveld,NL,stoptreinstation,51.832222,4.878056
+685,HBZM,8400438,Blauwe Zm,Blauwe Zoom,Hardinxveld Blauwe Zoom,hardinxveld-blauwe-zoom,NL,stoptreinstation,51.82944,4.81556
+205,GND,8400295,Hardinxvld,Hardinxveld-G.,Hardinxveld-Giessendam,hardinxveld-giessendam,NL,stoptreinstation,51.830554962158,4.8358335494995
+13,AKL,8400068,Arkel,Arkel,Arkel,arkel,NL,stoptreinstation,51.87194442749,4.9927778244019
+106,BSD,8400097,Beesd,Beesd,Beesd,beesd,NL,stoptreinstation,51.899444580078,5.1944446563721
+307,LDM,8400386,Leerdam,Leerdam,Leerdam,leerdam,NL,stoptreinstation,51.894721984863,5.0913887023926
+26,AMR,8400050,Alkmaar,Alkmaar,Alkmaar,alkmaar,NL,knooppuntIntercitystation,52.63777923584,4.7397222518921
+28,AMRN,8400052,Alkmaar N,Alkmaar Noord,Alkmaar Noord,alkmaar-noord,NL,stoptreinstation,52.643890380859,4.7641668319702
+18,ALMB,8400081,Buiten,Buiten,Almere Buiten,almere-buiten,NL,stoptreinstation,52.394165039062,5.2780556678772
+17,ALM,8400080,Almere C,Almere C.,Almere Centrum,almere-centrum,NL,knooppuntIntercitystation,52.37503,5.21764
+19,ALMM,8400082,Muziekwijk,Muziekwijk,Almere Muziekwijk,almere-muziekwijk,NL,stoptreinstation,52.367500305176,5.1902775764465
+20,ALMO,8400226,Oostvaard,Oostvaarders,Almere Oostvaarders,almere-oostvaarders,NL,stoptreinstation,52.403331756592,5.3005557060242
+21,ALMP,8400104,Parkwijk,Parkwijk,Almere Parkwijk,almere-parkwijk,NL,stoptreinstation,52.376667022705,5.244722366333
+680,AMPO,8400450,Poort,Poort,Almere Poort,almere-poort,NL,stoptreinstation,52.342778,5.151944
+274,HWD,8400306,Heerhugow,Heerhugowaard,Heerhugowaard,heerhugowaard,NL,knooppuntStoptreinstation,52.669723510742,4.8227777481079
+246,HLO,8400309,Heiloo,Heiloo,Heiloo,heiloo,NL,stoptreinstation,52.599445343018,4.7005553245544
+388,PMR,8400508,Purmerend,Purmerend,Purmerend,purmerend,NL,knooppuntStoptreinstation,52.50305557251,4.9536108970642
+387,PMO,8400506,Overwhere,Overwhere,Purmerend Overwhere,purmerend-overwhere,NL,stoptreinstation,52.511390686035,4.9683332443237
+389,PMW,8400499,Weidevenne,Weidevenne,Purmerend Weidevenne,purmerend-weidevenne,NL,stoptreinstation,52.496590632542,4.9356293678284
+111,BV,8400113,Beverwijk,Beverwijk,Beverwijk,beverwijk,NL,stoptreinstation,52.478332519531,4.6566667556763
+238,HK,8400317,Heemskerk,Heemskerk,Heemskerk,heemskerk,NL,stoptreinstation,52.495277404785,4.6869444847107
+468,UTG,8400615,Uitgeest,Uitgeest,Uitgeest,uitgeest,NL,knooppuntStoptreinstation,52.521667480469,4.7016668319702
+529,ZD,8400731,Zaandam,Zaandam,Zaandam,zaandam,NL,knooppuntIntercitystation,52.438888549805,4.8136110305786
+530,ZDK,8400728,Kogerveld,Kogerveld,Zaandam Kogerveld,zaandam-kogerveld,NL,stoptreinstation,52.456665039062,4.8202776908875
+804,ZZS,8400364,Zaanse S.,Zaanse Schans,Zaandijk Zaanse Schans,zaandijk-zaanse-schans,NL,knooppuntStoptreinstation,52.469165802002,4.8049998283386
+511,WM,8400707,Wormerveer,Wormerveer,Wormerveer,wormerveer,NL,stoptreinstation,52.489166259766,4.7922220230103
+286,KMA,8400368,Krommenie,Krommenie-Ass.,Krommenie-Assendelft,krommenie-assendelft,NL,stoptreinstation,52.49511,4.75417
+253,HNK,8400336,Hoorn Kers,Kersenboogerd,Hoorn Kersenboogerd,hoorn-kersenboogerd,NL,stoptreinstation,52.653610229492,5.0855555534363
+313,LLS,8400394,Lelystad C,Lelystad C.,Lelystad Centrum,lelystad-centrum,NL,knooppuntIntercitystation,52.507778167725,5.4727778434753
+423,SDT,8400565,Sliedrecht,Sliedrecht,Sliedrecht,sliedrecht,NL,stoptreinstation,51.829723358154,4.7783331871033
+548,SDTB,8400497,Baanhoek,Baanhoek,Sliedrecht Baanhoek,sliedrecht-baanhoek,NL,stoptreinstation,51.829722,4.743333
+435,SPTN,8400543,Santprt N,Santpoort Noord,Santpoort Noord,santpoort-noord,NL,stoptreinstation,52.43388748169,4.6325001716614
+436,SPTZ,8400544,Santprt Z,Santpoort Zuid,Santpoort Zuid,santpoort-zuid,NL,stoptreinstation,52.419723510742,4.6313886642456
+83,BLL,8400118,Bloemendl,Bloemendaal,Bloemendaal,bloemendaal,NL,stoptreinstation,52.404167175293,4.6275000572205

@@ -5,7 +5,7 @@ config:
 layers:
   Stations:
     stations:
-      file: "input/nl_casual/stations-2023-09.csv"
+      file: "input/nl_casual/stations-2023-09_old.csv"
       processors: [
         { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
         { name: "filter_by_column", column: "country", value: "NL" },
@@ -15,7 +15,7 @@ layers:
         color: "ff377eb8"
 
     intercity:
-      file: "input/nl_casual/stations-2023-09.csv"
+      file: "input/nl_casual/stations-2023-09_old.csv"
       processors: [
         { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
         { name: "filter_by_column", column: "country", value: "NL" },
@@ -27,7 +27,7 @@ layers:
         size: 6
 
     sneltrein:
-      file: "input/nl_casual/stations-2023-09.csv"
+      file: "input/nl_casual/stations-2023-09_old.csv"
       processors: [
         { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
         { name: "filter_by_column", column: "country", value: "NL" },
@@ -39,7 +39,7 @@ layers:
         size: 5
 
     stoptrein:
-      file: "input/nl_casual/stations-2023-09.csv"
+      file: "input/nl_casual/stations-2023-09_old.csv"
       processors: [
         { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
         { name: "filter_by_column", column: "country", value: "NL" },
@@ -51,7 +51,7 @@ layers:
         size: 4
 
     facultatif:
-      file: "input/nl_casual/stations-2023-09.csv"
+      file: "input/nl_casual/stations-2023-09_old.csv"
       processors: [
         { name: "rename_column", columns: { geo_lat: "Latitude", geo_lng: "Longitude", name_short: "name" } },
         { name: "filter_by_column", column: "country", value: "NL" },
