@@ -15,6 +15,10 @@ def add_to_kml(frames: Dict[str, gpd.GeoDataFrame], folder) -> None:
                     pt = fol.newpoint(name=row["name"], coords=coords)
                     pt.extendeddata.newdata("type", row["type"])
                     _set_description(pt, row)
+
+                    for x in row.keys():
+                        if x.startswith("_tag"):
+                            pt.extendeddata.newdata(x.removeprefix("_tag."), row[x])
                 case "Polygon":
                     shapes = row["geometry"]
                     multipolygon = fol.newmultigeometry(name=row["name"])

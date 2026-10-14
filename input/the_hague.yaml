@@ -5,7 +5,7 @@ config:
   round_map_zoom: false
 layers:
   Administrative Zones:
-    coast_west:
+    Seaside:
       geom_type: "polygons"
       query:
         '
@@ -16,7 +16,7 @@ layers:
         out geom;
         '
       style: { color: "ff1f78b4" }
-    centre:
+    Centre:
       geom_type: "polygons"
       query:
         '
@@ -27,7 +27,7 @@ layers:
         out geom;
         '
       style: { color: "ff33a02c" }
-    south_wateringen:
+    South Wateringen:
       geom_type: "polygons"
       query:
         '
@@ -42,7 +42,7 @@ layers:
         out geom;
         '
       style: { color: "ffe31a1c" }
-    delft:
+    South East:
       geom_type: "polygons"
       query:
         '
@@ -50,14 +50,13 @@ layers:
         relation(192736)->.denhaag;
         .denhaag map_to_area -> .denhaagArea;
         (
-          relation["boundary"="administrative"]["admin_level"="8"]["name"="Delft"];
           relation["boundary"="administrative"]["admin_level"="10"]["name"="Nootdorp"];
           relation["boundary"="place"]["place"="suburb"]["name"="Leidschenveen-Ypenburg"](area.denhaagArea);
         );
         out geom;
         '
       style: { color: "ffb15928" }
-    leidschendam_voorburg:
+    North East:
       geom_type: "polygons"
       query:
         '
@@ -72,7 +71,7 @@ layers:
         '
       style: { color: "ffcab2d6" }
 
-  Hiding Spots:
+  Stations:
     processors: [
       {
         name: "add_column",
@@ -81,7 +80,14 @@ layers:
       {
         "name": "mark_by_in_area_in_layer",
         source_layer: "Administrative Zones",
-      }
+        target_tag_key: "Small Zone"
+      },
+      {
+        "name": "mark_by_in_area_in_layer",
+        source_layer: "Administrative Zones",
+        source_tag_key: "type",
+        target_tag_key: "Big Zone"
+      },
     ]
     tram:
       geom_type: "points"
@@ -143,7 +149,7 @@ layers:
         '
         [out:json][timeout:60];
         relation["name"="Zuid Holland"]->.NL;
-        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Delft|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
+        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
         relation["type"="route"]["route"~"tram|light_rail"]["ref"~"^(1|2|3|4|6|9|11|12|15|16|17|19)$"](area.serviceArea)->.tramRoutes;
         (
           node(r.tramRoutes)(area.serviceArea)["railway"~"tram_stop|stop"]["name"];
@@ -166,7 +172,7 @@ layers:
         '
         [out:json][timeout:60];
         relation["name"="Zuid Holland"]->.NL;
-        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Delft|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
+        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
         relation["type"="route"]["route"~"tram|light_rail"]["ref"~"^(1|2|3|4|6|9|11|12|15|16|17|19)$"](area.serviceArea);
         out geom(51.95,4.17,52.14,4.43);
         '
@@ -184,7 +190,7 @@ layers:
         {
           name: "simplified_lines",
           file: "input/the_hague_tram_lines.json",
-          source_layer: "Hiding Spots",
+          source_layer: "Stations",
           source_type: "tram",
           prefix_ignores: [
             "Den Haag, ",
@@ -252,13 +258,20 @@ layers:
     processors: [
       {
         name: "filter_by_distance_to_layer",
-        source_layer: "Hiding Spots",
+        source_layer: "Stations",
         source_type: "tram",
         distance: 500
       },
       {
         "name": "mark_by_in_area_in_layer",
         source_layer: "Administrative Zones",
+        target_tag_key: "Small Zone"
+      },
+      {
+        "name": "mark_by_in_area_in_layer",
+        source_layer: "Administrative Zones",
+        source_tag_key: "type",
+        target_tag_key: "Big Zone"
       },
       {
         name: "remove_overlapping_zones",
