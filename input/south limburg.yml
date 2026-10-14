@@ -55,6 +55,12 @@ layers:
 
          out center;'
   Points Of Interest:
+    processors: [
+      {
+        "name": "mark_by_in_area_in_layer",
+        source_layer: "Admin Divisions",
+      },
+    ]
     Campings:
       geom_type: points
       query:
