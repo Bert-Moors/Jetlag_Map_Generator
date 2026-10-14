@@ -4,107 +4,6 @@ config:
   exporters: ["googleMMaps", "fullkml", "kmlHidingZones", "osmA3Pdf"]
   round_map_zoom: false
 layers:
-  Hiding Spots:
-    processors: [
-      {
-        name: "add_column",
-        columns: { "hiding_size": 250 }
-      }
-    ]
-    tram:
-      geom_type: "points"
-      processors: [
-        {
-          name: "name_based_deduplicate",
-          prefix_ignores: [
-            "Den Haag, ",
-            "Delft, ",
-            "Rijswijk, ",
-            "Leidschendam, ",
-            "Voorburg, ",
-            "Nootdorp, ",
-            "Wateringen, "
-          ],
-          equivalent_station_names: [
-            {
-              station_list: ["Station Laan van N.O.I.", "Den Haag Laan van NOI", "Den Haag Laan van N.O.I."],
-              replacement-station-name: "Station Laan van N.O.I."
-            },
-            {
-              station_list: ["Van Speijkstraat", "Obrechtstraat"],
-              replacement-station-name: "Van Speijkstraat/Obrechtstraat"
-            },
-            {
-              station_list: ["Conradkade", "Laan van Meerdervoort"],
-              replacement-station-name: "Conradkade/Laan van Meerdervoort"
-            },
-            {
-              station_list: ["Loosduinseweg", "De la Reyweg"],
-              replacement-station-name: "Loosduinseweg/De la Reyweg"
-            },
-            {
-              station_list: ["Malieveld", "Korte Voorhout"],
-              replacement-station-name: "Malieveld/Korte Voorhout"
-            },
-            {
-              station_list: ["Buitenhof", "Kneuterdijk"],
-              replacement-station-name: "Buitenhof/Kneuterdijk"
-            },
-            {
-              station_list: ["Spui", "Centrum", "Kalvermarkt-Stadhuis"],
-              replacement-station-name: "Spui/Centrum/Kalvermarkt-Stadhuis"
-            },
-            {
-              station_list: ["Monstersestraat", "Loosduinseweg"],
-              replacement-station-name: "Monstersestraat/Loosduinseweg"
-            },
-            {
-              station_list: ["Leidschenveen Centrum", "Leidschenveen"],
-              replacement-station-name: "Leidschenveen/Leidschenveen Centrum"
-            }
-          ],
-          distance_cutoff: 300
-        },
-      ]
-      type: "tram stops"
-      query:
-        '
-        [out:json][timeout:60];
-        relation["name"="Zuid Holland"]->.NL;
-        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Delft|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
-        relation["type"="route"]["route"~"tram|light_rail"]["ref"~"^(1|2|3|4|6|9|11|12|15|16|17|19)$"](area.serviceArea)->.tramRoutes;
-        (
-          node(r.tramRoutes)(area.serviceArea)["railway"~"tram_stop|stop"]["name"];
-          node(r.tramRoutes)(area.serviceArea)["public_transport"~"platform|stop_position"]["name"];
-          way(r.tramRoutes)(area.serviceArea)["railway"="tram_stop"]["name"];
-          way(r.tramRoutes)(area.serviceArea)["public_transport"="platform"]["name"];
-        );
-        out center;
-        '
-      style: {
-        color: "ffa82d6f",
-        href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
-      }
-
-  Transit:
-    tram_lines:
-      geom_type: "routes"
-      type: "tram lines"
-      query:
-        '
-        [out:json][timeout:60];
-        relation["name"="Zuid Holland"]->.NL;
-        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Delft|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
-        relation["type"="route"]["route"~"tram|light_rail"]["ref"~"^(1|2|3|4|6|9|11|12|15|16|17|19)$"](area.serviceArea);
-        out geom(51.95,4.17,52.14,4.43);
-        '
-      style: {
-        color: "ffa82d6f",
-        width: 4,
-        with_label: true,
-        label_size: 10
-      }
-
   Administrative Zones:
     coast_west:
       geom_type: "polygons"
@@ -172,6 +71,111 @@ layers:
         out geom;
         '
       style: { color: "ffcab2d6" }
+
+  Hiding Spots:
+    processors: [
+      {
+        name: "add_column",
+        columns: { "hiding_size": 250 }
+      },
+      {
+        "name": "mark_by_in_area_in_layer",
+        source_layer: "Administrative Zones",
+      }
+    ]
+    tram:
+      geom_type: "points"
+      processors: [
+        {
+          name: "name_based_deduplicate",
+          prefix_ignores: [
+            "Den Haag, ",
+            "Delft, ",
+            "Rijswijk, ",
+            "Leidschendam, ",
+            "Voorburg, ",
+            "Nootdorp, ",
+            "Wateringen, "
+          ],
+          equivalent_station_names: [
+            {
+              station_list: ["Station Laan van N.O.I.", "Den Haag Laan van NOI", "Den Haag Laan van N.O.I."],
+              replacement-station-name: "Station Laan van N.O.I."
+            },
+            {
+              station_list: ["Van Speijkstraat", "Obrechtstraat"],
+              replacement-station-name: "Van Speijkstraat/Obrechtstraat"
+            },
+            {
+              station_list: ["Conradkade", "Laan van Meerdervoort"],
+              replacement-station-name: "Conradkade/Laan van Meerdervoort"
+            },
+            {
+              station_list: ["Loosduinseweg", "De la Reyweg"],
+              replacement-station-name: "Loosduinseweg/De la Reyweg"
+            },
+            {
+              station_list: ["Malieveld", "Korte Voorhout"],
+              replacement-station-name: "Malieveld/Korte Voorhout"
+            },
+            {
+              station_list: ["Buitenhof", "Kneuterdijk"],
+              replacement-station-name: "Buitenhof/Kneuterdijk"
+            },
+            {
+              station_list: ["Spui", "Centrum", "Kalvermarkt-Stadhuis"],
+              replacement-station-name: "Spui/Centrum/Kalvermarkt-Stadhuis"
+            },
+            {
+              station_list: ["Monstersestraat", "Loosduinseweg"],
+              replacement-station-name: "Monstersestraat/Loosduinseweg"
+            },
+            {
+              station_list: ["Leidschenveen Centrum", "Leidschenveen"],
+              replacement-station-name: "Leidschenveen/Leidschenveen Centrum"
+            }
+          ],
+          distance_cutoff: 300
+        }
+      ]
+      type: "tram stops"
+      query:
+        '
+        [out:json][timeout:60];
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Delft|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
+        relation["type"="route"]["route"~"tram|light_rail"]["ref"~"^(1|2|3|4|6|9|11|12|15|16|17|19)$"](area.serviceArea)->.tramRoutes;
+        (
+          node(r.tramRoutes)(area.serviceArea)["railway"~"tram_stop|stop"]["name"];
+          node(r.tramRoutes)(area.serviceArea)["public_transport"~"platform|stop_position"]["name"];
+          way(r.tramRoutes)(area.serviceArea)["railway"="tram_stop"]["name"];
+          way(r.tramRoutes)(area.serviceArea)["public_transport"="platform"]["name"];
+        );
+        out center;
+        '
+      style: {
+        color: "ffa82d6f",
+        href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
+      }
+
+  Transit:
+    tram_lines:
+      geom_type: "routes"
+      type: "tram lines"
+      query:
+        '
+        [out:json][timeout:60];
+        relation["name"="Zuid Holland"]->.NL;
+        area["boundary"="administrative"]["name"~"''s-Gravenhage|Den Haag|Rijswijk|Delft|Leidschendam-Voorburg|Pijnacker-Nootdorp|Westland"](area.NL)->.serviceArea;
+        relation["type"="route"]["route"~"tram|light_rail"]["ref"~"^(1|2|3|4|6|9|11|12|15|16|17|19)$"](area.serviceArea);
+        out geom(51.95,4.17,52.14,4.43);
+        '
+      style: {
+        color: "ffa82d6f",
+        width: 4,
+        with_label: true,
+        label_size: 10
+      }
 
   Simplified Tram Lines:
     simplified_tram_lines:
@@ -251,6 +255,10 @@ layers:
         source_layer: "Hiding Spots",
         source_type: "tram",
         distance: 500
+      },
+      {
+        "name": "mark_by_in_area_in_layer",
+        source_layer: "Administrative Zones",
       },
       {
         name: "remove_overlapping_zones",
