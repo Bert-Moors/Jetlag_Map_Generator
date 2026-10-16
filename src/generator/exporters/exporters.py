@@ -1239,10 +1239,10 @@ class HidingZoneExporter:
 
 class StationClaimGameExporter:
     def export(self, data: dict, output_path):
-        self.export_stops(data, output_path)
-        self.export_lines(data, output_path)
-        self.export_quests(data, output_path)
-        self.export_zones(data, output_path)
+        stops = self.export_stops(data, output_path)
+        lines = self.export_lines(data, output_path)
+        quests = self.export_quests(data, output_path)
+        zones = self.export_zones(data, output_path)
 
 
     def export_stops(self, data: dict, output_path):
@@ -1250,15 +1250,30 @@ class StationClaimGameExporter:
         result = []
         for stop_sets in stops:
             zet = stops.get(stop_sets)
-            for x in list(zet):
-                print(x)
+            result += [
+                {
+                    "id": idx,
+                    "name": row["name"],
+                    "geom_type": row["geometry"].geom_type,
+                    "small_zone": row.get("_tag.Small Zone"),
+                    "big_zone": row.get("_tag.Big Zone"),
+                    "lines": row.get("_tag.lines"),
+                    "neighbours": row.get("_tag.neighbours"),
 
+                    # Extract coordinates based on Point vs. Polygon/LineString
+                    "coordinates": (row["geometry"].x, row["geometry"].y)
+                    if row["geometry"].geom_type == 'Point'
+                    else list(row["geometry"].exterior.coords)
+                }
+                for idx, row in zet.iterrows() if row["geometry"] is not None
+            ]
+        return result
 
     def export_lines(self, data:dict, output_path):
-        pass
+        return None
 
     def export_quests(self, data:dict, output_path):
-        pass
+        return None
 
     def export_zones(self, data: dict, output_path):
-        pass
+        return None
