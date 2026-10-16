@@ -1,10 +1,10 @@
 config:
   name: "The Hague Tram"
   location: "H&S The Hague Tram"
-  exporters: ["googleMMaps", "fullkml", "kmlHidingZones", "osmA3Pdf"]
+  exporters: ["googleMMaps", "fullkml", "kmlHidingZones", "osmA3Pdf", "stationClaimExporter"]
   round_map_zoom: false
 layers:
-  Administrative Zones:
+  zones:
     Seaside:
       geom_type: "polygons"
       query:
@@ -71,7 +71,7 @@ layers:
         '
       style: { color: "ffcab2d6" }
 
-  Stations:
+  stops:
     processors: [
       {
         name: "add_column",
@@ -79,15 +79,57 @@ layers:
       },
       {
         "name": "mark_by_in_area_in_layer",
-        source_layer: "Administrative Zones",
+        source_layer: "zones",
         target_tag_key: "Small Zone"
       },
       {
         "name": "mark_by_in_area_in_layer",
-        source_layer: "Administrative Zones",
+        source_layer: "zones",
         source_tag_key: "type",
         target_tag_key: "Big Zone"
       },
+      {
+        name: "transit_line_based_tags",
+        file: "input/the_hague_tram_lines.json",
+        equivalent_station_names: [
+          {
+            station_list: [ "Station Laan van N.O.I.", "Den Haag Laan van NOI", "Den Haag Laan van N.O.I." ],
+            replacement-station-name: "Station Laan van N.O.I."
+          },
+          {
+            station_list: [ "Van Speijkstraat", "Obrechtstraat" ],
+            replacement-station-name: "Van Speijkstraat/Obrechtstraat"
+          },
+          {
+            station_list: [ "Conradkade", "Laan van Meerdervoort" ],
+            replacement-station-name: "Conradkade/Laan van Meerdervoort"
+          },
+          {
+            station_list: [ "Loosduinseweg", "De la Reyweg" ],
+            replacement-station-name: "Loosduinseweg/De la Reyweg"
+          },
+          {
+            station_list: [ "Malieveld", "Korte Voorhout" ],
+            replacement-station-name: "Malieveld/Korte Voorhout"
+          },
+          {
+            station_list: [ "Buitenhof", "Kneuterdijk" ],
+            replacement-station-name: "Buitenhof/Kneuterdijk"
+          },
+          {
+            station_list: [ "Spui", "Centrum", "Kalvermarkt-Stadhuis" ],
+            replacement-station-name: "Spui/Centrum/Kalvermarkt-Stadhuis"
+          },
+          {
+            station_list: [ "Monstersestraat", "Loosduinseweg" ],
+            replacement-station-name: "Monstersestraat/Loosduinseweg"
+          },
+          {
+            station_list: [ "Leidschenveen Centrum", "Leidschenveen" ],
+            replacement-station-name: "Leidschenveen/Leidschenveen Centrum"
+          }
+        ],
+      }
     ]
     tram:
       geom_type: "points"
@@ -164,7 +206,7 @@ layers:
         href: "https://maps.google.com/mapfiles/kml/shapes/bus.png"
       }
 
-  Transit:
+  transit:
     tram_lines:
       geom_type: "routes"
       type: "tram lines"
@@ -183,14 +225,14 @@ layers:
         label_size: 10
       }
 
-  Simplified Tram Lines:
+  lines:
     simplified_tram_lines:
       geom_type: "points"
       processors: [
         {
           name: "simplified_lines",
           file: "input/the_hague_tram_lines.json",
-          source_layer: "Stations",
+          source_layer: "stops",
           source_type: "tram",
           prefix_ignores: [
             "Den Haag, ",
@@ -254,22 +296,22 @@ layers:
         }
       }
 
-  Interesting Places:
+  quests:
     processors: [
       {
         name: "filter_by_distance_to_layer",
-        source_layer: "Stations",
+        source_layer: "stops",
         source_type: "tram",
-        distance: 500
+        distance: 560
       },
       {
         "name": "mark_by_in_area_in_layer",
-        source_layer: "Administrative Zones",
+        source_layer: "zones",
         target_tag_key: "Small Zone"
       },
       {
         "name": "mark_by_in_area_in_layer",
-        source_layer: "Administrative Zones",
+        source_layer: "zones",
         source_tag_key: "type",
         target_tag_key: "Big Zone"
       },
@@ -307,6 +349,9 @@ layers:
           node["historic"="monument"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
           way["historic"="monument"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
           relation["historic"="monument"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          node["historic"="city_gate"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"="city_gate"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"="city_gate"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
         );
         out center;
         '
@@ -320,6 +365,9 @@ layers:
           node["historic"="monument"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
           way["historic"="monument"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
           relation["historic"="monument"]["name"][!"wikipedia"][!"wikidata"](51.95,4.17,52.14,4.43);
+          node["historic"="city_gate"]["name"][!"wikidata"](51.95,4.17,52.14,4.43);
+          way["historic"="city_gate"]["name"][!"wikidata"](51.95,4.17,52.14,4.43);
+          relation["historic"="city_gate"]["name"][!"wikidata"](51.95,4.17,52.14,4.43);
         );
         out center;
         '
@@ -452,6 +500,9 @@ layers:
           node["tourism"="attraction"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
           way["tourism"="attraction"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
           relation["tourism"="attraction"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          node["tourism"="theme_park"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          way["tourism"="theme_park"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
+          relation["tourism"="theme_park"]["name"]["wikidata"](51.95,4.17,52.14,4.43);
         );
         out center;
         '

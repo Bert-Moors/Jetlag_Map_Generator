@@ -1236,3 +1236,29 @@ class HidingZoneExporter:
         dat = GeoDataFrame(concat(partials), crs="EPSG:4326")
         add_to_kml({'Hiding Zones':dat}, layer)
         self._kml.save(f"{output_path} HZ.kml")
+
+class StationClaimGameExporter:
+    def export(self, data: dict, output_path):
+        self.export_stops(data, output_path)
+        self.export_lines(data, output_path)
+        self.export_quests(data, output_path)
+        self.export_zones(data, output_path)
+
+
+    def export_stops(self, data: dict, output_path):
+        stops = data.get("stops", [])
+        result = []
+        for stop_sets in stops:
+            zet = stops.get(stop_sets)
+            for x in list(zet):
+                print(x)
+
+
+    def export_lines(self, data:dict, output_path):
+        pass
+
+    def export_quests(self, data:dict, output_path):
+        pass
+
+    def export_zones(self, data: dict, output_path):
+        pass

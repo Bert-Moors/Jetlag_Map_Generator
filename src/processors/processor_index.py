@@ -10,6 +10,7 @@ from processors.remove_overlapping_zones import RemoveOverlappingZones
 from processors.rename import Rename
 from processors.simplified_lines import SimplifiedLines
 from processors.simplify_geometry import SimplifyGeometry
+from processors.transit_line_based_tags import TransitLineBasedTags
 
 
 def get_processor(processor):
@@ -24,6 +25,7 @@ def get_processor(processor):
         "filter_by_distance_to_layer": FilterByDistanceToLayer,
         "mark_by_in_area_in_layer": MarkInAreaInLayer,
         "lat_lon_to_points": LatLonToPoints,
+        "transit_line_based_tags": TransitLineBasedTags,
         "simplified_lines": SimplifiedLines,
         "simplify_geometry": SimplifyGeometry,
     }
