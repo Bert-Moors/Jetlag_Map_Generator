@@ -1259,6 +1259,7 @@ class StationClaimGameExporter:
                     "big_zone": row.get("_tag.Big Zone"),
                     "lines": row.get("_tag.lines"),
                     "neighbours": row.get("_tag.neighbours"),
+                    "description": row.get("description"),
 
                     # Extract coordinates based on Point vs. Polygon/LineString
                     "coordinates": (row["geometry"].x, row["geometry"].y)
@@ -1270,10 +1271,65 @@ class StationClaimGameExporter:
         return result
 
     def export_lines(self, data:dict, output_path):
-        return None
+        stops = data.get("lines", [])
+        result = []
+        for stop_sets in stops:
+            zet = stops.get(stop_sets)
+            result += [
+                {
+                    "id": idx,
+                    "name": row["name"],
+                    "geom_type": row["geometry"].geom_type,
+
+                    # Extract coordinates based on Point vs. Polygon/LineString
+                    "coordinates": list(row["geometry"].coords)
+                    if row["geometry"].geom_type == 'LineString'
+                    else list(row["geometry"].exterior.coords)
+                }
+                for idx, row in zet.iterrows() if row["geometry"] is not None
+            ]
+        return result
 
     def export_quests(self, data:dict, output_path):
-        return None
+        stops = data.get("quests", [])
+        result = []
+        for stop_sets in stops:
+            zet = stops.get(stop_sets)
+            result += [
+                {
+                    "id": idx,
+                    "name": row["name"],
+                    "geom_type": row["geometry"].geom_type,
+                    "small_zone": row.get("_tag.Small Zone"),
+                    "big_zone": row.get("_tag.Big Zone"),
+                    "type": row.get("type"),
+                    "description": row.get("description"),
+
+                    # Extract coordinates based on Point vs. Polygon/LineString
+                    "coordinates": (row["geometry"].x, row["geometry"].y)
+                    if row["geometry"].geom_type == 'Point'
+                    else list(row["geometry"].exterior.coords)
+                }
+                for idx, row in zet.iterrows() if row["geometry"] is not None
+            ]
+        return result
 
     def export_zones(self, data: dict, output_path):
-        return None
+        stops = data.get("zones", [])
+        result = []
+        for stop_sets in stops:
+            zet = stops.get(stop_sets)
+            result += [
+                {
+                    "id": idx,
+                    "name": row["name"],
+                    "geom_type": row["geometry"].geom_type,
+                    "small_zone": row.get("name"),
+                    "big_zone": row.get("type"),
+
+                    # Extract coordinates based on Point vs. Polygon/LineString
+                    "geometry": row["geometry"]
+                }
+                for idx, row in zet.iterrows() if row["geometry"] is not None
+            ]
+        return result
