@@ -1,4 +1,5 @@
 import io
+import json
 import math
 import os
 import re
@@ -1243,7 +1244,15 @@ class StationClaimGameExporter:
         lines = self.export_lines(data, output_path)
         quests = self.export_quests(data, output_path)
         zones = self.export_zones(data, output_path)
-
+        with io.open(output_path+"claim_game_stations.json", 'w', encoding='utf-8') as f:
+            f.write(json.dumps(stops, ensure_ascii=False))
+        with io.open(output_path+"claim_game_lines.json", 'w', encoding='utf-8') as f:
+            f.write(json.dumps(lines, ensure_ascii=False))
+        with io.open(output_path+"claim_game_quests.json", 'w', encoding='utf-8') as f:
+            f.write(json.dumps(quests, ensure_ascii=False))
+        with io.open(output_path + "claim_game_zones.json", 'w', encoding='utf-8') as f:
+            f.write(json.dumps(zones, ensure_ascii=False))
+        print("DONE")
 
     def export_stops(self, data: dict, output_path):
         stops = data.get("stops", [])
@@ -1328,7 +1337,7 @@ class StationClaimGameExporter:
                     "big_zone": row.get("type"),
 
                     # Extract coordinates based on Point vs. Polygon/LineString
-                    "geometry": row["geometry"]
+                    "geometry": row["geometry"].__geo_interface__
                 }
                 for idx, row in zet.iterrows() if row["geometry"] is not None
             ]
